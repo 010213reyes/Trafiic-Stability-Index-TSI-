@@ -16,7 +16,11 @@ TSI/
 │     └─ traffic_data.csv
 ├─ notebooks/
 │  ├─ Scraping_Traffic.ipynb
-│  └─ Data_Ingestion_Basic_Procesing.ipynb
+│  ├─ Data_Ingestion_Basic_Procesing.ipynb
+│  ├─ Realistic_Traffic_Modeling.ipynb
+│  ├─ 01_Synthetic_Traffic_Data.ipynb
+│  ├─ 02_Historical_Data_Import.ipynb
+│  └─ 03_Crowdsourcing_Collection.ipynb
 ├─ .venv/
 ├─ .gitignore
 ├─ .git/
@@ -30,10 +34,22 @@ TSI/
 - `notebooks/`: notebooks principales del pipeline y análisis.
 - `.venv/`: entorno virtual local de Python.
 
-## Flujo recomendado
+## Flujo recomendado (Pipeline de Recopilación)
 
-1. Ejecutar `notebooks/Scraping_Traffic.ipynb` para generar/actualizar datos en `data/raw/`.
-2. Ejecutar `notebooks/Data_Ingestion_Basic_Procesing.ipynb` para limpiar/procesar y guardar en `data/processed/`.
+**Técnicas de recopilación de datos (elegir una o varias):**
+
+1. **Scraping_Traffic.ipynb** → Web scraping de fuentes públicas → `data/raw/`
+2. **01_Synthetic_Traffic_Data.ipynb** → Generación de datos sintéticos realistas → `data/raw/`
+3. **02_Historical_Data_Import.ipynb** → Importar datos históricos desde múltiples fuentes → `data/processed/`
+4. **03_Crowdsourcing_Collection.ipynb** → Recopilación mediante reportes de usuarios → `data/raw/`
+
+**Procesamiento:**
+
+5. **Data_Ingestion_Basic_Procesing.ipynb** → Limpiar/procesar todos los datos → `data/processed/`
+
+**Análisis:**
+
+6. **Realistic_Traffic_Modeling.ipynb** → Modelado y análisis exploratorio → Validación de hipótesis TSI
 
 ## Limpieza pendiente
 
