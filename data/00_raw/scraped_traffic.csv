@@ -1,0 +1,118 @@
+timestamp,avenida,latitud,longitud,velocidad,densidad,detenciones,horario,descripcion
+2026-04-29 18:22:14.905157,Av. Chapultepec,20.6685,-103.2547,26,2,8,6:00-8:00 (pico matutino),Av. Chapultepec en 6:00-8:00 (pico matutino): congestionamiento moderado - 26 km/h
+2026-04-29 18:22:14.905278,Av. Chapultepec,20.6685,-103.2547,23,2,19,6:00-8:00 (pico matutino),Av. Chapultepec en 6:00-8:00 (pico matutino): tráfico bloqueado - 23 km/h
+2026-04-28 18:22:14.905343,Av. Chapultepec,20.6685,-103.2547,38,3,10,6:00-8:00 (pico matutino),Av. Chapultepec en 6:00-8:00 (pico matutino): congestionamiento moderado - 38 km/h
+2026-04-28 18:22:14.905407,Av. Chapultepec,20.6685,-103.2547,31,3,2,6:00-8:00 (pico matutino),Av. Chapultepec en 6:00-8:00 (pico matutino): congestionamiento severo - 31 km/h
+2026-04-30 16:22:14.905477,Av. Chapultepec,20.6685,-103.2547,37,1,0,8:00-10:00 (post-pico),Av. Chapultepec en 8:00-10:00 (post-pico): congestionamiento leve - 37 km/h
+2026-04-26 16:22:14.905536,Av. Chapultepec,20.6685,-103.2547,48,2,2,8:00-10:00 (post-pico),Av. Chapultepec en 8:00-10:00 (post-pico): congestionamiento moderado - 48 km/h
+2026-04-28 16:22:14.905587,Av. Chapultepec,20.6685,-103.2547,50,1,0,8:00-10:00 (post-pico),Av. Chapultepec en 8:00-10:00 (post-pico): congestionamiento leve - 50 km/h
+2026-04-26 16:22:14.905634,Av. Chapultepec,20.6685,-103.2547,35,2,15,8:00-10:00 (post-pico),Av. Chapultepec en 8:00-10:00 (post-pico): congestionamiento leve - 35 km/h
+2026-05-01 14:22:14.905667,Av. Chapultepec,20.6685,-103.2547,52,1,0,12:00-14:00 (almuerzo),Av. Chapultepec en 12:00-14:00 (almuerzo): flujo normal - 52 km/h
+2026-04-28 14:22:14.905686,Av. Chapultepec,20.6685,-103.2547,50,1,0,12:00-14:00 (almuerzo),Av. Chapultepec en 12:00-14:00 (almuerzo): flujo normal - 50 km/h
+2026-04-26 14:22:14.905704,Av. Chapultepec,20.6685,-103.2547,68,1,0,12:00-14:00 (almuerzo),Av. Chapultepec en 12:00-14:00 (almuerzo): flujo normal - 68 km/h
+2026-04-26 14:22:14.905722,Av. Chapultepec,20.6685,-103.2547,63,1,0,12:00-14:00 (almuerzo),Av. Chapultepec en 12:00-14:00 (almuerzo): flujo normal - 63 km/h
+2026-04-26 14:22:14.905739,Av. Chapultepec,20.6685,-103.2547,55,1,0,12:00-14:00 (almuerzo),Av. Chapultepec en 12:00-14:00 (almuerzo): flujo normal - 55 km/h
+2026-04-29 12:22:14.905779,Av. Chapultepec,20.6685,-103.2547,33,3,1,16:00-18:00 (pico vespertino),Av. Chapultepec en 16:00-18:00 (pico vespertino): tráfico bloqueado - 33 km/h
+2026-04-28 12:22:14.905837,Av. Chapultepec,20.6685,-103.2547,35,3,14,16:00-18:00 (pico vespertino),Av. Chapultepec en 16:00-18:00 (pico vespertino): congestionamiento moderado - 35 km/h
+2026-04-29 12:22:14.905902,Av. Chapultepec,20.6685,-103.2547,15,2,3,16:00-18:00 (pico vespertino),Av. Chapultepec en 16:00-18:00 (pico vespertino): congestionamiento moderado - 15 km/h
+2026-04-28 10:22:14.905971,Av. Chapultepec,20.6685,-103.2547,51,2,13,18:00-20:00 (post-pico),Av. Chapultepec en 18:00-20:00 (post-pico): congestionamiento leve - 51 km/h
+2026-05-01 10:22:14.906072,Av. Chapultepec,20.6685,-103.2547,40,1,0,18:00-20:00 (post-pico),Av. Chapultepec en 18:00-20:00 (post-pico): congestionamiento moderado - 40 km/h
+2026-05-01 10:22:14.906154,Av. Chapultepec,20.6685,-103.2547,39,2,13,18:00-20:00 (post-pico),Av. Chapultepec en 18:00-20:00 (post-pico): congestionamiento leve - 39 km/h
+2026-04-28 10:22:14.906225,Av. Chapultepec,20.6685,-103.2547,37,2,0,18:00-20:00 (post-pico),Av. Chapultepec en 18:00-20:00 (post-pico): congestionamiento leve - 37 km/h
+2026-05-01 10:22:14.906297,Av. Chapultepec,20.6685,-103.2547,37,2,9,18:00-20:00 (post-pico),Av. Chapultepec en 18:00-20:00 (post-pico): congestionamiento moderado - 37 km/h
+2026-04-26 18:22:14.906363,Av. Lopez Mateos,20.6295,-103.4048,36,3,17,6:00-8:00 (pico matutino),Av. Lopez Mateos en 6:00-8:00 (pico matutino): tráfico bloqueado - 36 km/h
+2026-04-30 18:22:14.906409,Av. Lopez Mateos,20.6295,-103.4048,29,3,9,6:00-8:00 (pico matutino),Av. Lopez Mateos en 6:00-8:00 (pico matutino): tráfico bloqueado - 29 km/h
+2026-05-01 18:22:14.906447,Av. Lopez Mateos,20.6295,-103.4048,16,3,8,6:00-8:00 (pico matutino),Av. Lopez Mateos en 6:00-8:00 (pico matutino): congestionamiento moderado - 16 km/h
+2026-04-27 18:22:14.906487,Av. Lopez Mateos,20.6295,-103.4048,25,3,9,6:00-8:00 (pico matutino),Av. Lopez Mateos en 6:00-8:00 (pico matutino): tráfico bloqueado - 25 km/h
+2026-04-30 18:22:14.906527,Av. Lopez Mateos,20.6295,-103.4048,37,3,12,6:00-8:00 (pico matutino),Av. Lopez Mateos en 6:00-8:00 (pico matutino): tráfico bloqueado - 37 km/h
+2026-04-27 16:22:14.906568,Av. Lopez Mateos,20.6295,-103.4048,41,1,0,8:00-10:00 (post-pico),Av. Lopez Mateos en 8:00-10:00 (post-pico): congestionamiento moderado - 41 km/h
+2026-04-26 16:22:14.906605,Av. Lopez Mateos,20.6295,-103.4048,54,1,0,8:00-10:00 (post-pico),Av. Lopez Mateos en 8:00-10:00 (post-pico): congestionamiento moderado - 54 km/h
+2026-04-29 16:22:14.906641,Av. Lopez Mateos,20.6295,-103.4048,50,2,14,8:00-10:00 (post-pico),Av. Lopez Mateos en 8:00-10:00 (post-pico): congestionamiento moderado - 50 km/h
+2026-04-25 16:22:14.906682,Av. Lopez Mateos,20.6295,-103.4048,36,2,18,8:00-10:00 (post-pico),Av. Lopez Mateos en 8:00-10:00 (post-pico): congestionamiento moderado - 36 km/h
+2026-04-28 14:22:14.906724,Av. Lopez Mateos,20.6295,-103.4048,66,1,0,12:00-14:00 (almuerzo),Av. Lopez Mateos en 12:00-14:00 (almuerzo): flujo normal - 66 km/h
+2026-04-26 14:22:14.906754,Av. Lopez Mateos,20.6295,-103.4048,59,1,0,12:00-14:00 (almuerzo),Av. Lopez Mateos en 12:00-14:00 (almuerzo): flujo normal - 59 km/h
+2026-04-26 14:22:14.906781,Av. Lopez Mateos,20.6295,-103.4048,64,1,0,12:00-14:00 (almuerzo),Av. Lopez Mateos en 12:00-14:00 (almuerzo): flujo normal - 64 km/h
+2026-04-28 12:22:14.906855,Av. Lopez Mateos,20.6295,-103.4048,19,2,11,16:00-18:00 (pico vespertino),Av. Lopez Mateos en 16:00-18:00 (pico vespertino): congestionamiento moderado - 19 km/h
+2026-04-28 12:22:14.906910,Av. Lopez Mateos,20.6295,-103.4048,26,2,5,16:00-18:00 (pico vespertino),Av. Lopez Mateos en 16:00-18:00 (pico vespertino): tráfico bloqueado - 26 km/h
+2026-04-25 12:22:14.906957,Av. Lopez Mateos,20.6295,-103.4048,27,3,2,16:00-18:00 (pico vespertino),Av. Lopez Mateos en 16:00-18:00 (pico vespertino): congestionamiento severo - 27 km/h
+2026-04-30 12:22:14.907004,Av. Lopez Mateos,20.6295,-103.4048,37,3,9,16:00-18:00 (pico vespertino),Av. Lopez Mateos en 16:00-18:00 (pico vespertino): congestionamiento moderado - 37 km/h
+2026-04-29 12:22:14.907104,Av. Lopez Mateos,20.6295,-103.4048,33,2,4,16:00-18:00 (pico vespertino),Av. Lopez Mateos en 16:00-18:00 (pico vespertino): tráfico bloqueado - 33 km/h
+2026-05-01 10:22:14.907179,Av. Lopez Mateos,20.6295,-103.4048,43,2,0,18:00-20:00 (post-pico),Av. Lopez Mateos en 18:00-20:00 (post-pico): congestionamiento leve - 43 km/h
+2026-04-26 10:22:14.907246,Av. Lopez Mateos,20.6295,-103.4048,49,2,15,18:00-20:00 (post-pico),Av. Lopez Mateos en 18:00-20:00 (post-pico): congestionamiento moderado - 49 km/h
+2026-05-01 10:22:14.907312,Av. Lopez Mateos,20.6295,-103.4048,42,1,0,18:00-20:00 (post-pico),Av. Lopez Mateos en 18:00-20:00 (post-pico): congestionamiento leve - 42 km/h
+2026-04-25 10:22:14.907361,Av. Lopez Mateos,20.6295,-103.4048,50,1,0,18:00-20:00 (post-pico),Av. Lopez Mateos en 18:00-20:00 (post-pico): congestionamiento leve - 50 km/h
+2026-04-29 18:22:14.907422,Av. Mexico,20.7057,-103.354,36,2,11,6:00-8:00 (pico matutino),Av. Mexico en 6:00-8:00 (pico matutino): tráfico bloqueado - 36 km/h
+2026-04-26 18:22:14.907478,Av. Mexico,20.7057,-103.354,30,2,13,6:00-8:00 (pico matutino),Av. Mexico en 6:00-8:00 (pico matutino): congestionamiento moderado - 30 km/h
+2026-04-26 18:22:14.907543,Av. Mexico,20.7057,-103.354,19,2,13,6:00-8:00 (pico matutino),Av. Mexico en 6:00-8:00 (pico matutino): congestionamiento moderado - 19 km/h
+2026-04-30 16:22:14.907611,Av. Mexico,20.7057,-103.354,54,1,0,8:00-10:00 (post-pico),Av. Mexico en 8:00-10:00 (post-pico): congestionamiento moderado - 54 km/h
+2026-04-28 16:22:14.907656,Av. Mexico,20.7057,-103.354,50,1,0,8:00-10:00 (post-pico),Av. Mexico en 8:00-10:00 (post-pico): congestionamiento leve - 50 km/h
+2026-04-27 16:22:14.907721,Av. Mexico,20.7057,-103.354,35,2,9,8:00-10:00 (post-pico),Av. Mexico en 8:00-10:00 (post-pico): congestionamiento moderado - 35 km/h
+2026-04-28 16:22:14.907789,Av. Mexico,20.7057,-103.354,39,2,9,8:00-10:00 (post-pico),Av. Mexico en 8:00-10:00 (post-pico): congestionamiento moderado - 39 km/h
+2026-04-30 14:22:14.907835,Av. Mexico,20.7057,-103.354,68,1,0,12:00-14:00 (almuerzo),Av. Mexico en 12:00-14:00 (almuerzo): flujo normal - 68 km/h
+2026-04-27 14:22:14.907857,Av. Mexico,20.7057,-103.354,50,1,0,12:00-14:00 (almuerzo),Av. Mexico en 12:00-14:00 (almuerzo): flujo normal - 50 km/h
+2026-04-28 14:22:14.907874,Av. Mexico,20.7057,-103.354,62,1,0,12:00-14:00 (almuerzo),Av. Mexico en 12:00-14:00 (almuerzo): flujo normal - 62 km/h
+2026-04-25 14:22:14.907890,Av. Mexico,20.7057,-103.354,65,1,0,12:00-14:00 (almuerzo),Av. Mexico en 12:00-14:00 (almuerzo): flujo normal - 65 km/h
+2026-04-28 12:22:14.907935,Av. Mexico,20.7057,-103.354,31,3,11,16:00-18:00 (pico vespertino),Av. Mexico en 16:00-18:00 (pico vespertino): tráfico bloqueado - 31 km/h
+2026-05-01 12:22:14.907993,Av. Mexico,20.7057,-103.354,32,2,18,16:00-18:00 (pico vespertino),Av. Mexico en 16:00-18:00 (pico vespertino): congestionamiento moderado - 32 km/h
+2026-05-01 12:22:14.908055,Av. Mexico,20.7057,-103.354,25,2,0,16:00-18:00 (pico vespertino),Av. Mexico en 16:00-18:00 (pico vespertino): tráfico bloqueado - 25 km/h
+2026-04-28 12:22:14.908118,Av. Mexico,20.7057,-103.354,22,3,12,16:00-18:00 (pico vespertino),Av. Mexico en 16:00-18:00 (pico vespertino): tráfico bloqueado - 22 km/h
+2026-04-29 10:22:14.908185,Av. Mexico,20.7057,-103.354,48,2,17,18:00-20:00 (post-pico),Av. Mexico en 18:00-20:00 (post-pico): congestionamiento leve - 48 km/h
+2026-04-30 10:22:14.908248,Av. Mexico,20.7057,-103.354,37,1,0,18:00-20:00 (post-pico),Av. Mexico en 18:00-20:00 (post-pico): congestionamiento leve - 37 km/h
+2026-04-30 10:22:14.908307,Av. Mexico,20.7057,-103.354,42,1,0,18:00-20:00 (post-pico),Av. Mexico en 18:00-20:00 (post-pico): congestionamiento moderado - 42 km/h
+2026-04-25 10:22:14.908364,Av. Mexico,20.7057,-103.354,36,1,0,18:00-20:00 (post-pico),Av. Mexico en 18:00-20:00 (post-pico): congestionamiento leve - 36 km/h
+2026-04-30 10:22:14.908420,Av. Mexico,20.7057,-103.354,38,2,12,18:00-20:00 (post-pico),Av. Mexico en 18:00-20:00 (post-pico): congestionamiento leve - 38 km/h
+2026-04-27 18:22:14.908487,Anillo Periférico,20.65,-103.3,38,3,3,6:00-8:00 (pico matutino),Anillo Periférico en 6:00-8:00 (pico matutino): congestionamiento moderado - 38 km/h
+2026-04-29 18:22:14.908550,Anillo Periférico,20.65,-103.3,24,2,16,6:00-8:00 (pico matutino),Anillo Periférico en 6:00-8:00 (pico matutino): congestionamiento moderado - 24 km/h
+2026-05-01 18:22:14.908616,Anillo Periférico,20.65,-103.3,17,3,6,6:00-8:00 (pico matutino),Anillo Periférico en 6:00-8:00 (pico matutino): congestionamiento severo - 17 km/h
+2026-04-27 18:22:14.908669,Anillo Periférico,20.65,-103.3,38,2,11,6:00-8:00 (pico matutino),Anillo Periférico en 6:00-8:00 (pico matutino): congestionamiento severo - 38 km/h
+2026-04-25 18:22:14.908718,Anillo Periférico,20.65,-103.3,31,2,2,6:00-8:00 (pico matutino),Anillo Periférico en 6:00-8:00 (pico matutino): congestionamiento moderado - 31 km/h
+2026-04-28 16:22:14.908767,Anillo Periférico,20.65,-103.3,51,1,0,8:00-10:00 (post-pico),Anillo Periférico en 8:00-10:00 (post-pico): congestionamiento moderado - 51 km/h
+2026-04-27 16:22:14.908811,Anillo Periférico,20.65,-103.3,50,1,0,8:00-10:00 (post-pico),Anillo Periférico en 8:00-10:00 (post-pico): congestionamiento moderado - 50 km/h
+2026-04-28 16:22:14.908854,Anillo Periférico,20.65,-103.3,53,1,0,8:00-10:00 (post-pico),Anillo Periférico en 8:00-10:00 (post-pico): congestionamiento moderado - 53 km/h
+2026-04-29 14:22:14.908889,Anillo Periférico,20.65,-103.3,58,1,0,12:00-14:00 (almuerzo),Anillo Periférico en 12:00-14:00 (almuerzo): flujo normal - 58 km/h
+2026-05-01 14:22:14.908919,Anillo Periférico,20.65,-103.3,61,1,0,12:00-14:00 (almuerzo),Anillo Periférico en 12:00-14:00 (almuerzo): flujo normal - 61 km/h
+2026-04-28 14:22:14.908946,Anillo Periférico,20.65,-103.3,56,1,0,12:00-14:00 (almuerzo),Anillo Periférico en 12:00-14:00 (almuerzo): flujo normal - 56 km/h
+2026-04-25 12:22:14.909008,Anillo Periférico,20.65,-103.3,34,2,15,16:00-18:00 (pico vespertino),Anillo Periférico en 16:00-18:00 (pico vespertino): congestionamiento severo - 34 km/h
+2026-04-28 12:22:14.909076,Anillo Periférico,20.65,-103.3,35,2,19,16:00-18:00 (pico vespertino),Anillo Periférico en 16:00-18:00 (pico vespertino): tráfico bloqueado - 35 km/h
+2026-04-25 12:22:14.909142,Anillo Periférico,20.65,-103.3,35,3,15,16:00-18:00 (pico vespertino),Anillo Periférico en 16:00-18:00 (pico vespertino): congestionamiento moderado - 35 km/h
+2026-04-27 12:22:14.909185,Anillo Periférico,20.65,-103.3,39,2,9,16:00-18:00 (pico vespertino),Anillo Periférico en 16:00-18:00 (pico vespertino): congestionamiento moderado - 39 km/h
+2026-04-30 10:22:14.909228,Anillo Periférico,20.65,-103.3,41,2,4,18:00-20:00 (post-pico),Anillo Periférico en 18:00-20:00 (post-pico): congestionamiento leve - 41 km/h
+2026-04-29 10:22:14.909265,Anillo Periférico,20.65,-103.3,37,1,0,18:00-20:00 (post-pico),Anillo Periférico en 18:00-20:00 (post-pico): congestionamiento leve - 37 km/h
+2026-04-28 10:22:14.909299,Anillo Periférico,20.65,-103.3,45,2,8,18:00-20:00 (post-pico),Anillo Periférico en 18:00-20:00 (post-pico): congestionamiento leve - 45 km/h
+2026-05-01 10:22:14.909338,Anillo Periférico,20.65,-103.3,44,2,5,18:00-20:00 (post-pico),Anillo Periférico en 18:00-20:00 (post-pico): congestionamiento moderado - 44 km/h
+2026-05-01 18:22:14.909380,Av. Vallarta,20.685,-103.385,28,2,17,6:00-8:00 (pico matutino),Av. Vallarta en 6:00-8:00 (pico matutino): congestionamiento severo - 28 km/h
+2026-04-27 18:22:14.909417,Av. Vallarta,20.685,-103.385,16,2,5,6:00-8:00 (pico matutino),Av. Vallarta en 6:00-8:00 (pico matutino): congestionamiento moderado - 16 km/h
+2026-05-01 18:22:14.909454,Av. Vallarta,20.685,-103.385,33,3,19,6:00-8:00 (pico matutino),Av. Vallarta en 6:00-8:00 (pico matutino): congestionamiento moderado - 33 km/h
+2026-05-01 18:22:14.909489,Av. Vallarta,20.685,-103.385,31,2,12,6:00-8:00 (pico matutino),Av. Vallarta en 6:00-8:00 (pico matutino): tráfico bloqueado - 31 km/h
+2026-04-28 18:22:14.909525,Av. Vallarta,20.685,-103.385,18,3,18,6:00-8:00 (pico matutino),Av. Vallarta en 6:00-8:00 (pico matutino): congestionamiento severo - 18 km/h
+2026-04-29 16:22:14.909564,Av. Vallarta,20.685,-103.385,46,2,9,8:00-10:00 (post-pico),Av. Vallarta en 8:00-10:00 (post-pico): congestionamiento leve - 46 km/h
+2026-04-29 16:22:14.909600,Av. Vallarta,20.685,-103.385,53,1,0,8:00-10:00 (post-pico),Av. Vallarta en 8:00-10:00 (post-pico): congestionamiento moderado - 53 km/h
+2026-04-28 16:22:14.909634,Av. Vallarta,20.685,-103.385,47,1,0,8:00-10:00 (post-pico),Av. Vallarta en 8:00-10:00 (post-pico): congestionamiento moderado - 47 km/h
+2026-04-28 14:22:14.909656,Av. Vallarta,20.685,-103.385,69,1,0,12:00-14:00 (almuerzo),Av. Vallarta en 12:00-14:00 (almuerzo): flujo normal - 69 km/h
+2026-04-27 14:22:14.909673,Av. Vallarta,20.685,-103.385,57,1,0,12:00-14:00 (almuerzo),Av. Vallarta en 12:00-14:00 (almuerzo): flujo normal - 57 km/h
+2026-04-25 14:22:14.909694,Av. Vallarta,20.685,-103.385,58,1,0,12:00-14:00 (almuerzo),Av. Vallarta en 12:00-14:00 (almuerzo): flujo normal - 58 km/h
+2026-04-29 14:22:14.909725,Av. Vallarta,20.685,-103.385,50,1,0,12:00-14:00 (almuerzo),Av. Vallarta en 12:00-14:00 (almuerzo): flujo normal - 50 km/h
+2026-05-01 12:22:14.909763,Av. Vallarta,20.685,-103.385,39,2,0,16:00-18:00 (pico vespertino),Av. Vallarta en 16:00-18:00 (pico vespertino): congestionamiento moderado - 39 km/h
+2026-04-30 12:22:14.909800,Av. Vallarta,20.685,-103.385,20,2,11,16:00-18:00 (pico vespertino),Av. Vallarta en 16:00-18:00 (pico vespertino): congestionamiento severo - 20 km/h
+2026-04-27 12:22:14.909836,Av. Vallarta,20.685,-103.385,27,3,14,16:00-18:00 (pico vespertino),Av. Vallarta en 16:00-18:00 (pico vespertino): congestionamiento moderado - 27 km/h
+2026-04-29 10:22:14.909876,Av. Vallarta,20.685,-103.385,50,2,4,18:00-20:00 (post-pico),Av. Vallarta en 18:00-20:00 (post-pico): congestionamiento leve - 50 km/h
+2026-04-28 10:22:14.909912,Av. Vallarta,20.685,-103.385,38,1,0,18:00-20:00 (post-pico),Av. Vallarta en 18:00-20:00 (post-pico): congestionamiento leve - 38 km/h
+2026-05-01 10:22:14.909945,Av. Vallarta,20.685,-103.385,52,1,0,18:00-20:00 (post-pico),Av. Vallarta en 18:00-20:00 (post-pico): congestionamiento leve - 52 km/h
+2026-04-27 18:22:14.909982,Calz. Independencia,20.66,-103.28,29,2,2,6:00-8:00 (pico matutino),Calz. Independencia en 6:00-8:00 (pico matutino): congestionamiento moderado - 29 km/h
+2026-04-29 18:22:14.910019,Calz. Independencia,20.66,-103.28,30,2,11,6:00-8:00 (pico matutino),Calz. Independencia en 6:00-8:00 (pico matutino): congestionamiento moderado - 30 km/h
+2026-04-28 18:22:14.910054,Calz. Independencia,20.66,-103.28,24,3,7,6:00-8:00 (pico matutino),Calz. Independencia en 6:00-8:00 (pico matutino): congestionamiento severo - 24 km/h
+2026-04-28 18:22:14.910090,Calz. Independencia,20.66,-103.28,18,3,17,6:00-8:00 (pico matutino),Calz. Independencia en 6:00-8:00 (pico matutino): congestionamiento severo - 18 km/h
+2026-04-29 16:22:14.910129,Calz. Independencia,20.66,-103.28,43,2,16,8:00-10:00 (post-pico),Calz. Independencia en 8:00-10:00 (post-pico): congestionamiento moderado - 43 km/h
+2026-04-28 16:22:14.910164,Calz. Independencia,20.66,-103.28,43,1,0,8:00-10:00 (post-pico),Calz. Independencia en 8:00-10:00 (post-pico): congestionamiento leve - 43 km/h
+2026-04-27 16:22:14.910198,Calz. Independencia,20.66,-103.28,47,2,12,8:00-10:00 (post-pico),Calz. Independencia en 8:00-10:00 (post-pico): congestionamiento moderado - 47 km/h
+2026-04-27 14:22:14.910222,Calz. Independencia,20.66,-103.28,52,1,0,12:00-14:00 (almuerzo),Calz. Independencia en 12:00-14:00 (almuerzo): flujo normal - 52 km/h
+2026-04-30 14:22:14.910239,Calz. Independencia,20.66,-103.28,55,1,0,12:00-14:00 (almuerzo),Calz. Independencia en 12:00-14:00 (almuerzo): flujo normal - 55 km/h
+2026-04-27 14:22:14.910255,Calz. Independencia,20.66,-103.28,68,1,0,12:00-14:00 (almuerzo),Calz. Independencia en 12:00-14:00 (almuerzo): flujo normal - 68 km/h
+2026-05-01 14:22:14.910272,Calz. Independencia,20.66,-103.28,64,1,0,12:00-14:00 (almuerzo),Calz. Independencia en 12:00-14:00 (almuerzo): flujo normal - 64 km/h
+2026-04-30 12:22:14.910305,Calz. Independencia,20.66,-103.28,24,3,12,16:00-18:00 (pico vespertino),Calz. Independencia en 16:00-18:00 (pico vespertino): congestionamiento severo - 24 km/h
+2026-04-26 12:22:14.910341,Calz. Independencia,20.66,-103.28,19,2,0,16:00-18:00 (pico vespertino),Calz. Independencia en 16:00-18:00 (pico vespertino): congestionamiento moderado - 19 km/h
+2026-05-01 12:22:14.910378,Calz. Independencia,20.66,-103.28,32,3,10,16:00-18:00 (pico vespertino),Calz. Independencia en 16:00-18:00 (pico vespertino): tráfico bloqueado - 32 km/h
+2026-05-01 12:22:14.910414,Calz. Independencia,20.66,-103.28,35,3,16,16:00-18:00 (pico vespertino),Calz. Independencia en 16:00-18:00 (pico vespertino): tráfico bloqueado - 35 km/h
+2026-04-29 10:22:14.910453,Calz. Independencia,20.66,-103.28,35,2,0,18:00-20:00 (post-pico),Calz. Independencia en 18:00-20:00 (post-pico): congestionamiento leve - 35 km/h
+2026-04-28 10:22:14.910489,Calz. Independencia,20.66,-103.28,50,1,0,18:00-20:00 (post-pico),Calz. Independencia en 18:00-20:00 (post-pico): congestionamiento moderado - 50 km/h
+2026-04-27 10:22:14.910522,Calz. Independencia,20.66,-103.28,51,1,0,18:00-20:00 (post-pico),Calz. Independencia en 18:00-20:00 (post-pico): congestionamiento leve - 51 km/h
