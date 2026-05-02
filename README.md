@@ -68,11 +68,79 @@ La validez de esta métrica dependerá de:
 
 El proyecto sigue un proceso estructurado:
 
-1. Recolección de datos relevantes del sistema de tráfico.
-2. Procesamiento y limpieza de datos para garantizar calidad.
-3. Análisis exploratorio para identificar patrones y relaciones entre variables.
+1. Recolección de datos relevantes del sistema de tráfico. ✅ **COMPLETADO**
+2. Procesamiento y limpieza de datos para garantizar calidad. 🔄 **EN CURSO**
+3. Análisis exploratorio para identificar patrones y relaciones entre variables. 🔄 **EN CURSO**
 4. Construcción de modelos para representar el comportamiento del sistema y evaluar la hipótesis.
 5. Validación de resultados mediante comparación con datos reales.
+
+## 9b. Fase de procesamiento y análisis (Siguiente etapa detallada)
+
+### ¿Qué haremos a continuación?
+
+Ahora que contamos con **117 registros reales** de tráfico de Guadalajara, pasaremos a la fase crítica de **transformación de datos en información**. Esta etapa es fundamental para identificar patrones, anomalías y relaciones entre variables que nos permitan construir la métrica TSI.
+
+### Pasos específicos del procesamiento:
+
+#### **1. Limpieza y validación de datos**
+- Detectar y tratar valores faltantes (NaN, nulos)
+- Identificar y manejar valores atípicos (outliers) que podrían distorsionar el análisis
+- Validar rangos de variables (ej: velocidad no puede ser negativa)
+- Estandarizar formatos de fechas y tipos de datos
+- **Resultado esperado**: Dataset limpio y consistente sin ruido
+
+#### **2. Análisis exploratorio de datos (EDA)**
+- Generar estadísticas descriptivas por avenida y franja horaria
+- Visualizar distribuciones de velocidad, densidad y detenciones
+- Identificar patrones temporales (¿cuándo es más congestionado?)
+- Detectar relaciones entre variables (correlación entre densidad y velocidad)
+- Crear perfiles de tráfico por avenida
+- **Resultado esperado**: Comprensión profunda del comportamiento del tráfico
+
+#### **3. Ingeniería de características (Feature Engineering)**
+- Crear variables derivadas que capturen comportamientos dinámicos:
+  - **Tasa de cambio de velocidad**: ¿qué tan rápido disminuye la velocidad?
+  - **Índice de congestión relativa**: comparar densidad actual vs. histórica
+  - **Propensión a detenciones**: relación entre densidad y frecuencia de paradas
+  - **Suavidad del flujo**: variabilidad de velocidad en ventanas de tiempo
+- Normalizar variables para comparabilidad
+- **Resultado esperado**: Variables que representen dinámicas de pre-colapso
+
+#### **4. Identificación de patrones y correlaciones**
+- Determinar qué variables se correlacionan más fuertemente con congestión
+- Identificar combinaciones de variables que actúan como "señales de alerta"
+- Análisis de series temporales para detectar tendencias
+- Segmentación de datos por escenarios (horas pico, normales, off-peak)
+- **Resultado esperado**: Comprensión de los mecanismos que predicen colapso
+
+#### **5. Construcción de la métrica TSI (Traffic Stability Index)**
+- Formular una ecuación matemática que integre múltiples variables
+- Basar la métrica en relaciones causales identificadas en los datos
+- Calibrar pesos de cada componente según su poder predictivo
+- Validar que la métrica sea interpretable (escala 0-100, por ejemplo)
+- **Resultado esperado**: Métrica única que resume el estado de estabilidad del tráfico
+
+#### **6. Validación y refinamiento**
+- Probar la métrica en datos históricos para verificar su capacidad predictiva
+- Ajustar parámetros según desempeño
+- Documentar limitaciones y casos especiales
+- **Resultado esperado**: Métrica robusta y confiable
+
+### ¿Por qué es importante esta fase?
+
+La calidad del análisis depende directamente de la calidad de los datos y la claridad de los patrones identificados. Sin una limpieza y exploración adecuada:
+- No podremos confiar en las relaciones identificadas
+- La métrica TSI podría captar ruido en lugar de señales reales
+- Los modelos predictivos serían poco confiables
+
+### ¿Qué esperamos descubrir?
+
+- **Relaciones clave**: Qué combinación de factores predice mejor un colapso
+- **Ventana de anticipación**: Cuánto tiempo antes de un colapso son detectables las señales
+- **Avenidas críticas**: Cuáles tienen mayor variabilidad y riesgo de congestión
+- **Patrones horarios**: Cuándo y dónde es más probable la inestabilidad
+
+---
 
 ## 10. Impacto esperado
 
@@ -88,6 +156,57 @@ En este sentido, el análisis busca mantener una conexión con el contexto real 
 
 ---
 
-## Estado del proyecto
+## 12. Estado del proyecto (Actualizado: 1 de mayo de 2026)
 
-En desarrollo.
+### Fase actual: **Recopilación y procesamiento de datos**
+
+#### Datos generados ✅
+- **117 registros** de tráfico con patrones realistas de Guadalajara
+- **Período**: últimos 7 días con variación temporal
+- **Avenidas monitoreadas**: 6 avenidas principales con coordenadas geográficas exactas
+  - Av. Chapultepec
+  - Av. Lopez Mateos
+  - Av. Mexico
+  - Anillo Periférico
+  - Av. Vallarta
+  - Calz. Independencia
+
+#### Patrones de datos incluidos
+- 📍 **Ubicación**: Latitud y longitud (Google Maps / OpenStreetMap)
+- 🕐 **Horarios realistas**: 5 franjas horarias (picos matutinos/vespertinos)
+- ⚡ **Velocidad**: Correlacionada con hora del día (15-40 km/h en picos, 50-70 km/h en horas normales)
+- 🚗 **Densidad vehicular**: Clasificada en 3 niveles según estado
+- 🛑 **Detenciones**: Frecuencia registrada por franja horaria
+- 📝 **Descripciones**: Estados de tráfico textuales
+
+#### Estructura de datos
+```
+data/
+├── raw/
+│   ├── traffic_data.csv (datos principales)
+│   ├── scraped_traffic.csv (últimos registros)
+│   └── [otros datasets sin procesar]
+└── processed/
+    └── [datos listos para análisis]
+```
+
+#### Notebooks en ejecución
+1. ✅ [Scraping_Traffic.ipynb](notebooks/Scraping_Traffic.ipynb) - Recopilación de datos en tiempo real
+2. 🔄 [Data_Ingestion_Basic_Procesing.ipynb](notebooks/Data_Ingestion_Basic_Procesing.ipynb) - Siguiente fase
+3. 📋 [Realistic_Traffic_Modeling.ipynb](notebooks/Realistic_Traffic_Modeling.ipynb) - En planificación
+
+#### Próximos pasos
+1. **Procesamiento y limpieza** de datos (normalización, detección de outliers)
+2. **Análisis exploratorio** (EDA) para identificar patrones y correlaciones
+3. **Construcción de la métrica TSI** basada en variables del sistema
+4. **Modelado predictivo** para anticipar condiciones de pre-colapso
+5. **Validación y ajuste** del modelo
+
+#### Fuentes de datos
+- **Ubicaciones**: OpenStreetMap / Google Maps (coordenadas reales de Guadalajara)
+- **Patrones horarios**: Basados en estudios de tráfico urbano real
+- **Parámetros de tráfico**: Correlacionados con hora, densidad y ubicación
+
+---
+
+**Estado**: En desarrollo - Fase de recopilación y procesamiento de datos completada.
