@@ -158,55 +158,103 @@ En este sentido, el análisis busca mantener una conexión con el contexto real 
 
 ## 12. Estado del proyecto (Actualizado: 1 de mayo de 2026)
 
-### Fase actual: **Recopilación y procesamiento de datos**
+### Fase actual: **Procesamiento, limpieza y análisis exploratorio de datos** 🔄
 
-#### Datos generados ✅
+#### ✅ Fase completada: Recopilación
 - **117 registros** de tráfico con patrones realistas de Guadalajara
-- **Período**: últimos 7 días con variación temporal
-- **Avenidas monitoreadas**: 6 avenidas principales con coordenadas geográficas exactas
-  - Av. Chapultepec
-  - Av. Lopez Mateos
-  - Av. Mexico
-  - Anillo Periférico
-  - Av. Vallarta
-  - Calz. Independencia
+- Coordenadas geográficas exactas (Google Maps / OpenStreetMap)
+- 5 franjas horarias con patrones de tráfico realistas
+- Datos listos en: `data/raw/traffic_data.csv`
 
-#### Patrones de datos incluidos
-- 📍 **Ubicación**: Latitud y longitud (Google Maps / OpenStreetMap)
-- 🕐 **Horarios realistas**: 5 franjas horarias (picos matutinos/vespertinos)
-- ⚡ **Velocidad**: Correlacionada con hora del día (15-40 km/h en picos, 50-70 km/h en horas normales)
-- 🚗 **Densidad vehicular**: Clasificada en 3 niveles según estado
-- 🛑 **Detenciones**: Frecuencia registrada por franja horaria
-- 📝 **Descripciones**: Estados de tráfico textuales
+#### 🔄 Fase actual: Procesamiento en 4 notebooks secuenciales
 
-#### Estructura de datos
+##### **Notebook 1: Data_Quality_Assessment.ipynb**
+Diagnóstico inicial de calidad
+- Detectar valores nulos y faltantes
+- Identificar tipos de datos incorrectos
+- Validar rangos de valores
+- Detectar duplicados y outliers
+- **Salida**: Reporte de problemas encontrados
+
+##### **Notebook 2: Data_Cleaning.ipynb**
+Transformación y corrección de datos
+- Conversión de tipos de datos (timestamp → datetime)
+- Imputación de valores nulos (por media de avenida)
+- Remoción de duplicados
+- Tratamiento de outliers (clipping)
+- Validación y corrección de rangos
+- Limpieza de columnas categóricas
+- **Salida**: Dataset limpio en `data/processed/traffic_data_clean.csv`
+
+##### **Notebook 3: Data_Validation.ipynb**
+Verificación de integridad post-limpieza
+- Validar estructura de datos
+- Verificar completitud (0 valores nulos)
+- Confirmar tipos de datos
+- Validar rangos de todas las variables
+- Confirmar ausencia de duplicados
+- Verificar consistencia referencial (avenidas válidas)
+- Integridad temporal
+- **Salida**: Dataset validado y listo para análisis
+
+##### **Notebook 4: Exploratory_Data_Analysis.ipynb** 
+Descubrimiento de patrones e insights
+- Estadísticas descriptivas por avenida
+- Análisis de distribuciones (velocidad, densidad, detenciones)
+- Correlación entre variables (matriz de correlación)
+- Clasificación de estados de tráfico (Flujo Libre → Congestión Severa)
+- Identificación de condiciones de pre-colapso
+- Visualizaciones (boxplots, heatmaps, scatter plots)
+- Avenidas críticas (con mayor congestión)
+- **Salida**: Insights y gráficos para feature engineering
+
+#### 📊 Estructura de procesamiento
 ```
 data/
 ├── raw/
-│   ├── traffic_data.csv (datos principales)
-│   ├── scraped_traffic.csv (últimos registros)
-│   └── [otros datasets sin procesar]
+│   ├── traffic_data.csv (datos originales - 117 registros)
+│   └── scraped_traffic.csv
+│
 └── processed/
-    └── [datos listos para análisis]
+    ├── traffic_data_clean.csv (datos limpios)
+    ├── traffic_data_with_classifications.csv (con estados)
+    ├── estadisticas_por_avenida.csv (análisis)
+    └── [visualizaciones EDA]
 ```
 
-#### Notebooks en ejecución
-1. ✅ [Scraping_Traffic.ipynb](notebooks/Scraping_Traffic.ipynb) - Recopilación de datos en tiempo real
-2. 🔄 [Data_Ingestion_Basic_Procesing.ipynb](notebooks/Data_Ingestion_Basic_Procesing.ipynb) - Siguiente fase
-3. 📋 [Realistic_Traffic_Modeling.ipynb](notebooks/Realistic_Traffic_Modeling.ipynb) - En planificación
+#### 🎯 Flujo de ejecución recomendado
+```
+1. Ejecutar: 01_Data_Quality_Assessment.ipynb
+   ↓ Identifica problemas
+   
+2. Ejecutar: 02_Data_Cleaning.ipynb
+   ↓ Corrige problemas
+   
+3. Ejecutar: 03_Data_Validation.ipynb
+   ↓ Verifica correcciones
+   
+4. Ejecutar: 04_Exploratory_Data_Analysis.ipynb
+   ↓ Descubre patrones
+   
+5. Feature Engineering (próximo)
+   ↓ Crea variables predictivas
+   
+6. Construcción de métrica TSI
+   ↓ Implementa modelo
+   
+7. Validación y predicción
+```
 
-#### Próximos pasos
-1. **Procesamiento y limpieza** de datos (normalización, detección de outliers)
-2. **Análisis exploratorio** (EDA) para identificar patrones y correlaciones
-3. **Construcción de la métrica TSI** basada en variables del sistema
-4. **Modelado predictivo** para anticipar condiciones de pre-colapso
-5. **Validación y ajuste** del modelo
+#### 📈 Insights esperados del EDA
+- Correlación entre velocidad y densidad
+- Identificación de avenidas críticas
+- Patrones horarios de congestión
+- Combinaciones de variables que predicen pre-colapso
+- Distribución de estados de tráfico
+- Ventana de tiempo anticipada para alertas
 
-#### Fuentes de datos
-- **Ubicaciones**: OpenStreetMap / Google Maps (coordenadas reales de Guadalajara)
-- **Patrones horarios**: Basados en estudios de tráfico urbano real
-- **Parámetros de tráfico**: Correlacionados con hora, densidad y ubicación
-
----
-
-**Estado**: En desarrollo - Fase de recopilación y procesamiento de datos completada.
+#### 🔄 Próximos pasos después de EDA
+1. **Feature Engineering** - Crear variables dinámicas
+2. **Construcción de TSI** - Métrica de estabilidad
+3. **Validación** - Pruebas de predictibilidad
+4. **Implementación** - Sistema en tiempo real
