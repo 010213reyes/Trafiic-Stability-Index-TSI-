@@ -156,105 +156,59 @@ En este sentido, el análisis busca mantener una conexión con el contexto real 
 
 ---
 
-## 12. Estado del proyecto (Actualizado: 1 de mayo de 2026)
+## 12. Estado del proyecto (Actualizado: 6 de mayo de 2026)
 
-### Fase actual: **Procesamiento, limpieza y análisis exploratorio de datos** 🔄
+### Fase actual: **Procesamiento, EDA robusto y modelado por algoritmo** 🔄
 
-#### ✅ Fase completada: Recopilación
-- **117 registros** de tráfico con patrones realistas de Guadalajara
-- Coordenadas geográficas exactas (Google Maps / OpenStreetMap)
-- 5 franjas horarias con patrones de tráfico realistas
-- Datos listos en: `data/raw/traffic_data.csv`
+#### ✅ Avances confirmados
+- Estructura de datos migrada a esquema por etapas (`00_raw`, `01_processed`, `02_clean`, `03_algorithm_output`).
+- EDA principal estabilizado en `04_Exploratory_Data_Analysis_TSI.ipynb`.
+- Notebook independiente de Isolation Forest creado y validado: `05_Isolation_Forest_TSI.ipynb`.
+- Dataset filtrado generado por Isolation Forest en `data/02_clean/filtered_isolation_forest.csv`.
+- Visualizaciones de algoritmo exportadas en `data/03_algorithm_output/`.
 
-#### 🔄 Fase actual: Procesamiento en 4 notebooks secuenciales
-
-##### **Notebook 1: Data_Quality_Assessment.ipynb**
-Diagnóstico inicial de calidad
-- Detectar valores nulos y faltantes
-- Identificar tipos de datos incorrectos
-- Validar rangos de valores
-- Detectar duplicados y outliers
-- **Salida**: Reporte de problemas encontrados
-
-##### **Notebook 2: Data_Cleaning.ipynb**
-Transformación y corrección de datos
-- Conversión de tipos de datos (timestamp → datetime)
-- Imputación de valores nulos (por media de avenida)
-- Remoción de duplicados
-- Tratamiento de outliers (clipping)
-- Validación y corrección de rangos
-- Limpieza de columnas categóricas
-- **Salida**: Dataset limpio en `data/processed/traffic_data_clean.csv`
-
-##### **Notebook 3: Data_Validation.ipynb**
-Verificación de integridad post-limpieza
-- Validar estructura de datos
-- Verificar completitud (0 valores nulos)
-- Confirmar tipos de datos
-- Validar rangos de todas las variables
-- Confirmar ausencia de duplicados
-- Verificar consistencia referencial (avenidas válidas)
-- Integridad temporal
-- **Salida**: Dataset validado y listo para análisis
-
-##### **Notebook 4: Exploratory_Data_Analysis.ipynb** 
-Descubrimiento de patrones e insights
-- Estadísticas descriptivas por avenida
-- Análisis de distribuciones (velocidad, densidad, detenciones)
-- Correlación entre variables (matriz de correlación)
-- Clasificación de estados de tráfico (Flujo Libre → Congestión Severa)
-- Identificación de condiciones de pre-colapso
-- Visualizaciones (boxplots, heatmaps, scatter plots)
-- Avenidas críticas (con mayor congestión)
-- **Salida**: Insights y gráficos para feature engineering
-
-#### 📊 Estructura de procesamiento
+#### 📁 Estructura actual de datos (resumen)
 ```
 data/
-├── raw/
-│   ├── traffic_data.csv (datos originales - 117 registros)
-│   └── scraped_traffic.csv
-│
-└── processed/
-    ├── traffic_data_clean.csv (datos limpios)
-    ├── traffic_data_with_classifications.csv (con estados)
-    ├── estadisticas_por_avenida.csv (análisis)
-    └── [visualizaciones EDA]
+├── 00_raw/
+│   ├── traffic_data.csv
+│   ├── scraped_traffic.csv
+│   ├── synthetic_traffic.csv
+│   ├── crowdsourcing_raw.csv
+│   └── crowdsourcing_aggregated.csv
+├── 01_processed/
+├── 02_clean/
+│   ├── traffic_data.csv
+│   ├── traffic_enriched.csv
+│   ├── historical_consolidated.csv
+│   ├── filtered_isolation_forest.csv
+│   ├── filtered_local_outlier_factor.csv
+│   └── filtered_dbscan.csv
+└── 03_algorithm_output/
 ```
 
-#### 🎯 Flujo de ejecución recomendado
+#### 📓 Estado de notebooks en procesamiento/modelado
+- `00_Algorithm_Evaluation_Pipeline.ipynb`: evaluación comparativa de enfoques.
+- `01_Data_Quality_Assessment.ipynb`: diagnóstico de calidad.
+- `02_Data_Cleaning.ipynb`: limpieza y normalización.
+- `03_Data_Validation.ipynb`: validación posterior a limpieza.
+- `04_Exploratory_Data_Analysis_TSI.ipynb`: EDA consolidado para interpretación del sistema.
+- `05_Isolation_Forest_TSI.ipynb`: flujo completo por algoritmo (diagnóstico, entrenamiento, filtrado y salidas).
+
+#### 🎯 Flujo recomendado de ejecución
 ```
-1. Ejecutar: 01_Data_Quality_Assessment.ipynb
-   ↓ Identifica problemas
-   
-2. Ejecutar: 02_Data_Cleaning.ipynb
-   ↓ Corrige problemas
-   
-3. Ejecutar: 03_Data_Validation.ipynb
-   ↓ Verifica correcciones
-   
-4. Ejecutar: 04_Exploratory_Data_Analysis.ipynb
-   ↓ Descubre patrones
-   
-5. Feature Engineering (próximo)
-   ↓ Crea variables predictivas
-   
-6. Construcción de métrica TSI
-   ↓ Implementa modelo
-   
-7. Validación y predicción
+1. 01_Data_Quality_Assessment.ipynb
+2. 02_Data_Cleaning.ipynb
+3. 03_Data_Validation.ipynb
+4. 04_Exploratory_Data_Analysis_TSI.ipynb
+5. 05_Isolation_Forest_TSI.ipynb
+6. (Siguiente) Notebook independiente de LOF
+7. (Siguiente) Notebook independiente de DBSCAN
+8. Comparación final para integrar la métrica TSI
 ```
 
-#### 📈 Insights esperados del EDA
-- Correlación entre velocidad y densidad
-- Identificación de avenidas críticas
-- Patrones horarios de congestión
-- Combinaciones de variables que predicen pre-colapso
-- Distribución de estados de tráfico
-- Ventana de tiempo anticipada para alertas
-
-#### 🔄 Próximos pasos después de EDA
-1. **Feature Engineering** - Crear variables dinámicas
-2. **Construcción de TSI** - Métrica de estabilidad
-3. **Validación** - Pruebas de predictibilidad
-4. **Implementación** - Sistema en tiempo real
+#### 🔄 Próximos pasos inmediatos
+1. Implementar `06_Local_Outlier_Factor_TSI.ipynb` con la misma plantilla metodológica.
+2. Implementar notebook de DBSCAN en formato independiente.
+3. Estandarizar métricas de comparación entre algoritmos (retención, sensibilidad a outliers, estabilidad temporal).
+4. Integrar hallazgos en la formulación final de la métrica TSI.
