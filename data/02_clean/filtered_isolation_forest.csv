@@ -18,12 +18,14 @@ timestamp,avenida,velocidad,densidad,detenciones,descripcion,latitud,longitud,ho
 2026-03-20 10:55:33.177410,Lopez Mateos,20.0,3,2.0,,,,
 2026-03-20 10:55:33.192331,Lopez Mateos,15.0,3,2.0,,,,
 2026-05-01 00:57:01.269614,Av. Vallarta,24.0,3,7.0,Av. Vallarta: fuerte congestionamiento - 24 km/h,,,
+2026-04-30 20:09:01.270224,Av. Vallarta,33.0,2,5.0,Av. Vallarta: carga vehicular - 33 km/h,,,
 2026-04-30 22:06:01.270332,Av. Lopez Mateos,39.0,3,1.0,Av. Lopez Mateos: fuerte congestionamiento - 39 km/h,,,
 2026-05-01 14:09:01.270405,Av. Adolfo Lopez Mateos Sur,42.0,1,5.0,Av. Adolfo Lopez Mateos Sur: flujo libre - 42 km/h,,,
 2026-05-01 09:51:01.270482,Av. Adolfo Lopez Mateos Sur,58.0,1,10.0,Av. Adolfo Lopez Mateos Sur: flujo libre - 58 km/h,,,
 2026-05-01 03:24:01.270808,Av. Lopez Mateos,18.0,2,4.0,Av. Lopez Mateos: carga vehicular - 18 km/h,,,
 2026-04-30 18:50:01.270937,Calz. Independencia,44.0,3,0.0,Calz. Independencia: congestionado - 44 km/h,,,
 2026-05-01 05:38:01.271265,Av. Vallarta,33.0,1,8.0,Av. Vallarta: flujo libre - 33 km/h,,,
+2026-05-01 07:34:01.271392,Av. Chapultepec,18.0,3,11.0,Av. Chapultepec: congestionado - 18 km/h,,,
 2026-05-01 14:31:01.271529,Av. Mexico,42.0,3,4.0,Av. Mexico: congestionado - 42 km/h,,,
 2026-05-01 05:22:01.271591,Av. Lopez Mateos,37.0,1,8.0,Av. Lopez Mateos: flujo libre - 37 km/h,,,
 2026-05-01 04:57:01.271653,Av. Lopez Mateos,57.0,1,6.0,Av. Lopez Mateos: flujo libre - 57 km/h,,,
@@ -31,6 +33,7 @@ timestamp,avenida,velocidad,densidad,detenciones,descripcion,latitud,longitud,ho
 2026-05-01 11:49:01.271840,Av. Vallarta,23.0,3,10.0,Av. Vallarta: congestionado - 23 km/h,,,
 2026-05-01 03:58:01.271903,Av. Vallarta,51.0,3,2.0,Av. Vallarta: congestionado - 51 km/h,,,
 2026-05-01 10:17:01.271964,Av. Vallarta,61.0,1,3.0,Av. Vallarta: flujo libre - 61 km/h,,,
+2026-05-01 07:36:01.272151,Av. Lopez Mateos,71.0,1,4.0,Av. Lopez Mateos: flujo libre - 71 km/h,,,
 2026-04-30 21:24:01.272406,Av. Chapultepec,46.0,2,2.0,Av. Chapultepec: carga vehicular - 46 km/h,,,
 2026-04-30 23:25:01.273007,Av. Adolfo Lopez Mateos Sur,48.0,2,2.0,Av. Adolfo Lopez Mateos Sur: carga vehicular - 48 km/h,,,
 2026-05-01 16:29:01.273140,Paseo Montaña,65.0,1,10.0,Paseo Montaña: flujo libre - 65 km/h,,,
@@ -201,6 +204,7 @@ timestamp,avenida,velocidad,densidad,detenciones,descripcion,latitud,longitud,ho
 2026-04-28 18:52:17.462984,Av. Mexico,39.0,1,11.0,Av. Mexico en 6:00-8:00 (pico matutino): congestionamiento severo - 39 km/h,20.7057,-103.354,6:00-8:00 (pico matutino)
 2026-04-26 18:52:17.463044,Av. Mexico,26.0,1,10.0,Av. Mexico en 6:00-8:00 (pico matutino): congestionamiento severo - 26 km/h,20.7057,-103.354,6:00-8:00 (pico matutino)
 2026-04-25 18:52:17.463111,Av. Mexico,37.0,1,0.0,Av. Mexico en 6:00-8:00 (pico matutino): congestionamiento moderado - 37 km/h,20.7057,-103.354,6:00-8:00 (pico matutino)
+2026-04-26 18:52:17.463174,Av. Mexico,15.0,1,19.0,Av. Mexico en 6:00-8:00 (pico matutino): tráfico bloqueado - 15 km/h,20.7057,-103.354,6:00-8:00 (pico matutino)
 2026-04-26 16:52:17.463237,Av. Mexico,43.0,1,0.0,Av. Mexico en 8:00-10:00 (post-pico): congestionamiento leve - 43 km/h,20.7057,-103.354,8:00-10:00 (post-pico)
 2026-04-26 16:52:17.463291,Av. Mexico,42.0,1,0.0,Av. Mexico en 8:00-10:00 (post-pico): congestionamiento leve - 42 km/h,20.7057,-103.354,8:00-10:00 (post-pico)
 2026-04-30 16:52:17.463343,Av. Mexico,39.0,1,0.0,Av. Mexico en 8:00-10:00 (post-pico): congestionamiento leve - 39 km/h,20.7057,-103.354,8:00-10:00 (post-pico)
@@ -222,6 +226,7 @@ timestamp,avenida,velocidad,densidad,detenciones,descripcion,latitud,longitud,ho
 2026-04-30 18:52:17.464140,Anillo Periférico,15.0,1,7.0,Anillo Periférico en 6:00-8:00 (pico matutino): tráfico bloqueado - 15 km/h,20.65,-103.3,6:00-8:00 (pico matutino)
 2026-05-01 18:52:17.464196,Anillo Periférico,15.0,1,17.0,Anillo Periférico en 6:00-8:00 (pico matutino): congestionamiento moderado - 15 km/h,20.65,-103.3,6:00-8:00 (pico matutino)
 2026-04-30 18:52:17.464257,Anillo Periférico,37.0,1,2.0,Anillo Periférico en 6:00-8:00 (pico matutino): congestionamiento severo - 37 km/h,20.65,-103.3,6:00-8:00 (pico matutino)
+2026-05-01 16:52:17.464331,Anillo Periférico,50.0,1,19.0,Anillo Periférico en 8:00-10:00 (post-pico): congestionamiento moderado - 50 km/h,20.65,-103.3,8:00-10:00 (post-pico)
 2026-04-26 16:52:17.464389,Anillo Periférico,51.0,1,11.0,Anillo Periférico en 8:00-10:00 (post-pico): congestionamiento leve - 51 km/h,20.65,-103.3,8:00-10:00 (post-pico)
 2026-04-29 16:52:17.464443,Anillo Periférico,39.0,1,0.0,Anillo Periférico en 8:00-10:00 (post-pico): congestionamiento moderado - 39 km/h,20.65,-103.3,8:00-10:00 (post-pico)
 2026-04-29 16:52:17.464494,Anillo Periférico,43.0,1,0.0,Anillo Periférico en 8:00-10:00 (post-pico): congestionamiento leve - 43 km/h,20.65,-103.3,8:00-10:00 (post-pico)
@@ -278,3 +283,4 @@ timestamp,avenida,velocidad,densidad,detenciones,descripcion,latitud,longitud,ho
 2026-04-30 10:52:17.467148,Calz. Independencia,54.0,1,0.0,Calz. Independencia en 18:00-20:00 (post-pico): congestionamiento moderado - 54 km/h,20.66,-103.28,18:00-20:00 (post-pico)
 2026-05-01 10:52:17.467200,Calz. Independencia,53.0,1,4.0,Calz. Independencia en 18:00-20:00 (post-pico): congestionamiento moderado - 53 km/h,20.66,-103.28,18:00-20:00 (post-pico)
 2026-04-25 10:52:17.467259,Calz. Independencia,47.0,1,1.0,Calz. Independencia en 18:00-20:00 (post-pico): congestionamiento moderado - 47 km/h,20.66,-103.28,18:00-20:00 (post-pico)
+2026-04-29 10:52:17.467314,Calz. Independencia,51.0,1,19.0,Calz. Independencia en 18:00-20:00 (post-pico): congestionamiento moderado - 51 km/h,20.66,-103.28,18:00-20:00 (post-pico)
