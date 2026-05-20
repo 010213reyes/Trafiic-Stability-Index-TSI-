@@ -158,7 +158,7 @@ En este sentido, el análisis busca mantener una conexión con el contexto real 
 
 ## 12. Estado del proyecto (Actualizado: 6 de mayo de 2026)
 
-### Fase actual: **Procesamiento, EDA robusto y modelado por algoritmo** 🔄
+### Fase actual: **Comparación de resultados, cierre de TSI y visualización ejecutiva** 🔄
 
 #### ✅ Avances confirmados
 - Estructura de datos migrada a esquema por etapas (`00_raw`, `01_processed`, `02_clean`, `03_algorithm_output`).
@@ -201,23 +201,23 @@ data/
 - `06_Local_Outlier_Factor_TSI.ipynb`: flujo completo por algoritmo (diagnóstico, entrenamiento, filtrado y salidas).
 - `07_DBSCAN_TSI.ipynb`: flujo completo por algoritmo (diagnóstico, búsqueda de parámetros, filtrado y salidas).
 
-#### 🎯 Flujo recomendado de ejecución
+#### 🎯 Flujo recomendado de consulta
 ```
 1. 01_Data_Quality_Assessment.ipynb
 2. 02_Data_Cleaning.ipynb
 3. 03_Data_Validation.ipynb
 4. 04_Exploratory_Data_Analysis_TSI.ipynb
 5. 05_Isolation_Forest_TSI.ipynb
-6. (Siguiente) Notebook independiente de LOF
-7. (Siguiente) Notebook independiente de DBSCAN
-8. Comparación final para integrar la métrica TSI
+6. 06_Local_Outlier_Factor_TSI.ipynb
+7. 07_DBSCAN_TSI.ipynb
+8. 08_Algorithm_Comparison_and_TSI.ipynb
+9. streamlit_dashboard/app.py
 ```
 
 #### 🔄 Próximos pasos inmediatos
-1. Estandarizar métricas de comparación entre algoritmos (retención, sensibilidad a outliers, estabilidad temporal).
-2. Comparar Isolation Forest, LOF y DBSCAN sobre la misma base de métricas y cobertura.
-3. Integrar hallazgos en la formulación final de la métrica TSI.
-4. Construir la capa de visualización ejecutiva en `streamlit_dashboard/` con solo los resultados que aportan al cierre.
+1. Afinar el dashboard ejecutivo para lectura final.
+2. Revisar el texto de conclusiones y narrativa de entrega.
+3. Preparar una versión resumida para presentación o reporte.
 
 #### 🖥️ Capa de visualización
 - `streamlit_dashboard/README.md`: guía de la interfaz ejecutiva y fuentes de datos que consumirá.
@@ -225,35 +225,21 @@ data/
 - `streamlit_dashboard/`: carpeta separada para dashboards y pantallas de decisión.
 
 ---
+## 13. Artefactos y puntos de consulta
 
-## 13. Cierre científico del proyecto
+### Resultados principales
+- [notebooks/02_Data_Processing/08_Algorithm_Comparison_and_TSI.ipynb](notebooks/02_Data_Processing/08_Algorithm_Comparison_and_TSI.ipynb): comparación homogénea de algoritmos y cierre de TSI.
+- [streamlit_dashboard/app.py](streamlit_dashboard/app.py): panel ejecutivo con la narrativa final del proyecto.
+- [streamlit_dashboard/README.md](streamlit_dashboard/README.md): guía de la capa de visualización.
 
-### ¿Cumple como proyecto de data science serio y completo?
-Sí, en términos de flujo de investigación aplicada, el proyecto ya cubre la cadena completa:
+### Datos de salida relevantes
+- `data/02_clean/filtered_isolation_forest.csv`
+- `data/02_clean/filtered_local_outlier_factor.csv`
+- `data/02_clean/filtered_dbscan.csv`
+- `data/03_algorithm_output/`
 
-1. Planteamiento del problema y hipótesis.
-2. Recolección y organización de datos.
-3. Limpieza, validación y EDA.
-4. Construcción y comparación de algoritmos.
-5. Definición de una métrica propia, TSI.
-6. Interpretación de hallazgos y cierre ejecutivo.
-
-### ¿Qué se descubrió?
-- Isolation Forest funciona como filtro de depuración fuerte.
-- LOF aporta validación local y sensibilidad a vecindades.
-- DBSCAN aporta la señal estructural más útil porque separa regímenes densos con ruido moderado.
-- La fórmula propuesta del TSI se alinea fuertemente con la versión actual y mantiene una correlación alta.
-
-### ¿Se puede prever el tráfico?
-Sí, pero con una precisión honesta: el proyecto no "detiene" el tráfico ni predice el futuro exacto, sino que **anticipa condiciones de riesgo** y **detecta estados de pre-colapso**. Eso permite actuar antes de que la congestión se vuelva crítica.
-
-### ¿Qué predice el modelo?
-El sistema estima la probabilidad de entrar en una zona de inestabilidad o pre-colapso a partir de variables operativas del tráfico. La predicción es de tipo anticipatorio, no determinista.
-
-### Límites del enfoque
-- El resultado depende de la calidad y cobertura de la fuente seleccionada.
-- La generalización a otras ciudades o periodos requiere validación adicional.
-- El índice TSI es interpretable y útil para decisión, pero sigue siendo una métrica construida por diseño, no una verdad absoluta del sistema.
-
-### Lectura final
-El proyecto ya puede presentarse como un trabajo completo de ciencia de datos aplicada porque no se limita a entrenar algoritmos: formula una hipótesis, la contrasta, define una métrica, compara enfoques y cierra con una interpretación útil para decisión.
+### Ruta de consulta recomendada
+1. Revisión de datos base en `data/02_clean/traffic_enriched.csv`.
+2. Lectura de comparación en `08_Algorithm_Comparison_and_TSI.ipynb`.
+3. Consulta de salidas visuales en `data/03_algorithm_output/`.
+4. Navegación ejecutiva en `streamlit_dashboard/app.py`.
