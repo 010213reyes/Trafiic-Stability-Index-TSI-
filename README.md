@@ -223,3 +223,37 @@ data/
 - `streamlit_dashboard/README.md`: guía de la interfaz ejecutiva y fuentes de datos que consumirá.
 - `streamlit_dashboard/app.py`: punto de entrada del dashboard ejecutivo.
 - `streamlit_dashboard/`: carpeta separada para dashboards y pantallas de decisión.
+
+---
+
+## 13. Cierre científico del proyecto
+
+### ¿Cumple como proyecto de data science serio y completo?
+Sí, en términos de flujo de investigación aplicada, el proyecto ya cubre la cadena completa:
+
+1. Planteamiento del problema y hipótesis.
+2. Recolección y organización de datos.
+3. Limpieza, validación y EDA.
+4. Construcción y comparación de algoritmos.
+5. Definición de una métrica propia, TSI.
+6. Interpretación de hallazgos y cierre ejecutivo.
+
+### ¿Qué se descubrió?
+- Isolation Forest funciona como filtro de depuración fuerte.
+- LOF aporta validación local y sensibilidad a vecindades.
+- DBSCAN aporta la señal estructural más útil porque separa regímenes densos con ruido moderado.
+- La fórmula propuesta del TSI se alinea fuertemente con la versión actual y mantiene una correlación alta.
+
+### ¿Se puede prever el tráfico?
+Sí, pero con una precisión honesta: el proyecto no "detiene" el tráfico ni predice el futuro exacto, sino que **anticipa condiciones de riesgo** y **detecta estados de pre-colapso**. Eso permite actuar antes de que la congestión se vuelva crítica.
+
+### ¿Qué predice el modelo?
+El sistema estima la probabilidad de entrar en una zona de inestabilidad o pre-colapso a partir de variables operativas del tráfico. La predicción es de tipo anticipatorio, no determinista.
+
+### Límites del enfoque
+- El resultado depende de la calidad y cobertura de la fuente seleccionada.
+- La generalización a otras ciudades o periodos requiere validación adicional.
+- El índice TSI es interpretable y útil para decisión, pero sigue siendo una métrica construida por diseño, no una verdad absoluta del sistema.
+
+### Lectura final
+El proyecto ya puede presentarse como un trabajo completo de ciencia de datos aplicada porque no se limita a entrenar algoritmos: formula una hipótesis, la contrasta, define una métrica, compara enfoques y cierra con una interpretación útil para decisión.

@@ -69,4 +69,11 @@ El dashboard debe mostrar solo lo que ayuda a decidir. Si una grafica no cambia 
 
 ## Estado
 
-Esta carpeta es la capa de presentacion del proyecto. El proximo paso es construir `app.py` y las paginas de Streamlit a partir de los artefactos ya generados por los notebooks.
+Esta carpeta es la capa de presentacion del proyecto. La app ya consume los artefactos generados por los notebooks y sirve para contar la historia final del proyecto sin ruido intermedio.
+
+## Lectura final que debe comunicar
+
+- El proyecto si cumple como flujo completo de data science aplicada.
+- La investigacion esta cerrada con una hipotesis, una metrica propia y una comparacion entre algoritmos.
+- La señal principal queda en DBSCAN como validacion estructural.
+- El dashboard no debe mostrar todo; debe mostrar solo lo que sostiene la conclusion.
