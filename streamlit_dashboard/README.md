@@ -22,22 +22,16 @@ Mostrar de forma resumida y accionable los elementos que realmente aportan al ci
 - `data/03_algorithm_output/*` para graficas finales
 - `data/02_clean/traffic_enriched.csv` para el TSI propuesto
 
-## Estructura recomendada
+## Estructura actual
 
 ```text
 streamlit_dashboard/
 ├── README.md
 ├── app.py
-├── pages/
-│   ├── 1_Resumen.py
-│   ├── 2_Comparacion_Algoritmos.py
-│   ├── 3_TSI_Final.py
-│   └── 4_Conclusiones.py
-└── assets/
-    └── [imagenes o recursos estaticos]
+└── [imagenes reutilizadas desde data/03_algorithm_output/]
 ```
 
-## Pantallas sugeridas
+## Pantallas sugeridas dentro de la app
 
 ### 1. Resumen
 
@@ -64,6 +58,10 @@ streamlit_dashboard/
 - que hace Isolation Forest
 - que hace LOF
 - como se interpreta el cierre del proyecto
+
+## Criterio de implementacion
+
+La version actual de `app.py` usa pestañas para mantener el flujo de lectura dentro de un solo dashboard. Si mas adelante se requiere una version mas formal, se puede migrar a `pages/`, pero no es necesario para el cierre actual.
 
 ## Criterio de diseno
 
