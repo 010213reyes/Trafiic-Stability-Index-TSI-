@@ -164,7 +164,11 @@ En este sentido, el análisis busca mantener una conexión con el contexto real 
 - Estructura de datos migrada a esquema por etapas (`00_raw`, `01_processed`, `02_clean`, `03_algorithm_output`).
 - EDA principal estabilizado en `04_Exploratory_Data_Analysis_TSI.ipynb`.
 - Notebook independiente de Isolation Forest creado y validado: `05_Isolation_Forest_TSI.ipynb`.
+- Notebook independiente de Local Outlier Factor creado y validado: `06_Local_Outlier_Factor_TSI.ipynb`.
+- Notebook independiente de DBSCAN creado y validado: `07_DBSCAN_TSI.ipynb`.
 - Dataset filtrado generado por Isolation Forest en `data/02_clean/filtered_isolation_forest.csv`.
+- Dataset filtrado generado por Local Outlier Factor en `data/02_clean/filtered_local_outlier_factor.csv`.
+- Dataset filtrado generado por DBSCAN en `data/02_clean/filtered_dbscan.csv`.
 - Visualizaciones de algoritmo exportadas en `data/03_algorithm_output/`.
 
 #### 📁 Estructura actual de datos (resumen)
@@ -194,6 +198,8 @@ data/
 - `03_Data_Validation.ipynb`: validación posterior a limpieza.
 - `04_Exploratory_Data_Analysis_TSI.ipynb`: EDA consolidado para interpretación del sistema.
 - `05_Isolation_Forest_TSI.ipynb`: flujo completo por algoritmo (diagnóstico, entrenamiento, filtrado y salidas).
+- `06_Local_Outlier_Factor_TSI.ipynb`: flujo completo por algoritmo (diagnóstico, entrenamiento, filtrado y salidas).
+- `07_DBSCAN_TSI.ipynb`: flujo completo por algoritmo (diagnóstico, búsqueda de parámetros, filtrado y salidas).
 
 #### 🎯 Flujo recomendado de ejecución
 ```
@@ -208,7 +214,6 @@ data/
 ```
 
 #### 🔄 Próximos pasos inmediatos
-1. Implementar `06_Local_Outlier_Factor_TSI.ipynb` con la misma plantilla metodológica.
-2. Implementar notebook de DBSCAN en formato independiente.
-3. Estandarizar métricas de comparación entre algoritmos (retención, sensibilidad a outliers, estabilidad temporal).
-4. Integrar hallazgos en la formulación final de la métrica TSI.
+1. Estandarizar métricas de comparación entre algoritmos (retención, sensibilidad a outliers, estabilidad temporal).
+2. Comparar Isolation Forest, LOF y DBSCAN sobre la misma base de métricas y cobertura.
+3. Integrar hallazgos en la formulación final de la métrica TSI.

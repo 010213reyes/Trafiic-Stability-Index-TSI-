@@ -1,0 +1,11 @@
+metric,value
+total_registros,288
+registros_retenidos,262
+ruido_detectado,26
+porcentaje_retenido,90.97
+porcentaje_ruido,9.03
+clusters_detectados,6
+min_samples,9
+eps,0.417083
+quantile_k_distance,0.7
+variables_usadas,"velocidad, densidad, detenciones, speed_congestion, tsi, velocidad_norm, densidad_norm, detenciones_norm"

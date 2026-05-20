@@ -1,0 +1,9 @@
+metric,value
+total_registros,288
+registros_retenidos,265
+anomalias_detectadas,23
+porcentaje_retenido,92.01
+porcentaje_anomalia,7.99
+variables_usadas,"velocidad, densidad, detenciones, speed_congestion, tsi, velocidad_norm, densidad_norm, detenciones_norm"
+n_neighbors,20
+contamination,0.08

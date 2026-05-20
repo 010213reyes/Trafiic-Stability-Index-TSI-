@@ -1,280 +1,266 @@
-timestamp,avenida,velocidad,densidad,detenciones,descripcion,latitud,longitud,horario
-2026-03-17 22:31:30.850956,Lopez Mateos,25.0,3,2.0,,,,
-2026-03-17 22:31:30.859960,Lopez Mateos,20.0,3,2.0,,,,
-2026-03-17 22:31:30.882579,Lopez Mateos,15.0,3,2.0,,,,
-2026-03-17 22:42:42.487827,Lopez Mateos,25.0,3,2.0,,,,
-2026-03-17 22:42:42.493310,Lopez Mateos,20.0,3,2.0,,,,
-2026-03-17 22:42:42.507905,Lopez Mateos,15.0,3,2.0,,,,
-2026-03-17 22:43:08.200488,Lopez Mateos,25.0,3,2.0,,,,
-2026-03-17 22:43:08.205723,Lopez Mateos,20.0,3,2.0,,,,
-2026-03-17 22:43:08.220188,Lopez Mateos,15.0,3,2.0,,,,
-2026-03-17 22:43:09.938734,Lopez Mateos,25.0,3,2.0,,,,
-2026-03-17 22:43:09.944193,Lopez Mateos,20.0,3,2.0,,,,
-2026-03-17 22:43:09.958288,Lopez Mateos,15.0,3,2.0,,,,
-2026-03-17 22:43:12.252931,Lopez Mateos,25.0,3,2.0,,,,
-2026-03-17 22:43:12.258683,Lopez Mateos,20.0,3,2.0,,,,
-2026-03-17 22:43:12.273623,Lopez Mateos,15.0,3,2.0,,,,
-2026-03-20 10:55:33.139701,Lopez Mateos,25.0,3,2.0,,,,
-2026-03-20 10:55:33.177410,Lopez Mateos,20.0,3,2.0,,,,
-2026-03-20 10:55:33.192331,Lopez Mateos,15.0,3,2.0,,,,
-2026-05-01 00:57:01.269614,Av. Vallarta,24.0,3,7.0,Av. Vallarta: fuerte congestionamiento - 24 km/h,,,
-2026-04-30 22:06:01.270332,Av. Lopez Mateos,39.0,3,1.0,Av. Lopez Mateos: fuerte congestionamiento - 39 km/h,,,
-2026-05-01 14:09:01.270405,Av. Adolfo Lopez Mateos Sur,42.0,1,5.0,Av. Adolfo Lopez Mateos Sur: flujo libre - 42 km/h,,,
-2026-05-01 09:51:01.270482,Av. Adolfo Lopez Mateos Sur,58.0,1,10.0,Av. Adolfo Lopez Mateos Sur: flujo libre - 58 km/h,,,
-2026-05-01 02:24:01.270553,Av. Lopez Mateos,69.0,3,13.0,Av. Lopez Mateos: fuerte congestionamiento - 69 km/h,,,
-2026-05-01 04:21:01.270682,Av. Chapultepec,60.0,3,4.0,Av. Chapultepec: congestionado - 60 km/h,,,
-2026-05-01 03:24:01.270808,Av. Lopez Mateos,18.0,2,4.0,Av. Lopez Mateos: carga vehicular - 18 km/h,,,
-2026-05-01 09:53:01.270872,Av. Adolfo Lopez Mateos Sur,69.0,3,11.0,Av. Adolfo Lopez Mateos Sur: fuerte congestionamiento - 69 km/h,,,
-2026-04-30 18:50:01.270937,Calz. Independencia,44.0,3,0.0,Calz. Independencia: congestionado - 44 km/h,,,
-2026-04-30 21:06:01.271138,Anillo Periférico,57.0,3,7.0,Anillo Periférico: congestionado - 57 km/h,,,
-2026-05-01 05:38:01.271265,Av. Vallarta,33.0,1,8.0,Av. Vallarta: flujo libre - 33 km/h,,,
-2026-05-01 17:17:01.271327,Av. Adolfo Lopez Mateos Sur,50.0,3,14.0,Av. Adolfo Lopez Mateos Sur: fuerte congestionamiento - 50 km/h,,,
-2026-05-01 07:34:01.271392,Av. Chapultepec,18.0,3,11.0,Av. Chapultepec: congestionado - 18 km/h,,,
-2026-05-01 11:50:01.271456,Calz. Independencia,20.0,3,0.0,Calz. Independencia: congestionado - 20 km/h,,,
-2026-05-01 14:31:01.271529,Av. Mexico,42.0,3,4.0,Av. Mexico: congestionado - 42 km/h,,,
-2026-05-01 05:22:01.271591,Av. Lopez Mateos,37.0,1,8.0,Av. Lopez Mateos: flujo libre - 37 km/h,,,
-2026-05-01 08:09:01.271715,Av. Mexico,44.0,3,2.0,Av. Mexico: fuerte congestionamiento - 44 km/h,,,
-2026-04-30 21:40:01.271778,Av. Vallarta,12.0,2,4.0,Av. Vallarta: carga vehicular - 12 km/h,,,
-2026-05-01 11:49:01.271840,Av. Vallarta,23.0,3,10.0,Av. Vallarta: congestionado - 23 km/h,,,
-2026-05-01 03:58:01.271903,Av. Vallarta,51.0,3,2.0,Av. Vallarta: congestionado - 51 km/h,,,
-2026-05-01 00:42:01.272026,Av. Vallarta,24.0,3,12.0,Av. Vallarta: congestionado - 24 km/h,,,
-2026-05-01 08:44:01.272089,Paseo Montaña,68.0,3,5.0,Paseo Montaña: fuerte congestionamiento - 68 km/h,,,
-2026-04-30 19:47:01.272213,Av. Adolfo Lopez Mateos Sur,53.0,3,13.0,Av. Adolfo Lopez Mateos Sur: fuerte congestionamiento - 53 km/h,,,
-2026-04-30 21:25:01.272477,Av. Adolfo Lopez Mateos Sur,68.0,3,7.0,Av. Adolfo Lopez Mateos Sur: fuerte congestionamiento - 68 km/h,,,
-2026-05-01 06:12:01.273311,Av. Chapultepec,11.0,3,11.0,Av. Chapultepec: congestionado - 11 km/h,,,
-2026-05-01 13:42:01.273471,Calz. Independencia,26.0,3,5.0,Calz. Independencia: congestionado - 26 km/h,,,
-2026-05-01 05:50:01.273540,Paseo Montaña,79.0,3,10.0,Paseo Montaña: fuerte congestionamiento - 79 km/h,,,
-2026-05-01 15:55:01.273686,Av. Adolfo Lopez Mateos Sur,45.0,3,9.0,Av. Adolfo Lopez Mateos Sur: congestionado - 45 km/h,,,
-2026-05-01 09:11:01.273755,Av. Adolfo Lopez Mateos Sur,61.0,3,0.0,Av. Adolfo Lopez Mateos Sur: fuerte congestionamiento - 61 km/h,,,
-2026-05-01 10:29:01.273828,Av. Lopez Mateos,10.0,3,11.0,Av. Lopez Mateos: fuerte congestionamiento - 10 km/h,,,
-2026-05-01 13:59:01.273894,Av. Lopez Mateos,40.0,3,9.0,Av. Lopez Mateos: congestionado - 40 km/h,,,
-2026-05-01 03:25:01.273964,Av. Adolfo Lopez Mateos Sur,69.0,3,1.0,Av. Adolfo Lopez Mateos Sur: fuerte congestionamiento - 69 km/h,,,
-2026-04-29 18:22:14.905157,Av. Chapultepec,26.0,1,8.0,Av. Chapultepec en 6:00-8:00 (pico matutino): congestionamiento moderado - 26 km/h,20.6685,-103.2547,6:00-8:00 (pico matutino)
-2026-04-29 18:22:14.905278,Av. Chapultepec,23.0,1,19.0,Av. Chapultepec en 6:00-8:00 (pico matutino): tráfico bloqueado - 23 km/h,20.6685,-103.2547,6:00-8:00 (pico matutino)
-2026-04-28 18:22:14.905343,Av. Chapultepec,38.0,1,10.0,Av. Chapultepec en 6:00-8:00 (pico matutino): congestionamiento moderado - 38 km/h,20.6685,-103.2547,6:00-8:00 (pico matutino)
-2026-04-28 18:22:14.905407,Av. Chapultepec,31.0,1,2.0,Av. Chapultepec en 6:00-8:00 (pico matutino): congestionamiento severo - 31 km/h,20.6685,-103.2547,6:00-8:00 (pico matutino)
-2026-04-30 16:22:14.905477,Av. Chapultepec,37.0,1,0.0,Av. Chapultepec en 8:00-10:00 (post-pico): congestionamiento leve - 37 km/h,20.6685,-103.2547,8:00-10:00 (post-pico)
-2026-04-28 16:22:14.905587,Av. Chapultepec,50.0,1,0.0,Av. Chapultepec en 8:00-10:00 (post-pico): congestionamiento leve - 50 km/h,20.6685,-103.2547,8:00-10:00 (post-pico)
-2026-04-26 16:22:14.905634,Av. Chapultepec,35.0,1,15.0,Av. Chapultepec en 8:00-10:00 (post-pico): congestionamiento leve - 35 km/h,20.6685,-103.2547,8:00-10:00 (post-pico)
-2026-05-01 14:22:14.905667,Av. Chapultepec,52.0,1,0.0,Av. Chapultepec en 12:00-14:00 (almuerzo): flujo normal - 52 km/h,20.6685,-103.2547,12:00-14:00 (almuerzo)
-2026-04-28 14:22:14.905686,Av. Chapultepec,50.0,1,0.0,Av. Chapultepec en 12:00-14:00 (almuerzo): flujo normal - 50 km/h,20.6685,-103.2547,12:00-14:00 (almuerzo)
-2026-04-26 14:22:14.905704,Av. Chapultepec,68.0,1,0.0,Av. Chapultepec en 12:00-14:00 (almuerzo): flujo normal - 68 km/h,20.6685,-103.2547,12:00-14:00 (almuerzo)
-2026-04-26 14:22:14.905722,Av. Chapultepec,63.0,1,0.0,Av. Chapultepec en 12:00-14:00 (almuerzo): flujo normal - 63 km/h,20.6685,-103.2547,12:00-14:00 (almuerzo)
-2026-04-26 14:22:14.905739,Av. Chapultepec,55.0,1,0.0,Av. Chapultepec en 12:00-14:00 (almuerzo): flujo normal - 55 km/h,20.6685,-103.2547,12:00-14:00 (almuerzo)
-2026-04-29 12:22:14.905779,Av. Chapultepec,33.0,1,1.0,Av. Chapultepec en 16:00-18:00 (pico vespertino): tráfico bloqueado - 33 km/h,20.6685,-103.2547,16:00-18:00 (pico vespertino)
-2026-04-28 12:22:14.905837,Av. Chapultepec,35.0,1,14.0,Av. Chapultepec en 16:00-18:00 (pico vespertino): congestionamiento moderado - 35 km/h,20.6685,-103.2547,16:00-18:00 (pico vespertino)
-2026-04-29 12:22:14.905902,Av. Chapultepec,15.0,1,3.0,Av. Chapultepec en 16:00-18:00 (pico vespertino): congestionamiento moderado - 15 km/h,20.6685,-103.2547,16:00-18:00 (pico vespertino)
-2026-04-28 10:22:14.905971,Av. Chapultepec,51.0,1,13.0,Av. Chapultepec en 18:00-20:00 (post-pico): congestionamiento leve - 51 km/h,20.6685,-103.2547,18:00-20:00 (post-pico)
-2026-05-01 10:22:14.906072,Av. Chapultepec,40.0,1,0.0,Av. Chapultepec en 18:00-20:00 (post-pico): congestionamiento moderado - 40 km/h,20.6685,-103.2547,18:00-20:00 (post-pico)
-2026-05-01 10:22:14.906154,Av. Chapultepec,39.0,1,13.0,Av. Chapultepec en 18:00-20:00 (post-pico): congestionamiento leve - 39 km/h,20.6685,-103.2547,18:00-20:00 (post-pico)
-2026-04-28 10:22:14.906225,Av. Chapultepec,37.0,1,0.0,Av. Chapultepec en 18:00-20:00 (post-pico): congestionamiento leve - 37 km/h,20.6685,-103.2547,18:00-20:00 (post-pico)
-2026-05-01 10:22:14.906297,Av. Chapultepec,37.0,1,9.0,Av. Chapultepec en 18:00-20:00 (post-pico): congestionamiento moderado - 37 km/h,20.6685,-103.2547,18:00-20:00 (post-pico)
-2026-04-26 18:22:14.906363,Av. Lopez Mateos,36.0,1,17.0,Av. Lopez Mateos en 6:00-8:00 (pico matutino): tráfico bloqueado - 36 km/h,20.6295,-103.4048,6:00-8:00 (pico matutino)
-2026-04-30 18:22:14.906409,Av. Lopez Mateos,29.0,1,9.0,Av. Lopez Mateos en 6:00-8:00 (pico matutino): tráfico bloqueado - 29 km/h,20.6295,-103.4048,6:00-8:00 (pico matutino)
-2026-05-01 18:22:14.906447,Av. Lopez Mateos,16.0,1,8.0,Av. Lopez Mateos en 6:00-8:00 (pico matutino): congestionamiento moderado - 16 km/h,20.6295,-103.4048,6:00-8:00 (pico matutino)
-2026-04-27 18:22:14.906487,Av. Lopez Mateos,25.0,1,9.0,Av. Lopez Mateos en 6:00-8:00 (pico matutino): tráfico bloqueado - 25 km/h,20.6295,-103.4048,6:00-8:00 (pico matutino)
-2026-04-30 18:22:14.906527,Av. Lopez Mateos,37.0,1,12.0,Av. Lopez Mateos en 6:00-8:00 (pico matutino): tráfico bloqueado - 37 km/h,20.6295,-103.4048,6:00-8:00 (pico matutino)
-2026-04-27 16:22:14.906568,Av. Lopez Mateos,41.0,1,0.0,Av. Lopez Mateos en 8:00-10:00 (post-pico): congestionamiento moderado - 41 km/h,20.6295,-103.4048,8:00-10:00 (post-pico)
-2026-04-26 16:22:14.906605,Av. Lopez Mateos,54.0,1,0.0,Av. Lopez Mateos en 8:00-10:00 (post-pico): congestionamiento moderado - 54 km/h,20.6295,-103.4048,8:00-10:00 (post-pico)
-2026-04-29 16:22:14.906641,Av. Lopez Mateos,50.0,1,14.0,Av. Lopez Mateos en 8:00-10:00 (post-pico): congestionamiento moderado - 50 km/h,20.6295,-103.4048,8:00-10:00 (post-pico)
-2026-04-25 16:22:14.906682,Av. Lopez Mateos,36.0,1,18.0,Av. Lopez Mateos en 8:00-10:00 (post-pico): congestionamiento moderado - 36 km/h,20.6295,-103.4048,8:00-10:00 (post-pico)
-2026-04-28 14:22:14.906724,Av. Lopez Mateos,66.0,1,0.0,Av. Lopez Mateos en 12:00-14:00 (almuerzo): flujo normal - 66 km/h,20.6295,-103.4048,12:00-14:00 (almuerzo)
-2026-04-26 14:22:14.906754,Av. Lopez Mateos,59.0,1,0.0,Av. Lopez Mateos en 12:00-14:00 (almuerzo): flujo normal - 59 km/h,20.6295,-103.4048,12:00-14:00 (almuerzo)
-2026-04-26 14:22:14.906781,Av. Lopez Mateos,64.0,1,0.0,Av. Lopez Mateos en 12:00-14:00 (almuerzo): flujo normal - 64 km/h,20.6295,-103.4048,12:00-14:00 (almuerzo)
-2026-04-28 12:22:14.906855,Av. Lopez Mateos,19.0,1,11.0,Av. Lopez Mateos en 16:00-18:00 (pico vespertino): congestionamiento moderado - 19 km/h,20.6295,-103.4048,16:00-18:00 (pico vespertino)
-2026-04-28 12:22:14.906910,Av. Lopez Mateos,26.0,1,5.0,Av. Lopez Mateos en 16:00-18:00 (pico vespertino): tráfico bloqueado - 26 km/h,20.6295,-103.4048,16:00-18:00 (pico vespertino)
-2026-04-25 12:22:14.906957,Av. Lopez Mateos,27.0,1,2.0,Av. Lopez Mateos en 16:00-18:00 (pico vespertino): congestionamiento severo - 27 km/h,20.6295,-103.4048,16:00-18:00 (pico vespertino)
-2026-04-30 12:22:14.907004,Av. Lopez Mateos,37.0,1,9.0,Av. Lopez Mateos en 16:00-18:00 (pico vespertino): congestionamiento moderado - 37 km/h,20.6295,-103.4048,16:00-18:00 (pico vespertino)
-2026-04-29 12:22:14.907104,Av. Lopez Mateos,33.0,1,4.0,Av. Lopez Mateos en 16:00-18:00 (pico vespertino): tráfico bloqueado - 33 km/h,20.6295,-103.4048,16:00-18:00 (pico vespertino)
-2026-05-01 10:22:14.907179,Av. Lopez Mateos,43.0,1,0.0,Av. Lopez Mateos en 18:00-20:00 (post-pico): congestionamiento leve - 43 km/h,20.6295,-103.4048,18:00-20:00 (post-pico)
-2026-04-26 10:22:14.907246,Av. Lopez Mateos,49.0,1,15.0,Av. Lopez Mateos en 18:00-20:00 (post-pico): congestionamiento moderado - 49 km/h,20.6295,-103.4048,18:00-20:00 (post-pico)
-2026-05-01 10:22:14.907312,Av. Lopez Mateos,42.0,1,0.0,Av. Lopez Mateos en 18:00-20:00 (post-pico): congestionamiento leve - 42 km/h,20.6295,-103.4048,18:00-20:00 (post-pico)
-2026-04-25 10:22:14.907361,Av. Lopez Mateos,50.0,1,0.0,Av. Lopez Mateos en 18:00-20:00 (post-pico): congestionamiento leve - 50 km/h,20.6295,-103.4048,18:00-20:00 (post-pico)
-2026-04-29 18:22:14.907422,Av. Mexico,36.0,1,11.0,Av. Mexico en 6:00-8:00 (pico matutino): tráfico bloqueado - 36 km/h,20.7057,-103.354,6:00-8:00 (pico matutino)
-2026-04-26 18:22:14.907478,Av. Mexico,30.0,1,13.0,Av. Mexico en 6:00-8:00 (pico matutino): congestionamiento moderado - 30 km/h,20.7057,-103.354,6:00-8:00 (pico matutino)
-2026-04-26 18:22:14.907543,Av. Mexico,19.0,1,13.0,Av. Mexico en 6:00-8:00 (pico matutino): congestionamiento moderado - 19 km/h,20.7057,-103.354,6:00-8:00 (pico matutino)
-2026-04-30 16:22:14.907611,Av. Mexico,54.0,1,0.0,Av. Mexico en 8:00-10:00 (post-pico): congestionamiento moderado - 54 km/h,20.7057,-103.354,8:00-10:00 (post-pico)
-2026-04-28 16:22:14.907656,Av. Mexico,50.0,1,0.0,Av. Mexico en 8:00-10:00 (post-pico): congestionamiento leve - 50 km/h,20.7057,-103.354,8:00-10:00 (post-pico)
-2026-04-27 16:22:14.907721,Av. Mexico,35.0,1,9.0,Av. Mexico en 8:00-10:00 (post-pico): congestionamiento moderado - 35 km/h,20.7057,-103.354,8:00-10:00 (post-pico)
-2026-04-28 16:22:14.907789,Av. Mexico,39.0,1,9.0,Av. Mexico en 8:00-10:00 (post-pico): congestionamiento moderado - 39 km/h,20.7057,-103.354,8:00-10:00 (post-pico)
-2026-04-30 14:22:14.907835,Av. Mexico,68.0,1,0.0,Av. Mexico en 12:00-14:00 (almuerzo): flujo normal - 68 km/h,20.7057,-103.354,12:00-14:00 (almuerzo)
-2026-04-27 14:22:14.907857,Av. Mexico,50.0,1,0.0,Av. Mexico en 12:00-14:00 (almuerzo): flujo normal - 50 km/h,20.7057,-103.354,12:00-14:00 (almuerzo)
-2026-04-28 14:22:14.907874,Av. Mexico,62.0,1,0.0,Av. Mexico en 12:00-14:00 (almuerzo): flujo normal - 62 km/h,20.7057,-103.354,12:00-14:00 (almuerzo)
-2026-04-25 14:22:14.907890,Av. Mexico,65.0,1,0.0,Av. Mexico en 12:00-14:00 (almuerzo): flujo normal - 65 km/h,20.7057,-103.354,12:00-14:00 (almuerzo)
-2026-04-28 12:22:14.907935,Av. Mexico,31.0,1,11.0,Av. Mexico en 16:00-18:00 (pico vespertino): tráfico bloqueado - 31 km/h,20.7057,-103.354,16:00-18:00 (pico vespertino)
-2026-05-01 12:22:14.907993,Av. Mexico,32.0,1,18.0,Av. Mexico en 16:00-18:00 (pico vespertino): congestionamiento moderado - 32 km/h,20.7057,-103.354,16:00-18:00 (pico vespertino)
-2026-04-28 12:22:14.908118,Av. Mexico,22.0,1,12.0,Av. Mexico en 16:00-18:00 (pico vespertino): tráfico bloqueado - 22 km/h,20.7057,-103.354,16:00-18:00 (pico vespertino)
-2026-04-29 10:22:14.908185,Av. Mexico,48.0,1,17.0,Av. Mexico en 18:00-20:00 (post-pico): congestionamiento leve - 48 km/h,20.7057,-103.354,18:00-20:00 (post-pico)
-2026-04-30 10:22:14.908248,Av. Mexico,37.0,1,0.0,Av. Mexico en 18:00-20:00 (post-pico): congestionamiento leve - 37 km/h,20.7057,-103.354,18:00-20:00 (post-pico)
-2026-04-30 10:22:14.908307,Av. Mexico,42.0,1,0.0,Av. Mexico en 18:00-20:00 (post-pico): congestionamiento moderado - 42 km/h,20.7057,-103.354,18:00-20:00 (post-pico)
-2026-04-25 10:22:14.908364,Av. Mexico,36.0,1,0.0,Av. Mexico en 18:00-20:00 (post-pico): congestionamiento leve - 36 km/h,20.7057,-103.354,18:00-20:00 (post-pico)
-2026-04-30 10:22:14.908420,Av. Mexico,38.0,1,12.0,Av. Mexico en 18:00-20:00 (post-pico): congestionamiento leve - 38 km/h,20.7057,-103.354,18:00-20:00 (post-pico)
-2026-04-27 18:22:14.908487,Anillo Periférico,38.0,1,3.0,Anillo Periférico en 6:00-8:00 (pico matutino): congestionamiento moderado - 38 km/h,20.65,-103.3,6:00-8:00 (pico matutino)
-2026-04-29 18:22:14.908550,Anillo Periférico,24.0,1,16.0,Anillo Periférico en 6:00-8:00 (pico matutino): congestionamiento moderado - 24 km/h,20.65,-103.3,6:00-8:00 (pico matutino)
-2026-05-01 18:22:14.908616,Anillo Periférico,17.0,1,6.0,Anillo Periférico en 6:00-8:00 (pico matutino): congestionamiento severo - 17 km/h,20.65,-103.3,6:00-8:00 (pico matutino)
-2026-04-27 18:22:14.908669,Anillo Periférico,38.0,1,11.0,Anillo Periférico en 6:00-8:00 (pico matutino): congestionamiento severo - 38 km/h,20.65,-103.3,6:00-8:00 (pico matutino)
-2026-04-25 18:22:14.908718,Anillo Periférico,31.0,1,2.0,Anillo Periférico en 6:00-8:00 (pico matutino): congestionamiento moderado - 31 km/h,20.65,-103.3,6:00-8:00 (pico matutino)
-2026-04-28 16:22:14.908767,Anillo Periférico,51.0,1,0.0,Anillo Periférico en 8:00-10:00 (post-pico): congestionamiento moderado - 51 km/h,20.65,-103.3,8:00-10:00 (post-pico)
-2026-04-27 16:22:14.908811,Anillo Periférico,50.0,1,0.0,Anillo Periférico en 8:00-10:00 (post-pico): congestionamiento moderado - 50 km/h,20.65,-103.3,8:00-10:00 (post-pico)
-2026-04-28 16:22:14.908854,Anillo Periférico,53.0,1,0.0,Anillo Periférico en 8:00-10:00 (post-pico): congestionamiento moderado - 53 km/h,20.65,-103.3,8:00-10:00 (post-pico)
-2026-04-29 14:22:14.908889,Anillo Periférico,58.0,1,0.0,Anillo Periférico en 12:00-14:00 (almuerzo): flujo normal - 58 km/h,20.65,-103.3,12:00-14:00 (almuerzo)
-2026-05-01 14:22:14.908919,Anillo Periférico,61.0,1,0.0,Anillo Periférico en 12:00-14:00 (almuerzo): flujo normal - 61 km/h,20.65,-103.3,12:00-14:00 (almuerzo)
-2026-04-28 14:22:14.908946,Anillo Periférico,56.0,1,0.0,Anillo Periférico en 12:00-14:00 (almuerzo): flujo normal - 56 km/h,20.65,-103.3,12:00-14:00 (almuerzo)
-2026-04-25 12:22:14.909008,Anillo Periférico,34.0,1,15.0,Anillo Periférico en 16:00-18:00 (pico vespertino): congestionamiento severo - 34 km/h,20.65,-103.3,16:00-18:00 (pico vespertino)
-2026-04-28 12:22:14.909076,Anillo Periférico,35.0,1,19.0,Anillo Periférico en 16:00-18:00 (pico vespertino): tráfico bloqueado - 35 km/h,20.65,-103.3,16:00-18:00 (pico vespertino)
-2026-04-25 12:22:14.909142,Anillo Periférico,35.0,1,15.0,Anillo Periférico en 16:00-18:00 (pico vespertino): congestionamiento moderado - 35 km/h,20.65,-103.3,16:00-18:00 (pico vespertino)
-2026-04-27 12:22:14.909185,Anillo Periférico,39.0,1,9.0,Anillo Periférico en 16:00-18:00 (pico vespertino): congestionamiento moderado - 39 km/h,20.65,-103.3,16:00-18:00 (pico vespertino)
-2026-04-30 10:22:14.909228,Anillo Periférico,41.0,1,4.0,Anillo Periférico en 18:00-20:00 (post-pico): congestionamiento leve - 41 km/h,20.65,-103.3,18:00-20:00 (post-pico)
-2026-04-29 10:22:14.909265,Anillo Periférico,37.0,1,0.0,Anillo Periférico en 18:00-20:00 (post-pico): congestionamiento leve - 37 km/h,20.65,-103.3,18:00-20:00 (post-pico)
-2026-04-28 10:22:14.909299,Anillo Periférico,45.0,1,8.0,Anillo Periférico en 18:00-20:00 (post-pico): congestionamiento leve - 45 km/h,20.65,-103.3,18:00-20:00 (post-pico)
-2026-05-01 10:22:14.909338,Anillo Periférico,44.0,1,5.0,Anillo Periférico en 18:00-20:00 (post-pico): congestionamiento moderado - 44 km/h,20.65,-103.3,18:00-20:00 (post-pico)
-2026-05-01 18:22:14.909380,Av. Vallarta,28.0,1,17.0,Av. Vallarta en 6:00-8:00 (pico matutino): congestionamiento severo - 28 km/h,20.685,-103.385,6:00-8:00 (pico matutino)
-2026-04-27 18:22:14.909417,Av. Vallarta,16.0,1,5.0,Av. Vallarta en 6:00-8:00 (pico matutino): congestionamiento moderado - 16 km/h,20.685,-103.385,6:00-8:00 (pico matutino)
-2026-05-01 18:22:14.909454,Av. Vallarta,33.0,1,19.0,Av. Vallarta en 6:00-8:00 (pico matutino): congestionamiento moderado - 33 km/h,20.685,-103.385,6:00-8:00 (pico matutino)
-2026-05-01 18:22:14.909489,Av. Vallarta,31.0,1,12.0,Av. Vallarta en 6:00-8:00 (pico matutino): tráfico bloqueado - 31 km/h,20.685,-103.385,6:00-8:00 (pico matutino)
-2026-04-28 18:22:14.909525,Av. Vallarta,18.0,1,18.0,Av. Vallarta en 6:00-8:00 (pico matutino): congestionamiento severo - 18 km/h,20.685,-103.385,6:00-8:00 (pico matutino)
-2026-04-29 16:22:14.909564,Av. Vallarta,46.0,1,9.0,Av. Vallarta en 8:00-10:00 (post-pico): congestionamiento leve - 46 km/h,20.685,-103.385,8:00-10:00 (post-pico)
-2026-04-29 16:22:14.909600,Av. Vallarta,53.0,1,0.0,Av. Vallarta en 8:00-10:00 (post-pico): congestionamiento moderado - 53 km/h,20.685,-103.385,8:00-10:00 (post-pico)
-2026-04-28 14:22:14.909656,Av. Vallarta,69.0,1,0.0,Av. Vallarta en 12:00-14:00 (almuerzo): flujo normal - 69 km/h,20.685,-103.385,12:00-14:00 (almuerzo)
-2026-04-27 14:22:14.909673,Av. Vallarta,57.0,1,0.0,Av. Vallarta en 12:00-14:00 (almuerzo): flujo normal - 57 km/h,20.685,-103.385,12:00-14:00 (almuerzo)
-2026-04-25 14:22:14.909694,Av. Vallarta,58.0,1,0.0,Av. Vallarta en 12:00-14:00 (almuerzo): flujo normal - 58 km/h,20.685,-103.385,12:00-14:00 (almuerzo)
-2026-04-29 14:22:14.909725,Av. Vallarta,50.0,1,0.0,Av. Vallarta en 12:00-14:00 (almuerzo): flujo normal - 50 km/h,20.685,-103.385,12:00-14:00 (almuerzo)
-2026-05-01 12:22:14.909763,Av. Vallarta,39.0,1,0.0,Av. Vallarta en 16:00-18:00 (pico vespertino): congestionamiento moderado - 39 km/h,20.685,-103.385,16:00-18:00 (pico vespertino)
-2026-04-30 12:22:14.909800,Av. Vallarta,20.0,1,11.0,Av. Vallarta en 16:00-18:00 (pico vespertino): congestionamiento severo - 20 km/h,20.685,-103.385,16:00-18:00 (pico vespertino)
-2026-04-27 12:22:14.909836,Av. Vallarta,27.0,1,14.0,Av. Vallarta en 16:00-18:00 (pico vespertino): congestionamiento moderado - 27 km/h,20.685,-103.385,16:00-18:00 (pico vespertino)
-2026-04-28 10:22:14.909912,Av. Vallarta,38.0,1,0.0,Av. Vallarta en 18:00-20:00 (post-pico): congestionamiento leve - 38 km/h,20.685,-103.385,18:00-20:00 (post-pico)
-2026-05-01 10:22:14.909945,Av. Vallarta,52.0,1,0.0,Av. Vallarta en 18:00-20:00 (post-pico): congestionamiento leve - 52 km/h,20.685,-103.385,18:00-20:00 (post-pico)
-2026-04-27 18:22:14.909982,Calz. Independencia,29.0,1,2.0,Calz. Independencia en 6:00-8:00 (pico matutino): congestionamiento moderado - 29 km/h,20.66,-103.28,6:00-8:00 (pico matutino)
-2026-04-29 18:22:14.910019,Calz. Independencia,30.0,1,11.0,Calz. Independencia en 6:00-8:00 (pico matutino): congestionamiento moderado - 30 km/h,20.66,-103.28,6:00-8:00 (pico matutino)
-2026-04-28 18:22:14.910054,Calz. Independencia,24.0,1,7.0,Calz. Independencia en 6:00-8:00 (pico matutino): congestionamiento severo - 24 km/h,20.66,-103.28,6:00-8:00 (pico matutino)
-2026-04-28 18:22:14.910090,Calz. Independencia,18.0,1,17.0,Calz. Independencia en 6:00-8:00 (pico matutino): congestionamiento severo - 18 km/h,20.66,-103.28,6:00-8:00 (pico matutino)
-2026-04-29 16:22:14.910129,Calz. Independencia,43.0,1,16.0,Calz. Independencia en 8:00-10:00 (post-pico): congestionamiento moderado - 43 km/h,20.66,-103.28,8:00-10:00 (post-pico)
-2026-04-28 16:22:14.910164,Calz. Independencia,43.0,1,0.0,Calz. Independencia en 8:00-10:00 (post-pico): congestionamiento leve - 43 km/h,20.66,-103.28,8:00-10:00 (post-pico)
-2026-04-27 16:22:14.910198,Calz. Independencia,47.0,1,12.0,Calz. Independencia en 8:00-10:00 (post-pico): congestionamiento moderado - 47 km/h,20.66,-103.28,8:00-10:00 (post-pico)
-2026-04-27 14:22:14.910222,Calz. Independencia,52.0,1,0.0,Calz. Independencia en 12:00-14:00 (almuerzo): flujo normal - 52 km/h,20.66,-103.28,12:00-14:00 (almuerzo)
-2026-04-30 14:22:14.910239,Calz. Independencia,55.0,1,0.0,Calz. Independencia en 12:00-14:00 (almuerzo): flujo normal - 55 km/h,20.66,-103.28,12:00-14:00 (almuerzo)
-2026-04-27 14:22:14.910255,Calz. Independencia,68.0,1,0.0,Calz. Independencia en 12:00-14:00 (almuerzo): flujo normal - 68 km/h,20.66,-103.28,12:00-14:00 (almuerzo)
-2026-05-01 14:22:14.910272,Calz. Independencia,64.0,1,0.0,Calz. Independencia en 12:00-14:00 (almuerzo): flujo normal - 64 km/h,20.66,-103.28,12:00-14:00 (almuerzo)
-2026-04-30 12:22:14.910305,Calz. Independencia,24.0,1,12.0,Calz. Independencia en 16:00-18:00 (pico vespertino): congestionamiento severo - 24 km/h,20.66,-103.28,16:00-18:00 (pico vespertino)
-2026-05-01 12:22:14.910378,Calz. Independencia,32.0,1,10.0,Calz. Independencia en 16:00-18:00 (pico vespertino): tráfico bloqueado - 32 km/h,20.66,-103.28,16:00-18:00 (pico vespertino)
-2026-05-01 12:22:14.910414,Calz. Independencia,35.0,1,16.0,Calz. Independencia en 16:00-18:00 (pico vespertino): tráfico bloqueado - 35 km/h,20.66,-103.28,16:00-18:00 (pico vespertino)
-2026-04-29 10:22:14.910453,Calz. Independencia,35.0,1,0.0,Calz. Independencia en 18:00-20:00 (post-pico): congestionamiento leve - 35 km/h,20.66,-103.28,18:00-20:00 (post-pico)
-2026-04-28 10:22:14.910489,Calz. Independencia,50.0,1,0.0,Calz. Independencia en 18:00-20:00 (post-pico): congestionamiento moderado - 50 km/h,20.66,-103.28,18:00-20:00 (post-pico)
-2026-04-27 10:22:14.910522,Calz. Independencia,51.0,1,0.0,Calz. Independencia en 18:00-20:00 (post-pico): congestionamiento leve - 51 km/h,20.66,-103.28,18:00-20:00 (post-pico)
-2026-04-29 18:52:17.460491,Av. Chapultepec,34.0,1,7.0,Av. Chapultepec en 6:00-8:00 (pico matutino): tráfico bloqueado - 34 km/h,20.6685,-103.2547,6:00-8:00 (pico matutino)
-2026-04-29 18:52:17.460737,Av. Chapultepec,35.0,1,10.0,Av. Chapultepec en 6:00-8:00 (pico matutino): congestionamiento severo - 35 km/h,20.6685,-103.2547,6:00-8:00 (pico matutino)
-2026-04-28 18:52:17.460816,Av. Chapultepec,25.0,1,7.0,Av. Chapultepec en 6:00-8:00 (pico matutino): congestionamiento moderado - 25 km/h,20.6685,-103.2547,6:00-8:00 (pico matutino)
-2026-04-27 18:52:17.460877,Av. Chapultepec,38.0,1,1.0,Av. Chapultepec en 6:00-8:00 (pico matutino): congestionamiento severo - 38 km/h,20.6685,-103.2547,6:00-8:00 (pico matutino)
-2026-04-26 18:52:17.460934,Av. Chapultepec,38.0,1,1.0,Av. Chapultepec en 6:00-8:00 (pico matutino): congestionamiento severo - 38 km/h,20.6685,-103.2547,6:00-8:00 (pico matutino)
-2026-04-26 16:52:17.461005,Av. Chapultepec,35.0,1,11.0,Av. Chapultepec en 8:00-10:00 (post-pico): congestionamiento moderado - 35 km/h,20.6685,-103.2547,8:00-10:00 (post-pico)
-2026-04-25 16:52:17.461063,Av. Chapultepec,51.0,1,0.0,Av. Chapultepec en 8:00-10:00 (post-pico): congestionamiento leve - 51 km/h,20.6685,-103.2547,8:00-10:00 (post-pico)
-2026-04-28 16:52:17.461117,Av. Chapultepec,44.0,1,15.0,Av. Chapultepec en 8:00-10:00 (post-pico): congestionamiento moderado - 44 km/h,20.6685,-103.2547,8:00-10:00 (post-pico)
-2026-04-26 14:52:17.461156,Av. Chapultepec,64.0,1,0.0,Av. Chapultepec en 12:00-14:00 (almuerzo): flujo normal - 64 km/h,20.6685,-103.2547,12:00-14:00 (almuerzo)
-2026-04-28 14:52:17.461183,Av. Chapultepec,68.0,1,0.0,Av. Chapultepec en 12:00-14:00 (almuerzo): flujo normal - 68 km/h,20.6685,-103.2547,12:00-14:00 (almuerzo)
-2026-05-01 14:52:17.461209,Av. Chapultepec,69.0,1,0.0,Av. Chapultepec en 12:00-14:00 (almuerzo): flujo normal - 69 km/h,20.6685,-103.2547,12:00-14:00 (almuerzo)
-2026-04-27 14:52:17.461236,Av. Chapultepec,52.0,1,0.0,Av. Chapultepec en 12:00-14:00 (almuerzo): flujo normal - 52 km/h,20.6685,-103.2547,12:00-14:00 (almuerzo)
-2026-04-25 14:52:17.461262,Av. Chapultepec,68.0,1,0.0,Av. Chapultepec en 12:00-14:00 (almuerzo): flujo normal - 68 km/h,20.6685,-103.2547,12:00-14:00 (almuerzo)
-2026-04-28 12:52:17.461322,Av. Chapultepec,23.0,1,13.0,Av. Chapultepec en 16:00-18:00 (pico vespertino): congestionamiento severo - 23 km/h,20.6685,-103.2547,16:00-18:00 (pico vespertino)
-2026-04-30 12:52:17.461389,Av. Chapultepec,32.0,1,1.0,Av. Chapultepec en 16:00-18:00 (pico vespertino): congestionamiento moderado - 32 km/h,20.6685,-103.2547,16:00-18:00 (pico vespertino)
-2026-04-28 12:52:17.461452,Av. Chapultepec,34.0,1,6.0,Av. Chapultepec en 16:00-18:00 (pico vespertino): tráfico bloqueado - 34 km/h,20.6685,-103.2547,16:00-18:00 (pico vespertino)
-2026-04-26 10:52:17.461519,Av. Chapultepec,42.0,1,0.0,Av. Chapultepec en 18:00-20:00 (post-pico): congestionamiento leve - 42 km/h,20.6685,-103.2547,18:00-20:00 (post-pico)
-2026-04-28 10:52:17.461577,Av. Chapultepec,51.0,1,1.0,Av. Chapultepec en 18:00-20:00 (post-pico): congestionamiento moderado - 51 km/h,20.6685,-103.2547,18:00-20:00 (post-pico)
-2026-04-28 10:52:17.461637,Av. Chapultepec,40.0,1,17.0,Av. Chapultepec en 18:00-20:00 (post-pico): congestionamiento moderado - 40 km/h,20.6685,-103.2547,18:00-20:00 (post-pico)
-2026-04-26 18:52:17.461704,Av. Lopez Mateos,26.0,1,3.0,Av. Lopez Mateos en 6:00-8:00 (pico matutino): congestionamiento severo - 26 km/h,20.6295,-103.4048,6:00-8:00 (pico matutino)
-2026-04-26 18:52:17.461775,Av. Lopez Mateos,28.0,1,7.0,Av. Lopez Mateos en 6:00-8:00 (pico matutino): tráfico bloqueado - 28 km/h,20.6295,-103.4048,6:00-8:00 (pico matutino)
-2026-04-30 18:52:17.461838,Av. Lopez Mateos,35.0,1,14.0,Av. Lopez Mateos en 6:00-8:00 (pico matutino): congestionamiento moderado - 35 km/h,20.6295,-103.4048,6:00-8:00 (pico matutino)
-2026-05-01 18:52:17.461901,Av. Lopez Mateos,35.0,1,12.0,Av. Lopez Mateos en 6:00-8:00 (pico matutino): congestionamiento severo - 35 km/h,20.6295,-103.4048,6:00-8:00 (pico matutino)
-2026-05-01 16:52:17.461969,Av. Lopez Mateos,49.0,1,0.0,Av. Lopez Mateos en 8:00-10:00 (post-pico): congestionamiento leve - 49 km/h,20.6295,-103.4048,8:00-10:00 (post-pico)
-2026-05-01 16:52:17.462033,Av. Lopez Mateos,41.0,1,0.0,Av. Lopez Mateos en 8:00-10:00 (post-pico): congestionamiento moderado - 41 km/h,20.6295,-103.4048,8:00-10:00 (post-pico)
-2026-04-25 16:52:17.462093,Av. Lopez Mateos,46.0,1,10.0,Av. Lopez Mateos en 8:00-10:00 (post-pico): congestionamiento moderado - 46 km/h,20.6295,-103.4048,8:00-10:00 (post-pico)
-2026-04-29 14:52:17.462135,Av. Lopez Mateos,66.0,1,0.0,Av. Lopez Mateos en 12:00-14:00 (almuerzo): flujo normal - 66 km/h,20.6295,-103.4048,12:00-14:00 (almuerzo)
-2026-05-01 14:52:17.462169,Av. Lopez Mateos,52.0,1,0.0,Av. Lopez Mateos en 12:00-14:00 (almuerzo): flujo normal - 52 km/h,20.6295,-103.4048,12:00-14:00 (almuerzo)
-2026-04-30 14:52:17.462200,Av. Lopez Mateos,54.0,1,0.0,Av. Lopez Mateos en 12:00-14:00 (almuerzo): flujo normal - 54 km/h,20.6295,-103.4048,12:00-14:00 (almuerzo)
-2026-04-30 14:52:17.462230,Av. Lopez Mateos,56.0,1,0.0,Av. Lopez Mateos en 12:00-14:00 (almuerzo): flujo normal - 56 km/h,20.6295,-103.4048,12:00-14:00 (almuerzo)
-2026-04-28 14:52:17.462257,Av. Lopez Mateos,58.0,1,0.0,Av. Lopez Mateos en 12:00-14:00 (almuerzo): flujo normal - 58 km/h,20.6295,-103.4048,12:00-14:00 (almuerzo)
-2026-05-01 12:52:17.462325,Av. Lopez Mateos,23.0,1,15.0,Av. Lopez Mateos en 16:00-18:00 (pico vespertino): congestionamiento severo - 23 km/h,20.6295,-103.4048,16:00-18:00 (pico vespertino)
-2026-04-27 12:52:17.462395,Av. Lopez Mateos,37.0,1,2.0,Av. Lopez Mateos en 16:00-18:00 (pico vespertino): congestionamiento severo - 37 km/h,20.6295,-103.4048,16:00-18:00 (pico vespertino)
-2026-04-25 12:52:17.462514,Av. Lopez Mateos,15.0,1,13.0,Av. Lopez Mateos en 16:00-18:00 (pico vespertino): congestionamiento moderado - 15 km/h,20.6295,-103.4048,16:00-18:00 (pico vespertino)
-2026-04-30 12:52:17.462569,Av. Lopez Mateos,17.0,1,13.0,Av. Lopez Mateos en 16:00-18:00 (pico vespertino): congestionamiento moderado - 17 km/h,20.6295,-103.4048,16:00-18:00 (pico vespertino)
-2026-04-30 10:52:17.462631,Av. Lopez Mateos,43.0,1,0.0,Av. Lopez Mateos en 18:00-20:00 (post-pico): congestionamiento leve - 43 km/h,20.6295,-103.4048,18:00-20:00 (post-pico)
-2026-04-29 10:52:17.462685,Av. Lopez Mateos,44.0,1,6.0,Av. Lopez Mateos en 18:00-20:00 (post-pico): congestionamiento leve - 44 km/h,20.6295,-103.4048,18:00-20:00 (post-pico)
-2026-04-29 10:52:17.462809,Av. Lopez Mateos,41.0,1,0.0,Av. Lopez Mateos en 18:00-20:00 (post-pico): congestionamiento leve - 41 km/h,20.6295,-103.4048,18:00-20:00 (post-pico)
-2026-04-25 10:52:17.462864,Av. Lopez Mateos,38.0,1,0.0,Av. Lopez Mateos en 18:00-20:00 (post-pico): congestionamiento moderado - 38 km/h,20.6295,-103.4048,18:00-20:00 (post-pico)
-2026-04-30 18:52:17.462926,Av. Mexico,33.0,1,12.0,Av. Mexico en 6:00-8:00 (pico matutino): congestionamiento severo - 33 km/h,20.7057,-103.354,6:00-8:00 (pico matutino)
-2026-04-28 18:52:17.462984,Av. Mexico,39.0,1,11.0,Av. Mexico en 6:00-8:00 (pico matutino): congestionamiento severo - 39 km/h,20.7057,-103.354,6:00-8:00 (pico matutino)
-2026-04-26 18:52:17.463044,Av. Mexico,26.0,1,10.0,Av. Mexico en 6:00-8:00 (pico matutino): congestionamiento severo - 26 km/h,20.7057,-103.354,6:00-8:00 (pico matutino)
-2026-04-25 18:52:17.463111,Av. Mexico,37.0,1,0.0,Av. Mexico en 6:00-8:00 (pico matutino): congestionamiento moderado - 37 km/h,20.7057,-103.354,6:00-8:00 (pico matutino)
-2026-04-26 18:52:17.463174,Av. Mexico,15.0,1,19.0,Av. Mexico en 6:00-8:00 (pico matutino): tráfico bloqueado - 15 km/h,20.7057,-103.354,6:00-8:00 (pico matutino)
-2026-04-26 16:52:17.463237,Av. Mexico,43.0,1,0.0,Av. Mexico en 8:00-10:00 (post-pico): congestionamiento leve - 43 km/h,20.7057,-103.354,8:00-10:00 (post-pico)
-2026-04-26 16:52:17.463291,Av. Mexico,42.0,1,0.0,Av. Mexico en 8:00-10:00 (post-pico): congestionamiento leve - 42 km/h,20.7057,-103.354,8:00-10:00 (post-pico)
-2026-04-30 16:52:17.463343,Av. Mexico,39.0,1,0.0,Av. Mexico en 8:00-10:00 (post-pico): congestionamiento leve - 39 km/h,20.7057,-103.354,8:00-10:00 (post-pico)
-2026-04-28 14:52:17.463381,Av. Mexico,58.0,1,0.0,Av. Mexico en 12:00-14:00 (almuerzo): flujo normal - 58 km/h,20.7057,-103.354,12:00-14:00 (almuerzo)
-2026-04-26 14:52:17.463407,Av. Mexico,66.0,1,0.0,Av. Mexico en 12:00-14:00 (almuerzo): flujo normal - 66 km/h,20.7057,-103.354,12:00-14:00 (almuerzo)
-2026-04-30 14:52:17.463432,Av. Mexico,66.0,1,0.0,Av. Mexico en 12:00-14:00 (almuerzo): flujo normal - 66 km/h,20.7057,-103.354,12:00-14:00 (almuerzo)
-2026-04-28 14:52:17.463460,Av. Mexico,69.0,1,0.0,Av. Mexico en 12:00-14:00 (almuerzo): flujo normal - 69 km/h,20.7057,-103.354,12:00-14:00 (almuerzo)
-2026-04-30 14:52:17.463486,Av. Mexico,56.0,1,0.0,Av. Mexico en 12:00-14:00 (almuerzo): flujo normal - 56 km/h,20.7057,-103.354,12:00-14:00 (almuerzo)
-2026-05-01 12:52:17.463544,Av. Mexico,31.0,1,16.0,Av. Mexico en 16:00-18:00 (pico vespertino): congestionamiento moderado - 31 km/h,20.7057,-103.354,16:00-18:00 (pico vespertino)
-2026-04-25 12:52:17.463602,Av. Mexico,16.0,1,4.0,Av. Mexico en 16:00-18:00 (pico vespertino): congestionamiento severo - 16 km/h,20.7057,-103.354,16:00-18:00 (pico vespertino)
-2026-04-26 12:52:17.463713,Av. Mexico,35.0,1,3.0,Av. Mexico en 16:00-18:00 (pico vespertino): congestionamiento severo - 35 km/h,20.7057,-103.354,16:00-18:00 (pico vespertino)
-2026-05-01 12:52:17.463782,Av. Mexico,37.0,1,5.0,Av. Mexico en 16:00-18:00 (pico vespertino): tráfico bloqueado - 37 km/h,20.7057,-103.354,16:00-18:00 (pico vespertino)
-2026-04-26 10:52:17.463849,Av. Mexico,54.0,1,10.0,Av. Mexico en 18:00-20:00 (post-pico): congestionamiento moderado - 54 km/h,20.7057,-103.354,18:00-20:00 (post-pico)
-2026-04-28 10:52:17.463964,Av. Mexico,50.0,1,0.0,Av. Mexico en 18:00-20:00 (post-pico): congestionamiento leve - 50 km/h,20.7057,-103.354,18:00-20:00 (post-pico)
-2026-04-29 18:52:17.464025,Anillo Periférico,18.0,1,18.0,Anillo Periférico en 6:00-8:00 (pico matutino): congestionamiento severo - 18 km/h,20.65,-103.3,6:00-8:00 (pico matutino)
-2026-04-28 18:52:17.464082,Anillo Periférico,34.0,1,8.0,Anillo Periférico en 6:00-8:00 (pico matutino): tráfico bloqueado - 34 km/h,20.65,-103.3,6:00-8:00 (pico matutino)
-2026-04-30 18:52:17.464140,Anillo Periférico,15.0,1,7.0,Anillo Periférico en 6:00-8:00 (pico matutino): tráfico bloqueado - 15 km/h,20.65,-103.3,6:00-8:00 (pico matutino)
-2026-05-01 18:52:17.464196,Anillo Periférico,15.0,1,17.0,Anillo Periférico en 6:00-8:00 (pico matutino): congestionamiento moderado - 15 km/h,20.65,-103.3,6:00-8:00 (pico matutino)
-2026-04-30 18:52:17.464257,Anillo Periférico,37.0,1,2.0,Anillo Periférico en 6:00-8:00 (pico matutino): congestionamiento severo - 37 km/h,20.65,-103.3,6:00-8:00 (pico matutino)
-2026-05-01 16:52:17.464331,Anillo Periférico,50.0,1,19.0,Anillo Periférico en 8:00-10:00 (post-pico): congestionamiento moderado - 50 km/h,20.65,-103.3,8:00-10:00 (post-pico)
-2026-04-26 16:52:17.464389,Anillo Periférico,51.0,1,11.0,Anillo Periférico en 8:00-10:00 (post-pico): congestionamiento leve - 51 km/h,20.65,-103.3,8:00-10:00 (post-pico)
-2026-04-29 16:52:17.464443,Anillo Periférico,39.0,1,0.0,Anillo Periférico en 8:00-10:00 (post-pico): congestionamiento moderado - 39 km/h,20.65,-103.3,8:00-10:00 (post-pico)
-2026-04-29 16:52:17.464494,Anillo Periférico,43.0,1,0.0,Anillo Periférico en 8:00-10:00 (post-pico): congestionamiento leve - 43 km/h,20.65,-103.3,8:00-10:00 (post-pico)
-2026-04-28 16:52:17.464547,Anillo Periférico,50.0,1,0.0,Anillo Periférico en 8:00-10:00 (post-pico): congestionamiento leve - 50 km/h,20.65,-103.3,8:00-10:00 (post-pico)
-2026-04-28 14:52:17.464599,Anillo Periférico,66.0,1,0.0,Anillo Periférico en 12:00-14:00 (almuerzo): flujo normal - 66 km/h,20.65,-103.3,12:00-14:00 (almuerzo)
-2026-04-28 14:52:17.464630,Anillo Periférico,55.0,1,0.0,Anillo Periférico en 12:00-14:00 (almuerzo): flujo normal - 55 km/h,20.65,-103.3,12:00-14:00 (almuerzo)
-2026-04-26 14:52:17.464658,Anillo Periférico,52.0,1,0.0,Anillo Periférico en 12:00-14:00 (almuerzo): flujo normal - 52 km/h,20.65,-103.3,12:00-14:00 (almuerzo)
-2026-05-01 14:52:17.464684,Anillo Periférico,52.0,1,0.0,Anillo Periférico en 12:00-14:00 (almuerzo): flujo normal - 52 km/h,20.65,-103.3,12:00-14:00 (almuerzo)
-2026-04-26 14:52:17.464709,Anillo Periférico,67.0,1,0.0,Anillo Periférico en 12:00-14:00 (almuerzo): flujo normal - 67 km/h,20.65,-103.3,12:00-14:00 (almuerzo)
-2026-04-27 12:52:17.464776,Anillo Periférico,16.0,1,8.0,Anillo Periférico en 16:00-18:00 (pico vespertino): tráfico bloqueado - 16 km/h,20.65,-103.3,16:00-18:00 (pico vespertino)
-2026-04-26 12:52:17.464842,Anillo Periférico,18.0,1,15.0,Anillo Periférico en 16:00-18:00 (pico vespertino): congestionamiento moderado - 18 km/h,20.65,-103.3,16:00-18:00 (pico vespertino)
-2026-04-29 12:52:17.464901,Anillo Periférico,34.0,1,16.0,Anillo Periférico en 16:00-18:00 (pico vespertino): tráfico bloqueado - 34 km/h,20.65,-103.3,16:00-18:00 (pico vespertino)
-2026-04-29 12:52:17.464962,Anillo Periférico,15.0,1,13.0,Anillo Periférico en 16:00-18:00 (pico vespertino): tráfico bloqueado - 15 km/h,20.65,-103.3,16:00-18:00 (pico vespertino)
-2026-04-29 10:52:17.465036,Anillo Periférico,40.0,1,7.0,Anillo Periférico en 18:00-20:00 (post-pico): congestionamiento leve - 40 km/h,20.65,-103.3,18:00-20:00 (post-pico)
-2026-05-01 10:52:17.465095,Anillo Periférico,36.0,1,0.0,Anillo Periférico en 18:00-20:00 (post-pico): congestionamiento moderado - 36 km/h,20.65,-103.3,18:00-20:00 (post-pico)
-2026-04-27 10:52:17.465148,Anillo Periférico,49.0,1,15.0,Anillo Periférico en 18:00-20:00 (post-pico): congestionamiento leve - 49 km/h,20.65,-103.3,18:00-20:00 (post-pico)
-2026-05-01 10:52:17.465205,Anillo Periférico,53.0,1,16.0,Anillo Periférico en 18:00-20:00 (post-pico): congestionamiento leve - 53 km/h,20.65,-103.3,18:00-20:00 (post-pico)
-2026-04-29 18:52:17.465276,Av. Vallarta,28.0,1,8.0,Av. Vallarta en 6:00-8:00 (pico matutino): congestionamiento severo - 28 km/h,20.685,-103.385,6:00-8:00 (pico matutino)
-2026-05-01 18:52:17.465338,Av. Vallarta,19.0,1,13.0,Av. Vallarta en 6:00-8:00 (pico matutino): congestionamiento moderado - 19 km/h,20.685,-103.385,6:00-8:00 (pico matutino)
-2026-04-28 18:52:17.465397,Av. Vallarta,35.0,1,0.0,Av. Vallarta en 6:00-8:00 (pico matutino): tráfico bloqueado - 35 km/h,20.685,-103.385,6:00-8:00 (pico matutino)
-2026-04-27 18:52:17.465458,Av. Vallarta,34.0,1,0.0,Av. Vallarta en 6:00-8:00 (pico matutino): congestionamiento moderado - 34 km/h,20.685,-103.385,6:00-8:00 (pico matutino)
-2026-04-25 16:52:17.465525,Av. Vallarta,52.0,1,0.0,Av. Vallarta en 8:00-10:00 (post-pico): congestionamiento moderado - 52 km/h,20.685,-103.385,8:00-10:00 (post-pico)
-2026-04-30 16:52:17.465584,Av. Vallarta,37.0,1,14.0,Av. Vallarta en 8:00-10:00 (post-pico): congestionamiento moderado - 37 km/h,20.685,-103.385,8:00-10:00 (post-pico)
-2026-04-30 16:52:17.465649,Av. Vallarta,36.0,1,0.0,Av. Vallarta en 8:00-10:00 (post-pico): congestionamiento leve - 36 km/h,20.685,-103.385,8:00-10:00 (post-pico)
-2026-05-01 16:52:17.465709,Av. Vallarta,36.0,1,8.0,Av. Vallarta en 8:00-10:00 (post-pico): congestionamiento leve - 36 km/h,20.685,-103.385,8:00-10:00 (post-pico)
-2026-04-25 16:52:17.465781,Av. Vallarta,45.0,1,9.0,Av. Vallarta en 8:00-10:00 (post-pico): congestionamiento moderado - 45 km/h,20.685,-103.385,8:00-10:00 (post-pico)
-2026-04-30 14:52:17.465824,Av. Vallarta,52.0,1,0.0,Av. Vallarta en 12:00-14:00 (almuerzo): flujo normal - 52 km/h,20.685,-103.385,12:00-14:00 (almuerzo)
-2026-04-28 14:52:17.465851,Av. Vallarta,62.0,1,0.0,Av. Vallarta en 12:00-14:00 (almuerzo): flujo normal - 62 km/h,20.685,-103.385,12:00-14:00 (almuerzo)
-2026-05-01 14:52:17.465876,Av. Vallarta,56.0,1,0.0,Av. Vallarta en 12:00-14:00 (almuerzo): flujo normal - 56 km/h,20.685,-103.385,12:00-14:00 (almuerzo)
-2026-04-27 14:52:17.465900,Av. Vallarta,53.0,1,0.0,Av. Vallarta en 12:00-14:00 (almuerzo): flujo normal - 53 km/h,20.685,-103.385,12:00-14:00 (almuerzo)
-2026-05-01 14:52:17.465924,Av. Vallarta,69.0,1,0.0,Av. Vallarta en 12:00-14:00 (almuerzo): flujo normal - 69 km/h,20.685,-103.385,12:00-14:00 (almuerzo)
-2026-04-25 12:52:17.465980,Av. Vallarta,30.0,1,14.0,Av. Vallarta en 16:00-18:00 (pico vespertino): tráfico bloqueado - 30 km/h,20.685,-103.385,16:00-18:00 (pico vespertino)
-2026-04-25 12:52:17.466038,Av. Vallarta,16.0,1,18.0,Av. Vallarta en 16:00-18:00 (pico vespertino): tráfico bloqueado - 16 km/h,20.685,-103.385,16:00-18:00 (pico vespertino)
-2026-04-26 12:52:17.466094,Av. Vallarta,39.0,1,16.0,Av. Vallarta en 16:00-18:00 (pico vespertino): tráfico bloqueado - 39 km/h,20.685,-103.385,16:00-18:00 (pico vespertino)
-2026-04-25 12:52:17.466148,Av. Vallarta,34.0,1,10.0,Av. Vallarta en 16:00-18:00 (pico vespertino): congestionamiento severo - 34 km/h,20.685,-103.385,16:00-18:00 (pico vespertino)
-2026-04-28 10:52:17.466211,Av. Vallarta,35.0,1,11.0,Av. Vallarta en 18:00-20:00 (post-pico): congestionamiento leve - 35 km/h,20.685,-103.385,18:00-20:00 (post-pico)
-2026-04-28 10:52:17.466317,Av. Vallarta,40.0,1,0.0,Av. Vallarta en 18:00-20:00 (post-pico): congestionamiento moderado - 40 km/h,20.685,-103.385,18:00-20:00 (post-pico)
-2026-04-28 18:52:17.466375,Calz. Independencia,29.0,1,15.0,Calz. Independencia en 6:00-8:00 (pico matutino): tráfico bloqueado - 29 km/h,20.66,-103.28,6:00-8:00 (pico matutino)
-2026-04-26 18:52:17.466431,Calz. Independencia,27.0,1,18.0,Calz. Independencia en 6:00-8:00 (pico matutino): congestionamiento severo - 27 km/h,20.66,-103.28,6:00-8:00 (pico matutino)
-2026-04-29 18:52:17.466485,Calz. Independencia,31.0,1,4.0,Calz. Independencia en 6:00-8:00 (pico matutino): tráfico bloqueado - 31 km/h,20.66,-103.28,6:00-8:00 (pico matutino)
-2026-04-25 18:52:17.466545,Calz. Independencia,35.0,1,8.0,Calz. Independencia en 6:00-8:00 (pico matutino): tráfico bloqueado - 35 km/h,20.66,-103.28,6:00-8:00 (pico matutino)
-2026-05-01 16:52:17.466606,Calz. Independencia,35.0,1,14.0,Calz. Independencia en 8:00-10:00 (post-pico): congestionamiento moderado - 35 km/h,20.66,-103.28,8:00-10:00 (post-pico)
-2026-04-26 16:52:17.466666,Calz. Independencia,36.0,1,15.0,Calz. Independencia en 8:00-10:00 (post-pico): congestionamiento moderado - 36 km/h,20.66,-103.28,8:00-10:00 (post-pico)
-2026-05-01 16:52:17.466722,Calz. Independencia,42.0,1,0.0,Calz. Independencia en 8:00-10:00 (post-pico): congestionamiento leve - 42 km/h,20.66,-103.28,8:00-10:00 (post-pico)
-2026-04-25 14:52:17.466756,Calz. Independencia,56.0,1,0.0,Calz. Independencia en 12:00-14:00 (almuerzo): flujo normal - 56 km/h,20.66,-103.28,12:00-14:00 (almuerzo)
-2026-04-26 14:52:17.466783,Calz. Independencia,54.0,1,0.0,Calz. Independencia en 12:00-14:00 (almuerzo): flujo normal - 54 km/h,20.66,-103.28,12:00-14:00 (almuerzo)
-2026-04-28 14:52:17.466808,Calz. Independencia,52.0,1,0.0,Calz. Independencia en 12:00-14:00 (almuerzo): flujo normal - 52 km/h,20.66,-103.28,12:00-14:00 (almuerzo)
-2026-04-26 12:52:17.466860,Calz. Independencia,30.0,1,13.0,Calz. Independencia en 16:00-18:00 (pico vespertino): congestionamiento moderado - 30 km/h,20.66,-103.28,16:00-18:00 (pico vespertino)
-2026-04-26 12:52:17.466918,Calz. Independencia,19.0,1,13.0,Calz. Independencia en 16:00-18:00 (pico vespertino): congestionamiento moderado - 19 km/h,20.66,-103.28,16:00-18:00 (pico vespertino)
-2026-04-30 12:52:17.466974,Calz. Independencia,34.0,1,15.0,Calz. Independencia en 16:00-18:00 (pico vespertino): congestionamiento severo - 34 km/h,20.66,-103.28,16:00-18:00 (pico vespertino)
-2026-04-26 12:52:17.467030,Calz. Independencia,35.0,1,4.0,Calz. Independencia en 16:00-18:00 (pico vespertino): congestionamiento moderado - 35 km/h,20.66,-103.28,16:00-18:00 (pico vespertino)
-2026-04-28 10:52:17.467092,Calz. Independencia,44.0,1,1.0,Calz. Independencia en 18:00-20:00 (post-pico): congestionamiento leve - 44 km/h,20.66,-103.28,18:00-20:00 (post-pico)
-2026-04-30 10:52:17.467148,Calz. Independencia,54.0,1,0.0,Calz. Independencia en 18:00-20:00 (post-pico): congestionamiento moderado - 54 km/h,20.66,-103.28,18:00-20:00 (post-pico)
+timestamp,avenida,velocidad,densidad,detenciones,temperatura,viento,hora,dia_semana,velocidad_norm,densidad_norm,detenciones_norm,speed_congestion,tsi,lof_label,lof_score,lof_is_anomaly
+2026-03-20 00:00:00,Simulada_ZMG,56.71,1.32,0,25.1,12.2,0,4,0.7387142857142858,0.16,0.0,0.2612857142857142,0.1323,1,0.9619079704876828,False
+2026-03-20 00:05:00,Simulada_ZMG,56.18,1.07,0,25.1,12.2,0,4,0.7311428571428571,0.035,0.0,0.2688571428571429,0.0713,1,0.9751364019863951,False
+2026-03-20 00:15:00,Simulada_ZMG,53.99,1.21,0,25.1,12.2,0,4,0.6998571428571428,0.1049999999999999,0.0,0.3001428571428571,0.1125,1,0.9630274922547759,False
+2026-03-20 00:25:00,Simulada_ZMG,57.25,1.38,1,25.1,12.2,0,4,0.7464285714285714,0.1899999999999999,0.25,0.2535714285714285,0.2207,1,0.9806746933998784,False
+2026-03-20 00:30:00,Simulada_ZMG,58.4,1.43,1,25.1,12.2,0,4,0.7628571428571428,0.2149999999999999,0.25,0.2371428571428572,0.2299,1,1.0472324997179603,False
+2026-03-20 00:35:00,Simulada_ZMG,49.44,1.31,1,25.1,12.2,0,4,0.6348571428571428,0.155,0.25,0.3651428571428572,0.2255,1,1.0355137381144415,False
+2026-03-20 00:40:00,Simulada_ZMG,49.26,1.0,0,25.1,12.2,0,4,0.6322857142857142,0.0,0.0,0.3677142857142857,0.0735,1,1.01976652086774,False
+2026-03-20 00:45:00,Simulada_ZMG,58.28,1.0,1,25.1,12.2,0,4,0.7611428571428571,0.0,0.25,0.2388571428571428,0.1228,1,1.0155123927454088,False
+2026-03-20 00:50:00,Simulada_ZMG,56.04,1.36,1,25.1,12.2,0,4,0.7291428571428571,0.18,0.25,0.2708571428571429,0.2192,1,0.983799111594496,False
+2026-03-20 00:55:00,Simulada_ZMG,55.41,1.3,0,25.1,12.2,0,4,0.7201428571428571,0.15,0.0,0.2798571428571429,0.131,1,0.9636382744040712,False
+2026-03-20 01:00:00,Simulada_ZMG,57.11,1.0,1,25.1,12.2,1,4,0.7444285714285714,0.0,0.25,0.2555714285714285,0.1261,1,0.9968757094243245,False
+2026-03-20 01:05:00,Simulada_ZMG,57.35,1.18,1,25.1,12.2,1,4,0.7478571428571429,0.0899999999999999,0.25,0.2521428571428571,0.1704,1,0.9607668979323577,False
+2026-03-20 01:10:00,Simulada_ZMG,56.72,1.22,1,25.1,12.2,1,4,0.7388571428571429,0.1099999999999999,0.25,0.2611428571428571,0.1822,1,0.9479596224979125,False
+2026-03-20 01:15:00,Simulada_ZMG,63.91,1.51,0,25.1,12.2,1,4,0.8415714285714285,0.255,0.0,0.1584285714285714,0.1592,1,1.1830837930669365,False
+2026-03-20 01:20:00,Simulada_ZMG,51.23,1.25,0,25.1,12.2,1,4,0.6604285714285714,0.125,0.0,0.3395714285714286,0.1304,1,0.9785818003562341,False
+2026-03-20 01:25:00,Simulada_ZMG,64.87,1.21,1,25.1,12.2,1,4,0.8552857142857143,0.1049999999999999,0.25,0.1447142857142856,0.1564,1,1.2204631456025825,False
+2026-03-20 01:35:00,Simulada_ZMG,65.9,1.23,0,25.1,12.2,1,4,0.8700000000000001,0.1149999999999999,0.0,0.1299999999999999,0.0835,1,1.2238054912342424,False
+2026-03-20 01:40:00,Simulada_ZMG,57.1,1.14,1,25.1,12.2,1,4,0.7442857142857143,0.0699999999999999,0.25,0.2557142857142856,0.1611,1,0.9726733942644872,False
+2026-03-20 01:45:00,Simulada_ZMG,54.38,1.36,1,25.1,12.2,1,4,0.7054285714285715,0.18,0.25,0.2945714285714285,0.2239,1,0.9945300060723434,False
+2026-03-20 01:50:00,Simulada_ZMG,52.96,1.06,1,25.1,12.2,1,4,0.6851428571428572,0.03,0.25,0.3148571428571428,0.153,1,1.0019516277154756,False
+2026-03-20 02:00:00,Simulada_ZMG,52.35,1.09,1,25.1,12.2,2,4,0.6764285714285715,0.045,0.25,0.3235714285714285,0.1622,1,0.996480132817702,False
+2026-03-20 02:05:00,Simulada_ZMG,55.53,1.31,0,25.1,12.2,2,4,0.7218571428571429,0.155,0.0,0.2781428571428571,0.1331,1,0.9634424368501142,False
+2026-03-20 02:10:00,Simulada_ZMG,58.78,1.32,1,25.1,12.2,2,4,0.7682857142857143,0.16,0.25,0.2317142857142856,0.2013,1,0.9768120523731495,False
+2026-03-20 02:15:00,Simulada_ZMG,60.01,1.31,0,25.1,12.2,2,4,0.7858571428571428,0.155,0.0,0.2141428571428572,0.1203,1,1.0456035523200937,False
+2026-03-20 02:30:00,Simulada_ZMG,59.46,1.33,1,25.1,12.2,2,4,0.778,0.165,0.25,0.2219999999999999,0.2019,1,0.9947542006972171,False
+2026-03-20 02:35:00,Simulada_ZMG,49.13,1.41,0,25.1,12.2,2,4,0.6304285714285714,0.2049999999999999,0.0,0.3695714285714285,0.1764,1,1.0643178354158536,False
+2026-03-20 02:40:00,Simulada_ZMG,56.87,1.28,0,25.1,12.2,2,4,0.741,0.14,0.0,0.259,0.1218,1,0.9540734282268829,False
+2026-03-20 02:45:00,Simulada_ZMG,49.96,1.22,1,25.1,12.2,2,4,0.6422857142857143,0.1099999999999999,0.25,0.3577142857142856,0.2015,1,1.0087523096150872,False
+2026-03-20 02:50:00,Simulada_ZMG,54.18,1.23,0,25.1,12.2,2,4,0.7025714285714285,0.1149999999999999,0.0,0.2974285714285715,0.117,1,0.9600651902832222,False
+2026-03-20 02:55:00,Simulada_ZMG,62.37,1.3,0,25.1,12.2,2,4,0.8195714285714285,0.15,0.0,0.1804285714285715,0.1111,1,1.0720776566697325,False
+2026-03-20 03:00:00,Simulada_ZMG,57.81,1.47,1,25.1,12.2,3,4,0.7544285714285714,0.235,0.25,0.2455714285714285,0.2416,1,1.064065947557091,False
+2026-03-20 03:05:00,Simulada_ZMG,47.84,1.42,1,25.1,12.2,3,4,0.6120000000000001,0.2099999999999999,0.25,0.3879999999999999,0.2576,1,1.1499448368207292,False
+2026-03-20 03:10:00,Simulada_ZMG,55.13,1.0,1,25.1,12.2,3,4,0.7161428571428572,0.0,0.25,0.2838571428571428,0.1318,1,1.0017503770935783,False
+2026-03-20 03:15:00,Simulada_ZMG,56.83,1.0,0,25.1,12.2,3,4,0.7404285714285714,0.0,0.0,0.2595714285714285,0.0519,1,1.0043960796511868,False
+2026-03-20 03:20:00,Simulada_ZMG,55.51,1.01,0,25.1,12.2,3,4,0.7215714285714285,0.005,0.0,0.2784285714285714,0.0582,1,0.9892082247993226,False
+2026-03-20 03:25:00,Simulada_ZMG,45.43,1.52,0,25.1,12.2,3,4,0.5775714285714285,0.26,0.0,0.4224285714285715,0.2145,1,1.1653536278040555,False
+2026-03-20 03:30:00,Simulada_ZMG,52.57,1.14,1,25.1,12.2,3,4,0.6795714285714286,0.0699999999999999,0.25,0.3204285714285714,0.1741,1,0.9774416319540757,False
+2026-03-20 03:35:00,Simulada_ZMG,61.96,1.0,1,25.1,12.2,3,4,0.8137142857142857,0.0,0.25,0.1862857142857142,0.1123,1,1.1472278220577263,False
+2026-03-20 03:40:00,Simulada_ZMG,54.72,1.14,1,25.1,12.2,3,4,0.7102857142857143,0.0699999999999999,0.25,0.2897142857142857,0.1679,1,0.9479374002907013,False
+2026-03-20 03:45:00,Simulada_ZMG,45.18,1.05,0,25.1,12.2,3,4,0.574,0.025,0.0,0.426,0.0977,1,1.1290272926062817,False
+2026-03-20 03:50:00,Simulada_ZMG,61.36,1.48,0,25.1,12.2,3,4,0.8051428571428572,0.24,0.0,0.1948571428571428,0.159,1,1.0977158451718025,False
+2026-03-20 04:00:00,Simulada_ZMG,56.99,1.11,1,25.1,12.2,4,4,0.7427142857142858,0.055,0.25,0.2572857142857142,0.154,1,0.9716735893550259,False
+2026-03-20 04:05:00,Simulada_ZMG,51.77,1.06,1,25.1,12.2,4,4,0.6681428571428571,0.03,0.25,0.3318571428571428,0.1564,1,1.032781145738275,False
+2026-03-20 04:10:00,Simulada_ZMG,50.56,1.02,0,25.1,12.2,4,4,0.6508571428571429,0.01,0.0,0.3491428571428571,0.0748,1,0.9872325812053375,False
+2026-03-20 04:15:00,Simulada_ZMG,51.35,1.24,0,25.1,12.2,4,4,0.6621428571428571,0.12,0.0,0.3378571428571428,0.1276,1,0.9770496704552676,False
+2026-03-20 04:20:00,Simulada_ZMG,57.43,1.32,1,25.1,12.2,4,4,0.749,0.16,0.25,0.251,0.2052,1,0.9704081204434152,False
+2026-03-20 04:25:00,Simulada_ZMG,47.23,1.2,1,25.1,12.2,4,4,0.6032857142857142,0.0999999999999999,0.25,0.3967142857142858,0.2043,1,1.090641626121171,False
+2026-03-20 04:30:00,Simulada_ZMG,49.67,1.48,0,25.1,12.2,4,4,0.6381428571428571,0.24,0.0,0.3618571428571429,0.1924,1,1.103961976710503,False
+2026-03-20 04:35:00,Simulada_ZMG,56.56,1.37,1,25.1,12.2,4,4,0.7365714285714287,0.185,0.25,0.2634285714285713,0.2202,1,0.9861402895075152,False
+2026-03-20 04:40:00,Simulada_ZMG,64.21,1.18,0,25.1,12.2,4,4,0.8458571428571428,0.0899999999999999,0.0,0.1541428571428572,0.0758,1,1.1341888259576194,False
+2026-03-20 04:50:00,Simulada_ZMG,53.61,1.09,1,25.1,12.2,4,4,0.6944285714285714,0.045,0.25,0.3055714285714286,0.1586,1,0.9550976055896863,False
+2026-03-20 04:55:00,Simulada_ZMG,60.6,1.2,1,25.1,12.2,4,4,0.7942857142857143,0.0999999999999999,0.25,0.2057142857142857,0.1661,1,1.0007700064183112,False
+2026-03-20 05:00:00,Simulada_ZMG,52.27,1.58,1,25.1,12.2,5,4,0.6752857142857144,0.29,0.25,0.3247142857142856,0.2849,1,1.1865391794976086,False
+2026-03-20 05:05:00,Simulada_ZMG,49.74,1.1,1,25.1,12.2,5,4,0.6391428571428571,0.05,0.25,0.3608571428571429,0.1722,1,1.0477007382859842,False
+2026-03-20 05:10:00,Simulada_ZMG,48.49,1.04,1,25.1,12.2,5,4,0.6212857142857143,0.02,0.25,0.3787142857142856,0.1607,1,1.0869209932232,False
+2026-03-20 05:15:00,Simulada_ZMG,57.41,1.07,0,25.1,12.2,5,4,0.7487142857142857,0.035,0.0,0.2512857142857143,0.0678,1,0.9852209936739789,False
+2026-03-20 05:20:00,Simulada_ZMG,65.31,1.44,0,25.1,12.2,5,4,0.8615714285714287,0.2199999999999999,0.0,0.1384285714285713,0.1377,1,1.2037644374891219,False
+2026-03-20 05:25:00,Simulada_ZMG,53.12,1.07,0,25.1,12.2,5,4,0.6874285714285714,0.035,0.0,0.3125714285714286,0.08,1,0.9747573300118726,False
+2026-03-20 05:30:00,Simulada_ZMG,55.92,1.35,1,25.1,12.2,5,4,0.7274285714285714,0.175,0.25,0.2725714285714286,0.217,1,0.9801989588449486,False
+2026-03-20 05:35:00,Simulada_ZMG,62.52,1.2,1,25.1,12.2,5,4,0.8217142857142857,0.0999999999999999,0.25,0.1782857142857142,0.1607,1,1.0825349088879999,False
+2026-03-20 05:45:00,Simulada_ZMG,62.82,1.19,0,25.1,12.2,5,4,0.826,0.0949999999999999,0.0,0.174,0.0823,1,1.0760831350860727,False
+2026-03-20 05:50:00,Simulada_ZMG,56.37,1.08,1,25.1,12.2,5,4,0.7338571428571429,0.04,0.25,0.2661428571428571,0.1482,1,0.972988292962705,False
+2026-03-20 06:00:00,Simulada_ZMG,57.7,1.29,1,25.1,12.2,6,4,0.7528571428571429,0.145,0.25,0.2471428571428571,0.1969,1,0.9591111932676926,False
+2026-03-20 06:05:00,Simulada_ZMG,52.78,1.4,0,25.1,12.2,6,4,0.6825714285714286,0.1999999999999999,0.0,0.3174285714285714,0.1635,1,1.007176166462275,False
+2026-03-20 06:10:00,Simulada_ZMG,54.0,1.0,1,25.1,12.2,6,4,0.7,0.0,0.25,0.3,0.135,1,1.0019616066475163,False
+2026-03-20 06:30:00,Simulada_ZMG,56.09,1.0,1,25.1,12.2,6,4,0.7298571428571429,0.0,0.25,0.2701428571428571,0.129,1,0.9949488566928275,False
+2026-03-20 06:35:00,Simulada_ZMG,48.38,1.0,0,25.1,12.2,6,4,0.6197142857142858,0.0,0.0,0.3802857142857142,0.0761,1,1.0440878889933187,False
+2026-03-20 06:40:00,Simulada_ZMG,64.52,1.26,0,25.1,12.2,6,4,0.8502857142857142,0.13,0.0,0.1497142857142858,0.0949,1,1.1540669777525996,False
+2026-03-20 06:45:00,Simulada_ZMG,50.07,1.16,1,25.1,12.2,6,4,0.6438571428571429,0.0799999999999999,0.25,0.3561428571428571,0.1862,1,1.027164676890928,False
+2026-03-20 06:50:00,Simulada_ZMG,54.69,1.09,0,25.1,12.2,6,4,0.7098571428571429,0.045,0.0,0.2901428571428571,0.0805,1,0.9583913537632511,False
+2026-03-20 06:55:00,Simulada_ZMG,50.87,1.16,1,25.1,12.2,6,4,0.6552857142857142,0.0799999999999999,0.25,0.3447142857142857,0.1839,1,1.010048122180192,False
+2026-03-20 07:00:00,Simulada_ZMG,22.77,2.4,1,25.1,12.2,7,4,0.2538571428571428,0.7,0.25,0.7461428571428572,0.5742,1,0.9800068370357004,False
+2026-03-20 07:05:00,Simulada_ZMG,19.36,2.54,1,25.1,12.2,7,4,0.2051428571428571,0.77,0.25,0.7948571428571429,0.619,1,0.9679465546322886,False
+2026-03-20 07:10:00,Simulada_ZMG,10.25,2.41,2,25.1,12.2,7,4,0.075,0.7050000000000001,0.5,0.925,0.6875,1,1.0243293875024824,False
+2026-03-20 07:15:00,Simulada_ZMG,22.92,2.89,1,25.1,12.2,7,4,0.256,0.945,0.25,0.744,0.6963,1,1.0061208858825352,False
+2026-03-20 07:20:00,Simulada_ZMG,22.45,2.69,1,25.1,12.2,7,4,0.2492857142857142,0.845,0.25,0.7507142857142857,0.6476,1,1.0006850393317386,False
+2026-03-20 07:25:00,Simulada_ZMG,21.07,2.53,2,25.1,12.2,7,4,0.2295714285714285,0.7649999999999999,0.5,0.7704285714285715,0.6866,1,0.9994967856878431,False
+2026-03-20 07:30:00,Simulada_ZMG,13.29,2.46,2,25.1,12.2,7,4,0.1184285714285714,0.73,0.5,0.8815714285714286,0.6913,1,0.9821157007393087,False
+2026-03-20 07:35:00,Simulada_ZMG,13.69,2.51,2,25.1,12.2,7,4,0.1241428571428571,0.7549999999999999,0.5,0.8758571428571429,0.7027,1,0.9818873369626309,False
+2026-03-20 07:40:00,Simulada_ZMG,22.44,2.58,2,25.1,12.2,7,4,0.2491428571428571,0.79,0.5,0.7508571428571429,0.6952,1,1.0041346715889108,False
+2026-03-20 07:45:00,Simulada_ZMG,17.87,2.41,1,25.1,12.2,7,4,0.1838571428571428,0.7050000000000001,0.25,0.8161428571428572,0.5907,1,0.9756043863205125,False
+2026-03-20 07:50:00,Simulada_ZMG,22.43,2.87,3,25.1,12.2,7,4,0.249,0.935,0.75,0.751,0.8427,1,1.034378575596147,False
+2026-03-20 07:55:00,Simulada_ZMG,19.84,2.9,1,25.1,12.2,7,4,0.212,0.95,0.25,0.788,0.7076,1,0.9919466213899701,False
+2026-03-20 08:00:00,Simulada_ZMG,15.64,2.49,1,25.1,12.2,8,4,0.152,0.7450000000000001,0.25,0.848,0.6171,1,0.971736431902342,False
+2026-03-20 08:05:00,Simulada_ZMG,15.78,2.53,3,25.1,12.2,8,4,0.154,0.7649999999999999,0.75,0.846,0.7767,1,1.0289957529422973,False
+2026-03-20 08:10:00,Simulada_ZMG,24.52,2.67,3,25.1,12.2,8,4,0.2788571428571428,0.835,0.75,0.7211428571428571,0.7867,1,1.0269976403021133,False
+2026-03-20 08:15:00,Simulada_ZMG,14.77,2.34,3,25.1,12.2,8,4,0.1395714285714285,0.6699999999999999,0.75,0.8604285714285714,0.7321,1,1.026090727453654,False
+2026-03-20 08:20:00,Simulada_ZMG,26.55,2.37,1,25.1,12.2,8,4,0.3078571428571429,0.685,0.25,0.6921428571428572,0.5559,1,1.014604058332463,False
+2026-03-20 08:25:00,Simulada_ZMG,13.58,2.51,2,25.1,12.2,8,4,0.1225714285714285,0.7549999999999999,0.5,0.8774285714285714,0.703,1,0.9818765391887698,False
+2026-03-20 08:30:00,Simulada_ZMG,23.73,2.29,3,25.1,12.2,8,4,0.2675714285714285,0.645,0.75,0.7324285714285714,0.694,1,1.0486066685044921,False
+2026-03-20 08:35:00,Simulada_ZMG,9.0,2.73,1,25.1,12.2,8,4,0.0571428571428571,0.865,0.25,0.9428571428571428,0.6961,1,1.0779971397685009,False
+2026-03-20 08:40:00,Simulada_ZMG,22.89,2.59,1,25.1,12.2,8,4,0.2555714285714285,0.7949999999999999,0.25,0.7444285714285714,0.6214,1,0.9788822704354827,False
+2026-03-20 08:45:00,Simulada_ZMG,21.2,2.63,2,25.1,12.2,8,4,0.2314285714285714,0.815,0.5,0.7685714285714286,0.7112,1,0.9995552648353062,False
+2026-03-20 08:50:00,Simulada_ZMG,24.08,2.45,3,25.1,12.2,8,4,0.2725714285714285,0.7250000000000001,0.75,0.7274285714285715,0.733,1,1.0276793175067689,False
+2026-03-20 08:55:00,Simulada_ZMG,21.13,3.0,2,25.1,12.2,8,4,0.2304285714285714,1.0,0.5,0.7695714285714286,0.8039,1,1.0334832651377488,False
+2026-03-20 09:00:00,Simulada_ZMG,19.1,2.83,2,25.1,12.2,9,4,0.2014285714285714,0.915,0.5,0.7985714285714285,0.7672,1,0.9941833744417232,False
+2026-03-20 09:05:00,Simulada_ZMG,12.38,2.3,3,25.1,12.2,9,4,0.1054285714285714,0.6499999999999999,0.75,0.8945714285714286,0.7289,1,1.0465249424708376,False
+2026-03-20 09:10:00,Simulada_ZMG,18.47,2.85,1,25.1,12.2,9,4,0.1924285714285714,0.925,0.25,0.8075714285714286,0.699,1,0.9890755414841801,False
+2026-03-20 09:15:00,Simulada_ZMG,11.06,2.7,3,25.1,12.2,9,4,0.0865714285714285,0.8500000000000001,0.75,0.9134285714285716,0.8327,1,1.0419324254147833,False
+2026-03-20 09:20:00,Simulada_ZMG,20.91,2.66,2,25.1,12.2,9,4,0.2272857142857142,0.8300000000000001,0.5,0.7727142857142857,0.7195,1,0.9987415872634895,False
+2026-03-20 09:25:00,Simulada_ZMG,16.58,2.82,1,25.1,12.2,9,4,0.1654285714285714,0.91,0.25,0.8345714285714286,0.6969,1,0.9926112838493755,False
+2026-03-20 09:30:00,Simulada_ZMG,24.93,2.9,1,25.1,12.2,9,4,0.2847142857142857,0.95,0.25,0.7152857142857143,0.6931,1,1.0253610802726498,False
+2026-03-20 09:35:00,Simulada_ZMG,18.09,2.62,3,25.1,12.2,9,4,0.187,0.81,0.75,0.813,0.7926,1,1.026380767047156,False
+2026-03-20 09:40:00,Simulada_ZMG,14.13,2.43,3,25.1,12.2,9,4,0.1304285714285714,0.7150000000000001,0.75,0.8695714285714286,0.7564,1,1.0227808551074715,False
+2026-03-20 09:45:00,Simulada_ZMG,16.41,2.96,2,25.1,12.2,9,4,0.163,0.98,0.5,0.837,0.8074,1,1.0163543675473503,False
+2026-03-20 09:50:00,Simulada_ZMG,18.5,2.53,2,25.1,12.2,9,4,0.1928571428571428,0.7649999999999999,0.5,0.8071428571428572,0.6939,1,0.9913229766808447,False
+2026-03-20 09:55:00,Simulada_ZMG,16.79,2.74,1,25.1,12.2,9,4,0.1684285714285714,0.8700000000000001,0.25,0.8315714285714286,0.6763,1,0.9695566649635611,False
+2026-03-20 10:00:00,Simulada_ZMG,41.24,1.77,1,25.1,12.2,10,4,0.5177142857142858,0.385,0.25,0.4822857142857142,0.364,1,1.0085819758834724,False
+2026-03-20 10:10:00,Simulada_ZMG,26.77,1.69,1,25.1,12.2,10,4,0.311,0.345,0.25,0.6890000000000001,0.3853,1,1.0383680869919734,False
+2026-03-20 10:15:00,Simulada_ZMG,29.74,1.96,2,25.1,12.2,10,4,0.3534285714285714,0.48,0.5,0.6465714285714286,0.5193,1,0.9807699472670013,False
+2026-03-20 10:20:00,Simulada_ZMG,29.71,2.19,2,25.1,12.2,10,4,0.353,0.595,0.5,0.647,0.5769,1,1.1146621446457234,False
+2026-03-20 10:25:00,Simulada_ZMG,33.58,1.94,1,25.1,12.2,10,4,0.4082857142857142,0.47,0.25,0.5917142857142857,0.4283,1,0.999078821287795,False
+2026-03-20 10:30:00,Simulada_ZMG,23.24,2.16,1,25.1,12.2,10,4,0.2605714285714285,0.5800000000000001,0.25,0.7394285714285714,0.5129,1,1.0534839953646475,False
+2026-03-20 10:35:00,Simulada_ZMG,39.29,1.77,1,25.1,12.2,10,4,0.4898571428571428,0.385,0.25,0.5101428571428572,0.3695,1,1.0010954103523744,False
+2026-03-20 10:40:00,Simulada_ZMG,39.07,2.28,1,25.1,12.2,10,4,0.4867142857142857,0.6399999999999999,0.25,0.5132857142857143,0.4977,1,1.1029228904204151,False
+2026-03-20 10:45:00,Simulada_ZMG,23.28,1.93,2,25.1,12.2,10,4,0.2611428571428572,0.4649999999999999,0.5,0.7388571428571429,0.5303,1,1.1837519392083977,False
+2026-03-20 10:50:00,Simulada_ZMG,34.59,2.0,2,25.1,12.2,10,4,0.4227142857142857,0.5,0.5,0.5772857142857142,0.5155,1,0.9636494530186287,False
+2026-03-20 10:55:00,Simulada_ZMG,35.98,1.99,1,25.1,12.2,10,4,0.4425714285714285,0.495,0.25,0.5574285714285715,0.434,1,1.006069652457181,False
+2026-03-20 11:00:00,Simulada_ZMG,37.87,1.84,2,25.1,12.2,11,4,0.4695714285714285,0.42,0.5,0.5304285714285715,0.4661,1,0.9610742187324466,False
+2026-03-20 11:05:00,Simulada_ZMG,35.18,1.52,2,25.1,12.2,11,4,0.4311428571428571,0.26,0.5,0.5688571428571428,0.3938,1,1.044404491924962,False
+2026-03-20 11:10:00,Simulada_ZMG,37.64,2.0,0,25.1,12.2,11,4,0.4662857142857143,0.5,0.0,0.5337142857142857,0.3567,1,1.0155660625905933,False
+2026-03-20 11:15:00,Simulada_ZMG,42.9,1.87,1,25.1,12.2,11,4,0.5414285714285714,0.435,0.25,0.4585714285714286,0.3842,1,1.0058062062756927,False
+2026-03-20 11:20:00,Simulada_ZMG,36.43,1.94,2,25.1,12.2,11,4,0.449,0.47,0.5,0.5509999999999999,0.4952,1,0.9575106288463493,False
+2026-03-20 11:25:00,Simulada_ZMG,35.71,2.17,2,25.1,12.2,11,4,0.4387142857142857,0.585,0.5,0.5612857142857143,0.5548,1,1.025950698444245,False
+2026-03-20 11:30:00,Simulada_ZMG,31.27,2.33,0,25.1,12.2,11,4,0.3752857142857143,0.665,0.0,0.6247142857142858,0.4574,1,1.091320937205959,False
+2026-03-20 11:35:00,Simulada_ZMG,41.76,1.97,2,25.1,12.2,11,4,0.5251428571428571,0.485,0.5,0.4748571428571428,0.4875,1,1.0061029320384898,False
+2026-03-20 11:40:00,Simulada_ZMG,30.64,2.15,0,25.1,12.2,11,4,0.3662857142857142,0.575,0.0,0.6337142857142857,0.4142,1,1.040901938991532,False
+2026-03-20 11:45:00,Simulada_ZMG,45.99,2.0,0,25.1,12.2,11,4,0.5855714285714286,0.5,0.0,0.4144285714285713,0.3329,1,1.0838743788180119,False
+2026-03-20 11:50:00,Simulada_ZMG,31.97,1.63,1,25.1,12.2,11,4,0.3852857142857143,0.3149999999999999,0.25,0.6147142857142858,0.3554,1,0.9876699989226305,False
+2026-03-20 11:55:00,Simulada_ZMG,29.98,1.35,1,25.1,12.2,11,4,0.3568571428571429,0.175,0.25,0.6431428571428571,0.2911,1,1.1086486955609236,False
+2026-03-20 12:00:00,Simulada_ZMG,35.52,1.82,2,25.1,12.2,12,4,0.436,0.41,0.5,0.564,0.4678,1,0.9592919913766588,False
+2026-03-20 12:05:00,Simulada_ZMG,30.24,1.82,0,25.1,12.2,12,4,0.3605714285714285,0.41,0.0,0.6394285714285715,0.3329,1,0.9971562805648375,False
+2026-03-20 12:10:00,Simulada_ZMG,33.73,2.19,1,25.1,12.2,12,4,0.4104285714285713,0.595,0.25,0.5895714285714286,0.4904,1,1.016139959638863,False
+2026-03-20 12:15:00,Simulada_ZMG,38.94,1.72,0,25.1,12.2,12,4,0.4848571428571428,0.36,0.0,0.5151428571428571,0.283,1,1.0077105423287815,False
+2026-03-20 12:20:00,Simulada_ZMG,35.11,1.59,1,25.1,12.2,12,4,0.4301428571428571,0.295,0.25,0.5698571428571428,0.3365,1,1.0205255612310633,False
+2026-03-20 12:25:00,Simulada_ZMG,35.34,2.38,2,25.1,12.2,12,4,0.4334285714285715,0.69,0.5,0.5665714285714285,0.6083,1,1.1981135961264606,False
+2026-03-20 12:30:00,Simulada_ZMG,31.95,2.01,1,25.1,12.2,12,4,0.385,0.5049999999999999,0.25,0.615,0.4505,1,0.99909547697943,False
+2026-03-20 12:35:00,Simulada_ZMG,35.28,2.16,2,25.1,12.2,12,4,0.4325714285714286,0.5800000000000001,0.5,0.5674285714285714,0.5535,1,1.0202131576507694,False
+2026-03-20 12:40:00,Simulada_ZMG,38.79,1.82,0,25.1,12.2,12,4,0.4827142857142857,0.41,0.0,0.5172857142857143,0.3085,1,1.0058360350234072,False
+2026-03-20 12:45:00,Simulada_ZMG,30.85,1.53,2,25.1,12.2,12,4,0.3692857142857143,0.265,0.5,0.6307142857142857,0.4086,1,1.0833321169439736,False
+2026-03-20 12:50:00,Simulada_ZMG,36.16,1.78,2,25.1,12.2,12,4,0.4451428571428571,0.39,0.5,0.5548571428571429,0.456,1,0.9766992366180801,False
+2026-03-20 12:55:00,Simulada_ZMG,33.66,2.02,2,25.1,12.2,12,4,0.4094285714285713,0.51,0.5,0.5905714285714286,0.5231,1,0.9655928895036123,False
+2026-03-20 13:00:00,Simulada_ZMG,34.14,2.05,1,25.1,12.2,13,4,0.4162857142857143,0.5249999999999999,0.25,0.5837142857142856,0.4542,1,1.0037307005292682,False
+2026-03-20 13:05:00,Simulada_ZMG,35.48,2.14,0,25.1,12.2,13,4,0.4354285714285714,0.5700000000000001,0.0,0.5645714285714286,0.3979,1,1.0309546232435616,False
+2026-03-20 13:10:00,Simulada_ZMG,25.74,1.99,1,25.1,12.2,13,4,0.2962857142857142,0.495,0.25,0.7037142857142857,0.4632,1,1.0259665517919532,False
+2026-03-20 13:15:00,Simulada_ZMG,30.93,1.31,0,25.1,12.2,13,4,0.3704285714285714,0.155,0.0,0.6295714285714286,0.2034,1,1.1194621578045727,False
+2026-03-20 13:20:00,Simulada_ZMG,31.82,1.67,0,25.1,12.2,13,4,0.3831428571428572,0.3349999999999999,0.0,0.6168571428571428,0.2909,1,1.0048761072055208,False
+2026-03-20 13:25:00,Simulada_ZMG,29.5,1.73,0,25.1,12.2,13,4,0.35,0.365,0.0,0.65,0.3125,1,1.0059346572399983,False
+2026-03-20 13:30:00,Simulada_ZMG,43.56,1.75,1,25.1,12.2,13,4,0.5508571428571429,0.375,0.25,0.449142857142857,0.3523,1,1.0696925127197026,False
+2026-03-20 13:35:00,Simulada_ZMG,35.76,2.26,0,25.1,12.2,13,4,0.4394285714285714,0.6299999999999999,0.0,0.5605714285714286,0.4271,1,1.0517550431097402,False
+2026-03-20 13:40:00,Simulada_ZMG,34.49,1.74,2,25.1,12.2,13,4,0.4212857142857143,0.37,0.5,0.5787142857142857,0.4507,1,0.9986185706934171,False
+2026-03-20 13:45:00,Simulada_ZMG,41.86,1.8,2,25.1,12.2,13,4,0.5265714285714286,0.4,0.5,0.4734285714285714,0.4447,1,1.0321706577617702,False
+2026-03-20 13:50:00,Simulada_ZMG,30.01,1.81,1,25.1,12.2,13,4,0.3572857142857143,0.405,0.25,0.6427142857142857,0.406,1,0.9880486067686876,False
+2026-03-20 13:55:00,Simulada_ZMG,34.4,1.5,0,25.1,12.2,13,4,0.42,0.25,0.0,0.5800000000000001,0.241,1,1.0198481041560468,False
+2026-03-20 14:00:00,Simulada_ZMG,29.14,2.38,0,25.1,12.2,14,4,0.3448571428571428,0.69,0.0,0.6551428571428571,0.476,1,1.153055550305735,False
+2026-03-20 14:05:00,Simulada_ZMG,34.97,1.76,1,25.1,12.2,14,4,0.4281428571428571,0.38,0.25,0.5718571428571428,0.3794,1,1.0032061346553034,False
+2026-03-20 14:10:00,Simulada_ZMG,33.18,2.06,2,25.1,12.2,14,4,0.4025714285714286,0.53,0.5,0.5974285714285714,0.5345,1,0.9833814841625663,False
+2026-03-20 14:15:00,Simulada_ZMG,39.02,1.65,1,25.1,12.2,14,4,0.486,0.3249999999999999,0.25,0.514,0.3403,1,1.0401550496305179,False
+2026-03-20 14:20:00,Simulada_ZMG,39.01,1.85,1,25.1,12.2,14,4,0.4858571428571428,0.425,0.25,0.5141428571428572,0.3903,1,1.0030799052312638,False
+2026-03-20 14:25:00,Simulada_ZMG,31.55,1.52,0,25.1,12.2,14,4,0.3792857142857143,0.26,0.0,0.6207142857142858,0.2541,1,1.038099219506876,False
+2026-03-20 14:30:00,Simulada_ZMG,26.16,1.61,0,25.1,12.2,14,4,0.3022857142857142,0.305,0.0,0.6977142857142857,0.292,1,1.0689453830727982,False
+2026-03-20 14:40:00,Simulada_ZMG,31.8,1.63,1,25.1,12.2,14,4,0.3828571428571428,0.3149999999999999,0.25,0.6171428571428572,0.3559,1,0.9884583836382236,False
+2026-03-20 14:45:00,Simulada_ZMG,34.13,2.1,1,25.1,12.2,14,4,0.4161428571428572,0.55,0.25,0.5838571428571429,0.4668,1,0.9943559633528037,False
+2026-03-20 14:50:00,Simulada_ZMG,27.3,1.58,2,25.1,12.2,14,4,0.3185714285714285,0.29,0.5,0.6814285714285715,0.4313,1,1.120885161801199,False
+2026-03-20 14:55:00,Simulada_ZMG,45.35,1.53,0,25.1,12.2,14,4,0.5764285714285714,0.265,0.0,0.4235714285714286,0.2172,1,1.1466654111421994,False
+2026-03-20 15:05:00,Simulada_ZMG,45.2,1.51,1,25.1,12.2,15,4,0.5742857142857143,0.255,0.25,0.4257142857142857,0.2876,1,1.188143393738153,False
+2026-03-20 15:10:00,Simulada_ZMG,42.02,1.7,0,25.1,12.2,15,4,0.5288571428571429,0.35,0.0,0.4711428571428571,0.2692,1,1.0928127465709072,False
+2026-03-20 15:15:00,Simulada_ZMG,44.95,1.76,1,25.1,12.2,15,4,0.5707142857142857,0.38,0.25,0.4292857142857142,0.3509,1,1.1109327644742273,False
+2026-03-20 15:20:00,Simulada_ZMG,46.38,1.89,2,25.1,12.2,15,4,0.5911428571428572,0.4449999999999999,0.5,0.4088571428571428,0.4543,1,1.1914425147189318,False
+2026-03-20 15:25:00,Simulada_ZMG,46.69,1.8,2,25.1,12.2,15,4,0.5955714285714285,0.4,0.5,0.4044285714285714,0.4309,1,1.1944092616998405,False
+2026-03-20 15:30:00,Simulada_ZMG,31.36,1.67,2,25.1,12.2,15,4,0.3765714285714285,0.3349999999999999,0.5,0.6234285714285714,0.4422,1,0.9980359823429152,False
+2026-03-20 15:35:00,Simulada_ZMG,34.07,1.78,2,25.1,12.2,15,4,0.4152857142857143,0.39,0.5,0.5847142857142857,0.4619,1,0.9800700152448834,False
+2026-03-20 15:40:00,Simulada_ZMG,37.25,1.87,0,25.1,12.2,15,4,0.4607142857142857,0.435,0.0,0.5392857142857144,0.3254,1,1.0035339564446244,False
+2026-03-20 15:45:00,Simulada_ZMG,43.96,2.06,1,25.1,12.2,15,4,0.5565714285714286,0.53,0.25,0.4434285714285714,0.4287,1,1.0671959425005788,False
+2026-03-20 15:50:00,Simulada_ZMG,38.78,1.9,0,25.1,12.2,15,4,0.4825714285714286,0.4499999999999999,0.0,0.5174285714285713,0.3285,1,1.007890389389802,False
+2026-03-20 15:55:00,Simulada_ZMG,33.47,2.15,1,25.1,12.2,15,4,0.4067142857142857,0.575,0.25,0.5932857142857143,0.4812,1,1.0108641470841473,False
+2026-03-20 16:00:00,Simulada_ZMG,32.01,2.24,1,25.1,12.2,16,4,0.3858571428571428,0.6200000000000001,0.25,0.6141428571428571,0.5078,1,1.0381185251111544,False
+2026-03-20 16:05:00,Simulada_ZMG,30.52,1.66,2,25.1,12.2,16,4,0.3645714285714285,0.3299999999999999,0.5,0.6354285714285715,0.4421,1,1.022184189776485,False
+2026-03-20 16:10:00,Simulada_ZMG,36.81,1.74,2,25.1,12.2,16,4,0.4544285714285714,0.37,0.5,0.5455714285714286,0.4441,1,1.0030765627356173,False
+2026-03-20 16:15:00,Simulada_ZMG,35.65,2.08,2,25.1,12.2,16,4,0.4378571428571428,0.54,0.5,0.5621428571428572,0.5324,1,0.9890430698147004,False
+2026-03-20 16:20:00,Simulada_ZMG,40.59,2.43,0,25.1,12.2,16,4,0.5084285714285715,0.7150000000000001,0.0,0.4915714285714285,0.4558,1,1.1540909571081088,False
+2026-03-20 16:25:00,Simulada_ZMG,43.97,1.1,0,25.1,12.2,16,4,0.5567142857142857,0.05,0.0,0.4432857142857143,0.1137,1,1.1595835746815535,False
+2026-03-20 16:30:00,Simulada_ZMG,27.24,1.81,1,25.1,12.2,16,4,0.3177142857142856,0.405,0.25,0.6822857142857144,0.414,1,1.007497989687703,False
+2026-03-20 16:40:00,Simulada_ZMG,35.7,1.46,2,25.1,12.2,16,4,0.4385714285714286,0.2299999999999999,0.5,0.5614285714285714,0.3773,1,1.0774069854255484,False
+2026-03-20 16:45:00,Simulada_ZMG,30.86,1.93,2,25.1,12.2,16,4,0.3694285714285714,0.4649999999999999,0.5,0.6305714285714286,0.5086,1,0.9623248332969428,False
+2026-03-20 16:50:00,Simulada_ZMG,34.98,1.85,2,25.1,12.2,16,4,0.4282857142857142,0.425,0.5,0.5717142857142858,0.4768,1,0.9471032341644634,False
+2026-03-20 16:55:00,Simulada_ZMG,28.84,2.29,0,25.1,12.2,16,4,0.3405714285714286,0.645,0.0,0.6594285714285715,0.4544,1,1.1051304312818726,False
+2026-03-20 17:00:00,Simulada_ZMG,36.52,1.86,2,25.1,12.2,17,4,0.4502857142857143,0.43,0.5,0.5497142857142856,0.4749,1,0.9480389708592343,False
+2026-03-20 17:05:00,Simulada_ZMG,34.28,2.08,0,25.1,12.2,17,4,0.4182857142857143,0.54,0.0,0.5817142857142856,0.3863,1,1.0231628963612132,False
+2026-03-20 17:10:00,Simulada_ZMG,38.02,1.63,0,25.1,12.2,17,4,0.4717142857142857,0.3149999999999999,0.0,0.5282857142857142,0.2632,1,1.0135276816257257,False
+2026-03-20 17:15:00,Simulada_ZMG,45.14,1.81,0,25.1,12.2,17,4,0.5734285714285714,0.405,0.0,0.4265714285714286,0.2878,1,1.1256742423645754,False
+2026-03-20 17:20:00,Simulada_ZMG,35.14,1.48,2,25.1,12.2,17,4,0.4305714285714286,0.24,0.5,0.5694285714285714,0.3839,1,1.057328803154356,False
+2026-03-20 17:25:00,Simulada_ZMG,37.0,1.59,0,25.1,12.2,17,4,0.4571428571428571,0.295,0.0,0.5428571428571429,0.2561,1,1.0190276975066372,False
+2026-03-20 17:30:00,Simulada_ZMG,21.32,2.51,1,25.1,12.2,17,4,0.2331428571428571,0.7549999999999999,0.25,0.7668571428571429,0.6059,1,0.9605161903969573,False
+2026-03-20 17:35:00,Simulada_ZMG,29.28,1.54,0,25.1,12.2,17,4,0.3468571428571428,0.27,0.0,0.6531428571428571,0.2656,1,1.0477346063890272,False
+2026-03-20 17:40:00,Simulada_ZMG,33.29,1.79,1,25.1,12.2,17,4,0.4041428571428571,0.395,0.25,0.5958571428571429,0.3917,1,0.997366835891637,False
+2026-03-20 17:45:00,Simulada_ZMG,42.6,2.09,2,25.1,12.2,17,4,0.5371428571428571,0.5449999999999999,0.5,0.4628571428571428,0.5151,1,1.0726550407568722,False
+2026-03-20 17:50:00,Simulada_ZMG,33.61,1.48,2,25.1,12.2,17,4,0.4087142857142857,0.24,0.5,0.5912857142857143,0.3883,1,1.0791776791588616,False
+2026-03-20 18:00:00,Simulada_ZMG,20.57,3.0,3,25.1,12.2,18,4,0.2224285714285714,1.0,0.75,0.7775714285714286,0.8805,1,1.0732014364640028,False
+2026-03-20 18:05:00,Simulada_ZMG,19.99,2.83,2,25.1,12.2,18,4,0.2141428571428571,0.915,0.5,0.7858571428571429,0.7647,1,0.9940338191147358,False
+2026-03-20 18:10:00,Simulada_ZMG,17.27,2.46,3,25.1,12.2,18,4,0.1752857142857142,0.73,0.75,0.8247142857142857,0.7549,1,1.0239141421841027,False
+2026-03-20 18:15:00,Simulada_ZMG,16.97,2.91,1,25.1,12.2,18,4,0.1709999999999999,0.955,0.25,0.829,0.7183,1,1.0009062448729302,False
+2026-03-20 18:20:00,Simulada_ZMG,22.68,2.76,3,25.1,12.2,18,4,0.2525714285714285,0.8799999999999999,0.75,0.7474285714285714,0.8145,1,1.0305204470231044,False
+2026-03-20 18:25:00,Simulada_ZMG,23.64,3.0,1,25.1,12.2,18,4,0.2662857142857143,1.0,0.25,0.7337142857142858,0.7217,1,1.043612575153505,False
+2026-03-20 18:30:00,Simulada_ZMG,15.9,2.5,1,25.1,12.2,18,4,0.1557142857142857,0.75,0.25,0.8442857142857143,0.6189,1,0.9727392968424068,False
+2026-03-20 18:35:00,Simulada_ZMG,18.07,2.91,1,25.1,12.2,18,4,0.1867142857142857,0.955,0.25,0.8132857142857143,0.7152,1,0.9962199133573849,False
+2026-03-20 18:40:00,Simulada_ZMG,22.02,2.15,2,25.1,12.2,18,4,0.2431428571428571,0.575,0.5,0.7568571428571429,0.5889,1,1.0806555562458642,False
+2026-03-20 18:50:00,Simulada_ZMG,22.59,2.79,1,25.1,12.2,18,4,0.2512857142857143,0.895,0.25,0.7487142857142857,0.6722,1,0.9898852161973986,False
+2026-03-20 18:55:00,Simulada_ZMG,15.23,2.45,3,25.1,12.2,18,4,0.1461428571428571,0.7250000000000001,0.75,0.8538571428571429,0.7583,1,1.0219815346103573,False
+2026-03-20 19:00:00,Simulada_ZMG,18.01,2.38,3,25.1,12.2,19,4,0.1858571428571429,0.69,0.75,0.8141428571428571,0.7328,1,1.0247271332090548,False
+2026-03-20 19:05:00,Simulada_ZMG,8.28,2.52,1,25.1,12.2,19,4,0.0468571428571428,0.76,0.25,0.9531428571428572,0.6456,1,1.1112667387432498,False
+2026-03-20 19:10:00,Simulada_ZMG,16.44,2.7,3,25.1,12.2,19,4,0.1634285714285714,0.8500000000000001,0.75,0.8365714285714285,0.8173,1,1.0294678702930475,False
+2026-03-20 19:15:00,Simulada_ZMG,19.82,2.8,2,25.1,12.2,19,4,0.2117142857142857,0.8999999999999999,0.5,0.7882857142857143,0.7577,1,0.9909611219799188,False
+2026-03-20 19:20:00,Simulada_ZMG,10.73,2.93,1,25.1,12.2,19,4,0.0818571428571428,0.965,0.25,0.9181428571428571,0.7411,1,1.1075663762710621,False
+2026-03-20 19:25:00,Simulada_ZMG,13.46,2.81,2,25.1,12.2,19,4,0.1208571428571428,0.905,0.5,0.8791428571428571,0.7783,1,0.9910055108363138,False
+2026-03-20 19:30:00,Simulada_ZMG,12.76,2.4,2,25.1,12.2,19,4,0.1108571428571428,0.7,0.5,0.8891428571428571,0.6778,1,0.988616560486286,False
+2026-03-20 19:35:00,Simulada_ZMG,12.83,2.77,2,25.1,12.2,19,4,0.1118571428571428,0.885,0.5,0.8881428571428571,0.7701,1,0.9913444915364013,False
+2026-03-20 19:40:00,Simulada_ZMG,16.61,3.0,3,25.1,12.2,19,4,0.1658571428571428,1.0,0.75,0.8341428571428572,0.8918,1,1.0761817252013224,False
+2026-03-20 19:45:00,Simulada_ZMG,29.23,2.74,2,25.1,12.2,19,4,0.3461428571428571,0.8700000000000001,0.5,0.6538571428571429,0.7158,1,1.0738157810686866,False
+2026-03-20 19:50:00,Simulada_ZMG,12.79,2.25,1,25.1,12.2,19,4,0.1112857142857142,0.625,0.25,0.8887142857142857,0.5652,1,1.0997430140590059,False
+2026-03-20 19:55:00,Simulada_ZMG,20.58,2.64,1,25.1,12.2,19,4,0.2225714285714285,0.8200000000000001,0.25,0.7774285714285715,0.6405,1,0.9892970374015192,False
+2026-03-20 20:00:00,Simulada_ZMG,21.01,2.5,2,25.1,12.2,20,4,0.2287142857142857,0.75,0.5,0.7712857142857142,0.6793,1,1.0033762913550943,False
+2026-03-20 20:05:00,Simulada_ZMG,14.84,2.59,3,25.1,12.2,20,4,0.1405714285714285,0.7949999999999999,0.75,0.8594285714285714,0.7944,1,1.0290278897218068,False
+2026-03-20 20:10:00,Simulada_ZMG,20.43,2.65,2,25.1,12.2,20,4,0.2204285714285714,0.825,0.5,0.7795714285714286,0.7184,1,1.0011330510987384,False
+2026-03-20 20:15:00,Simulada_ZMG,20.48,2.41,1,25.1,12.2,20,4,0.2211428571428571,0.7050000000000001,0.25,0.7788571428571429,0.5833,1,0.9717165207514965,False
+2026-03-20 20:20:00,Simulada_ZMG,21.75,2.71,1,25.1,12.2,20,4,0.2392857142857143,0.855,0.25,0.7607142857142857,0.6546,1,0.9996295073817467,False
+2026-03-20 20:25:00,Simulada_ZMG,17.34,2.48,2,25.1,12.2,20,4,0.1762857142857143,0.74,0.5,0.8237142857142857,0.6847,1,0.995651469879913,False
+2026-03-20 20:30:00,Simulada_ZMG,11.85,2.54,1,25.1,12.2,20,4,0.0978571428571428,0.77,0.25,0.9021428571428572,0.6404,1,1.0261927704037885,False
+2026-03-20 20:35:00,Simulada_ZMG,23.26,2.14,2,25.1,12.2,20,4,0.2608571428571429,0.5700000000000001,0.5,0.7391428571428571,0.5828,1,1.1069796404467773,False
+2026-03-20 20:40:00,Simulada_ZMG,17.74,2.66,2,25.1,12.2,20,4,0.1819999999999999,0.8300000000000001,0.5,0.8180000000000001,0.7286,1,0.9977092152206559,False
+2026-03-20 20:45:00,Simulada_ZMG,11.9,2.96,3,25.1,12.2,20,4,0.0985714285714285,0.98,0.75,0.9014285714285716,0.8953,1,1.1013960236081926,False
+2026-03-20 20:50:00,Simulada_ZMG,14.86,2.39,1,25.1,12.2,20,4,0.1408571428571428,0.6950000000000001,0.25,0.8591428571428572,0.5943,1,1.0271168892234068,False
+2026-03-20 20:55:00,Simulada_ZMG,23.47,2.41,1,25.1,12.2,20,4,0.2638571428571428,0.7050000000000001,0.25,0.7361428571428572,0.5747,1,0.9852083113207823,False
+2026-03-20 21:00:00,Simulada_ZMG,50.69,1.37,1,25.1,12.2,21,4,0.6527142857142857,0.185,0.25,0.3472857142857143,0.237,1,1.029770107998082,False
+2026-03-20 21:05:00,Simulada_ZMG,50.16,1.28,1,25.1,12.2,21,4,0.6451428571428571,0.14,0.25,0.3548571428571428,0.216,1,0.9975451006958236,False
+2026-03-20 21:15:00,Simulada_ZMG,47.01,1.0,1,25.1,12.2,21,4,0.6001428571428571,0.0,0.25,0.3998571428571429,0.155,1,1.2032255566313423,False
+2026-03-20 21:20:00,Simulada_ZMG,62.02,1.26,0,25.1,12.2,21,4,0.8145714285714286,0.13,0.0,0.1854285714285714,0.1021,1,1.0656826033537206,False
+2026-03-20 21:25:00,Simulada_ZMG,51.54,1.36,1,25.1,12.2,21,4,0.6648571428571428,0.18,0.25,0.3351428571428572,0.232,1,1.011568568691786,False
+2026-03-20 21:30:00,Simulada_ZMG,55.81,1.49,0,25.1,12.2,21,4,0.7258571428571429,0.245,0.0,0.2741428571428571,0.1773,1,1.0695169110518417,False
+2026-03-20 21:45:00,Simulada_ZMG,50.66,1.04,0,25.1,12.2,21,4,0.6522857142857142,0.02,0.0,0.3477142857142857,0.0795,1,0.9865889965770286,False
+2026-03-20 21:50:00,Simulada_ZMG,52.14,1.19,0,25.1,12.2,21,4,0.6734285714285715,0.0949999999999999,0.0,0.3265714285714285,0.1128,1,0.9499667579678726,False
+2026-03-20 22:00:00,Simulada_ZMG,54.82,1.33,1,25.1,12.2,22,4,0.7117142857142857,0.165,0.25,0.2882857142857142,0.2152,1,0.9812235235933761,False
+2026-03-20 22:05:00,Simulada_ZMG,61.14,1.17,1,25.1,12.2,22,4,0.802,0.0849999999999999,0.25,0.1979999999999999,0.1571,1,1.0247299595836106,False
+2026-03-20 22:10:00,Simulada_ZMG,49.22,1.41,1,25.1,12.2,22,4,0.6317142857142857,0.2049999999999999,0.25,0.3682857142857143,0.2512,1,1.1037095783041857,False
+2026-03-20 22:15:00,Simulada_ZMG,56.1,1.0,0,25.1,12.2,22,4,0.73,0.0,0.0,0.27,0.054,1,0.9977596845999821,False
+2026-03-20 22:20:00,Simulada_ZMG,56.87,1.37,0,25.1,12.2,22,4,0.741,0.185,0.0,0.259,0.1443,1,1.005661139516803,False
+2026-03-20 22:25:00,Simulada_ZMG,52.21,1.0,0,25.1,12.2,22,4,0.6744285714285715,0.0,0.0,0.3255714285714285,0.0651,1,0.9692225183893569,False
+2026-03-20 22:30:00,Simulada_ZMG,59.29,1.08,1,25.1,12.2,22,4,0.7755714285714286,0.04,0.25,0.2244285714285714,0.1399,1,1.0060164341360491,False
+2026-03-20 22:35:00,Simulada_ZMG,47.54,1.08,0,25.1,12.2,22,4,0.6077142857142857,0.04,0.0,0.3922857142857143,0.0985,1,1.0209367654414634,False
+2026-03-20 22:40:00,Simulada_ZMG,47.97,1.22,0,25.1,12.2,22,4,0.6138571428571429,0.1099999999999999,0.0,0.3861428571428571,0.1322,1,1.0245588149021658,False
+2026-03-20 22:45:00,Simulada_ZMG,64.65,1.39,1,25.1,12.2,22,4,0.8521428571428572,0.1949999999999999,0.25,0.1478571428571428,0.2021,1,1.2224095584412003,False
+2026-03-20 22:50:00,Simulada_ZMG,57.28,1.03,1,25.1,12.2,22,4,0.7468571428571429,0.015,0.25,0.2531428571428571,0.1331,1,0.9819400176860166,False
+2026-03-20 22:55:00,Simulada_ZMG,53.14,1.36,1,25.1,12.2,22,4,0.6877142857142857,0.18,0.25,0.3122857142857143,0.2275,1,0.9941542360435,False
+2026-03-20 23:00:00,Simulada_ZMG,50.8,1.05,0,25.1,12.2,23,4,0.6542857142857142,0.025,0.0,0.3457142857142857,0.0816,1,0.9797834537827252,False
+2026-03-20 23:05:00,Simulada_ZMG,48.16,1.04,1,25.1,12.2,23,4,0.6165714285714285,0.02,0.25,0.3834285714285714,0.1617,1,1.1009922607534046,False
+2026-03-20 23:10:00,Simulada_ZMG,62.33,1.28,1,25.1,12.2,23,4,0.819,0.14,0.25,0.181,0.1812,1,1.0766265138758682,False
+2026-03-20 23:15:00,Simulada_ZMG,48.79,1.35,0,25.1,12.2,23,4,0.6255714285714286,0.175,0.0,0.3744285714285714,0.1624,1,1.0585924165997187,False
+2026-03-20 23:20:00,Simulada_ZMG,49.5,1.45,0,25.1,12.2,23,4,0.6357142857142857,0.2249999999999999,0.0,0.3642857142857143,0.1854,1,1.0797172836534812,False
+2026-03-20 23:25:00,Simulada_ZMG,51.09,1.48,0,25.1,12.2,23,4,0.6584285714285715,0.24,0.0,0.3415714285714285,0.1883,1,1.0550463682213904,False
+2026-03-20 23:30:00,Simulada_ZMG,61.28,1.39,0,25.1,12.2,23,4,0.804,0.1949999999999999,0.0,0.1959999999999999,0.1367,1,1.0813785184462277,False
+2026-03-20 23:35:00,Simulada_ZMG,44.61,1.09,0,25.1,12.2,23,4,0.5658571428571428,0.045,0.0,0.4341428571428571,0.1093,1,1.1230847212809834,False
+2026-03-20 23:40:00,Simulada_ZMG,56.53,1.3,1,25.1,12.2,23,4,0.7361428571428572,0.15,0.25,0.2638571428571428,0.2028,1,0.9614562694218698,False
+2026-03-20 23:45:00,Simulada_ZMG,54.03,1.26,1,25.1,12.2,23,4,0.7004285714285714,0.13,0.25,0.2995714285714286,0.1999,1,0.9473576456061747,False
+2026-03-20 23:50:00,Simulada_ZMG,60.88,1.0,0,25.1,12.2,23,4,0.7982857142857144,0.0,0.0,0.2017142857142856,0.0403,1,1.1116074058385323,False
+2026-03-20 23:55:00,Simulada_ZMG,56.72,1.03,0,25.1,12.2,23,4,0.7388571428571429,0.015,0.0,0.2611428571428571,0.0597,1,0.9807156430830254,False
