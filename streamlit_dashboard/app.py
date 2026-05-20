@@ -28,7 +28,6 @@ IF_PATH = CLEAN_ROOT / 'filtered_isolation_forest.csv'
 LOF_PATH = CLEAN_ROOT / 'filtered_local_outlier_factor.csv'
 DBSCAN_PATH = CLEAN_ROOT / 'filtered_dbscan.csv'
 
-IF_SUMMARY_PATH = OUTPUT_ROOT / 'local_outlier_factor_summary.csv'
 LOF_SUMMARY_PATH = OUTPUT_ROOT / 'local_outlier_factor_summary.csv'
 DBSCAN_SUMMARY_PATH = OUTPUT_ROOT / 'dbscan_summary.csv'
 
