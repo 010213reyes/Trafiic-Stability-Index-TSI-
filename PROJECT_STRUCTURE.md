@@ -4,7 +4,6 @@
 
 ```
 TSI/
-├── notebooks/                    # Todos los notebooks organizados
 │   ├── 01_Data_Collection/      # Recopilación de datos
 │   │   ├── 01_Synthetic_Traffic_Data.ipynb
 │   │   ├── 02_Historical_Data_Import.ipynb
@@ -12,12 +11,21 @@ TSI/
 │   │   ├── Realistic_Traffic_Modeling.ipynb
 │   │   └── Scraping_Traffic.ipynb
 │   │
-│   └── 02_Data_Processing/      # Procesamiento y limpieza de datos
-│       ├── 01_Data_Quality_Assessment.ipynb    # Diagnóstico
-│       ├── 02_Data_Cleaning.ipynb              # Limpieza
-│       ├── 03_Data_Validation.ipynb            # Validación
-│       ├── 04_Exploratory_Data_Analysis.ipynb  # Análisis
-│       └── Data_Ingestion_Basic_Procesing.ipynb
+│   ├── 02_Data_Processing/      # Procesamiento, EDA y modelado
+│   │   ├── 00_Algorithm_Evaluation_Pipeline.ipynb
+│   │   ├── 01_Data_Quality_Assessment.ipynb
+│   │   ├── 02_Data_Cleaning.ipynb
+│   │   ├── 03_Data_Validation.ipynb
+│   │   ├── 04_Exploratory_Data_Analysis_TSI.ipynb
+│   │   ├── 05_Isolation_Forest_TSI.ipynb
+│   │   ├── 06_Local_Outlier_Factor_TSI.ipynb
+│   │   ├── 07_DBSCAN_TSI.ipynb
+│   │   └── 08_Algorithm_Comparison_and_TSI.ipynb
+│   │
+│   └── 03_Demostracion_Tecnica_TSI/       # Notebook único de demostración técnica
+│       ├── README.md
+│       └── 01_Demostracion_Tecnica_TSI.ipynb
+│   └── 01_Demostracion_Tecnica_TSI.ipynb
 │
 ├── streamlit_dashboard/          # Dashboards y capa de visualización ejecutiva
 │   ├── README.md
@@ -100,6 +108,13 @@ Notebooks (ejecución secuencial):
    - Detección de patrones
    - Clasificación de estados
    - **Salida**: Gráficos PNG + insights
+
+#### **03_Demostracion_Tecnica_TSI/** - Demostración técnica resumida
+**Objetivo**: Mostrar el flujo completo del proyecto con los artefactos finales y solo las visualizaciones relevantes.
+
+Contenido:
+- `01_Demostracion_Tecnica_TSI.ipynb` - notebook único de consulta y presentación
+- `README.md` - guía de uso de la carpeta
 
 ### **streamlit_dashboard/**
 

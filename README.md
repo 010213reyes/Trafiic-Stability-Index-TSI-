@@ -201,6 +201,9 @@ data/
 - `06_Local_Outlier_Factor_TSI.ipynb`: flujo completo por algoritmo (diagnóstico, entrenamiento, filtrado y salidas).
 - `07_DBSCAN_TSI.ipynb`: flujo completo por algoritmo (diagnóstico, búsqueda de parámetros, filtrado y salidas).
 
+#### 📘 Demostración técnica
+- `03_Demostracion_Tecnica_TSI/01_Demostracion_Tecnica_TSI.ipynb`: ejemplo técnico único para mostrar el proyecto de principio a fin con los artefactos finales.
+
 #### 🎯 Flujo recomendado de consulta
 ```
 1. 01_Data_Quality_Assessment.ipynb
@@ -211,7 +214,8 @@ data/
 6. 06_Local_Outlier_Factor_TSI.ipynb
 7. 07_DBSCAN_TSI.ipynb
 8. 08_Algorithm_Comparison_and_TSI.ipynb
-9. streamlit_dashboard/app.py
+9. 03_Demostracion_Tecnica_TSI/01_Demostracion_Tecnica_TSI.ipynb
+10. streamlit_dashboard/app.py
 ```
 
 #### 🔄 Próximos pasos inmediatos
@@ -229,6 +233,7 @@ data/
 
 ### Resultados principales
 - [notebooks/02_Data_Processing/08_Algorithm_Comparison_and_TSI.ipynb](notebooks/02_Data_Processing/08_Algorithm_Comparison_and_TSI.ipynb): comparación homogénea de algoritmos y cierre de TSI.
+- [notebooks/03_Demostracion_Tecnica_TSI/01_Demostracion_Tecnica_TSI.ipynb](notebooks/03_Demostracion_Tecnica_TSI/01_Demostracion_Tecnica_TSI.ipynb): demostración técnica resumida del flujo completo.
 - [streamlit_dashboard/app.py](streamlit_dashboard/app.py): panel ejecutivo con la narrativa final del proyecto.
 - [streamlit_dashboard/README.md](streamlit_dashboard/README.md): guía de la capa de visualización.
 

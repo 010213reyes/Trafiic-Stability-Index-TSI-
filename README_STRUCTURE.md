@@ -8,6 +8,12 @@ Este documento resume cómo está organizado actualmente el proyecto desde la ra
 TSI/
 ├─ README.md
 ├─ README_STRUCTURE.md
+├─ notebooks/
+│  ├─ 01_Data_Collection/
+│  ├─ 02_Data_Processing/
+│  └─ 03_Demostracion_Tecnica_TSI/
+│     ├─ README.md
+│     └─ 01_Demostracion_Tecnica_TSI.ipynb
 ├─ streamlit_dashboard/
 │  └─ README.md
 ├─ data/
