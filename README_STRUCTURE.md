@@ -8,6 +8,8 @@ Este documento resume cómo está organizado actualmente el proyecto desde la ra
 TSI/
 ├─ README.md
 ├─ README_STRUCTURE.md
+├─ streamlit_dashboard/
+│  └─ README.md
 ├─ data/
 │  ├─ raw/
 │  │  ├─ scraped_traffic.csv
@@ -32,6 +34,7 @@ TSI/
 - `data/raw/`: datos originales o recién recolectados (sin procesamiento final).
 - `data/processed/`: datos limpios/transformados listos para análisis.
 - `notebooks/`: notebooks principales del pipeline y análisis.
+- `streamlit_dashboard/`: capa separada para visualización ejecutiva y dashboards.
 - `.venv/`: entorno virtual local de Python.
 
 ## Flujo recomendado (Pipeline de Recopilación)
@@ -50,6 +53,10 @@ TSI/
 **Análisis:**
 
 6. **Realistic_Traffic_Modeling.ipynb** → Modelado y análisis exploratorio → Validación de hipótesis TSI
+
+**Presentación ejecutiva:**
+
+7. **streamlit_dashboard/** → Visualización resumida de resultados y decisión final
 
 ## Limpieza pendiente
 

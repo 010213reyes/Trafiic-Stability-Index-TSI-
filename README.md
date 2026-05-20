@@ -217,3 +217,9 @@ data/
 1. Estandarizar métricas de comparación entre algoritmos (retención, sensibilidad a outliers, estabilidad temporal).
 2. Comparar Isolation Forest, LOF y DBSCAN sobre la misma base de métricas y cobertura.
 3. Integrar hallazgos en la formulación final de la métrica TSI.
+4. Construir la capa de visualización ejecutiva en `streamlit_dashboard/` con solo los resultados que aportan al cierre.
+
+#### 🖥️ Capa de visualización
+- `streamlit_dashboard/README.md`: guía de la interfaz ejecutiva y fuentes de datos que consumirá.
+- `streamlit_dashboard/app.py`: punto de entrada del dashboard ejecutivo.
+- `streamlit_dashboard/`: carpeta separada para dashboards y pantallas de decisión.

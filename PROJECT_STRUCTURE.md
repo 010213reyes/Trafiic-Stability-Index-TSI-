@@ -19,6 +19,12 @@ TSI/
 │       ├── 04_Exploratory_Data_Analysis.ipynb  # Análisis
 │       └── Data_Ingestion_Basic_Procesing.ipynb
 │
+├── streamlit_dashboard/          # Dashboards y capa de visualización ejecutiva
+│   ├── README.md
+│   ├── app.py
+│   ├── pages/
+│   └── assets/
+│
 ├── data/                         # Datos organizados por etapa
 │   ├── 00_raw/                  # Datos crudos sin procesar
 │   │   ├── traffic_data.csv
@@ -94,6 +100,18 @@ Notebooks (ejecución secuencial):
    - Detección de patrones
    - Clasificación de estados
    - **Salida**: Gráficos PNG + insights
+
+### **streamlit_dashboard/**
+
+#### **Visualización Ejecutiva**
+**Objetivo**: Presentar solo los resultados que ayudan a tomar decisiones y cerrar el proyecto.
+
+Contenido sugerido:
+- Resumen ejecutivo del proyecto
+- Comparación de algoritmos
+- Distribución del TSI
+- Conclusiones finales
+- Gráficas clave reutilizadas desde `data/03_algorithm_output/`
 
 ### **data/**
 
