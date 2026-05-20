@@ -156,7 +156,7 @@ En este sentido, el análisis busca mantener una conexión con el contexto real 
 
 ---
 
-## 12. Estado del proyecto (Actualizado: 6 de mayo de 2026)
+## 12. Estado del proyecto (Actualizado: 20 de mayo de 2026)
 
 ### Fase actual: **Comparación de resultados, cierre de TSI y visualización ejecutiva** 🔄
 
@@ -166,6 +166,7 @@ En este sentido, el análisis busca mantener una conexión con el contexto real 
 - Notebook independiente de Isolation Forest creado y validado: `05_Isolation_Forest_TSI.ipynb`.
 - Notebook independiente de Local Outlier Factor creado y validado: `06_Local_Outlier_Factor_TSI.ipynb`.
 - Notebook independiente de DBSCAN creado y validado: `07_DBSCAN_TSI.ipynb`.
+- Notebook de cierre comparativo y formulación final del índice validado: `08_Algorithm_Comparison_and_TSI.ipynb`.
 - Dataset filtrado generado por Isolation Forest en `data/02_clean/filtered_isolation_forest.csv`.
 - Dataset filtrado generado por Local Outlier Factor en `data/02_clean/filtered_local_outlier_factor.csv`.
 - Dataset filtrado generado por DBSCAN en `data/02_clean/filtered_dbscan.csv`.
@@ -200,6 +201,7 @@ data/
 - `05_Isolation_Forest_TSI.ipynb`: flujo completo por algoritmo (diagnóstico, entrenamiento, filtrado y salidas).
 - `06_Local_Outlier_Factor_TSI.ipynb`: flujo completo por algoritmo (diagnóstico, entrenamiento, filtrado y salidas).
 - `07_DBSCAN_TSI.ipynb`: flujo completo por algoritmo (diagnóstico, búsqueda de parámetros, filtrado y salidas).
+- `08_Algorithm_Comparison_and_TSI.ipynb`: cierre comparativo y definición final del TSI unificado.
 
 #### 📘 Demostración técnica
 - `03_Demostracion_Tecnica_TSI/01_Demostracion_Tecnica_TSI.ipynb`: ejemplo técnico único para mostrar el proyecto de principio a fin con los artefactos finales.
@@ -245,6 +247,6 @@ data/
 
 ### Ruta de consulta recomendada
 1. Revisión de datos base en `data/02_clean/traffic_enriched.csv`.
-2. Lectura de comparación en `08_Algorithm_Comparison_and_TSI.ipynb`.
+2. Lectura de comparación en `notebooks/02_Data_Processing/08_Algorithm_Comparison_and_TSI.ipynb`.
 3. Consulta de salidas visuales en `data/03_algorithm_output/`.
 4. Navegación ejecutiva en `streamlit_dashboard/app.py`.
