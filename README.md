@@ -69,23 +69,13 @@ La validez de esta métrica dependerá de:
 El proyecto sigue un proceso estructurado:
 
 1. Recolección de datos relevantes del sistema de tráfico. ✅ **COMPLETADO**
-2. Procesamiento y limpieza de datos para garantizar calidad. 🔄 **EN CURSO**
-3. Análisis exploratorio para identificar patrones y relaciones entre variables. 🔄 **EN CURSO**
-4. Construcción de modelos para representar el comportamiento del sistema y evaluar la hipótesis.
-5. Validación de resultados mediante comparación con datos reales.
+2. Procesamiento y limpieza de datos para garantizar calidad. ✅ **COMPLETADO**
+3. Análisis exploratorio para identificar patrones y relaciones entre variables. ✅ **COMPLETADO**
+4. Construcción de modelos para representar el comportamiento del sistema y evaluar la hipótesis. ✅ **COMPLETADO**
+5. Validación de resultados mediante comparación con datos reales. ✅ **COMPLETADO**
 
-## 9b. Fase de procesamiento y análisis (Siguiente etapa detallada)
+## 9b. Fase de procesamiento y análisis (Investigación concluida)
 
-### ¿Qué haremos a continuación?
-
-Ahora que contamos con **117 registros reales** de tráfico de Guadalajara, pasaremos a la fase crítica de **transformación de datos en información**. Esta etapa es fundamental para identificar patrones, anomalías y relaciones entre variables que nos permitan construir la métrica TSI.
-
-### Pasos específicos del procesamiento:
-
-#### **1. Limpieza y validación de datos**
-- Detectar y tratar valores faltantes (NaN, nulos)
-- Identificar y manejar valores atípicos (outliers) que podrían distorsionar el análisis
-- Validar rangos de variables (ej: velocidad no puede ser negativa)
 - Estandarizar formatos de fechas y tipos de datos
 - **Resultado esperado**: Dataset limpio y consistente sin ruido
 
@@ -156,9 +146,9 @@ En este sentido, el análisis busca mantener una conexión con el contexto real 
 
 ---
 
-## 12. Estado del proyecto (Actualizado: 20 de mayo de 2026)
+## 12. Estado del proyecto (Actualizado: 3 de septiembre de 2026)
 
-### Fase actual: **Comparación de resultados, cierre de TSI y visualización ejecutiva** 🔄
+### Fase actual: **Investigación concluida y planificación de implementación** ✅
 
 #### ✅ Avances confirmados
 - Estructura de datos migrada a esquema por etapas (`00_raw`, `01_processed`, `02_clean`, `03_algorithm_output`).
@@ -221,9 +211,9 @@ data/
 ```
 
 #### 🔄 Próximos pasos inmediatos
-1. Afinar el dashboard ejecutivo para lectura final.
-2. Revisar el texto de conclusiones y narrativa de entrega.
-3. Preparar una versión resumida para presentación o reporte.
+1. Diseñar la arquitectura de datos y la base de datos SQL.
+2. Definir el pipeline reproducible de ingeniería de datos.
+3. Planificar la integración del modelo con la interfaz Streamlit.
 
 #### 🖥️ Capa de visualización
 - `streamlit_dashboard/README.md`: guía de la interfaz ejecutiva y fuentes de datos que consumirá.
@@ -250,3 +240,91 @@ data/
 2. Lectura de comparación en `notebooks/02_Data_Processing/08_Algorithm_Comparison_and_TSI.ipynb`.
 3. Consulta de salidas visuales en `data/03_algorithm_output/`.
 4. Navegación ejecutiva en `streamlit_dashboard/app.py`.
+
+---
+
+## 14. Nueva hoja de ruta de implementación
+
+Con la investigación terminada, el proyecto avanzará hacia una solución de inteligencia artificial de punta a punta.
+
+### Fase 1: Minería de datos
+
+- Formalizar las definiciones de anomalía, congestión y pre-colapso.
+- Documentar las fuentes disponibles, su calidad y sus limitaciones.
+- Consolidar los hallazgos obtenidos durante la investigación.
+
+**Entregable:** definición funcional del problema y catálogo de datos.
+
+### Fase 2: Ingeniería de datos
+
+- Diseñar el flujo `raw -> processed -> clean`.
+- Estandarizar formatos, tipos y reglas de calidad.
+- Registrar el origen y las transformaciones de cada conjunto.
+- Preparar cargas reproducibles hacia SQL.
+
+**Entregable:** pipeline reproducible y reglas de validación.
+
+### Fase 3: Base de datos SQL
+
+- Centralizar observaciones, avenidas, fuentes, ejecuciones y resultados.
+- Definir tablas, claves, relaciones e índices.
+- Separar datos originales, procesados y resultados de modelos.
+- Permitir consultas desde la aplicación.
+
+**Entregable:** modelo relacional documentado y base SQL funcional.
+
+### Fase 4: Análisis de datos
+
+- Convertir los hallazgos en indicadores operativos.
+- Analizar resultados por avenida, periodo y franja horaria.
+- Mantener visualizaciones orientadas a interpretación y decisiones.
+
+**Entregable:** indicadores y reportes analíticos.
+
+### Fase 5: Ciencia de datos y machine learning
+
+- Consolidar variables y características del modelo.
+- Comparar DBSCAN, Isolation Forest y LOF con criterios definidos.
+- Validar el TSI y documentar su interpretación y limitaciones.
+- Versionar modelos, parámetros, datos y métricas.
+
+**Entregable:** modelo seleccionado, TSI validado y evaluación documentada.
+
+### Fase 6: Interfaz mínima
+
+- Usar Streamlit como interfaz de demostración.
+- Mostrar indicadores, gráficas y anomalías relevantes.
+- Incorporar filtros por avenida, fecha y método.
+- Consultar resultados almacenados en SQL.
+- Incluir estados claros de carga, error y ausencia de datos.
+
+**Entregable:** demostración funcional para usuarios y presentación del proyecto.
+
+### Fase 7: MLOps
+
+- Versionar código, datos, modelos y configuraciones.
+- Automatizar pruebas de calidad y validación.
+- Registrar experimentos y métricas.
+- Preparar entrenamiento y actualización reproducibles.
+- Monitorear calidad de datos y desempeño del modelo.
+
+**Entregable:** flujo operativo preparado para mantenimiento y evolución.
+
+### Estrategia de despliegue
+
+La primera demostración se realizará localmente con Streamlit. El despliegue en la nube será una etapa posterior, cuando la arquitectura, la base SQL, el pipeline y el modelo estén estabilizados.
+
+
+Fuentes -> Pipeline -> SQL -> Análisis y ML -> TSI -> Streamlit -> Nube
+```
+
+### Orden de implementación
+
+1. Arquitectura y catálogo de datos.
+2. Pipeline de ingeniería de datos.
+3. Diseño e integración de SQL.
+4. Evaluación final del modelo y del TSI.
+5. Interfaz Streamlit para demostración.
+6. Automatización y prácticas MLOps.
+7. Despliegue en la nube.
+
