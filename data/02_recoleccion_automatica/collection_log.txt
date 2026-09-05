@@ -1,0 +1,17 @@
+2026-09-05 13:05:24,958 - INFO - ======================================================================
+2026-09-05 13:05:24,958 - INFO - INICIANDO RECOLECCIÓN: 2026-09-05
+2026-09-05 13:05:24,958 - INFO - ======================================================================
+2026-09-05 13:05:24,958 - INFO - Fuente 1: Generando datos sintéticos calibrados...
+2026-09-05 13:05:24,972 - INFO -   ✓ 720 registros generados
+2026-09-05 13:05:24,972 - INFO - Fuente 2: Interpolando datos históricos...
+2026-09-05 13:05:24,979 - INFO - Datos históricos cargados de C:\Users\REYES\OneDrive\Desktop\terminado\portafolio data science\TSI\data\00_raw\traffic_data.csv: 310 registros
+2026-09-05 13:05:24,989 - INFO - Datos históricos cargados de C:\Users\REYES\OneDrive\Desktop\terminado\portafolio data science\TSI\data\00_raw\scraped_traffic.csv: 117 registros
+2026-09-05 13:05:25,022 - INFO - Resumen histórico calculado: 71 combinaciones avenida-hora
+2026-09-05 13:05:25,024 - INFO -   ✓ Resumen histórico disponible
+2026-09-05 13:05:25,024 - INFO - Fuente 3: Generando anomalías realistas...
+2026-09-05 13:05:25,024 - INFO -   ✓ 0 evento(s) detectado(s)
+2026-09-05 13:05:25,035 - INFO - Datos guardados en: C:\Users\REYES\OneDrive\Desktop\terminado\portafolio data science\TSI\data\02_recoleccion_automatica\2026-09-05_traffic_collection.csv
+2026-09-05 13:05:25,041 - INFO - Metadatos guardados en: C:\Users\REYES\OneDrive\Desktop\terminado\portafolio data science\TSI\data\02_recoleccion_automatica\2026-09-05_metadata.json
+2026-09-05 13:05:25,041 - INFO - ======================================================================
+2026-09-05 13:05:25,041 - INFO - RECOLECCIÓN COMPLETADA
+2026-09-05 13:05:25,041 - INFO - ======================================================================

@@ -1,0 +1,115 @@
+name: Recolección automática de datos de tráfico
+
+# Ejecutar diariamente a las 2:00 AM UTC (8:00 PM Guadalajara UTC-6)
+# Configurable según necesidad
+on:
+  schedule:
+    - cron: '0 2 * * *'  # 2:00 AM UTC todos los días
+  
+  # Permitir disparar manualmente desde GitHub Actions
+  workflow_dispatch:
+
+  # Ejecutar al hacer push a main (opcional, para testing)
+  push:
+    branches:
+      - main
+    paths:
+      - 'scripts/collect_traffic_data.py'
+      - '.github/workflows/daily_traffic_collection.yml'
+
+jobs:
+  collect-traffic-data:
+    runs-on: ubuntu-latest
+    
+    # Permisos necesarios para hacer commits
+    permissions:
+      contents: write
+      
+    steps:
+      # Paso 1: Descargar código
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      # Paso 2: Configurar Python
+      - name: Set up Python 3.10
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+          cache: 'pip'
+
+      # Paso 3: Instalar dependencias
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pandas numpy
+
+      # Paso 4: Ejecutar recolección de datos
+      - name: Collect traffic data
+        run: |
+          python scripts/collect_traffic_data.py
+        continue-on-error: false
+
+      # Paso 5: Verificar datos generados
+      - name: Verify data collection
+        run: |
+          ls -lh data/02_recoleccion_automatica/
+          python -c "
+          import pandas as pd
+          import os
+          import glob
+          
+          # Buscar archivo del día
+          csv_files = sorted(glob.glob('data/02_recoleccion_automatica/*.csv'))
+          if csv_files:
+              df = pd.read_csv(csv_files[-1])
+              print(f'\n✓ Archivo: {os.path.basename(csv_files[-1])}')
+              print(f'  Registros: {len(df)}')
+              print(f'  Columnas: {len(df.columns)}')
+              print(f'  Avenidas: {df[\"avenida\"].nunique()}')
+          else:
+              print('✗ No se encontraron archivos CSV')
+          "
+
+      # Paso 6: Configurar Git
+      - name: Configure Git
+        run: |
+          git config --local user.email "traffic-bot@github.com"
+          git config --local user.name "Traffic Data Bot"
+
+      # Paso 7: Hacer commit y push de nuevos datos
+      - name: Commit and push data
+        run: |
+          # Agregar solo archivos nuevos de recolección
+          git add data/02_recoleccion_automatica/ || true
+          
+          # Contar cambios
+          STATUS=$(git status --short)
+          if [ -n "$STATUS" ]; then
+              git commit -m "🤖 Recolección automática: $(date -u +'%Y-%m-%d')"
+              git push origin main
+              echo "✓ Datos pusheados a GitHub"
+          else
+              echo "✓ No hay cambios nuevos"
+          fi
+
+      # Paso 8: Resumen de ejecución
+      - name: Summary
+        if: always()
+        run: |
+          echo "## 📊 Recolección de datos de tráfico completada" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**Fecha:** $(date -u +'%Y-%m-%d %H:%M:%S UTC')" >> $GITHUB_STEP_SUMMARY
+          echo "**Estado:** ✓ Exitosa" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "### Archivos generados:" >> $GITHUB_STEP_SUMMARY
+          ls -1 data/02_recoleccion_automatica/ | tail -5 | sed 's/^/- /' >> $GITHUB_STEP_SUMMARY || echo "- (sin cambios)" >> $GITHUB_STEP_SUMMARY
+
+      # Paso 9: Notificar si hay error
+      - name: Error notification
+        if: failure()
+        run: |
+          echo "## ⚠️ Error en recolección de datos"
+          echo "Revisa los logs arriba para detalles"
+          exit 1
