@@ -70,6 +70,12 @@ También se conservaron los metadatos de ubicación de sensores:
 - `data/00_raw/external/sensor_metadata/metr_la_sensor_locations.csv`: 207 filas, encabezados presentes, sin valores nulos.
 - `data/00_raw/external/sensor_metadata/pems_bay_sensor_locations.csv`: 325 filas, tres columnas sin encabezados, sin valores nulos.
 
+Las representaciones procesadas se generaron y validaron en `data/01_processed/external/`:
+
+- `metr_la.parquet`: 34,272 filas y 207 sensores.
+- `pems_bay.parquet`: 52,116 filas y 325 sensores.
+- Ambos conservan una frecuencia dominante de 5 minutos y no presentan timestamps inválidos, faltantes ni valores negativos.
+
 El archivo de PEMS-BAY debe normalizarse asignando las columnas `sensor_id`, `latitude` y `longitude` durante la ingeniería de datos, conservando el archivo original sin modificar.
 
 ## Próxima revisión
