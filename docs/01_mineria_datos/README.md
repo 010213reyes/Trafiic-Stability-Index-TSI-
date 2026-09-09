@@ -20,7 +20,7 @@ Esta fase no requiere servicios ni nuevas APIs. Se trabajará primero con:
 3. ¿Qué variables tienen sentido operativo para detectar inestabilidad?
 4. ¿Qué sesgos tienen los datos sintéticos, históricos, scraped y crowdsourcing?
 5. ¿Qué calidad, cobertura temporal y cobertura por avenida tiene cada fuente?
-6. ¿Qué evidencia permite evaluar la hipótesis de anticipación de 3 a 10 minutos?
+6. ¿Qué evidencia permite evaluar la hipótesis de anticipación de 18 a 20 minutos?
 
 ## Fuentes abiertas para comenzar
 
@@ -35,6 +35,9 @@ Esta fase no requiere servicios ni nuevas APIs. Se trabajará primero con:
 - [INEGI: vehículos de motor registrados](https://www.inegi.org.mx/temas/vehiculos/)
 - [Datos Abiertos del Gobierno de México](https://datos.gob.mx/)
 - [Datos Abiertos Jalisco](https://datos.jalisco.gob.mx/)
+- [Caltrans PeMS: datos de desempeño de autopistas](https://pems.dot.ca.gov/)
+- [METR-LA y PEMS-BAY: repositorio público de series de sensores](https://github.com/liyaguang/DCRNN)
+- [Portal de datos abiertos de Madrid: tráfico](https://datos.madrid.es/)
 - [FHWA: conceptos y medición del tráfico](https://ops.fhwa.dot.gov/publications/fhwahop08054/)
 - [UCI Machine Learning Repository](https://archive.ics.uci.edu/)
 - [OpenML: conjuntos de datos y experimentos](https://www.openml.org/)
@@ -60,7 +63,9 @@ Para cada fuente o definición, registrar:
 
 ## Criterio de cierre
 
-La fase termina cuando exista una definición aprobada del problema, un catálogo de fuentes, una lista justificada de variables y un registro explícito de limitaciones. Todavía no se deben modificar modelos ni crear infraestructura SQL.
+La fase termina cuando exista una definición aprobada del problema, un catálogo de fuentes, una lista justificada de variables, un registro explícito de limitaciones y una matriz de compatibilidad multiciudad. Todavía no se deben modificar modelos ni crear infraestructura SQL.
+
+Las fuentes internacionales pueden utilizarse para aprender patrones generales de tráfico. No sustituyen la validación local: la prueba final de anticipación debe realizarse con datos de Guadalajara no utilizados durante el ajuste.
 
 ## Estrategia de trabajo eficiente
 

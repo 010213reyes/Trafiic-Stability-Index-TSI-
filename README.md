@@ -16,7 +16,7 @@ Bajo esta perspectiva, el problema se redefine no como la medición del congesti
 
 ### H1 (hipótesis alternativa)
 
-Es posible identificar un estado previo al colapso del tráfico urbano mediante el análisis conjunto de variables operativas del sistema. Este estado, definido como **zona de pre-colapso**, puede ser detectado con suficiente anticipación para inferir la probabilidad de que ocurra congestión en un intervalo corto de tiempo, estimado entre **3 y 10 minutos**.
+Es posible identificar un estado previo al colapso del tráfico urbano mediante el análisis conjunto de variables operativas del sistema. Este estado, definido como **zona de pre-colapso**, puede ser detectado con suficiente anticipación para inferir la probabilidad de que ocurra congestión en un intervalo estimado de **18 a 20 minutos**.
 
 ### H0 (hipótesis nula)
 

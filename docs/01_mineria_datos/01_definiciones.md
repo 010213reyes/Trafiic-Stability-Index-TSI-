@@ -42,7 +42,7 @@ En esta fase no se afirma que el pre-colapso esté identificado en los datos rea
 
 Capacidad de identificar un evento futuro usando únicamente información disponible antes de ese evento. No debe declararse hasta evaluar correctamente el orden temporal y evitar usar información futura.
 
-**Nota urgente:** Con datos actuales (máximo 9 días fragmentados de datos reales), no es posible validar anticipación de 3–10 minutos. Se requieren ≥30 días de datos reales con resolución 5–15 minutos.
+**Nota urgente:** Con datos actuales (máximo 9 días fragmentados de datos reales), no es posible validar anticipación de 18–20 minutos. Se requieren ≥30 días de datos reales con resolución 5–15 minutos.
 
 ---
 

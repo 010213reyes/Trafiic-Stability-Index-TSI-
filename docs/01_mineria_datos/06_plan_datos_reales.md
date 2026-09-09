@@ -5,11 +5,28 @@
 - **Datos sintéticos:** 5,040 observaciones, 6–7 días, resolución 10 min ✓ apto para prototipo
 - **Datos reales:** 427 observaciones, máximo 9 días, resolución inconsistente ✗ insuficiente
 
-**Problema:** Un modelo entrenado solo en datos sintéticos no funcionará en producción.
+**Problema:** Un modelo entrenado solo en datos sintéticos no funcionará en producción. La captura de Guadalajara puede complementarse con fuentes públicas internacionales para aprender patrones generales, pero la validación final seguirá requiriendo datos de Guadalajara.
+
+## Nueva estrategia: datos reales multiciudad
+
+No se exigirá que las fuentes externas sean mexicanas. Se priorizarán conjuntos públicos ya publicados con sensores reales y series temporales: METR-LA, PEMS-BAY, Caltrans PeMS y portales urbanos abiertos como Madrid. Estas fuentes sirven para preentrenamiento o comparación, no para afirmar que el comportamiento observado sea el de Guadalajara.
+
+### Separación de funciones
+
+```
+Fuentes públicas externas -> aprender patrones generales
+Datos disponibles de Guadalajara -> calibrar el contexto local
+Datos nuevos de Guadalajara -> prueba final
+Datos sintéticos -> pruebas técnicas, no validación real
+```
+
+### Requisito de compatibilidad
+
+Antes de descargar o programar integraciones se elaborará una matriz por fuente con: ciudad, proveedor, licencia, periodo, resolución, sensores, variables, unidades, zona horaria, faltantes y formato. Una fuente se acepta si tiene al menos velocidad, timestamp fiable, resolución de 5–15 minutos y cobertura continua; flujo, ocupación, densidad y espera serán variables complementarias.
 
 ## Requisitos de datos reales
 
-Para validar la hipótesis de anticipación de 3–10 minutos y crear un modelo operativo:
+Para validar la hipótesis de anticipación de 18–20 minutos y crear un modelo operativo:
 
 | Aspecto | Requisito | Actual | Estado |
 |---------|-----------|--------|--------|
@@ -21,7 +38,25 @@ Para validar la hipótesis de anticipación de 3–10 minutos y crear un modelo 
 
 ## Opciones de recolección
 
-### Opción 1: Autoridades de tránsito municipal/estatal
+### Opción 1: Datasets públicos históricos internacionales
+
+**Fuentes candidatas:** METR-LA, PEMS-BAY, Caltrans PeMS y portales urbanos de datos abiertos.
+
+**Ventajas:** acceso sin trámite local, series temporales documentadas, sensores reales y formatos reutilizables.
+
+**Desventajas:** diferencias de infraestructura, cobertura espacial, variables y metodología de medición.
+
+**Uso:** preentrenamiento, comparación de patrones y validación de la portabilidad del modelo.
+
+### Opción 2: Captura propia desde una fuente pública
+
+Si un portal publica datos actuales pero no conserva histórico, se puede recolectar durante 30–90 días con un script propio. Cada captura debe conservar la respuesta original, timestamp de consulta, zona horaria, endpoint, estado HTTP y metadatos.
+
+**Ventajas:** serie reproducible
+
+**Desventajas:** solo genera histórico desde el inicio de la captura; no debe presentarse como histórico retrospectivo.
+
+### Opción 3: Autoridades de tránsito municipal/estatal
 **Fuente:** Secretaría de Movilidad, Instituto de Transporte y Vialidad, o equivalente local
 
 **Cómo acceder:**
@@ -33,7 +68,7 @@ Para validar la hipótesis de anticipación de 3–10 minutos y crear un modelo 
 **Desventajas:** Tramites administrativos, tiempo de respuesta, posibles restricciones de licencia
 **Probabilidad:** Moderada (depende de políticas de datos abiertos locales)
 
-### Opción 2: Plataformas de movilidad urbana
+### Opción 4: Plataformas de movilidad urbana
 **Fuente:** Waze, Google Maps, Mapbox (APIs de tráfico)
 
 **Cómo acceder:**
@@ -50,7 +85,7 @@ Para validar la hipótesis de anticipación de 3–10 minutos y crear un modelo 
 - 30 días × 144 consultas/día (cada 10 min) × 5 avenidas ≈ 21,600 consultas ≈ $150–300 USD
 - Waze Premium data (si disponible): comúnmente $100–500 USD/mes
 
-### Opción 3: Sensores IoT / cámaras de tráfico
+### Opción 5: Sensores IoT / cámaras de tráfico
 **Fuente:** Sistemas de conteo de vehículos en campo
 
 **Cómo acceder:**
@@ -62,7 +97,7 @@ Para validar la hipótesis de anticipación de 3–10 minutos y crear un modelo 
 **Desventajas:** Muy costoso (€1,000–5,000 USD por sensor), tiempo de instalación
 **Probabilidad:** Baja (impractible para proyecto académico)
 
-### Opción 4: Datos históricos + simulación mejorada
+### Opción 6: Datos históricos + simulación mejorada
 **Fuente:** Extender datos actuales + mejorar modelo sintético
 
 **Cómo acceder:**
@@ -76,20 +111,13 @@ Para validar la hipótesis de anticipación de 3–10 minutos y crear un modelo 
 
 ## Recomendación
 
-**Prioridad 1 (Inmediato):**
-1. Contactar Secretaría de Movilidad local → solicitar datos abiertos o acceso API
-2. Paralelamente, evaluar costo de Google Maps Traffic API
-3. Plazo: 1–2 semanas
+**Prioridad 1 (inmediata):** descargar y verificar METR-LA y PEMS-BAY como fuentes públicas de transferencia.
 
-**Prioridad 2 (Si Prioridad 1 falla):**
-1. Implementar recolección automática vía Google Maps API por 30 días
-2. Presupuesto: ~$200 USD
-3. Plazo: 40 días (30 recolección + 10 análisis)
+**Prioridad 2:** evaluar el acceso gratuito a PeMS y revisar datasets históricos de Madrid u otros portales urbanos abiertos.
 
-**Prioridad 3 (Fallback):**
-1. Usar datos sintéticos calibrados para prototipo académico
-2. Documentar limitaciones explícitamente
-3. Advertir que modelo no es operativo sin datos reales
+**Prioridad 3:** iniciar una captura propia desde una API o feed público que exponga datos actuales, manteniendo los originales y sus metadatos.
+
+**Fallback:** usar datos sintéticos calibrados solo para prototipo académico y documentar que no validan el comportamiento real.
 
 ## Próximos pasos
 
@@ -99,4 +127,4 @@ Después de cerrar minería (documentar fuentes de definiciones):
 2. **Semana 2–4:** Ingeniería de datos (Fase 2) en paralelo
 3. **Semana 4+:** Con datos reales en hand → pasar a análisis y modelado
 
-**No iniciar análisis ni ML hasta tener datos reales confirmados.**
+**No iniciar transferencia ni afirmar validación hasta tener fuentes reales descargadas, documentadas y separadas por ciudad.**

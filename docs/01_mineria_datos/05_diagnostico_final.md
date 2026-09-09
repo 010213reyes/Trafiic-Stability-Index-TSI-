@@ -30,7 +30,7 @@ Se ejecutó un análisis controlado para determinar si las definiciones de conge
 - Resolución temporal: inconsistente, sin garantía de 10 minutos
 - Cobertura máxima: 9 días fragmentados
 - Faltantes: 0% en velocidad/densidad, pero escasez extrema de densidad por avenida
-- **Impacto:** no permiten observar pre-colapso ni validar anticipación de 3–10 minutos
+- **Impacto:** no permiten observar pre-colapso ni validar anticipación de 18–20 minutos
 
 **Conclusión:** Los datos sintéticos son **reproducibles y suficientes para validar las definiciones de congestión**. Los datos reales actuales son demasiado escasos.
 
@@ -47,9 +47,9 @@ Se ejecutó un análisis controlado para determinar si las definiciones de conge
 
 Estas definiciones están **alineadas con literatura estándar de ingeniería de tráfico** y **reproducibles en los datos sintéticos disponibles**. Están listos para documentar en diccionario de datos.
 
-## Respuesta a la hipótesis de 3 a 10 minutos
+## Respuesta a la hipótesis de 18 a 20 minutos
 
-**DECISIÓN EXPLÍCITA:** No se puede validar anticipación de 3–10 minutos con los datos actuales.
+**DECISIÓN EXPLÍCITA:** No se puede validar anticipación de 18–20 minutos con los datos actuales.
 
 **Razones:**
 
@@ -65,7 +65,7 @@ Estas definiciones están **alineadas con literatura estándar de ingeniería de
 2. Definir evento de congestión objetivo con etiquetas verdaderas
 3. Construir variables usando solo información previa (sin data leakage)
 4. Medir anticipación, falsos positivos y falsos negativos
-5. Evaluar si 3–10 minutos es realista o debe ajustarse
+5. Evaluar la anticipación de 18–20 minutos
 
 **Nota urgente:** Sin datos reales suficientes, cualquier modelo entrenado en datos sintéticos no será válido en producción.
 

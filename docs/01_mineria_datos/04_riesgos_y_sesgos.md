@@ -15,12 +15,15 @@
 - Mezclar años y periodos como si fueran observaciones comparables.
 - Introducir fuga de información al calcular variables con datos futuros.
 - Tratar datos sintéticos como validación de capacidad predictiva real.
+- Transferir patrones entre ciudades con distinta infraestructura, clima, geometría vial o método de medición.
+- Confundir datos reales de otra ciudad con evidencia de validez para Guadalajara.
+- Combinar sensores de autopista con avenidas urbanas sin conservar el tipo de vía.
 - Duplicar evidencia al usar raw y agregado de crowdsourcing en el mismo análisis.
 - Imputar faltantes sin documentar el supuesto.
 
 ## Riesgo de anticipación
 
-Actualmente no hay evidencia suficiente para afirmar anticipación de 3 a 10 minutos. La fuente sintética tiene intervalos de 10 minutos, pero eso solo demuestra resolución temporal, no capacidad predictiva. Para validar anticipación se requiere una secuencia temporal real con un evento definido y datos anteriores y posteriores al evento.
+Actualmente no hay evidencia suficiente para afirmar anticipación de 18 a 20 minutos. La fuente sintética tiene intervalos de 10 minutos, pero eso solo demuestra resolución temporal, no capacidad predictiva. Para validar anticipación se requiere una secuencia temporal real con un evento definido y datos anteriores y posteriores al evento.
 
 ## Controles propuestos
 
@@ -30,3 +33,6 @@ Actualmente no hay evidencia suficiente para afirmar anticipación de 3 a 10 min
 - Crear etiquetas o reglas de evento antes de evaluar modelos.
 - Reportar cobertura y faltantes junto con cualquier métrica.
 - Comparar resultados contra una línea base simple.
+- Mantener `ciudad`, `fuente`, `segmento_id`, `tipo_via` y `es_real` en el esquema común.
+- Ajustar umbrales por ciudad y avenida antes de comparar desempeño.
+- Evaluar por separado: entrenamiento externo, calibración local y prueba de Guadalajara.
