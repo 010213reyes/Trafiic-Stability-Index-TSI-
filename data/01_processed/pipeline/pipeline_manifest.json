@@ -1,0 +1,106 @@
+{
+  "pipeline": "raw_to_processed",
+  "executed_at_utc": "2026-09-10T18:34:01.079599+00:00",
+  "project_root": ".",
+  "sources": [
+    {
+      "source_id": "traffic_data",
+      "source_path": "data/00_raw/traffic_data.csv",
+      "processed_path": "data/01_processed/pipeline/traffic_data.parquet",
+      "rows": 310,
+      "columns": 9,
+      "timestamp_column": "timestamp",
+      "invalid_timestamps": 0,
+      "min_timestamp": "2026-03-17T22:31:30.850956",
+      "max_timestamp": "2026-05-01T18:52:17.465338"
+    },
+    {
+      "source_id": "scraped_traffic",
+      "source_path": "data/00_raw/scraped_traffic.csv",
+      "processed_path": "data/01_processed/pipeline/scraped_traffic.parquet",
+      "rows": 117,
+      "columns": 9,
+      "timestamp_column": "timestamp",
+      "invalid_timestamps": 0,
+      "min_timestamp": "2026-04-25T10:22:14.907361",
+      "max_timestamp": "2026-05-01T18:22:14.909489"
+    },
+    {
+      "source_id": "crowdsourcing_raw",
+      "source_path": "data/00_raw/crowdsourcing_raw.csv",
+      "processed_path": "data/01_processed/pipeline/crowdsourcing_raw.parquet",
+      "rows": 500,
+      "columns": 11,
+      "timestamp_column": "timestamp",
+      "invalid_timestamps": 0,
+      "min_timestamp": "2026-03-29T22:03:08.046149",
+      "max_timestamp": "2026-04-27T22:03:08.087890"
+    },
+    {
+      "source_id": "crowdsourcing_aggregated",
+      "source_path": "data/00_raw/crowdsourcing_aggregated.csv",
+      "processed_path": "data/01_processed/pipeline/crowdsourcing_aggregated.parquet",
+      "rows": 148,
+      "columns": 9,
+      "timestamp_column": "timestamp",
+      "invalid_timestamps": 0,
+      "min_timestamp": "2026-03-29T22:00:00",
+      "max_timestamp": "2026-04-27T22:00:00"
+    },
+    {
+      "source_id": "synthetic_traffic",
+      "source_path": "data/00_raw/synthetic_traffic.csv",
+      "processed_path": "data/01_processed/pipeline/synthetic_traffic.parquet",
+      "rows": 5040,
+      "columns": 8,
+      "timestamp_column": "timestamp",
+      "invalid_timestamps": 0,
+      "min_timestamp": "2024-01-01T00:00:00",
+      "max_timestamp": "2024-01-07T23:50:00"
+    },
+    {
+      "source_id": "metr_la",
+      "source_path": "data/00_raw/external/traffic_datasets/METR-LA.csv",
+      "processed_path": "data/01_processed/pipeline/metr_la.parquet",
+      "rows": 34272,
+      "columns": 208,
+      "timestamp_column": "Unnamed: 0",
+      "invalid_timestamps": 0,
+      "min_timestamp": "2012-03-01T00:00:00",
+      "max_timestamp": "2012-06-27T23:55:00"
+    },
+    {
+      "source_id": "pems_bay",
+      "source_path": "data/00_raw/external/traffic_datasets/PEMS-BAY.csv",
+      "processed_path": "data/01_processed/pipeline/pems_bay.parquet",
+      "rows": 52116,
+      "columns": 326,
+      "timestamp_column": "Unnamed: 0",
+      "invalid_timestamps": 0,
+      "min_timestamp": "2017-01-01T00:00:00",
+      "max_timestamp": "2017-06-30T23:55:00"
+    },
+    {
+      "source_id": "metr_la_sensor_locations",
+      "source_path": "data/00_raw/external/sensor_metadata/metr_la_sensor_locations.csv",
+      "processed_path": "data/01_processed/pipeline/metr_la_sensor_locations.parquet",
+      "rows": 207,
+      "columns": 4,
+      "timestamp_column": "",
+      "invalid_timestamps": "",
+      "min_timestamp": "",
+      "max_timestamp": ""
+    },
+    {
+      "source_id": "pems_bay_sensor_locations",
+      "source_path": "data/00_raw/external/sensor_metadata/pems_bay_sensor_locations.csv",
+      "processed_path": "data/01_processed/pipeline/pems_bay_sensor_locations.parquet",
+      "rows": 325,
+      "columns": 3,
+      "timestamp_column": "",
+      "invalid_timestamps": "",
+      "min_timestamp": "",
+      "max_timestamp": ""
+    }
+  ]
+}
