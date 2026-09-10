@@ -60,6 +60,10 @@ Para cada fuente o definición, registrar:
 - `03_variables_relevantes.md`: variables candidatas y justificación.
 - `04_riesgos_y_sesgos.md`: sesgos, limitaciones y riesgos de interpretación.
 - `05_diagnostico_final.md`: diagnóstico y definición aprobada del problema.
+- `07_matriz_compatibilidad_multiciudad.md`: compatibilidad de fuentes públicas externas y Guadalajara.
+- `08_diccionario_datos_proyecto.md`: contrato de datos de la implementación nueva.
+- `09_etiquetas_operativas_proyecto.md`: reglas de congestión, pre-colapso y horizonte de 18–20 minutos.
+- `10_cierre_mineria_proyecto.md`: cierre de la Fase 1 y autorización para iniciar ingeniería de datos.
 
 ## Criterio de cierre
 

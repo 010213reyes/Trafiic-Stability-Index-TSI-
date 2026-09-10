@@ -1,0 +1,10 @@
+source_id,source_path,origin,processed_output,clean_output,pipeline_stage,is_real,notes
+traffic_data,data/00_raw/traffic_data.csv,Scraping_Traffic.ipynb,data/01_processed/traffic_data_normalized.parquet,data/02_clean/traffic_data.csv,raw -> processed -> clean,True,
+scraped_traffic,data/00_raw/scraped_traffic.csv,Scraping_Traffic.ipynb,data/01_processed/scraped_traffic_normalized.parquet,data/02_clean/traffic_data.csv,raw -> processed -> clean,True,
+crowdsourcing_raw,data/00_raw/crowdsourcing_raw.csv,03_Crowdsourcing_Collection.ipynb,data/01_processed/crowdsourcing_normalized.parquet,data/02_clean/historical_consolidated.csv,raw -> processed -> clean,True,
+crowdsourcing_aggregated,data/00_raw/crowdsourcing_aggregated.csv,03_Crowdsourcing_Collection.ipynb; crowdsourcing_raw.csv,data/01_processed/crowdsourcing_aggregated_normalized.parquet,data/02_clean/historical_consolidated.csv,raw -> processed -> clean,True,Fuente derivada
+synthetic_traffic,data/00_raw/synthetic_traffic.csv,01_Synthetic_Traffic_Data.ipynb,data/01_processed/synthetic_traffic_normalized.parquet,data/02_clean/traffic_enriched.csv,raw -> processed -> clean,False,
+metr_la,data/00_raw/external/traffic_datasets/METR-LA.csv,Zenodo 5724362; DCRNN sensor graph,data/01_processed/external/metr_la.parquet,data/02_clean/external/metr_la_clean.parquet,raw -> processed -> clean,True,
+pems_bay,data/00_raw/external/traffic_datasets/PEMS-BAY.csv,Zenodo 5724362; DCRNN sensor graph,data/01_processed/external/pems_bay.parquet,data/02_clean/external/pems_bay_clean.parquet,raw -> processed -> clean,True,
+metr_la_sensor_locations,data/00_raw/external/sensor_metadata/metr_la_sensor_locations.csv,DCRNN sensor graph,data/01_processed/external/metr_la_sensor_locations.csv,data/02_clean/external/metr_la_sensor_locations.csv,raw -> processed -> clean,True,
+pems_bay_sensor_locations,data/00_raw/external/sensor_metadata/pems_bay_sensor_locations.csv,DCRNN sensor graph,data/01_processed/external/pems_bay_sensor_locations.csv,data/02_clean/external/pems_bay_sensor_locations.csv,raw -> processed -> clean,True,
