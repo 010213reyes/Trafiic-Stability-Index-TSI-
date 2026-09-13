@@ -6,3 +6,4 @@ __pycache__/
 # Generated datasets
 data/raw/*.csv
 data/processed/*.csv
+data/02_clean/consolidated/consolidated_observations.parquet

@@ -1,0 +1,72 @@
+{
+  "pipeline": "integration_and_consolidation",
+  "executed_at_utc": "2026-09-13T23:13:22.356731+00:00",
+  "observation_output": {
+    "output_path": "data/02_clean/consolidated/consolidated_observations.parquet",
+    "sources": [
+      {
+        "source_id": "traffic_data",
+        "input_path": "data/01_processed/normalized/traffic_data.parquet",
+        "rows": 310
+      },
+      {
+        "source_id": "scraped_traffic",
+        "input_path": "data/01_processed/normalized/scraped_traffic.parquet",
+        "rows": 117
+      },
+      {
+        "source_id": "crowdsourcing_raw",
+        "input_path": "data/01_processed/normalized/crowdsourcing_raw.parquet",
+        "rows": 500
+      },
+      {
+        "source_id": "synthetic_traffic",
+        "input_path": "data/01_processed/normalized/synthetic_traffic.parquet",
+        "rows": 5040
+      },
+      {
+        "source_id": "metr_la",
+        "input_path": "data/01_processed/normalized/metr_la.parquet",
+        "rows": 7094304
+      },
+      {
+        "source_id": "pems_bay",
+        "input_path": "data/01_processed/normalized/pems_bay.parquet",
+        "rows": 16937700
+      }
+    ]
+  },
+  "aggregate_output": {
+    "output_path": "data/02_clean/consolidated/derived_aggregates.parquet",
+    "sources": [
+      {
+        "source_id": "crowdsourcing_aggregated",
+        "input_path": "data/01_processed/normalized/crowdsourcing_aggregated.parquet",
+        "rows": 148
+      }
+    ]
+  },
+  "catalog_output": {
+    "output_path": "data/02_clean/consolidated/sensor_catalog.parquet",
+    "sources": [
+      "metr_la_sensor_locations",
+      "pems_bay_sensor_locations"
+    ],
+    "rows": 532
+  },
+  "quality_status_by_source": {
+    "crowdsourcing_aggregated": "advertencia",
+    "crowdsourcing_raw": "advertencia",
+    "metr_la": "valido",
+    "metr_la_sensor_locations": "valido",
+    "pems_bay": "valido",
+    "pems_bay_sensor_locations": "valido",
+    "scraped_traffic": "advertencia",
+    "synthetic_traffic": "advertencia",
+    "traffic_data": "advertencia"
+  },
+  "excluded_from_observations": {
+    "crowdsourcing_aggregated": "Se conserva separado para evitar duplicar crowdsourcing_raw.",
+    "sensor_locations": "Se conserva como catálogo espacial."
+  }
+}
