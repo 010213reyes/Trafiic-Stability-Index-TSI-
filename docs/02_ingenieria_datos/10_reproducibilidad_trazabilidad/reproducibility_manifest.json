@@ -1,0 +1,53 @@
+{
+  "pipeline": "reproducibility_and_traceability",
+  "executed_at_utc": "2026-09-15T01:13:23.039721+00:00",
+  "project_root": "C:/Users/REYES/OneDrive/Desktop/terminado/portafolio data science/TSI",
+  "checks": [
+    {
+      "artifact": "data/00_raw",
+      "exists": true,
+      "type": "directory"
+    },
+    {
+      "artifact": "data/01_processed/pipeline/pipeline_manifest.json",
+      "exists": true,
+      "type": "file"
+    },
+    {
+      "artifact": "data/01_processed/normalized/normalization_manifest.json",
+      "exists": true,
+      "type": "file"
+    },
+    {
+      "artifact": "data/01_processed/quality/quality_report.json",
+      "exists": true,
+      "type": "file"
+    },
+    {
+      "artifact": "data/02_clean/consolidated/consolidation_manifest.json",
+      "exists": true,
+      "type": "file"
+    },
+    {
+      "artifact": "data/02_clean/dataset_clean/dataset_clean_manifest.json",
+      "exists": true,
+      "type": "file"
+    },
+    {
+      "artifact": "data/02_clean/dataset_clean/clean_observations.parquet",
+      "exists": true,
+      "type": "file"
+    },
+    {
+      "artifact": "docs/02_ingenieria_datos/sql/tsi_stage.sqlite",
+      "exists": true,
+      "type": "file"
+    },
+    {
+      "artifact": "docs/02_ingenieria_datos/sql/sql_load_manifest.json",
+      "exists": true,
+      "type": "file"
+    }
+  ],
+  "status": "ok"
+}

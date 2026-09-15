@@ -1,0 +1,18 @@
+{
+  "pipeline": "sql_load",
+  "executed_at_utc": "2026-09-15T01:09:07.166549+00:00",
+  "database_path": "docs/02_ingenieria_datos/sql/tsi_stage.sqlite",
+  "source_dataset": "data/02_clean/dataset_clean/clean_observations.parquet",
+  "limit_applied": 50000,
+  "tables": {
+    "fact_observaciones": 50000,
+    "dim_segmento": 207,
+    "dim_fuente": 1,
+    "fact_aggregates": 0
+  },
+  "notes": [
+    "La tabla fact_observaciones almacena las mediciones del dataset limpio.",
+    "Las dimensiones son generadas a partir del propio dataset limpio para mantener trazabilidad y consulta eficiente.",
+    "Se recomienda crear índices adicionales en timestamp, segmento_id y fuente después de la carga inicial."
+  ]
+}
