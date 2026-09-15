@@ -1,0 +1,109 @@
+{
+  "pipeline": "dataset_clean",
+  "executed_at_utc": "2026-09-15T00:33:36.925057+00:00",
+  "input_sources": {
+    "observations": "data/02_clean/consolidated/consolidated_observations.parquet",
+    "aggregates": "data/02_clean/consolidated/derived_aggregates.parquet",
+    "sensor_catalog": "data/02_clean/consolidated/sensor_catalog.parquet"
+  },
+  "outputs": {
+    "observations": {
+      "dataset_name": "clean_observations",
+      "rows": 24032004,
+      "columns": [
+        "timestamp",
+        "ciudad",
+        "fuente",
+        "es_real",
+        "segmento_id",
+        "tipo_via",
+        "latitud",
+        "longitud",
+        "velocidad_kmh",
+        "flujo_veh_h",
+        "ocupacion_pct",
+        "densidad_veh_km",
+        "tiempo_viaje_seg",
+        "calidad_registro",
+        "valor_fuente"
+      ],
+      "output_path": "data/02_clean/dataset_clean/clean_observations.parquet",
+      "required_columns": [
+        "timestamp",
+        "ciudad",
+        "fuente",
+        "es_real",
+        "segmento_id",
+        "tipo_via"
+      ],
+      "created_at_utc": "2026-09-15T00:33:36.539176+00:00"
+    },
+    "aggregates": {
+      "dataset_name": "clean_aggregates",
+      "rows": 0,
+      "columns": [
+        "timestamp",
+        "ciudad",
+        "fuente",
+        "es_real",
+        "segmento_id",
+        "tipo_via",
+        "latitud",
+        "longitud",
+        "velocidad_kmh",
+        "flujo_veh_h",
+        "ocupacion_pct",
+        "densidad_veh_km",
+        "tiempo_viaje_seg",
+        "calidad_registro",
+        "valor_fuente"
+      ],
+      "output_path": "data/02_clean/dataset_clean/clean_aggregates.parquet",
+      "required_columns": [
+        "timestamp",
+        "ciudad",
+        "fuente",
+        "es_real",
+        "segmento_id",
+        "tipo_via"
+      ],
+      "created_at_utc": "2026-09-15T00:33:36.865255+00:00"
+    },
+    "sensor_catalog": {
+      "dataset_name": "clean_sensor_catalog",
+      "rows": 0,
+      "columns": [
+        "timestamp",
+        "ciudad",
+        "fuente",
+        "es_real",
+        "segmento_id",
+        "tipo_via",
+        "latitud",
+        "longitud",
+        "velocidad_kmh",
+        "flujo_veh_h",
+        "ocupacion_pct",
+        "densidad_veh_km",
+        "tiempo_viaje_seg",
+        "calidad_registro",
+        "valor_fuente"
+      ],
+      "output_path": "data/02_clean/dataset_clean/clean_sensor_catalog.parquet",
+      "required_columns": [
+        "timestamp",
+        "ciudad",
+        "fuente",
+        "es_real",
+        "segmento_id",
+        "tipo_via"
+      ],
+      "created_at_utc": "2026-09-15T00:33:36.924991+00:00"
+    }
+  },
+  "notes": [
+    "Se congelan solo registros con la firma mínima requerida para análisis y modelado.",
+    "Los agregados y catálogos espaciales se conservan como artefactos complementarios.",
+    "Los registros con nulls obligatorios o timestamps inválidos quedan fuera del dataset limpio."
+  ]
+}
