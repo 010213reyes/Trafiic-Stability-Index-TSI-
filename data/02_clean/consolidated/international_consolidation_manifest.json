@@ -1,0 +1,43 @@
+{
+  "pipeline": "international_clean_consolidation",
+  "executed_at_utc": "2026-09-23T21:25:20.155778+00:00",
+  "sql_status": "pendiente_hasta_curso_sql",
+  "timestamp_rule": "El consolidado almacena timestamp en UTC sin zona embebida; la zona horaria original permanece en el contrato de cada fuente.",
+  "metric_separation_rule": "No comparar directamente velocidad, indice de congestion, longitud de congestion e intensidad sin una transformacion documentada.",
+  "consolidated_output": {
+    "output_path": "data/02_clean/consolidated/international_observations.parquet",
+    "rows": 41770880,
+    "sources": [
+      {
+        "source_id": "istanbul_traffic_index",
+        "input_path": "data/02_clean/external/istanbul_traffic_index_clean.parquet",
+        "rows": 3332,
+        "metrica_principal": "indice_congestion"
+      },
+      {
+        "source_id": "sao_paulo_cet",
+        "input_path": "data/02_clean/external/sao_paulo_cet_clean.parquet",
+        "rows": 5223411,
+        "metrica_principal": "congestion_longitud_m"
+      },
+      {
+        "source_id": "madrid_traffic_points",
+        "input_path": "data/02_clean/external/madrid_traffic_points_clean.parquet",
+        "rows": 12512133,
+        "metrica_principal": "intensidad"
+      },
+      {
+        "source_id": "metr_la",
+        "input_path": "data/02_clean/external/metr_la_clean.parquet",
+        "rows": 7094304,
+        "metrica_principal": "velocidad_sensor"
+      },
+      {
+        "source_id": "pems_bay",
+        "input_path": "data/02_clean/external/pems_bay_clean.parquet",
+        "rows": 16937700,
+        "metrica_principal": "velocidad_sensor"
+      }
+    ]
+  }
+}

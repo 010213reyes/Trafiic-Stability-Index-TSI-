@@ -7,3 +7,11 @@ __pycache__/
 data/raw/*.csv
 data/processed/*.csv
 data/02_clean/consolidated/consolidated_observations.parquet
+
+# Large downloaded and generated international datasets
+data/00_raw/external/madrid/
+data/00_raw/external/sao_paulo/
+data/01_processed/external/madrid_traffic_points.parquet
+data/01_processed/external/sao_paulo_cet.parquet
+data/02_clean/external/*_clean.parquet
+data/02_clean/consolidated/international_observations.parquet

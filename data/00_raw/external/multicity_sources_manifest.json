@@ -1,0 +1,190 @@
+{
+  "project": "TSI",
+  "strategy": "transferencia_multiciudad",
+  "ciudad_objetivo": "Guadalajara",
+  "pais_objetivo": "Mexico",
+  "status": "planificado",
+  "ciudades": [
+    {
+      "ciudad": "Bangkok",
+      "pais": "Tailandia",
+      "region": "Asia",
+      "timezone": "Asia/Bangkok",
+      "rol_dato": "entrenamiento",
+      "prioridad": 1,
+      "estado": "pendiente",
+      "fuentes_sugeridas": [
+        "open traffic APIs",
+        "municipal mobility feeds",
+        "road sensor datasets"
+      ],
+      "variables_esperadas": [
+        "timestamp",
+        "speed",
+        "flow",
+        "occupancy",
+        "segment_id"
+      ]
+    },
+    {
+      "ciudad": "Istanbul",
+      "pais": "Turquia",
+      "region": "Europa-Asia",
+      "timezone": "Europe/Istanbul",
+      "rol_dato": "entrenamiento",
+      "prioridad": 2,
+      "estado": "pendiente",
+      "fuentes_sugeridas": [
+        "smart city mobility data",
+        "road network sensor data",
+        "public traffic feeds"
+      ],
+      "variables_esperadas": [
+        "timestamp",
+        "speed",
+        "flow",
+        "occupancy",
+        "segment_id"
+      ]
+    },
+    {
+      "ciudad": "Dubai",
+      "pais": "Emiratos Arabes Unidos",
+      "region": "Medio Oriente",
+      "timezone": "Asia/Dubai",
+      "rol_dato": "comparacion",
+      "prioridad": 3,
+      "estado": "pendiente",
+      "fuentes_sugeridas": [
+        "urban traffic portals",
+        "arterial road monitoring",
+        "public operator feeds"
+      ],
+      "variables_esperadas": [
+        "timestamp",
+        "speed",
+        "travel_time",
+        "flow",
+        "segment_id"
+      ]
+    },
+    {
+      "ciudad": "Madrid",
+      "pais": "Espana",
+      "region": "Europa",
+      "timezone": "Europe/Madrid",
+      "rol_dato": "validacion",
+      "prioridad": 4,
+      "estado": "pendiente",
+      "fuentes_sugeridas": [
+        "portal de datos abiertos de Madrid",
+        "traffic intensity datasets",
+        "urban sensor feeds"
+      ],
+      "variables_esperadas": [
+        "timestamp",
+        "speed",
+        "intensity",
+        "traffic_level",
+        "segment_id"
+      ]
+    },
+    {
+      "ciudad": "Barcelona",
+      "pais": "Espana",
+      "region": "Europa",
+      "timezone": "Europe/Madrid",
+      "rol_dato": "comparacion",
+      "prioridad": 5,
+      "estado": "pendiente",
+      "fuentes_sugeridas": [
+        "open mobility portals",
+        "traffic monitoring data",
+        "public road performance data"
+      ],
+      "variables_esperadas": [
+        "timestamp",
+        "speed",
+        "flow",
+        "congestion_level",
+        "segment_id"
+      ]
+    }
+  ],
+  "acquisition_status": {
+    "project": "TSI",
+    "strategy": "transferencia_multiciudad",
+    "generated_at": "2026-09-23",
+    "ciudades": [
+      {
+        "ciudad": "Istanbul",
+        "pais": "Turquia",
+        "status": "descargado",
+        "dataset": "Istanbul Traffic Index",
+        "url": "https://data.ibb.gov.tr/dataset/b3fbb6ce-03a5-4777-8c6c-111c73775523/resource/ba47eacb-a4e1-441c-ae51-0e622d4a18e2/download/traffic_index.csv",
+        "output": "data\\00_raw\\external\\source_downloads\\istanbul_traffic_index.csv",
+        "download": {
+          "url": "https://data.ibb.gov.tr/dataset/b3fbb6ce-03a5-4777-8c6c-111c73775523/resource/ba47eacb-a4e1-441c-ae51-0e622d4a18e2/download/traffic_index.csv",
+          "destination": "data\\00_raw\\external\\source_downloads\\istanbul_traffic_index.csv",
+          "bytes": 189921,
+          "content_type": "text/csv",
+          "status_code": 200,
+          "attempt": 1
+        }
+      },
+      {
+        "ciudad": "Sao Paulo",
+        "pais": "Brasil",
+        "status": "descargado_copia_secundaria",
+        "dataset": "Sao Paulo Traffic Jams since 2001",
+        "primary_source": "CET / Prefeitura de Sao Paulo",
+        "url": "https://www.kaggle.com/api/v1/datasets/download/danlessa/sao-paulo-traffic-jams-since-2001",
+        "official_catalog_url": "https://dados.prefeitura.sp.gov.br/api/3/action/package_show?id=base-de-dados-sobre-lentidao-por-trechos-cet",
+        "output": "data\\00_raw\\external\\sao_paulo\\sao_paulo_traffic_jams_kaggle.zip",
+        "download": {
+          "url": "https://www.kaggle.com/api/v1/datasets/download/danlessa/sao-paulo-traffic-jams-since-2001",
+          "destination": "data\\00_raw\\external\\sao_paulo\\sao_paulo_traffic_jams_kaggle.zip",
+          "bytes": 30003111,
+          "content_type": "application/zip",
+          "status_code": 200,
+          "attempt": 1
+        },
+        "official_download_error": "ChunkedEncodingError: (\"Connection broken: ConnectionResetError(10054, 'Se ha forzado la interrupción de una conexión existente por el host remoto', None, 10054, None)\", ConnectionResetError(10054, 'Se ha forzado la interrupción de una conexión existente por el host remoto', None, 10054, None))"
+      },
+      {
+        "ciudad": "Madrid",
+        "pais": "Espana",
+        "status": "descargado",
+        "dataset": "Historico de datos del trafico desde 2013",
+        "url": "https://datos.madrid.es/dataset/208627-0-transporte-ptomedida-historico/resource/208627-0-transporte-ptomedida-historico-zip/download/208627-0-transporte-ptomedida-historico-zip.zip",
+        "output": "data\\00_raw\\external\\madrid\\historico_2022_12.zip",
+        "download": {
+          "url": "https://datos.madrid.es/dataset/208627-0-transporte-ptomedida-historico/resource/208627-0-transporte-ptomedida-historico-zip/download/208627-0-transporte-ptomedida-historico-zip.zip",
+          "destination": "data\\00_raw\\external\\madrid\\historico_2022_12.zip",
+          "bytes": 79348668,
+          "content_type": "application/zip",
+          "status_code": 200,
+          "attempt": 1
+        }
+      },
+      {
+        "ciudad": "Bangkok",
+        "pais": "Tailandia",
+        "status": "no_validado",
+        "motivo": "El portal responde, pero la API de paquetes no expone un dataset de tráfico reutilizable desde esta sesión."
+      },
+      {
+        "ciudad": "Barcelona",
+        "pais": "Espana",
+        "status": "pendiente",
+        "motivo": "El catálogo está disponible, pero no se identificó un dataset operativo de flujo/velocidad con suficiente resolución para el pipeline actual."
+      },
+      {
+        "ciudad": "Dubai",
+        "pais": "Emiratos Arabes Unidos",
+        "status": "no_accseso",
+        "motivo": "El portal no respondió de forma confiable: ConnectTimeout: HTTPSConnectionPool(host='www.rta.ae', port=443): Max retries exceeded with url: /wps/portal/rta/ae/home (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.rta.ae', port=443) at 0x2bae77496d0>, 'Connection to www.rta.ae timed out. (connect timeout=45)'))"
+      }
+    ]
+  }
+}

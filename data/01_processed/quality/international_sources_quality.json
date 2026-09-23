@@ -1,0 +1,104 @@
+{
+  "pipeline": "international_sources_raw_to_processed",
+  "executed_at_utc": "2026-09-23T21:17:32.600138+00:00",
+  "sources": [
+    {
+      "source_id": "istanbul_traffic_index",
+      "input_path": "data/00_raw/external/source_downloads/istanbul_traffic_index.csv",
+      "output_path": "data/01_processed/external/istanbul_traffic_index.parquet",
+      "rows": 3332,
+      "columns": [
+        "timestamp",
+        "ciudad",
+        "fuente",
+        "es_real",
+        "segmento_id",
+        "tipo_via",
+        "latitud",
+        "longitud",
+        "velocidad_kmh",
+        "flujo_veh_h",
+        "ocupacion_pct",
+        "densidad_veh_km",
+        "tiempo_viaje_seg",
+        "indice_congestion",
+        "minimum_traffic_index",
+        "maximum_traffic_index",
+        "average_traffic_index",
+        "calidad_registro"
+      ],
+      "null_cells": 23324,
+      "invalid_timestamps": 0,
+      "observed_columns": [
+        "indice_congestion"
+      ],
+      "quality": "advertencia"
+    },
+    {
+      "source_id": "sao_paulo_cet",
+      "input_path": "data/00_raw/external/sao_paulo/sao_paulo_traffic_jams_kaggle.zip",
+      "output_path": "data/01_processed/external/sao_paulo_cet.parquet",
+      "rows": 5223448,
+      "columns": [
+        "timestamp",
+        "ciudad",
+        "fuente",
+        "es_real",
+        "segmento_id",
+        "tipo_via",
+        "latitud",
+        "longitud",
+        "velocidad_kmh",
+        "flujo_veh_h",
+        "ocupacion_pct",
+        "densidad_veh_km",
+        "tiempo_viaje_seg",
+        "congestion_longitud_m",
+        "calidad_registro",
+        "direction_fuente",
+        "region_fuente",
+        "passage_fuente"
+      ],
+      "null_cells": 42397212,
+      "invalid_timestamps": 0,
+      "observed_columns": [
+        "congestion_longitud_m"
+      ],
+      "quality": "advertencia"
+    },
+    {
+      "source_id": "madrid_traffic_points",
+      "input_path": "data/00_raw/external/madrid/historico_2022_12.zip",
+      "output_path": "data/01_processed/external/madrid_traffic_points.parquet",
+      "rows": 12512133,
+      "columns": [
+        "timestamp",
+        "ciudad",
+        "fuente",
+        "es_real",
+        "segmento_id",
+        "tipo_via",
+        "latitud",
+        "longitud",
+        "velocidad_kmh",
+        "flujo_veh_h",
+        "ocupacion_pct",
+        "densidad_veh_km",
+        "tiempo_viaje_seg",
+        "calidad_registro",
+        "intensidad_fuente",
+        "carga_fuente",
+        "vmed_fuente",
+        "error_fuente",
+        "periodo_integracion_min"
+      ],
+      "null_cells": 75092753,
+      "invalid_timestamps": 0,
+      "quality": "advertencia",
+      "notes": [
+        "vmed_fuente se conserva sin convertir hasta confirmar unidad",
+        "intensidad_fuente se conserva junto a flujo_veh_h como mapeo provisional"
+      ]
+    }
+  ]
+}

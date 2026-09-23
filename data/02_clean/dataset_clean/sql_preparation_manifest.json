@@ -1,0 +1,508 @@
+{
+  "pipeline": "sql_preparation",
+  "executed_at_utc": "2026-09-15T01:01:33.357775+00:00",
+  "source_dataset": "data/02_clean/dataset_clean/clean_observations.parquet",
+  "entities": [
+    {
+      "entity_name": "fact_observaciones",
+      "source_path": "data/02_clean/dataset_clean/clean_observations.parquet",
+      "rows": 24032004,
+      "primary_key": "observation_id",
+      "columns": [
+        {
+          "column": "timestamp",
+          "sql_type": "TIMESTAMP",
+          "nullable": false,
+          "nulls": 0
+        },
+        {
+          "column": "ciudad",
+          "sql_type": "VARCHAR(100)",
+          "nullable": false,
+          "nulls": 0
+        },
+        {
+          "column": "fuente",
+          "sql_type": "VARCHAR(50)",
+          "nullable": false,
+          "nulls": 0
+        },
+        {
+          "column": "es_real",
+          "sql_type": "BOOLEAN",
+          "nullable": false,
+          "nulls": 0
+        },
+        {
+          "column": "segmento_id",
+          "sql_type": "VARCHAR(100)",
+          "nullable": false,
+          "nulls": 0
+        },
+        {
+          "column": "tipo_via",
+          "sql_type": "VARCHAR(100)",
+          "nullable": false,
+          "nulls": 0
+        },
+        {
+          "column": "latitud",
+          "sql_type": "DOUBLE",
+          "nullable": true,
+          "nulls": 24032004
+        },
+        {
+          "column": "longitud",
+          "sql_type": "DOUBLE",
+          "nullable": true,
+          "nulls": 24032004
+        },
+        {
+          "column": "velocidad_kmh",
+          "sql_type": "DOUBLE",
+          "nullable": true,
+          "nulls": 24032004
+        },
+        {
+          "column": "flujo_veh_h",
+          "sql_type": "DOUBLE",
+          "nullable": true,
+          "nulls": 24032004
+        },
+        {
+          "column": "ocupacion_pct",
+          "sql_type": "DOUBLE",
+          "nullable": true,
+          "nulls": 24032004
+        },
+        {
+          "column": "densidad_veh_km",
+          "sql_type": "DOUBLE",
+          "nullable": true,
+          "nulls": 24032004
+        },
+        {
+          "column": "tiempo_viaje_seg",
+          "sql_type": "DOUBLE",
+          "nullable": true,
+          "nulls": 24032004
+        },
+        {
+          "column": "calidad_registro",
+          "sql_type": "VARCHAR(30)",
+          "nullable": false,
+          "nulls": 0
+        },
+        {
+          "column": "valor_fuente",
+          "sql_type": "DOUBLE",
+          "nullable": false,
+          "nulls": 0
+        }
+      ],
+      "target_stage": "sql_load"
+    },
+    {
+      "entity_name": "dim_segmento",
+      "source_path": "data/02_clean/dataset_clean/clean_observations.parquet",
+      "rows": 24032004,
+      "primary_key": "segmento_id",
+      "columns": [
+        {
+          "column": "timestamp",
+          "sql_type": "TIMESTAMP",
+          "nullable": false,
+          "nulls": 0
+        },
+        {
+          "column": "ciudad",
+          "sql_type": "VARCHAR(100)",
+          "nullable": false,
+          "nulls": 0
+        },
+        {
+          "column": "fuente",
+          "sql_type": "VARCHAR(50)",
+          "nullable": false,
+          "nulls": 0
+        },
+        {
+          "column": "es_real",
+          "sql_type": "BOOLEAN",
+          "nullable": false,
+          "nulls": 0
+        },
+        {
+          "column": "segmento_id",
+          "sql_type": "VARCHAR(100)",
+          "nullable": false,
+          "nulls": 0
+        },
+        {
+          "column": "tipo_via",
+          "sql_type": "VARCHAR(100)",
+          "nullable": false,
+          "nulls": 0
+        },
+        {
+          "column": "latitud",
+          "sql_type": "DOUBLE",
+          "nullable": true,
+          "nulls": 24032004
+        },
+        {
+          "column": "longitud",
+          "sql_type": "DOUBLE",
+          "nullable": true,
+          "nulls": 24032004
+        },
+        {
+          "column": "velocidad_kmh",
+          "sql_type": "DOUBLE",
+          "nullable": true,
+          "nulls": 24032004
+        },
+        {
+          "column": "flujo_veh_h",
+          "sql_type": "DOUBLE",
+          "nullable": true,
+          "nulls": 24032004
+        },
+        {
+          "column": "ocupacion_pct",
+          "sql_type": "DOUBLE",
+          "nullable": true,
+          "nulls": 24032004
+        },
+        {
+          "column": "densidad_veh_km",
+          "sql_type": "DOUBLE",
+          "nullable": true,
+          "nulls": 24032004
+        },
+        {
+          "column": "tiempo_viaje_seg",
+          "sql_type": "DOUBLE",
+          "nullable": true,
+          "nulls": 24032004
+        },
+        {
+          "column": "calidad_registro",
+          "sql_type": "VARCHAR(30)",
+          "nullable": false,
+          "nulls": 0
+        },
+        {
+          "column": "valor_fuente",
+          "sql_type": "DOUBLE",
+          "nullable": false,
+          "nulls": 0
+        }
+      ],
+      "target_stage": "sql_load"
+    },
+    {
+      "entity_name": "dim_fuente",
+      "source_path": "data/02_clean/dataset_clean/clean_observations.parquet",
+      "rows": 24032004,
+      "primary_key": "fuente",
+      "columns": [
+        {
+          "column": "timestamp",
+          "sql_type": "TIMESTAMP",
+          "nullable": false,
+          "nulls": 0
+        },
+        {
+          "column": "ciudad",
+          "sql_type": "VARCHAR(100)",
+          "nullable": false,
+          "nulls": 0
+        },
+        {
+          "column": "fuente",
+          "sql_type": "VARCHAR(50)",
+          "nullable": false,
+          "nulls": 0
+        },
+        {
+          "column": "es_real",
+          "sql_type": "BOOLEAN",
+          "nullable": false,
+          "nulls": 0
+        },
+        {
+          "column": "segmento_id",
+          "sql_type": "VARCHAR(100)",
+          "nullable": false,
+          "nulls": 0
+        },
+        {
+          "column": "tipo_via",
+          "sql_type": "VARCHAR(100)",
+          "nullable": false,
+          "nulls": 0
+        },
+        {
+          "column": "latitud",
+          "sql_type": "DOUBLE",
+          "nullable": true,
+          "nulls": 24032004
+        },
+        {
+          "column": "longitud",
+          "sql_type": "DOUBLE",
+          "nullable": true,
+          "nulls": 24032004
+        },
+        {
+          "column": "velocidad_kmh",
+          "sql_type": "DOUBLE",
+          "nullable": true,
+          "nulls": 24032004
+        },
+        {
+          "column": "flujo_veh_h",
+          "sql_type": "DOUBLE",
+          "nullable": true,
+          "nulls": 24032004
+        },
+        {
+          "column": "ocupacion_pct",
+          "sql_type": "DOUBLE",
+          "nullable": true,
+          "nulls": 24032004
+        },
+        {
+          "column": "densidad_veh_km",
+          "sql_type": "DOUBLE",
+          "nullable": true,
+          "nulls": 24032004
+        },
+        {
+          "column": "tiempo_viaje_seg",
+          "sql_type": "DOUBLE",
+          "nullable": true,
+          "nulls": 24032004
+        },
+        {
+          "column": "calidad_registro",
+          "sql_type": "VARCHAR(30)",
+          "nullable": false,
+          "nulls": 0
+        },
+        {
+          "column": "valor_fuente",
+          "sql_type": "DOUBLE",
+          "nullable": false,
+          "nulls": 0
+        }
+      ],
+      "target_stage": "sql_load"
+    },
+    {
+      "entity_name": "dim_catalogo_sensores",
+      "source_path": "data/02_clean/dataset_clean/clean_sensor_catalog.parquet",
+      "rows": 0,
+      "primary_key": "segmento_id",
+      "columns": [
+        {
+          "column": "timestamp",
+          "sql_type": "TIMESTAMP",
+          "nullable": false,
+          "nulls": 0
+        },
+        {
+          "column": "ciudad",
+          "sql_type": "VARCHAR(100)",
+          "nullable": false,
+          "nulls": 0
+        },
+        {
+          "column": "fuente",
+          "sql_type": "VARCHAR(50)",
+          "nullable": false,
+          "nulls": 0
+        },
+        {
+          "column": "es_real",
+          "sql_type": "BOOLEAN",
+          "nullable": false,
+          "nulls": 0
+        },
+        {
+          "column": "segmento_id",
+          "sql_type": "VARCHAR(100)",
+          "nullable": false,
+          "nulls": 0
+        },
+        {
+          "column": "tipo_via",
+          "sql_type": "VARCHAR(100)",
+          "nullable": false,
+          "nulls": 0
+        },
+        {
+          "column": "latitud",
+          "sql_type": "DOUBLE",
+          "nullable": false,
+          "nulls": 0
+        },
+        {
+          "column": "longitud",
+          "sql_type": "DOUBLE",
+          "nullable": false,
+          "nulls": 0
+        },
+        {
+          "column": "velocidad_kmh",
+          "sql_type": "DOUBLE",
+          "nullable": false,
+          "nulls": 0
+        },
+        {
+          "column": "flujo_veh_h",
+          "sql_type": "DOUBLE",
+          "nullable": false,
+          "nulls": 0
+        },
+        {
+          "column": "ocupacion_pct",
+          "sql_type": "DOUBLE",
+          "nullable": false,
+          "nulls": 0
+        },
+        {
+          "column": "densidad_veh_km",
+          "sql_type": "DOUBLE",
+          "nullable": false,
+          "nulls": 0
+        },
+        {
+          "column": "tiempo_viaje_seg",
+          "sql_type": "DOUBLE",
+          "nullable": false,
+          "nulls": 0
+        },
+        {
+          "column": "calidad_registro",
+          "sql_type": "VARCHAR(30)",
+          "nullable": false,
+          "nulls": 0
+        },
+        {
+          "column": "valor_fuente",
+          "sql_type": "DOUBLE",
+          "nullable": false,
+          "nulls": 0
+        }
+      ],
+      "target_stage": "sql_load"
+    },
+    {
+      "entity_name": "fact_aggregates",
+      "source_path": "data/02_clean/dataset_clean/clean_aggregates.parquet",
+      "rows": 0,
+      "primary_key": "segmento_id",
+      "columns": [
+        {
+          "column": "timestamp",
+          "sql_type": "TIMESTAMP",
+          "nullable": false,
+          "nulls": 0
+        },
+        {
+          "column": "ciudad",
+          "sql_type": "VARCHAR(100)",
+          "nullable": false,
+          "nulls": 0
+        },
+        {
+          "column": "fuente",
+          "sql_type": "VARCHAR(50)",
+          "nullable": false,
+          "nulls": 0
+        },
+        {
+          "column": "es_real",
+          "sql_type": "BOOLEAN",
+          "nullable": false,
+          "nulls": 0
+        },
+        {
+          "column": "segmento_id",
+          "sql_type": "VARCHAR(100)",
+          "nullable": false,
+          "nulls": 0
+        },
+        {
+          "column": "tipo_via",
+          "sql_type": "VARCHAR(100)",
+          "nullable": false,
+          "nulls": 0
+        },
+        {
+          "column": "latitud",
+          "sql_type": "DOUBLE",
+          "nullable": false,
+          "nulls": 0
+        },
+        {
+          "column": "longitud",
+          "sql_type": "DOUBLE",
+          "nullable": false,
+          "nulls": 0
+        },
+        {
+          "column": "velocidad_kmh",
+          "sql_type": "DOUBLE",
+          "nullable": false,
+          "nulls": 0
+        },
+        {
+          "column": "flujo_veh_h",
+          "sql_type": "DOUBLE",
+          "nullable": false,
+          "nulls": 0
+        },
+        {
+          "column": "ocupacion_pct",
+          "sql_type": "DOUBLE",
+          "nullable": false,
+          "nulls": 0
+        },
+        {
+          "column": "densidad_veh_km",
+          "sql_type": "DOUBLE",
+          "nullable": false,
+          "nulls": 0
+        },
+        {
+          "column": "tiempo_viaje_seg",
+          "sql_type": "DOUBLE",
+          "nullable": false,
+          "nulls": 0
+        },
+        {
+          "column": "calidad_registro",
+          "sql_type": "VARCHAR(30)",
+          "nullable": false,
+          "nulls": 0
+        },
+        {
+          "column": "valor_fuente",
+          "sql_type": "DOUBLE",
+          "nullable": false,
+          "nulls": 0
+        }
+      ],
+      "target_stage": "sql_load"
+    }
+  ],
+  "notes": [
+    "fact_observaciones es la entidad principal para consultas temporales y segmentales.",
+    "dim_segmento y dim_fuente deben cargarse como dimensiones referenciales.",
+    "dim_catalogo_sensores se deja preparado para el catálogo espacial, aunque el dataset actual está vacío.",
+    "fact_aggregates queda disponible como conjunto derivado para análisis y reportes agregados."
+  ]
+}

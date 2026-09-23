@@ -1,0 +1,62 @@
+{
+  "pipeline": "international_sources_processed_to_clean",
+  "executed_at_utc": "2026-09-23T21:20:53.890748+00:00",
+  "batch_size": 250000,
+  "sources": [
+    {
+      "source_id": "istanbul_traffic_index",
+      "input_path": "data/01_processed/external/istanbul_traffic_index.parquet",
+      "output_path": "data/02_clean/external/istanbul_traffic_index_clean.parquet",
+      "input_rows": 3332,
+      "output_rows": 3332,
+      "invalid_timestamps": 0,
+      "range_violations": 0,
+      "duplicate_rows": 0,
+      "status": "valido"
+    },
+    {
+      "source_id": "sao_paulo_cet",
+      "input_path": "data/01_processed/external/sao_paulo_cet.parquet",
+      "output_path": "data/02_clean/external/sao_paulo_cet_clean.parquet",
+      "input_rows": 5223448,
+      "output_rows": 5223411,
+      "invalid_timestamps": 0,
+      "range_violations": 0,
+      "duplicate_rows": 37,
+      "status": "advertencia"
+    },
+    {
+      "source_id": "madrid_traffic_points",
+      "input_path": "data/01_processed/external/madrid_traffic_points.parquet",
+      "output_path": "data/02_clean/external/madrid_traffic_points_clean.parquet",
+      "input_rows": 12512133,
+      "output_rows": 12512133,
+      "invalid_timestamps": 0,
+      "range_violations": 0,
+      "duplicate_rows": 0,
+      "status": "valido"
+    },
+    {
+      "source_id": "metr_la",
+      "input_path": "data/01_processed/normalized/metr_la.parquet",
+      "output_path": "data/02_clean/external/metr_la_clean.parquet",
+      "input_rows": 7094304,
+      "output_rows": 7094304,
+      "invalid_timestamps": 0,
+      "range_violations": 0,
+      "duplicate_rows": 0,
+      "status": "valido"
+    },
+    {
+      "source_id": "pems_bay",
+      "input_path": "data/01_processed/normalized/pems_bay.parquet",
+      "output_path": "data/02_clean/external/pems_bay_clean.parquet",
+      "input_rows": 16937700,
+      "output_rows": 16937700,
+      "invalid_timestamps": 0,
+      "range_violations": 0,
+      "duplicate_rows": 0,
+      "status": "valido"
+    }
+  ]
+}

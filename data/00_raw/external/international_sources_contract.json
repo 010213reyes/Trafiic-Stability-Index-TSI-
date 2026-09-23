@@ -1,0 +1,189 @@
+{
+  "project": "TSI",
+  "contract_version": "1.0",
+  "objective_city": "Guadalajara",
+  "strategy": "transferencia_multiciudad",
+  "rules": {
+    "raw_immutable": true,
+    "missing_variables_remain_null": true,
+    "speed_units_must_be_confirmed_before_conversion": true,
+    "sources_are_not_combined_until_normalized": true
+  },
+  "common_contract": {
+    "required": [
+      "timestamp",
+      "ciudad",
+      "fuente",
+      "es_real",
+      "segmento_id",
+      "tipo_via",
+      "calidad_registro"
+    ],
+    "optional": [
+      "latitud",
+      "longitud",
+      "velocidad_kmh",
+      "flujo_veh_h",
+      "ocupacion_pct",
+      "densidad_veh_km",
+      "tiempo_viaje_seg",
+      "congestion_longitud_m",
+      "indice_congestion"
+    ],
+    "engineering_outputs": {
+      "processed": "data/01_processed/external/<source_id>.parquet",
+      "clean": "data/02_clean/external/<source_id>_clean.parquet",
+      "quality": "data/01_processed/quality/<source_id>.json"
+    }
+  },
+  "sources": [
+    {
+      "source_id": "istanbul_traffic_index",
+      "city": "Istanbul",
+      "country": "Turquia",
+      "timezone": "Europe/Istanbul",
+      "role": "comparacion",
+      "status": "raw_validated",
+      "source_url": "https://data.ibb.gov.tr/dataset/b3fbb6ce-03a5-4777-8c6c-111c73775523/resource/ba47eacb-a4e1-441c-ae51-0e622d4a18e2/download/traffic_index.csv",
+      "raw_path": "data\\00_raw\\external\\source_downloads\\istanbul_traffic_index.csv",
+      "observed_variables": [
+        "timestamp",
+        "indice_congestion"
+      ],
+      "raw_columns": [
+        "trafficindexdate",
+        "minimum_traffic_index",
+        "maximum_traffic_index",
+        "average_traffic_index"
+      ],
+      "time_resolution": "por confirmar",
+      "limitations": [
+        "indice agregado",
+        "sin sensor o segmento vial identificable",
+        "no contiene velocidad directa"
+      ],
+      "mining_task": "analizar distribucion y tendencia temporal del indice",
+      "engineering_task": "normalizar fecha, ciudad y fuente; conservar minimo, maximo y promedio como variables especificas"
+    },
+    {
+      "source_id": "sao_paulo_cet",
+      "city": "Sao Paulo",
+      "country": "Brasil",
+      "timezone": "America/Sao_Paulo",
+      "role": "comparacion_congestion_urbana",
+      "status": "raw_validated",
+      "source_url": "https://dados.prefeitura.sp.gov.br/dataset/base-de-dados-sobre-lentidao-por-trechos-cet",
+      "raw_path": "data\\00_raw\\external\\sao_paulo\\sao_paulo_traffic_jams_kaggle.zip",
+      "observed_variables": [
+        "timestamp",
+        "congestion_longitud_m",
+        "segmento_id",
+        "direccion",
+        "region"
+      ],
+      "raw_columns_expected": [
+        "passage",
+        "direction",
+        "type",
+        "region",
+        "timestamp",
+        "jam_size",
+        "segment"
+      ],
+      "time_resolution": "por confirmar por archivo anual",
+      "limitations": [
+        "mide longitud de congestion y no velocidad",
+        "requiere revisar formato anual y duplicados"
+      ],
+      "mining_task": "analizar patrones de longitud de congestion por segmento, hora y region",
+      "engineering_task": "descargar CSV oficial, mapear jam_size a congestion_longitud_m y conservar tipo de via"
+    },
+    {
+      "source_id": "madrid_traffic_points",
+      "city": "Madrid",
+      "country": "Espana",
+      "timezone": "Europe/Madrid",
+      "role": "transferencia_urbana",
+      "status": "raw_validated",
+      "source_url": "https://datos.madrid.es/api/3/action/package_show?id=208627-0-transporte-ptomedida-historico",
+      "raw_path": "data\\00_raw\\external\\madrid\\historico_2022_12.zip",
+      "observed_variables": [
+        "timestamp",
+        "flujo_veh_h",
+        "ocupacion_pct",
+        "velocidad_kmh",
+        "intensidad",
+        "carga"
+      ],
+      "raw_columns_expected": [
+        "id",
+        "fecha",
+        "tipo_elem",
+        "intensidad",
+        "ocupacion",
+        "carga",
+        "vmed",
+        "error",
+        "periodo_integracion"
+      ],
+      "time_resolution": "15 minutos",
+      "limitations": [
+        "confirmar unidad de vmed e intensidad",
+        "los recursos son mensuales",
+        "carga requiere diccionario operativo"
+      ],
+      "mining_task": "comparar intensidad, ocupacion y velocidad por punto y tipo de via",
+      "engineering_task": "descargar archivos seleccionados, mapear id a segmento_id y fecha a timestamp"
+    },
+    {
+      "source_id": "metr_la",
+      "city": "Los Angeles County",
+      "country": "Estados Unidos",
+      "timezone": "America/Los_Angeles",
+      "role": "preentrenamiento_velocidad",
+      "status": "raw_and_processed_validated",
+      "source_url": "https://zenodo.org/records/5724362",
+      "raw_path": "data/00_raw/external/traffic_datasets/METR-LA.csv",
+      "observed_variables": [
+        "timestamp",
+        "valor_fuente"
+      ],
+      "raw_columns": [
+        "timestamp",
+        "207 sensores"
+      ],
+      "time_resolution": "5 minutos",
+      "limitations": [
+        "red de autopistas",
+        "unidad de velocidad debe conservarse documentada antes de renombrar"
+      ],
+      "mining_task": "analizar estacionalidad, faltantes y correlacion temporal entre sensores",
+      "engineering_task": "pasar de formato ancho a largo y conservar valor_fuente por sensor"
+    },
+    {
+      "source_id": "pems_bay",
+      "city": "San Francisco Bay Area",
+      "country": "Estados Unidos",
+      "timezone": "America/Los_Angeles",
+      "role": "transferencia_velocidad",
+      "status": "raw_and_processed_validated",
+      "source_url": "https://zenodo.org/records/5724362",
+      "raw_path": "data/00_raw/external/traffic_datasets/PEMS-BAY.csv",
+      "observed_variables": [
+        "timestamp",
+        "valor_fuente"
+      ],
+      "raw_columns": [
+        "timestamp",
+        "325 sensores"
+      ],
+      "time_resolution": "5 minutos",
+      "limitations": [
+        "red de autopistas",
+        "unidad de velocidad debe conservarse documentada antes de renombrar"
+      ],
+      "mining_task": "analizar continuidad, distribucion y dependencia entre sensores",
+      "engineering_task": "pasar de formato ancho a largo y conservar valor_fuente por sensor"
+    }
+  ]
+}
