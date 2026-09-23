@@ -1,0 +1,14 @@
+{
+  "fecha_recoleccion": "2026-09-17T07:24:55.965003",
+  "fecha_datos": "2026-09-17",
+  "registros": 720,
+  "avenidas": 5,
+  "resolucion_minutos": 10,
+  "fuentes": [
+    "sintético_calibrado (patrones horarios Guadalajara)",
+    "históricos_interpolados (traffic_data.csv, scraped_traffic.csv)",
+    "anomalías_estocásticas (eventos realistas)"
+  ],
+  "anomalias_detectadas": [],
+  "estado": "OK"
+}
