@@ -1,235 +1,187 @@
+from __future__ import annotations
+
+import json
 from pathlib import Path
 
 import pandas as pd
+import pyarrow.parquet as parquet
 import streamlit as st
 
 
-st.set_page_config(page_title='TSI Dashboard', page_icon='TSI', layout='wide')
-
-
-def resolve_project_root() -> Path:
-    return next(
-        (
-            candidate
-            for candidate in [Path(__file__).resolve().parent, Path.cwd(), Path.cwd().parent, Path.cwd().parent.parent]
-            if (candidate / 'data' / '02_clean').exists()
-        ),
-        Path.cwd(),
-    )
-
-
-PROJECT_ROOT = resolve_project_root()
-DATA_ROOT = PROJECT_ROOT / 'data'
-CLEAN_ROOT = DATA_ROOT / '02_clean'
-OUTPUT_ROOT = DATA_ROOT / '03_algorithm_output'
-
-SOURCE_PATH = CLEAN_ROOT / 'traffic_enriched.csv'
-IF_PATH = CLEAN_ROOT / 'filtered_isolation_forest.csv'
-LOF_PATH = CLEAN_ROOT / 'filtered_local_outlier_factor.csv'
-DBSCAN_PATH = CLEAN_ROOT / 'filtered_dbscan.csv'
-
-LOF_SUMMARY_PATH = OUTPUT_ROOT / 'local_outlier_factor_summary.csv'
-DBSCAN_SUMMARY_PATH = OUTPUT_ROOT / 'dbscan_summary.csv'
-
-RANKING_IMAGE = OUTPUT_ROOT / '02_algorithm_ranking.png'
-COMPARISON_IMAGE = OUTPUT_ROOT / '01_algorithm_comparison.png'
-FILTER_IMPACT_IMAGE = OUTPUT_ROOT / '09_filtrado_impacto.png'
-VARIABILITY_IMAGE = OUTPUT_ROOT / '10_variability_comparison.png'
-IF_SUMMARY_IMAGE = OUTPUT_ROOT / '11_isolation_forest_summary.png'
-IF_BOXPLOTS_IMAGE = OUTPUT_ROOT / '12_isolation_forest_boxplots.png'
-LOF_PCA_IMAGE = OUTPUT_ROOT / 'local_outlier_factor_pca.png'
-LOF_SCORES_IMAGE = OUTPUT_ROOT / 'local_outlier_factor_scores.png'
-DBSCAN_PCA_IMAGE = OUTPUT_ROOT / 'dbscan_pca_clusters.png'
-DBSCAN_KDIST_IMAGE = OUTPUT_ROOT / 'dbscan_kdistance_curve.png'
-DBSCAN_CLUSTER_IMAGE = OUTPUT_ROOT / 'dbscan_cluster_sizes.png'
-
-
-def load_csv(path: Path) -> pd.DataFrame | None:
-    return pd.read_csv(path) if path.exists() else None
-
-
-def load_metric(summary_df: pd.DataFrame, metric: str):
-    if summary_df is None:
-        return None
-    matches = summary_df.loc[summary_df['metric'] == metric, 'value']
-    if matches.empty:
-        return None
-    return matches.iloc[0]
-
-
-source_df = load_csv(SOURCE_PATH)
-if_df = load_csv(IF_PATH)
-lof_df = load_csv(LOF_PATH)
-dbscan_df = load_csv(DBSCAN_PATH)
-lof_summary = load_csv(LOF_SUMMARY_PATH)
-dbscan_summary = load_csv(DBSCAN_SUMMARY_PATH)
-
-st.title('Traffic Stability Index')
-st.caption('Panel ejecutivo para la narrativa final del proyecto TSI')
-
-st.markdown(
-    'Este dashboard muestra solo lo que cambia la lectura final del proyecto: la comparación entre algoritmos, la señal del TSI y las conclusiones que conectan el análisis de principio a fin.'
+st.set_page_config(
+    page_title="TSI | Avance del proyecto",
+    page_icon="TSI",
+    layout="wide",
 )
 
-if source_df is None:
-    st.error('No se encontró el dataset base traffic_enriched.csv en data/02_clean.')
+
+def project_root() -> Path:
+    return Path(__file__).resolve().parents[1]
+
+
+ROOT = project_root()
+DATA = ROOT / "data"
+DOCS = ROOT / "docs" / "02_ingenieria_datos" / "sql"
+
+CONTRACT_PATH = DATA / "00_raw" / "external" / "international_sources_contract.json"
+QUALITY_PATH = DATA / "02_clean" / "external" / "international_clean_quality.json"
+CONSOLIDATION_PATH = DATA / "02_clean" / "consolidated" / "international_consolidation_manifest.json"
+OBSERVATIONS_PATH = DATA / "02_clean" / "consolidated" / "international_observations.parquet"
+SQL_PLAN_PATH = DOCS / "12_plan_fase_sql.md"
+
+ADMIN_USERNAME = "admin"
+ADMIN_PASSWORD = "admin123"
+
+
+def read_json(path: Path) -> dict:
+    if not path.exists():
+        return {}
+    return json.loads(path.read_text(encoding="utf-8"))
+
+
+def parquet_row_count(path: Path) -> int | None:
+    if not path.exists():
+        return None
+    return parquet.ParquetFile(path).metadata.num_rows
+
+
+def parquet_preview(path: Path, rows: int = 12) -> pd.DataFrame:
+    if not path.exists():
+        return pd.DataFrame()
+    parquet_file = parquet.ParquetFile(path)
+    batch = next(parquet_file.iter_batches(batch_size=rows), None)
+    return batch.to_pandas() if batch is not None else pd.DataFrame()
+
+
+def exists_label(path: Path) -> str:
+    return "Disponible" if path.exists() else "Pendiente"
+
+
+if "authenticated" not in st.session_state:
+    st.session_state.authenticated = False
+
+if not st.session_state.authenticated:
+    st.title("Acceso al dashboard TSI")
+    st.caption("Demostracion del avance de la nueva investigacion")
+    with st.form("admin_login"):
+        username = st.text_input("Usuario")
+        password = st.text_input("Contrasena", type="password")
+        submitted = st.form_submit_button("Ingresar", type="primary")
+    if submitted:
+        if username == ADMIN_USERNAME and password == ADMIN_PASSWORD:
+            st.session_state.authenticated = True
+            st.rerun()
+        else:
+            st.error("Usuario o contrasena incorrectos.")
     st.stop()
 
-source_count = len(source_df)
-dbscan_clusters = int(load_metric(dbscan_summary, 'clusters_detectados') or 0)
-dbscan_noise_pct = float(load_metric(dbscan_summary, 'porcentaje_ruido') or 0)
-dbscan_retention_pct = float(load_metric(dbscan_summary, 'porcentaje_retenido') or 0)
 
-if_retention = round(len(if_df) / source_count * 100, 2) if if_df is not None else None
-if_noise = round((source_count - len(if_df)) / source_count * 100, 2) if if_df is not None else None
-lof_retention = float(load_metric(lof_summary, 'porcentaje_retenido') or 0)
-lof_noise = float(load_metric(lof_summary, 'porcentaje_anomalia') or 0)
+contract = read_json(CONTRACT_PATH)
+quality = read_json(QUALITY_PATH)
+clean_sources = quality.get("sources", [])
+quality_by_source = {item["source_id"]: item for item in clean_sources}
+source_rows = []
 
-top_left, top_mid_left, top_mid_right, top_right = st.columns(4)
-with top_left:
-    st.metric('Registros base', f'{source_count:,}')
-with top_mid_left:
-    st.metric('DBSCAN retención', f'{dbscan_retention_pct:.2f}%')
-with top_mid_right:
-    st.metric('DBSCAN ruido', f'{dbscan_noise_pct:.2f}%')
-with top_right:
-    st.metric('Clusters DBSCAN', f'{dbscan_clusters}')
-
-st.divider()
-
-overview_tab, comparison_tab, tsi_tab, conclusion_tab = st.tabs([
-    'Resumen ejecutivo',
-    'Comparación de algoritmos',
-    'TSI final',
-    'Conclusión',
-])
-
-with overview_tab:
-    left, right = st.columns([1.05, 0.95])
-    with left:
-        st.subheader('Lectura final del proyecto')
-        st.markdown(
-            '- **Isolation Forest** depura muy bien, pero su señal es principalmente binaria.\n'
-            '- **LOF** captura vecindad local y da una depuración más suave.\n'
-            '- **DBSCAN** separa regímenes densos y ofrece la mejor señal estructural para TSI.'
-        )
-        st.markdown(
-            'La decisión final del proyecto se apoya en DBSCAN como validación estructural, mientras que los otros dos algoritmos quedan como filtros de apoyo.'
-        )
-        summary_cols = st.columns(3)
-        with summary_cols[0]:
-            st.metric('Isolation Forest', f'{if_retention:.2f}%' if if_retention is not None else 'N/D', f'ruido {if_noise:.2f}%' if if_noise is not None else None)
-        with summary_cols[1]:
-            st.metric('LOF', f'{lof_retention:.2f}%', f'anomalias {lof_noise:.2f}%')
-        with summary_cols[2]:
-            st.metric('DBSCAN', f'{dbscan_retention_pct:.2f}%', f'ruido {dbscan_noise_pct:.2f}%')
-    with right:
-        if RANKING_IMAGE.exists():
-            st.image(str(RANKING_IMAGE), caption='Ranking comparativo de algoritmos', use_container_width=True)
-        else:
-            st.warning('No se encontró 02_algorithm_ranking.png.')
-
-with comparison_tab:
-    st.subheader('Comparación homogénea')
-    rows = []
-    if if_df is not None:
-        rows.append({
-            'Algoritmo': 'Isolation Forest',
-            'Retención (%)': if_retention,
-            'Ruido / outliers (%)': if_noise,
-            'Estabilidad': 'Baja',
-            'Regímenes detectados': 1,
-        })
-    if lof_df is not None:
-        rows.append({
-            'Algoritmo': 'Local Outlier Factor',
-            'Retención (%)': lof_retention,
-            'Ruido / outliers (%)': lof_noise,
-            'Estabilidad': 'Media',
-            'Regímenes detectados': 1,
-        })
-    if dbscan_df is not None:
-        rows.append({
-            'Algoritmo': 'DBSCAN',
-            'Retención (%)': dbscan_retention_pct,
-            'Ruido / outliers (%)': dbscan_noise_pct,
-            'Estabilidad': 'Alta',
-            'Regímenes detectados': dbscan_clusters,
-        })
-
-    comparison_df = pd.DataFrame(rows)
-    st.dataframe(comparison_df, use_container_width=True, hide_index=True)
-
-    c1, c2 = st.columns(2)
-    with c1:
-        if COMPARISON_IMAGE.exists():
-            st.image(str(COMPARISON_IMAGE), caption='Comparación general de algoritmos', use_container_width=True)
-        else:
-            st.warning('No se encontró 01_algorithm_comparison.png.')
-    with c2:
-        if VARIABILITY_IMAGE.exists():
-            st.image(str(VARIABILITY_IMAGE), caption='Comparación de variabilidad', use_container_width=True)
-        else:
-            st.warning('No se encontró 10_variability_comparison.png.')
-
-with tsi_tab:
-    st.subheader('TSI propuesto')
-    source_df['TSI_propuesto'] = (
-        0.45 * source_df['speed_congestion']
-        + 0.35 * source_df['densidad_norm']
-        + 0.20 * source_df['detenciones_norm']
-    ).clip(0, 1)
-
-    tsi_stats = source_df['TSI_propuesto'].describe(percentiles=[0.1, 0.25, 0.5, 0.75, 0.9, 0.95, 0.99])
-    st.metric('Correlación con el TSI actual', f"{source_df['TSI'].corr(source_df['TSI_propuesto']):.4f}" if 'TSI' in source_df.columns else 'N/D')
-
-    tsi_col1, tsi_col2 = st.columns([1, 1])
-    with tsi_col1:
-        st.markdown(
-            'La fórmula final queda anclada en tres componentes:\n'
-            '- congestión relativa\n'
-            '- densidad normalizada\n'
-            '- detenciones normalizadas'
-        )
-        st.code('TSI = 0.45 * speed_congestion + 0.35 * densidad_norm + 0.20 * detenciones_norm', language='text')
-        st.write(tsi_stats.to_frame(name='TSI_propuesto'))
-    with tsi_col2:
-        if IF_SUMMARY_IMAGE.exists():
-            st.image(str(IF_SUMMARY_IMAGE), caption='Resumen visual de Isolation Forest', use_container_width=True)
-        elif IF_BOXPLOTS_IMAGE.exists():
-            st.image(str(IF_BOXPLOTS_IMAGE), caption='Resumen visual de depuración', use_container_width=True)
-        else:
-            st.info('No se encontró una visualización de resumen para esta sección.')
-
-    bottom_left, bottom_right = st.columns(2)
-    with bottom_left:
-        if LOF_PCA_IMAGE.exists():
-            st.image(str(LOF_PCA_IMAGE), caption='LOF: proyección PCA', use_container_width=True)
-        else:
-            st.warning('No se encontró local_outlier_factor_pca.png.')
-    with bottom_right:
-        if DBSCAN_PCA_IMAGE.exists():
-            st.image(str(DBSCAN_PCA_IMAGE), caption='DBSCAN: proyección PCA de clusters', use_container_width=True)
-        else:
-            st.warning('No se encontró dbscan_pca_clusters.png.')
-
-with conclusion_tab:
-    st.subheader('Decisión final')
-    st.success(
-        'DBSCAN se mantiene como validación estructural principal porque conserva una retención razonable y separa regímenes densos con ruido moderado, lo que aporta la señal más útil para definir riesgo.'
-    )
-    st.markdown(
-        'Isolation Forest queda como depuración fuerte y LOF como validación local. La narrativa final del proyecto se apoya en esta división de roles para pasar de filtrado a interpretación.'
+for source in contract.get("sources", []):
+    source_quality = quality_by_source.get(source["source_id"], {})
+    source_rows.append(
+        {
+            "Ciudad": source["city"],
+            "Fuente": source["source_id"],
+            "Rol": source["role"],
+            "Metrica": source["observed_variables"][1] if len(source["observed_variables"]) > 1 else source["observed_variables"][0],
+            "Registros CLEAN": source_quality.get("output_rows", "N/D"),
+            "Calidad": source_quality.get("status", "Pendiente"),
+        }
     )
 
-    if DBSCAN_KDIST_IMAGE.exists() and DBSCAN_CLUSTER_IMAGE.exists():
-        c_left, c_right = st.columns(2)
-        with c_left:
-            st.image(str(DBSCAN_KDIST_IMAGE), caption='DBSCAN: curva k-distance', use_container_width=True)
-        with c_right:
-            st.image(str(DBSCAN_CLUSTER_IMAGE), caption='DBSCAN: tamaños de clusters', use_container_width=True)
 
-    st.markdown('### Siguientes pasos')
-    st.write('1. Ajustar el dashboard para navegación por páginas si quieres una versión más formal.')
-    st.write('2. Exportar una versión ejecutiva con conclusiones y figuras clave.')
-    st.write('3. Conectar este dashboard al README final del proyecto como la capa de presentación.')
+st.title("Traffic Stability Index")
+st.caption("Demostracion visual del avance de la nueva investigacion multiciudad")
+st.info(
+    "Esta aplicacion muestra unicamente el avance de la nueva investigacion: fuentes internacionales, "
+    "ingenieria RAW-PROCESSED-CLEAN-CONSOLIDATED y organizacion de la fase SQL."
+)
+
+total_rows = parquet_row_count(OBSERVATIONS_PATH)
+metric_a, metric_b, metric_c, metric_d = st.columns(4)
+with metric_a:
+    st.metric("Fuentes aprobadas", len(source_rows))
+with metric_b:
+    st.metric("Fuentes CLEAN", len(clean_sources))
+with metric_c:
+    st.metric("Observaciones consolidadas", f"{total_rows:,}" if total_rows else "N/D")
+with metric_d:
+    st.metric("SQL", "Diseno listo" if SQL_PLAN_PATH.exists() else "Pendiente")
+
+pipeline_tab, sources_tab, sql_tab = st.tabs(["Avance del pipeline", "Fuentes internacionales", "Fase SQL"])
+
+with pipeline_tab:
+    st.subheader("Avance demostrable")
+    pipeline = pd.DataFrame(
+        [
+            {"Etapa": "RAW", "Estado": "Completada", "Evidencia": "Archivos originales y contrato de fuentes"},
+            {"Etapa": "PROCESSED", "Estado": "Completada", "Evidencia": "Parquet por fuente"},
+            {"Etapa": "CLEAN", "Estado": "Completada", "Evidencia": "Reporte de calidad internacional"},
+            {"Etapa": "CONSOLIDATED", "Estado": "Completada", "Evidencia": "international_observations.parquet"},
+            {"Etapa": "SQL", "Estado": "En organizacion", "Evidencia": "Modelo conceptual, logico y fisico documentado"},
+            {"Etapa": "ANALISIS", "Estado": "Siguiente", "Evidencia": "EDA multiciudad despues de la base SQL"},
+        ]
+    )
+    st.dataframe(pipeline, use_container_width=True, hide_index=True)
+
+    st.subheader("Artefactos actuales")
+    artifacts = pd.DataFrame(
+        [
+            {"Artefacto": "Contrato internacional", "Ruta": str(CONTRACT_PATH.relative_to(ROOT)), "Estado": exists_label(CONTRACT_PATH)},
+            {"Artefacto": "Calidad CLEAN", "Ruta": str(QUALITY_PATH.relative_to(ROOT)), "Estado": exists_label(QUALITY_PATH)},
+            {"Artefacto": "Consolidado internacional", "Ruta": str(OBSERVATIONS_PATH.relative_to(ROOT)), "Estado": exists_label(OBSERVATIONS_PATH)},
+            {"Artefacto": "Manifiesto de consolidacion", "Ruta": str(CONSOLIDATION_PATH.relative_to(ROOT)), "Estado": exists_label(CONSOLIDATION_PATH)},
+            {"Artefacto": "Plan de fase SQL", "Ruta": str(SQL_PLAN_PATH.relative_to(ROOT)), "Estado": exists_label(SQL_PLAN_PATH)},
+        ]
+    )
+    st.dataframe(artifacts, use_container_width=True, hide_index=True)
+
+with sources_tab:
+    st.subheader("Fuentes internacionales aprobadas")
+    st.dataframe(pd.DataFrame(source_rows), use_container_width=True, hide_index=True)
+    st.caption("Las metricas se mantienen separadas: velocidad, intensidad, indice y longitud de congestion no son equivalentes.")
+
+    if source_rows:
+        selected_city = st.selectbox("Selecciona una ciudad para ver su contrato", [row["Ciudad"] for row in source_rows])
+        selected = next(row for row in contract["sources"] if row["city"] == selected_city)
+        st.write(
+            {
+                "ciudad": selected["city"],
+                "pais": selected["country"],
+                "zona_horaria": selected["timezone"],
+                "rol": selected["role"],
+                "variables": selected["observed_variables"],
+                "estado": selected["status"],
+            }
+        )
+        dataset_path = DATA / "02_clean" / "external" / f"{selected['source_id']}_clean.parquet"
+        st.markdown("#### Muestra del dataset CLEAN")
+        st.caption(f"Archivo: {dataset_path.relative_to(ROOT)} | Registros disponibles: {parquet_row_count(dataset_path) or 'N/D'}")
+        preview = parquet_preview(dataset_path)
+        if preview.empty:
+            st.warning("No existe un dataset CLEAN local para esta fuente.")
+        else:
+            st.dataframe(preview, use_container_width=True, hide_index=True)
+
+with sql_tab:
+    st.subheader("Organizacion de la base SQL")
+    st.write("La base SQL todavia no carga el consolidado completo. Esta pantalla demuestra el diseno previo a la implementacion.")
+    sql_steps = pd.DataFrame(
+        [
+            {"Subfase": "SQL-01", "Estado": "Completada", "Salida": "Preguntas y limites"},
+            {"Subfase": "SQL-02", "Estado": "Completada", "Salida": "Modelo conceptual"},
+            {"Subfase": "SQL-03", "Estado": "Completada", "Salida": "Modelo logico"},
+            {"Subfase": "SQL-04", "Estado": "Completada", "Salida": "Politica de metricas"},
+            {"Subfase": "SQL-05", "Estado": "Completada", "Salida": "Modelo fisico MySQL"},
+            {"Subfase": "SQL-06", "Estado": "Completada", "Salida": "Guia de diagrama EER"},
+            {"Subfase": "SQL-07", "Estado": "Siguiente", "Salida": "Carga de prueba"},
+        ]
+    )
+    st.dataframe(sql_steps, use_container_width=True, hide_index=True)
+    st.warning("La carga SQL y las consultas de validacion se realizaran despues de revisar el modelo visual en MySQL Workbench.")
