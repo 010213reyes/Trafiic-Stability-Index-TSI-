@@ -474,3 +474,20 @@
 2026-10-01 08:36:16,131 - INFO - ======================================================================
 2026-10-01 08:36:16,131 - INFO - RECOLECCIÓN COMPLETADA
 2026-10-01 08:36:16,131 - INFO - ======================================================================
+2026-10-02 08:12:32,996 - INFO - ======================================================================
+2026-10-02 08:12:32,996 - INFO - INICIANDO RECOLECCIÓN: 2026-10-02
+2026-10-02 08:12:32,996 - INFO - ======================================================================
+2026-10-02 08:12:32,996 - INFO - Fuente 1: Generando datos sintéticos calibrados...
+2026-10-02 08:12:33,006 - INFO -   ✓ 720 registros generados
+2026-10-02 08:12:33,006 - INFO - Fuente 2: Interpolando datos históricos...
+2026-10-02 08:12:33,009 - INFO - Datos históricos cargados de /home/runner/work/Trafiic-Stability-Index-TSI-/Trafiic-Stability-Index-TSI-/data/00_raw/traffic_data.csv: 310 registros
+2026-10-02 08:12:33,011 - INFO - Datos históricos cargados de /home/runner/work/Trafiic-Stability-Index-TSI-/Trafiic-Stability-Index-TSI-/data/00_raw/scraped_traffic.csv: 117 registros
+2026-10-02 08:12:33,016 - INFO - Resumen histórico calculado: 71 combinaciones avenida-hora
+2026-10-02 08:12:33,016 - INFO -   ✓ Resumen histórico disponible
+2026-10-02 08:12:33,017 - INFO - Fuente 3: Generando anomalías realistas...
+2026-10-02 08:12:33,017 - INFO -   ✓ 0 evento(s) detectado(s)
+2026-10-02 08:12:33,022 - INFO - Datos guardados en: /home/runner/work/Trafiic-Stability-Index-TSI-/Trafiic-Stability-Index-TSI-/data/02_recoleccion_automatica/2026-10-02_traffic_collection.csv
+2026-10-02 08:12:33,022 - INFO - Metadatos guardados en: /home/runner/work/Trafiic-Stability-Index-TSI-/Trafiic-Stability-Index-TSI-/data/02_recoleccion_automatica/2026-10-02_metadata.json
+2026-10-02 08:12:33,022 - INFO - ======================================================================
+2026-10-02 08:12:33,022 - INFO - RECOLECCIÓN COMPLETADA
+2026-10-02 08:12:33,022 - INFO - ======================================================================
