@@ -39,12 +39,12 @@
       "type": "file"
     },
     {
-      "artifact": "docs/02_ingenieria_datos/sql/tsi_stage.sqlite",
+      "artifact": "docs/02_ingenieria_datos/sql/legacy_prototipo/tsi_stage.sqlite",
       "exists": true,
       "type": "file"
     },
     {
-      "artifact": "docs/02_ingenieria_datos/sql/sql_load_manifest.json",
+      "artifact": "docs/02_ingenieria_datos/sql/legacy_prototipo/sql_load_manifest.json",
       "exists": true,
       "type": "file"
     }

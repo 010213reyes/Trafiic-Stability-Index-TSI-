@@ -30,8 +30,8 @@ La verificación comprueba que existan las rutas clave:
 - data/02_clean/consolidated/consolidation_manifest.json
 - data/02_clean/dataset_clean/dataset_clean_manifest.json
 - data/02_clean/dataset_clean/clean_observations.parquet
-- docs/02_ingenieria_datos/sql/tsi_stage.sqlite
-- docs/02_ingenieria_datos/sql/sql_load_manifest.json
+- docs/02_ingenieria_datos/sql/legacy_prototipo/tsi_stage.sqlite
+- docs/02_ingenieria_datos/sql/legacy_prototipo/sql_load_manifest.json
 ```
 
 ## Entregable

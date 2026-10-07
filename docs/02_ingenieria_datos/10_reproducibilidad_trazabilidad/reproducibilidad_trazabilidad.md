@@ -41,7 +41,7 @@ data/01_processed/normalized/normalization_manifest.json
 data/01_processed/quality/quality_report.json
 data/02_clean/consolidated/consolidation_manifest.json
 data/02_clean/dataset_clean/dataset_clean_manifest.json
-docs/02_ingenieria_datos/sql/sql_load_manifest.json
+docs/02_ingenieria_datos/sql/legacy_prototipo/sql_load_manifest.json
 ```
 
 ## Entregable

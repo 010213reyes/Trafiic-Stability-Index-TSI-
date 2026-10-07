@@ -23,13 +23,13 @@ python docs/02_ingenieria_datos/09_pipeline_carga_sql/cargar_sql.py
 La carga se dirige a:
 
 ```text
-docs/02_ingenieria_datos/sql/tsi_stage.sqlite
+docs/02_ingenieria_datos/sql/legacy_prototipo/tsi_stage.sqlite
 ```
 
 El manifiesto de ejecución queda en:
 
 ```text
-docs/02_ingenieria_datos/sql/sql_load_manifest.json
+docs/02_ingenieria_datos/sql/legacy_prototipo/sql_load_manifest.json
 ```
 
 ### Tablas creadas

@@ -27,7 +27,7 @@ CONTRACT_PATH = DATA / "00_raw" / "external" / "international_sources_contract.j
 QUALITY_PATH = DATA / "02_clean" / "external" / "international_clean_quality.json"
 CONSOLIDATION_PATH = DATA / "02_clean" / "consolidated" / "international_consolidation_manifest.json"
 OBSERVATIONS_PATH = DATA / "02_clean" / "consolidated" / "international_observations.parquet"
-SQL_PLAN_PATH = DOCS / "12_plan_fase_sql.md"
+SQL_PLAN_PATH = DOCS / "00_planificacion" / "12_plan_fase_sql.md"
 
 ADMIN_USERNAME = "admin"
 ADMIN_PASSWORD = "admin123"
@@ -180,7 +180,8 @@ with sql_tab:
             {"Subfase": "SQL-04", "Estado": "Completada", "Salida": "Politica de metricas"},
             {"Subfase": "SQL-05", "Estado": "Completada", "Salida": "Modelo fisico MySQL"},
             {"Subfase": "SQL-06", "Estado": "Completada", "Salida": "Guia de diagrama EER"},
-            {"Subfase": "SQL-07", "Estado": "Siguiente", "Salida": "Carga de prueba"},
+            {"Subfase": "SQL-07", "Estado": "Completada", "Salida": "Carga internacional de prueba validada"},
+            {"Subfase": "SQL-08", "Estado": "Siguiente", "Salida": "Carga controlada del consolidado"},
         ]
     )
     st.dataframe(sql_steps, use_container_width=True, hide_index=True)

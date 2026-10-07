@@ -4,7 +4,7 @@
 
 Construir una base de datos relacional para consultar las observaciones limpias y consolidadas del proyecto TSI, conservando la trazabilidad de ciudad, fuente, segmento, métrica y calidad del registro.
 
-La base SQLite existente (`docs/02_ingenieria_datos/sql/tsi_stage.sqlite`) se considera un prototipo previo. Su manifiesto indica que fue cargada con el dataset clean anterior y un límite de 50,000 filas; no representa todavía la base SQL final de las fuentes internacionales.
+La base SQLite existente (`docs/02_ingenieria_datos/sql/legacy_prototipo/tsi_stage.sqlite`) se considera un prototipo previo. Su manifiesto indica que fue cargada con el dataset clean anterior y un límite de 50,000 filas; no representa todavía la base SQL final de las fuentes internacionales.
 
 ## Entrada oficial de esta fase
 
@@ -119,13 +119,15 @@ No se crearán tablas definitivas ni scripts de carga hasta aprobar el modelo co
 
 ## Estado inicial
 
-- SQL-01: completado; preguntas y límites documentados en `sql/01_alcance_preguntas.md`.
-- SQL-02: completado; modelo conceptual en `sql/02_modelo_conceptual.txt`, sin tipos SQL todavía.
-- SQL-03: completado; modelo lógico en `sql/03_modelo_logico.md`, pendiente de revisión en papel.
-- SQL-04: completado; política de métricas en `sql/04_politica_metricas.md`.
-- SQL-05: completado; modelo físico en `sql/05_modelo_fisico_mysql.md`.
-- SQL-06: completado; diagrama y guía en `sql/06_diagrama_eer_workbench.md`.
-- SQL-07: siguiente; carga de prueba con muestra pequeña.
+- SQL-01: completado; preguntas y límites documentados en `../01_alcance/01_alcance_preguntas.md`.
+- SQL-02: completado; carpeta reservada en `../02_modelo_conceptual/`; el artefacto conceptual debe conservarse allí.
+- SQL-03: completado; modelo lógico en `../03_modelo_logico/03_modelo_logico.md`, pendiente de revisión en papel.
+- SQL-04: completado; política de métricas en `../04_politica_metricas/04_politica_metricas.md`.
+- SQL-05: completado; modelo físico en `../05_modelo_fisico/05_modelo_fisico_mysql.md`.
+- SQL-06: completado; diagrama y guía en `../06_diagrama_eer/06_diagrama_eer_workbench.md`.
+- SQL-07: completado; carga internacional de 5.000 filas validada en `../07_carga_prueba/07_resultado_carga_prueba_internacional.md`.
+- SQL-08: planificado; carga por lotes hacia MySQL documentada en `../08_carga_controlada/08_plan_carga_controlada.md`.
+- SQL-09: consultas preparadas en `../09_validacion/09_consultas_validacion_mysql.sql`; ejecución pendiente de la instancia MySQL.
 - Prototipo SQLite anterior: existente, pero separado de la nueva base internacional.
 - Consolidado internacional: disponible como entrada.
 - Guía visual de MySQL Workbench: se elaborará después de aprobar SQL-03 y antes de SQL-07.

@@ -1,0 +1,65 @@
+{
+  "pipeline": "sql08_controlled_load_plan",
+  "created_at_utc": "2026-10-07T18:02:01.180508+00:00",
+  "status": "planned_not_executed",
+  "source_dataset": "data/02_clean/consolidated/international_observations.parquet",
+  "target_engine": "mysql_innodb",
+  "batch_rows": 250000,
+  "total_rows": 41770880,
+  "parquet_row_groups": 170,
+  "planned_batches": 168,
+  "row_group_sizes": {
+    "min": 3332,
+    "max": 250000,
+    "first": 3332
+  },
+  "sources": [
+    {
+      "source_id": "istanbul_traffic_index",
+      "input_path": "data/02_clean/external/istanbul_traffic_index_clean.parquet",
+      "rows": 3332,
+      "metrica_principal": "indice_congestion"
+    },
+    {
+      "source_id": "sao_paulo_cet",
+      "input_path": "data/02_clean/external/sao_paulo_cet_clean.parquet",
+      "rows": 5223411,
+      "metrica_principal": "congestion_longitud_m"
+    },
+    {
+      "source_id": "madrid_traffic_points",
+      "input_path": "data/02_clean/external/madrid_traffic_points_clean.parquet",
+      "rows": 12512133,
+      "metrica_principal": "intensidad"
+    },
+    {
+      "source_id": "metr_la",
+      "input_path": "data/02_clean/external/metr_la_clean.parquet",
+      "rows": 7094304,
+      "metrica_principal": "velocidad_sensor"
+    },
+    {
+      "source_id": "pems_bay",
+      "input_path": "data/02_clean/external/pems_bay_clean.parquet",
+      "rows": 16937700,
+      "metrica_principal": "velocidad_sensor"
+    }
+  ],
+  "execution_order": [
+    "crear esquema y restricciones en MySQL",
+    "cargar dim_ciudad y dim_fuente desde el contrato",
+    "cargar dim_segmento con claves fuente + segmento_id",
+    "leer el Parquet por grupos y enviar lotes a fact_observaciones",
+    "registrar cada lote en log_cargas",
+    "crear índices temporales después de la carga de hechos",
+    "ejecutar SQL-09 sobre conteos y relaciones"
+  ],
+  "controls": {
+    "max_rows_in_memory": 250000,
+    "transactions": "una transaccion por lote",
+    "retry_policy": "reintentar el lote fallido sin duplicar cargas",
+    "duplicate_guard": "clave de lote y conteo confirmado antes de commit",
+    "null_policy": "conservar NULL en metricas; normalizar tipo_via ausente como no_especificado"
+  },
+  "not_run_reason": "La carga completa requiere una instancia MySQL disponible y credenciales fuera del repositorio."
+}

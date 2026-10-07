@@ -1,0 +1,31 @@
+{
+  "pipeline": "sql07_international_load_test",
+  "executed_at_utc": "2026-10-07T17:59:22.230106+00:00",
+  "source_dataset": "data/02_clean/consolidated/international_observations.parquet",
+  "database_path": "docs/02_ingenieria_datos/sql/07_carga_prueba/tsi_international_stage.sqlite",
+  "rows_per_source": 1000,
+  "source_rows": {
+    "istanbul_traffic_index": 1000,
+    "madrid_traffic_points": 1000,
+    "metr_la": 1000,
+    "pems_bay": 1000,
+    "sao_paulo_cet": 1000
+  },
+  "tables": {
+    "dim_ciudad": 5,
+    "dim_fuente": 5,
+    "dim_segmento": 232,
+    "fact_observaciones": 5000,
+    "log_cargas": 5
+  },
+  "validation": {
+    "fact_rows": 5000,
+    "city_rows": 5,
+    "source_rows": 5,
+    "segment_rows": 232,
+    "foreign_key_violations": 0,
+    "required_nulls": 0,
+    "duplicate_observation_ids": 0,
+    "status": "passed"
+  }
+}
