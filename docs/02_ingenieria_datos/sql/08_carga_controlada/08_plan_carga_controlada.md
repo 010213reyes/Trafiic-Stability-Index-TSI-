@@ -26,6 +26,8 @@ La entrada tiene 170 grupos Parquet y 41.770.880 filas. Con lotes de 250.000 fil
 6. Crear los índices temporales después de cargar los hechos.
 7. Ejecutar SQL-09 para validar conteos, rangos, nulos y relaciones.
 
+El cargador preparado es `08_cargar_mysql_lotes.py`. Sin `--execute` funciona en modo de validación y no abre conexión. La ejecución real requiere `mysql-connector-python` y estas variables de entorno: `TSI_MYSQL_HOST`, `TSI_MYSQL_PORT`, `TSI_MYSQL_USER`, `TSI_MYSQL_PASSWORD` y `TSI_MYSQL_DATABASE`.
+
 ## Controles obligatorios
 
 - Una transacción por lote.

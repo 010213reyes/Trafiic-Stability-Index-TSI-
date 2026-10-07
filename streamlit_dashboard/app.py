@@ -182,6 +182,7 @@ with sql_tab:
             {"Subfase": "SQL-06", "Estado": "Completada", "Salida": "Guia de diagrama EER"},
             {"Subfase": "SQL-07", "Estado": "Completada", "Salida": "Carga internacional de prueba validada"},
             {"Subfase": "SQL-08", "Estado": "Siguiente", "Salida": "Carga controlada del consolidado"},
+            {"Subfase": "SQL-09", "Estado": "Preparada", "Salida": "Consultas de validacion MySQL"},
         ]
     )
     st.dataframe(sql_steps, use_container_width=True, hide_index=True)

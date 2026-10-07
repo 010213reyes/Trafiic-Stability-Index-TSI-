@@ -10,7 +10,7 @@ import pandas as pd
 import pyarrow.parquet as parquet
 
 
-PROJECT_ROOT = Path(__file__).resolve().parents[3]
+PROJECT_ROOT = Path(__file__).resolve().parents[4]
 DATA_ROOT = PROJECT_ROOT / "data"
 CONTRACT_PATH = DATA_ROOT / "00_raw" / "external" / "international_sources_contract.json"
 OBSERVATIONS_PATH = DATA_ROOT / "02_clean" / "consolidated" / "international_observations.parquet"

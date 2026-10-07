@@ -8,7 +8,7 @@ from pathlib import Path
 import pyarrow.parquet as parquet
 
 
-PROJECT_ROOT = Path(__file__).resolve().parents[3]
+PROJECT_ROOT = Path(__file__).resolve().parents[4]
 OBSERVATIONS_PATH = PROJECT_ROOT / "data" / "02_clean" / "consolidated" / "international_observations.parquet"
 CONSOLIDATION_MANIFEST_PATH = PROJECT_ROOT / "data" / "02_clean" / "consolidated" / "international_consolidation_manifest.json"
 SQL_DIR = PROJECT_ROOT / "docs" / "02_ingenieria_datos" / "sql"
