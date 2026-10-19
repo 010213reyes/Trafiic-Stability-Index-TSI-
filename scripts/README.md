@@ -24,4 +24,8 @@ Genera perfiles y resultados reproducibles:
 - `06_validacion_sql.py`: comparacion Parquet contra MySQL.
 - `07_consolidar_resultados.py`: estado consolidado de la fase.
 
+## `modeling/`
+
+Reservada para construccion de caracteristicas, particiones temporales, entrenamiento y evaluacion. Permanece sin experimentos hasta cerrar la definicion de etiqueta y la validacion de datos.
+
 Todos los scripts calculan la raiz del proyecto desde su propia ubicacion y deben ejecutarse desde la raiz de TSI.
