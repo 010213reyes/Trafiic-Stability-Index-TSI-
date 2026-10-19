@@ -16,7 +16,7 @@ from typing import Any
 
 import requests
 
-PROJECT_ROOT = Path(__file__).resolve().parents[1]
+PROJECT_ROOT = Path(__file__).resolve().parents[2]
 OUT_DIR = PROJECT_ROOT / "data" / "00_raw" / "external" / "source_downloads"
 INTERNATIONAL_DIR = PROJECT_ROOT / "data" / "00_raw" / "external"
 MANIFEST_PATH = PROJECT_ROOT / "data" / "00_raw" / "external" / "multicity_sources_manifest.json"

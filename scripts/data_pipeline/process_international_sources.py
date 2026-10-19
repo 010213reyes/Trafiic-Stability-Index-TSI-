@@ -11,7 +11,7 @@ import pyarrow as pa
 import pyarrow.parquet as pq
 
 
-PROJECT_ROOT = Path(__file__).resolve().parents[1]
+PROJECT_ROOT = Path(__file__).resolve().parents[2]
 RAW_DIR = PROJECT_ROOT / "data" / "00_raw" / "external"
 OUTPUT_DIR = PROJECT_ROOT / "data" / "01_processed" / "external"
 REPORT_DIR = PROJECT_ROOT / "data" / "01_processed" / "quality"

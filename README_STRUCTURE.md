@@ -19,6 +19,7 @@ TSI/
 ├─ notebooks/
 │  └─ 03_Analisis_Datos/
 ├─ scripts/
+│  ├─ data_pipeline/
 │  └─ analysis/
 ├─ streamlit_dashboard/
 ├─ .gitignore
@@ -29,7 +30,8 @@ TSI/
 
 - `data/`: almacenamiento por etapas; no contiene logica de negocio.
 - `docs/`: decisiones, contratos, modelos, analisis y resultados.
-- `scripts/`: ejecuciones reproducibles y procesamiento por lotes.
+- `scripts/data_pipeline/`: descarga, procesamiento, limpieza y consolidacion de fuentes.
+- `scripts/analysis/`: perfiles, controles y resultados analiticos reproducibles.
 - `notebooks/03_Analisis_Datos/`: lectura exploratoria y visualizaciones.
 - `streamlit_dashboard/`: presentacion de la investigacion internacional.
 
