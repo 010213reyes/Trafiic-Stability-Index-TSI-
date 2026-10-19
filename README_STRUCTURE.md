@@ -34,6 +34,17 @@ TSI/
 │  └─ 03_Demostracion_Tecnica_TSI/
 │     ├─ README.md
 │     └─ 01_Demostracion_Tecnica_TSI.ipynb
+├─ docs/
+│  ├─ 02_ingenieria_datos/
+│  └─ 03_analisis_datos/
+│     ├─ 00_planificacion/
+│     ├─ 01_eda/
+│     ├─ 02_calidad_cobertura/
+│     ├─ 03_analisis_temporal/
+│     ├─ 04_comparacion_fuentes/
+│     ├─ 05_indicador_tsi/
+│     ├─ 06_validacion_sql/
+│     └─ 07_resultados/
 ├─ streamlit_dashboard/
 │  ├─ README.md
 │  └─ app.py
@@ -51,6 +62,7 @@ TSI/
 - `notebooks/01_Data_Collection/`: notebooks de captura y generación de datos.
 - `notebooks/02_Data_Processing/`: notebooks de limpieza, validación, EDA y cierre de TSI.
 - `notebooks/03_Demostracion_Tecnica_TSI/`: versión curada para presentación técnica.
+- `docs/03_analisis_datos/`: documentación y resultados de la fase formal de análisis.
 - `streamlit_dashboard/`: capa separada para visualización ejecutiva y dashboards.
 - `.venv/`: entorno virtual local de Python.
 
