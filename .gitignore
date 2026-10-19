@@ -16,3 +16,4 @@ data/01_processed/external/madrid_traffic_points.parquet
 data/01_processed/external/sao_paulo_cet.parquet
 data/02_clean/external/*_clean.parquet
 data/02_clean/consolidated/international_observations.parquet
+data/03_analysis_output/
