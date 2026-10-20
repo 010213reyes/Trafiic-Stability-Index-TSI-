@@ -5,7 +5,7 @@ Esta subfase consolida los resultados reproducibles de las etapas de EDA, calida
 ## Ejecucion
 
 ```powershell
-.\.venv\Scripts\python.exe scripts\analysis\07_consolidar_resultados.py
+.\.venv\Scripts\python.exe docs\03_analisis_datos\07_resultados\07_consolidar_resultados.py
 ```
 
 Las salidas locales se guardan en `data/03_analysis_output/resultados/`:

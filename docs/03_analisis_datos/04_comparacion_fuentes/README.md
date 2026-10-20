@@ -5,7 +5,7 @@ Esta subfase establece que fuentes pueden compararse y bajo que condiciones. No 
 ## Ejecucion
 
 ```powershell
-.\.venv\Scripts\python.exe scripts\analysis\04_comparacion_fuentes.py
+.\.venv\Scripts\python.exe docs\03_analisis_datos\04_comparacion_fuentes\04_comparacion_fuentes.py
 ```
 
 Las salidas locales se generan en `data/03_analysis_output/comparacion_fuentes/`:

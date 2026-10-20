@@ -9,7 +9,7 @@ import pyarrow as pa
 import pyarrow.parquet as parquet
 
 
-PROJECT_ROOT = Path(__file__).resolve().parents[2]
+PROJECT_ROOT = Path(__file__).resolve().parents[3]
 CLEAN_DIR = PROJECT_ROOT / "data" / "02_clean" / "external"
 OUTPUT_DIR = PROJECT_ROOT / "data" / "02_clean" / "consolidated"
 BATCH_SIZE = 250_000

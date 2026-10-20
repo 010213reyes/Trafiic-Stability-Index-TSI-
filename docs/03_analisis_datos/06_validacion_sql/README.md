@@ -11,7 +11,7 @@ $env:TSI_MYSQL_HOST = "127.0.0.1"
 $env:TSI_MYSQL_PORT = "3306"
 $env:TSI_MYSQL_USER = "root"
 $env:TSI_MYSQL_DATABASE = "tsi_db"
-.\.venv\Scripts\python.exe scripts\analysis\06_validacion_sql.py --password
+.\.venv\Scripts\python.exe docs\03_analisis_datos\06_validacion_sql\06_validacion_sql.py --password
 ```
 
 El script compara:

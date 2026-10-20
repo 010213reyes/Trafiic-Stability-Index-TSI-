@@ -5,7 +5,7 @@ Esta subfase evalua completitud, cobertura temporal, etiquetas de calidad y rang
 ## Ejecucion
 
 ```powershell
-.\.venv\Scripts\python.exe scripts\analysis\02_calidad_cobertura.py
+.\.venv\Scripts\python.exe docs\03_analisis_datos\02_calidad_cobertura\02_calidad_cobertura.py
 ```
 
 El script procesa el Parquet por lotes y genera salidas locales en `data/03_analysis_output/calidad_cobertura/`:

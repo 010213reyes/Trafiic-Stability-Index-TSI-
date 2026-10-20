@@ -9,7 +9,7 @@ import pyarrow as pa
 import pyarrow.parquet as pq
 
 
-PROJECT_ROOT = Path(__file__).resolve().parents[2]
+PROJECT_ROOT = Path(__file__).resolve().parents[3]
 INPUT_DIR = PROJECT_ROOT / "data" / "01_processed" / "external"
 NORMALIZED_DIR = PROJECT_ROOT / "data" / "01_processed" / "normalized"
 OUTPUT_DIR = PROJECT_ROOT / "data" / "02_clean" / "external"

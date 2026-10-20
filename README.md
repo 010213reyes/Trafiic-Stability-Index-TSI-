@@ -22,8 +22,8 @@ Fuentes externas
 - `data/01_processed/`: datos procesados y metadatos de linaje.
 - `data/02_clean/external/`: fuentes limpias por ciudad o proveedor.
 - `data/02_clean/consolidated/`: consolidado internacional para analisis y SQL.
-- `scripts/`: procesamiento internacional y perfiles reproducibles.
-- `notebooks/03_Analisis_Datos/`: exploracion documentada.
+- `docs/02_ingenieria_datos/`: scripts de ingesta, procesamiento, consolidacion y SQL.
+- `docs/03_analisis_datos/`: scripts, notebook, salidas y documentacion del analisis.
 - `streamlit_dashboard/`: interfaz de la investigacion nueva.
 
 ## Flujo de trabajo

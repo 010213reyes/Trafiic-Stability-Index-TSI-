@@ -1,6 +1,6 @@
 # Catálogo preliminar de fuentes
 
-Diagnóstico realizado sobre los archivos actuales de `data/00_raw/` y los notebooks de `notebooks/01_Data_Collection/`.
+Diagnostico realizado sobre los archivos actuales de `data/00_raw/` y la documentacion de las fuentes internacionales.
 
 | Fuente | Registros | Días | Cobertura de avenidas | Faltantes | Origen |
 |---|---:|---:|---|---|---|

@@ -168,7 +168,7 @@ No se debe avanzar de fase si la salida anterior no está definida y validada.
 ```text
 TSI/
 ├── data/                         # Datos por etapa del flujo
-├── notebooks/                    # Exploración, investigación y prototipos
+├── docs/                         # Documentacion, scripts y notebooks por fase
 ├── docs/                         # Decisiones y documentación de fases
 │   ├── 00_arq_y_decisiones/
 │   ├── 01_mineria_datos/

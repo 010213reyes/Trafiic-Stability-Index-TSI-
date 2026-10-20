@@ -5,7 +5,7 @@ Estudia la evolucion de las observaciones por fecha, hora y dia de la semana, ma
 ## Ejecucion
 
 ```powershell
-.\.venv\Scripts\python.exe scripts\analysis\03_analisis_temporal.py
+.\.venv\Scripts\python.exe docs\03_analisis_datos\03_analisis_temporal\03_analisis_temporal.py
 ```
 
 El script procesa el consolidado por lotes y genera salidas locales en `data/03_analysis_output/analisis_temporal/`:

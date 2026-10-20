@@ -5,7 +5,7 @@ Esta subfase prepara un componente TSI provisional y documenta lo que aun falta 
 ## Ejecucion provisional
 
 ```powershell
-.\.venv\Scripts\python.exe scripts\analysis\05_indicador_tsi_provisional.py
+.\.venv\Scripts\python.exe docs\03_analisis_datos\05_indicador_tsi\05_indicador_tsi_provisional.py
 ```
 
 El script genera `data/03_analysis_output/indicador_tsi/tsi_provisional_diario.csv` y `metodo.json`.
