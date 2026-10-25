@@ -14,6 +14,6 @@ Esta fase transforma los hallazgos del analisis en variables, modelos y validaci
 ## Dependencias
 
 - La calidad y cobertura deben estar documentadas en `docs/03_analisis_datos/`.
-- La carga SQL y su validacion siguen siendo una dependencia pendiente.
+- La carga SQL y su validacion forman parte de la base reproducible de esta fase.
 - Guadalajara se mantiene como ciudad objetivo para calibracion y validacion local.
 - El indicador TSI provisional no se considera una etiqueta final ni un modelo validado.

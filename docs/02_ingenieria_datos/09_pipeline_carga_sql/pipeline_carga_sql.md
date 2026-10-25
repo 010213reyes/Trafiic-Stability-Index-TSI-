@@ -47,5 +47,5 @@ Carga reproducible hacia la base SQL con tablas fact/dimension y trazabilidad de
 
 ## Resultado
 
-- La carga del dataset limpio queda preparada para la etapa de SQL.
-- La base local es el punto de entrada para consultas analíticas y validación posterior.
+- La carga del dataset limpio está registrada en MySQL.
+- La base `tsi_db` es el punto de entrada para consultas analíticas reproducibles.

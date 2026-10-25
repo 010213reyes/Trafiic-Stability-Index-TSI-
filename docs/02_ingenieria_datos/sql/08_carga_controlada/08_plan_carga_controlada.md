@@ -35,8 +35,8 @@ El cargador preparado es `08_cargar_mysql_lotes.py`. Sin `--execute` funciona en
 - No insertar credenciales ni contraseñas en scripts o manifiestos.
 - Conservar `NULL` en métricas que la fuente no mide.
 - Normalizar `tipo_via` ausente como `no_especificado`, igual que en SQL-07.
-- No ejecutar la carga completa hasta disponer de una instancia MySQL y credenciales configuradas fuera del repositorio.
+- La carga completa se ejecuta con una instancia MySQL y credenciales configuradas fuera del repositorio.
 
 ## Estado
 
-SQL-08 queda planificado, pero no ejecutado. La ejecución física depende de disponer de MySQL; el siguiente paso técnico es preparar el cargador por lotes y las consultas SQL-09 de validación.
+SQL-08 está documentado como carga por lotes reproducible y su ejecución queda registrada en `tsi_db`. SQL-09 conserva las consultas de control de la base internacional.

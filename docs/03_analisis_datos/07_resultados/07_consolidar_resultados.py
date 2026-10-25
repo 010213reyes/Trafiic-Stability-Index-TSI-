@@ -15,7 +15,7 @@ PHASES = {
     "03_analisis_temporal": "completada",
     "04_comparacion_fuentes": "completada",
     "05_indicador_tsi": "provisional",
-    "06_validacion_sql": "pendiente_carga_mysql",
+    "06_validacion_sql": "completada",
 }
 
 
@@ -56,7 +56,7 @@ def main() -> None:
         ]
     ].to_dict(orient="records")
     report = {
-        "estado_fase": "analisis_exploratorio_completado_con_validacion_sql_pendiente",
+        "estado_fase": "analisis_exploratorio_con_validacion_sql",
         "observaciones_evaluadas": profile["filas"],
         "grupos_ciudad_fuente_metrica": profile["grupos_ciudad_fuente_metrica"],
         "calidad": {
@@ -71,7 +71,7 @@ def main() -> None:
         },
         "validacion_sql": sql_state,
         "fuentes": source_findings,
-        "siguiente_decision": "completar_carga_mysql_y_ejecutar_validacion_sql",
+        "siguiente_decision": "continuar_con_ciencia_de_datos_y_experimentacion_reproducible",
     }
     (args.output / "estado_fase_analisis.json").write_text(
         json.dumps(report, indent=2, ensure_ascii=False),

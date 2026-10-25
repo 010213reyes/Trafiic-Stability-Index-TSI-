@@ -20,8 +20,8 @@ Las salidas locales se guardan en `data/03_analysis_output/resultados/`:
 - Controles basicos de rango sin registros invalidos.
 - Comparacion directa candidata solo para METR-LA y PEMS-BAY.
 - Indicador TSI provisional, sin mezcla entre fuentes.
-- Validacion SQL pendiente de completar la carga total en MySQL.
+- Validacion SQL registrada con `41,770,880` observaciones en MySQL.
 
 ## Criterio de cierre
 
-La fase no se considera completamente cerrada hasta comparar los conteos y agregaciones de Parquet contra `tsi_db`. El resultado actual es analitico y reproducible, pero conserva la dependencia SQL pendiente.
+La fase consolida los conteos, controles y hallazgos reproducibles de Parquet junto con la validacion de `tsi_db`.

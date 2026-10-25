@@ -24,7 +24,7 @@ El calculo completo genero 9.757 combinaciones dia-fuente. Las medias provisiona
 
 Estas diferencias no representan aun que una ciudad sea mas estable que otra. El resultado es sensible a extremos, rangos de origen, ventanas temporales y unidades.
 
-## Pendientes antes del indicador final
+## Condiciones del indicador final
 
 1. Verificar unidades y significado operacional de cada metrica.
 2. Evaluar normalizacion robusta frente a min-max.

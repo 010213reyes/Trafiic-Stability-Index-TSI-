@@ -20,7 +20,7 @@ El proceso se ejecuta con:
 python docs/02_ingenieria_datos/08_preparacion_sql/preparar_sql.py
 ```
 
-Estas son las entidades que quedan preparadas para SQL:
+Estas son las entidades definidas para SQL:
 
 ```text
 - fact_observaciones

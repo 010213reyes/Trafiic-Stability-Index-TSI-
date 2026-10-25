@@ -113,7 +113,7 @@ def main() -> None:
     manifest = {
         "pipeline": "international_clean_consolidation",
         "executed_at_utc": datetime.now(timezone.utc).isoformat(),
-        "sql_status": "pendiente_hasta_curso_sql",
+        "sql_status": "validado_en_tsi_db",
         "timestamp_rule": "El consolidado almacena timestamp en UTC sin zona embebida; la zona horaria original permanece en el contrato de cada fuente.",
         "metric_separation_rule": "No comparar directamente velocidad, indice de congestion, longitud de congestion e intensidad sin una transformacion documentada.",
         "consolidated_output": consolidated,

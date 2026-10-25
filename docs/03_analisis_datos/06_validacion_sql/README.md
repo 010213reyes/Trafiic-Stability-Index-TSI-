@@ -26,6 +26,14 @@ Las salidas locales se guardan en `data/03_analysis_output/validacion_sql/`.
 
 ## Estado actual
 
-La validacion queda preparada, pero no se considera cerrada hasta que la carga completa de MySQL termine y el archivo `estado.json` indique `completa`.
+La carga completa de MySQL ya termino y contiene `41,770,880` observaciones. Los conteos por fuente coinciden con el consolidado Parquet:
 
-No se debe repetir la carga de prueba de 5.000 filas como sustituto de la validacion final.
+- `istanbul_traffic_index`: `3,332`;
+- `madrid_traffic_points`: `12,512,133`;
+- `metr_la`: `7,094,304`;
+- `pems_bay`: `16,937,700`;
+- `sao_paulo_cet`: `5,223,411`.
+
+La validacion queda cerrada mediante `data/03_analysis_output/validacion_sql/estado.json`, con estado `completa`, diferencia total `0` y metodo `validacion_manual_sql_por_fuente`.
+
+El script automatico conserva una consulta adicional de rangos y grupos, pero no es necesario repetir la carga ni ejecutar el cargador para validar la base. La carga de prueba de 5.000 filas tampoco sustituye la carga internacional completa.

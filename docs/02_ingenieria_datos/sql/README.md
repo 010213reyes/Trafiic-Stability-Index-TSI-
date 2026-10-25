@@ -12,8 +12,8 @@ La fase SQL está organizada por subfases para separar decisiones, modelos, carg
 | `05_modelo_fisico` | Tipos, restricciones e índices MySQL | Completada |
 | `06_diagrama_eer` | Modelo visual de Workbench | Completada |
 | `07_carga_prueba` | Prueba internacional de 5.000 filas | Completada |
-| `08_carga_controlada` | Plan y DDL para carga por lotes | Planificada, no ejecutada |
-| `09_validacion` | Consultas de control | Preparadas, pendientes de MySQL |
+| `08_carga_controlada` | Plan y DDL para carga por lotes | Ejecutada y registrada en MySQL |
+| `09_validacion` | Consultas de control | Validada sobre `tsi_db` |
 | `legacy_prototipo` | SQLite de la investigación anterior | Fuera de la base internacional |
 
 No se deben mezclar los artefactos de `legacy_prototipo` con SQL-07, SQL-08 o SQL-09.

@@ -23,4 +23,4 @@ La base podrá avanzar a SQL-10 cuando:
 
 ## Estado
 
-Las consultas están preparadas, pero quedan pendientes de ejecución hasta disponer de la instancia MySQL de SQL-08. La prueba SQLite de SQL-07 ya validó el mismo conjunto básico de claves y campos obligatorios.
+Las consultas de control se aplican sobre la instancia MySQL de SQL-08. La prueba SQLite de SQL-07 conserva la validación inicial del mismo conjunto básico de claves y campos obligatorios.

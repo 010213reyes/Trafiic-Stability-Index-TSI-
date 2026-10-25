@@ -121,13 +121,13 @@ No se crearán tablas definitivas ni scripts de carga hasta aprobar el modelo co
 
 - SQL-01: completado; preguntas y límites documentados en `../01_alcance/01_alcance_preguntas.md`.
 - SQL-02: completado; carpeta reservada en `../02_modelo_conceptual/`; el artefacto conceptual debe conservarse allí.
-- SQL-03: completado; modelo lógico en `../03_modelo_logico/03_modelo_logico.md`, pendiente de revisión en papel.
+- SQL-03: completado; modelo lógico en `../03_modelo_logico/03_modelo_logico.md`.
 - SQL-04: completado; política de métricas en `../04_politica_metricas/04_politica_metricas.md`.
 - SQL-05: completado; modelo físico en `../05_modelo_fisico/05_modelo_fisico_mysql.md`.
 - SQL-06: completado; diagrama y guía en `../06_diagrama_eer/06_diagrama_eer_workbench.md`.
 - SQL-07: completado; carga internacional de 5.000 filas validada en `../07_carga_prueba/07_resultado_carga_prueba_internacional.md`.
-- SQL-08: planificado; carga por lotes hacia MySQL documentada en `../08_carga_controlada/08_plan_carga_controlada.md`.
-- SQL-09: consultas preparadas en `../09_validacion/09_consultas_validacion_mysql.sql`; ejecución pendiente de la instancia MySQL.
+- SQL-08: ejecutado; carga por lotes hacia MySQL documentada en `../08_carga_controlada/08_plan_carga_controlada.md`.
+- SQL-09: validado sobre `tsi_db`; consultas de control conservadas en `../09_validacion/09_consultas_validacion_mysql.sql`.
 - Prototipo SQLite anterior: existente, pero separado de la nueva base internacional.
 - Consolidado internacional: disponible como entrada.
 - Guía visual de MySQL Workbench: se elaborará después de aprobar SQL-03 y antes de SQL-07.
