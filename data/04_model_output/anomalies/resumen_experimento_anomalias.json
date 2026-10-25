@@ -1,0 +1,24 @@
+{
+  "experiment": "deteccion_anomalias_alta_frecuencia",
+  "sources": [
+    "metr_la",
+    "pems_bay"
+  ],
+  "resolution_minutes": 5,
+  "methods": [
+    "baseline_robust_z_score",
+    "isolation_forest"
+  ],
+  "isolation_contamination": 0.05,
+  "outputs": [
+    "anomalias_alta_frecuencia.parquet",
+    "resumen_anomalias.csv"
+  ],
+  "status": "exploratory_anomaly_detection_without_ground_truth",
+  "limitations": [
+    "no_incident_ground_truth",
+    "network_median_proxy",
+    "highway_sources",
+    "not_Guadalajara_validation"
+  ]
+}

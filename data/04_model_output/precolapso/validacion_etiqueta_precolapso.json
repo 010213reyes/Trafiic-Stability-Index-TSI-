@@ -1,0 +1,25 @@
+{
+  "status": "etiqueta_exploratoria_validada_para_subconjunto",
+  "fuentes_con_combinacion_valida": [
+    "metr_la",
+    "pems_bay"
+  ],
+  "combinaciones_validas": 32,
+  "horizontes_evaluados": [
+    5,
+    10,
+    15,
+    20,
+    30,
+    60
+  ],
+  "umbrales_evaluados": [
+    0.1,
+    0.15,
+    0.2,
+    0.25,
+    0.3
+  ],
+  "criterio_minimo_eventos_test": 10,
+  "nota": "La validacion estadistica no sustituye etiquetas de eventos reales ni validacion local."
+}

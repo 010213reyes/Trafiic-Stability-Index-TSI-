@@ -1,0 +1,3 @@
+source,observaciones,baseline_anomalias,isolation_anomalias,coincidencias,tasa_isolation_pct,tasa_coincidencia_sobre_baseline_pct
+metr_la,34269,7691,1709,124,4.987014502903499,1.612274086594721
+pems_bay,52113,3197,2606,504,5.000671617446702,15.764779480763217
