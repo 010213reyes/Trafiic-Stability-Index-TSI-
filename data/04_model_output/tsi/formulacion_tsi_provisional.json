@@ -1,0 +1,24 @@
+{
+  "nombre": "Traffic Stability Index provisional",
+  "escala": [
+    0,
+    100
+  ],
+  "unidad_de_comparacion": "relativa_dentro_de_fuente_y_metrica",
+  "normalizacion": "min_max",
+  "direcciones": {
+    "indice_congestion": "lower_is_better",
+    "velocidad": "higher_is_better",
+    "intensidad": "lower_is_better",
+    "congestion_longitud": "lower_is_better"
+  },
+  "fuentes_mezcladas": false,
+  "regla_valor_alto": "mejor estabilidad relativa dentro de la fuente",
+  "uso_actual": "objetivo de pronostico exploratorio del siguiente dia",
+  "no_debe_usarse_como": [
+    "verdad universal de estabilidad",
+    "etiqueta de precolapso",
+    "comparacion directa entre unidades distintas"
+  ],
+  "filas_evaluadas": 41770880
+}
