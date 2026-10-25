@@ -27,13 +27,14 @@ La ventana de 18 a 20 minutos se conserva como hipotesis del proyecto, no como r
 - validacion local con Guadalajara;
 - documentacion de falsos positivos, falsos negativos y limites.
 
-## Bloqueos actuales
+## Estado de inicio experimental
 
-1. Validar la carga completa en MySQL.
-2. Confirmar unidades y semantica de las metricas.
-3. Definir una etiqueta operacional de inestabilidad.
-4. Elegir caracteristicas sin mezclar escalas incompatibles.
+1. La carga completa en MySQL y su control por conteos estan documentados.
+2. Las unidades y semantica siguen separadas por fuente.
+3. La primera tarea reproducible es pronosticar el TSI provisional del siguiente dia.
+4. La etiqueta operacional de pre-colapso queda fuera de este experimento hasta contar con una regla validada.
+5. Las caracteristicas temporales usan solo informacion pasada y conservan la fuente para evaluar estabilidad.
 
 ## Criterio para iniciar modelado
 
-No se entrenara un modelo final hasta cerrar los cuatro bloqueos y registrar una particion temporal reproducible.
+No se declara un modelo final: primero se registran baseline, validacion temporal, estabilidad por fuente y limites de interpretacion.

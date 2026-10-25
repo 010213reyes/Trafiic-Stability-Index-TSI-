@@ -1,5 +1,5 @@
 # 02 Modelado
 
-Contiene los modelos candidatos para detectar inestabilidad o condiciones de pre-colapso.
+Contiene el primer experimento de pronostico del TSI provisional del siguiente dia. El objetivo no equivale aun a detectar pre-colapso.
 
-Los experimentos deben separar exploracion, entrenamiento y evaluacion, sin mezclar fuentes incompatibles.
+`01_Seleccion_Modelos_Internacional.ipynb` compara persistencia, Ridge y Random Forest con particion temporal 60/20/20 por fuente. La seleccion se hace con validacion y la prueba final se conserva fuera de muestra.
