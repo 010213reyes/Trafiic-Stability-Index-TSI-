@@ -1,0 +1,19 @@
+{
+  "tarea": "pronostico_del_tsi_provisional_del_siguiente_dia",
+  "filas_features": 9742,
+  "modelo_candidato": "random_forest",
+  "mae_prueba_modelo_candidato": 2.5110870774445324,
+  "mae_prueba_baseline": 5.30213794644081,
+  "fuentes_con_mejora": 4,
+  "fuentes_evaluadas": 5,
+  "excepciones": [
+    "madrid_traffic_points"
+  ],
+  "estado": "candidato_internacional_no_final",
+  "limitaciones": [
+    "TSI provisional",
+    "Madrid tiene cinco filas de prueba",
+    "sin etiqueta de pre_colapso",
+    "sin calibracion local de Guadalajara"
+  ]
+}
