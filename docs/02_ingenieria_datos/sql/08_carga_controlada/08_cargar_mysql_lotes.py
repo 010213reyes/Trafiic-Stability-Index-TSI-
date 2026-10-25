@@ -28,6 +28,7 @@ FACT_COLUMNS = [
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Carga el consolidado internacional a MySQL por lotes")
     parser.add_argument("--batch-rows", type=int, default=DEFAULT_BATCH_ROWS)
+    parser.add_argument("--skip-rows", type=int, default=0, help="Salta filas ya confirmadas para reanudar una carga")
     parser.add_argument("--max-rows", type=int, default=None, help="Limita filas para una prueba")
     parser.add_argument("--rows-per-source", type=int, default=None, help="Limita filas por fuente para una prueba")
     parser.add_argument("--source-ids", default=None, help="Fuentes separadas por coma para una prueba")
@@ -215,7 +216,7 @@ def fact_rows(frame: pd.DataFrame, city_ids: dict, source_ids: dict, segment_ids
         )
 
 
-def load_facts(connection, contract: dict, batch_rows: int, max_rows: int | None, rows_per_source: int | None, source_filter: set[str] | None) -> int:
+def load_facts(connection, contract: dict, batch_rows: int, skip_rows: int, max_rows: int | None, rows_per_source: int | None, source_filter: set[str] | None) -> int:
     cursor = connection.cursor()
     placeholders = ", ".join(["%s"] * len(FACT_COLUMNS))
     columns = ", ".join(f"`{column}`" for column in FACT_COLUMNS)
@@ -226,8 +227,15 @@ def load_facts(connection, contract: dict, batch_rows: int, max_rows: int | None
     city_ids = {}
     source_ids = {}
     segment_ids = {}
+    rows_to_skip = skip_rows
     for group_index, batch in enumerate(parquet_file.iter_batches(batch_size=batch_rows), start=1):
         frame = batch.to_pandas()
+        if rows_to_skip:
+            if rows_to_skip >= len(frame):
+                rows_to_skip -= len(frame)
+                continue
+            frame = frame.iloc[rows_to_skip:].reset_index(drop=True)
+            rows_to_skip = 0
         if max_rows is not None:
             remaining = max_rows - loaded
             if remaining <= 0:
@@ -268,8 +276,12 @@ def main() -> None:
     args = parse_args()
     if args.batch_rows <= 0:
         raise ValueError("--batch-rows debe ser mayor que cero")
+    if args.skip_rows < 0:
+        raise ValueError("--skip-rows no puede ser negativo")
     if args.max_rows is not None and args.rows_per_source is not None:
         raise ValueError("Usa --max-rows o --rows-per-source, no ambos")
+    if args.skip_rows and (args.rows_per_source is not None or args.source_ids):
+        raise ValueError("--skip-rows solo se puede combinar con una carga completa, sin filtros por fuente")
     if args.rows_per_source is not None and args.rows_per_source <= 0:
         raise ValueError("--rows-per-source debe ser mayor que cero")
 
@@ -280,6 +292,8 @@ def main() -> None:
     print(f"Filas: {parquet_file.metadata.num_rows:,} | grupos: {parquet_file.metadata.num_row_groups} | lote: {args.batch_rows:,}")
     if args.max_rows is not None:
         print(f"Limite de prueba: {args.max_rows:,} filas")
+    if args.skip_rows:
+        print(f"Reanudacion: se saltan {args.skip_rows:,} filas ya confirmadas")
     if args.rows_per_source is not None:
         print(f"Limite por fuente: {args.rows_per_source:,} filas")
     if source_filter:
@@ -295,7 +309,7 @@ def main() -> None:
         raise ValueError(f"Fuentes desconocidas: {unknown}")
     connection = connect_mysql()
     try:
-        loaded = load_facts(connection, contract, args.batch_rows, args.max_rows, args.rows_per_source, source_filter)
+        loaded = load_facts(connection, contract, args.batch_rows, args.skip_rows, args.max_rows, args.rows_per_source, source_filter)
         print(f"Filas insertadas: {loaded:,}")
     finally:
         connection.close()
