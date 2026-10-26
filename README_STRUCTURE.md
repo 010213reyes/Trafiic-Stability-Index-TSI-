@@ -16,7 +16,7 @@ TSI/
 │  ├─ 04_ciencia_datos/
 │  ├─ 05_mlops/
 │  └─ 06_interfaz_streamlit/
-├─ streamlit_dashboard/
+├─ streamlit_app/
 ├─ .gitignore
 └─ README.md
 ```
@@ -27,6 +27,6 @@ TSI/
 - `docs/`: decisiones, contratos, modelos, analisis y resultados.
 - `docs/02_ingenieria_datos/`: scripts de descarga, procesamiento, consolidacion y SQL dentro de cada subfase.
 - `docs/03_analisis_datos/`: scripts, notebook, salidas y documentacion de cada subfase analitica.
-- `streamlit_dashboard/`: presentacion de la investigacion internacional.
+- `streamlit_app/`: aplicacion Streamlit de la investigacion internacional.
 
 La carga SQL se mantiene documentada en `docs/02_ingenieria_datos/sql/` y no depende de notebooks legacy.

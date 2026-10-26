@@ -12,7 +12,7 @@ Fuentes externas
   -> docs/02_ingenieria_datos/sql
   -> docs/03_analisis_datos
   -> docs/04_ciencia_datos
-  -> streamlit_dashboard
+  -> streamlit_app
 ```
 
 ## Rutas principales
@@ -24,7 +24,7 @@ Fuentes externas
 - `data/02_clean/consolidated/`: consolidado internacional para analisis y SQL.
 - `docs/02_ingenieria_datos/`: scripts de ingesta, procesamiento, consolidacion y SQL.
 - `docs/03_analisis_datos/`: scripts, notebook, salidas y documentacion del analisis.
-- `streamlit_dashboard/`: interfaz de la investigacion nueva.
+- `streamlit_app/`: aplicacion Streamlit de la investigacion nueva.
 
 ## Flujo de trabajo
 

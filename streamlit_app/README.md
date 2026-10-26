@@ -15,7 +15,7 @@ Los datasets grandes y las credenciales permanecen fuera de Git. La aplicacion d
 Desde la raiz del proyecto:
 
 ```powershell
-streamlit run streamlit_dashboard/app.py
+streamlit run streamlit_app/app.py
 ```
 
 La documentacion funcional y las decisiones de interfaz se mantienen en `docs/06_interfaz_streamlit/`.
