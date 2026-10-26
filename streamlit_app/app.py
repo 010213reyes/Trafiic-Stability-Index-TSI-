@@ -28,6 +28,11 @@ QUALITY_PATH = DATA / "02_clean" / "external" / "international_clean_quality.jso
 CONSOLIDATION_PATH = DATA / "02_clean" / "consolidated" / "international_consolidation_manifest.json"
 OBSERVATIONS_PATH = DATA / "02_clean" / "consolidated" / "international_observations.parquet"
 SQL_PLAN_PATH = DOCS / "00_planificacion" / "12_plan_fase_sql.md"
+MODEL_MANIFEST_PATH = DATA / "05_mlops" / "model_registry" / "rf_tsi_internacional_v1.0.0" / "manifest.json"
+INFERENCE_METADATA_PATH = DATA / "05_mlops" / "inference" / "predicciones_tsi.json"
+PREDICTIONS_PATH = DATA / "05_mlops" / "inference" / "predicciones_tsi.csv"
+MONITORING_PATH = DATA / "05_mlops" / "monitoring" / "reporte_monitoreo.json"
+ANOMALY_SUMMARY_PATH = DATA / "04_model_output" / "anomalies" / "resumen_anomalias.csv"
 
 ADMIN_USERNAME = "admin"
 ADMIN_PASSWORD = "admin123"
@@ -99,8 +104,8 @@ for source in contract.get("sources", []):
 st.title("Traffic Stability Index")
 st.caption("Demostracion visual del avance de la nueva investigacion multiciudad")
 st.info(
-    "Esta aplicacion muestra unicamente el avance de la nueva investigacion: fuentes internacionales, "
-    "ingenieria RAW-PROCESSED-CLEAN-CONSOLIDATED y organizacion de la fase SQL."
+    "Esta aplicacion muestra el avance de la nueva investigacion: fuentes internacionales, "
+    "ingenieria RAW-PROCESSED-CLEAN-CONSOLIDATED, fase SQL y operacion MLOps local."
 )
 
 total_rows = parquet_row_count(OBSERVATIONS_PATH)
@@ -114,7 +119,9 @@ with metric_c:
 with metric_d:
     st.metric("SQL", "Diseno listo" if SQL_PLAN_PATH.exists() else "Pendiente")
 
-pipeline_tab, sources_tab, sql_tab = st.tabs(["Avance del pipeline", "Fuentes internacionales", "Fase SQL"])
+pipeline_tab, sources_tab, sql_tab, mlops_tab = st.tabs(
+    ["Avance del pipeline", "Fuentes internacionales", "Fase SQL", "Operacion MLOps"]
+)
 
 with pipeline_tab:
     st.subheader("Avance demostrable")
@@ -187,3 +194,71 @@ with sql_tab:
     )
     st.dataframe(sql_steps, use_container_width=True, hide_index=True)
     st.warning("La carga SQL y las consultas de validacion se realizaran despues de revisar el modelo visual en MySQL Workbench.")
+
+with mlops_tab:
+    st.subheader("Operacion MLOps local")
+    st.caption("La interfaz lee artefactos versionados; no entrena modelos ni modifica los datos de entrada.")
+
+    manifest = read_json(MODEL_MANIFEST_PATH)
+    inference_metadata = read_json(INFERENCE_METADATA_PATH)
+    monitoring = read_json(MONITORING_PATH)
+
+    if not manifest or not inference_metadata or not monitoring or not PREDICTIONS_PATH.exists():
+        st.warning("Faltan artefactos de la ejecucion MLOps. Ejecute inferencia y monitoreo antes de abrir esta vista.")
+    else:
+        performance = monitoring.get("performance", {})
+        metric_a, metric_b, metric_c, metric_d = st.columns(4)
+        with metric_a:
+            st.metric("Version del modelo", manifest.get("model_version", "N/D"))
+        with metric_b:
+            st.metric("Predicciones", f"{inference_metadata.get('rows_inferred', 0):,}")
+        with metric_c:
+            st.metric("MAE", f"{performance.get('mae', 0):.3f}")
+        with metric_d:
+            st.metric("Estado monitoreo", monitoring.get("status", "N/D").upper())
+
+        st.write(
+            {
+                "ejecucion_utc": inference_metadata.get("run_at_utc"),
+                "entrada": inference_metadata.get("input_path"),
+                "hash_entrada": inference_metadata.get("input_sha256"),
+                "filas_omitidas_por_incompletitud": inference_metadata.get("rows_skipped_incomplete"),
+            }
+        )
+
+        st.markdown("#### Metricas de desempeño")
+        st.dataframe(
+            pd.DataFrame(
+                [
+                    {"Metrica": "MAE", "Valor": performance.get("mae")},
+                    {"Metrica": "RMSE", "Valor": performance.get("rmse")},
+                    {"Metrica": "P95 error absoluto", "Valor": performance.get("p95_error_absoluto")},
+                    {"Metrica": "Drift maximo de media", "Valor": monitoring.get("drift_max_mean_shift")},
+                ]
+            ),
+            use_container_width=True,
+            hide_index=True,
+        )
+
+        checks = monitoring.get("checks", [])
+        if checks:
+            st.markdown("#### Controles de monitoreo")
+            checks_table = pd.DataFrame(checks)
+            st.dataframe(
+                checks_table[["name", "value", "status", "detail"]],
+                use_container_width=True,
+                hide_index=True,
+            )
+
+        predictions = pd.read_csv(PREDICTIONS_PATH)
+        st.markdown("#### Predicciones generadas")
+        st.dataframe(predictions.head(25), use_container_width=True, hide_index=True)
+
+        if ANOMALY_SUMMARY_PATH.exists():
+            st.markdown("#### Resumen de anomalias exploratorias")
+            st.dataframe(pd.read_csv(ANOMALY_SUMMARY_PATH), use_container_width=True, hide_index=True)
+
+        st.warning(
+            "El modelo es candidato internacional y el TSI es provisional. Las anomalias no tienen ground truth externo; "
+            "Guadalajara queda pendiente de calibracion y validacion local."
+        )
