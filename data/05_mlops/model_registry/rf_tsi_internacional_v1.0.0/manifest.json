@@ -1,0 +1,69 @@
+{
+  "model_version": "rf_tsi_internacional_v1.0.0",
+  "model_name": "random_forest",
+  "task": "pronostico_del_tsi_provisional_del_siguiente_dia",
+  "status": "candidato_internacional_no_final",
+  "target": "objetivo_tsi_siguiente",
+  "predictors": [
+    "tsi_provisional_media",
+    "tsi_lag_1",
+    "tsi_lag_7",
+    "delta_1",
+    "media_movil_3",
+    "media_movil_7",
+    "desviacion_movil_7",
+    "dia_semana",
+    "mes",
+    "es_fin_de_semana",
+    "observaciones"
+  ],
+  "feature_columns": [
+    "tsi_provisional_media",
+    "tsi_lag_1",
+    "tsi_lag_7",
+    "delta_1",
+    "media_movil_3",
+    "media_movil_7",
+    "desviacion_movil_7",
+    "dia_semana",
+    "mes",
+    "es_fin_de_semana",
+    "observaciones",
+    "fuente_istanbul_traffic_index",
+    "fuente_madrid_traffic_points",
+    "fuente_metr_la",
+    "fuente_pems_bay",
+    "fuente_sao_paulo_cet"
+  ],
+  "model_parameters": {
+    "n_estimators": 150,
+    "min_samples_leaf": 5,
+    "random_state": 42,
+    "n_jobs": -1
+  },
+  "training_policy": "train_plus_validation_temporal_por_fuente",
+  "rows": {
+    "features_input": 9742,
+    "eligible": 9717,
+    "train": 5827,
+    "validation": 1944,
+    "test_reserved": 1946,
+    "fit": 7771
+  },
+  "evaluation_metrics": {
+    "modelo": "random_forest",
+    "mae": 2.5110870774445324,
+    "rmse": 5.274512502805163,
+    "r2": 0.9478706115283908
+  },
+  "data": {
+    "path": "data/04_model_output/features/tsi_daily_features.parquet",
+    "sha256": "be53d0e7fdf32d3d7b01d2d3d9155dc691f7d2361b85ba02f35b3ce4c395fa84"
+  },
+  "created_at_utc": "2026-10-26T02:08:38.519788+00:00",
+  "limitations": [
+    "TSI provisional y especifico por fuente",
+    "sin etiqueta externa de pre_colapso",
+    "sin calibracion local de Guadalajara"
+  ]
+}

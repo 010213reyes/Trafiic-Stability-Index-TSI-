@@ -1,0 +1,14 @@
+{
+  "run_at_utc": "2026-10-26T02:09:57.782413+00:00",
+  "model_version": "rf_tsi_internacional_v1.0.0",
+  "model_name": "random_forest",
+  "input_path": "data\\04_model_output\\features\\tsi_daily_features.parquet",
+  "input_sha256": "be53d0e7fdf32d3d7b01d2d3d9155dc691f7d2361b85ba02f35b3ce4c395fa84",
+  "registry_path": "data\\05_mlops\\model_registry\\rf_tsi_internacional_v1.0.0",
+  "output_path": "data\\05_mlops\\inference\\predicciones_tsi.csv",
+  "rows_input": 9742,
+  "rows_inferred": 9717,
+  "rows_skipped_incomplete": 25,
+  "prediction_column": "prediccion_tsi_siguiente",
+  "prediction_decimals": 10
+}
