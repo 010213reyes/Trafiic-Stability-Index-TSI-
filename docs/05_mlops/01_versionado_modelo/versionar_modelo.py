@@ -97,6 +97,16 @@ def main() -> None:
     model_path = registry_dir / "model.joblib"
     joblib.dump(model, model_path)
 
+    reference_profile = {}
+    for column in feature_columns:
+        values = train_validation[column].astype(float)
+        reference_profile[column] = {
+            "mean": float(values.mean()),
+            "std": float(values.std(ddof=0)),
+            "min": float(values.min()),
+            "max": float(values.max()),
+        }
+
     metrics = pd.read_csv(metrics_path)
     selected_metrics = metrics.loc[metrics["modelo"] == "random_forest"].to_dict("records")
     if not selected_metrics:
@@ -111,6 +121,7 @@ def main() -> None:
         "predictors": PREDICTORS,
         "feature_columns": feature_columns,
         "model_parameters": MODEL_PARAMETERS,
+        "reference_profile": reference_profile,
         "training_policy": "train_plus_validation_temporal_por_fuente",
         "rows": {
             "features_input": int(len(features)),

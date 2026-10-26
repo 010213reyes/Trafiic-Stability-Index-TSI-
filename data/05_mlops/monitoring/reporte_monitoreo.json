@@ -1,0 +1,314 @@
+{
+  "report_at_utc": "2026-10-26T02:17:31.513531+00:00",
+  "model_version": "rf_tsi_internacional_v1.0.0",
+  "status": "ok",
+  "inputs": {
+    "features": "data/04_model_output/features/tsi_daily_features.parquet",
+    "predictions": "data/05_mlops/inference/predicciones_tsi.csv",
+    "anomalies": "data/04_model_output/anomalies/resumen_anomalias.csv"
+  },
+  "rows": {
+    "features": 9742,
+    "predictions": 9717
+  },
+  "performance": {
+    "rows": 9717,
+    "mae": 1.7650647047423176,
+    "rmse": 3.921702962890759,
+    "p95_error_absoluto": 7.4592909462599994
+  },
+  "drift_max_mean_shift": 0.025753040022030597,
+  "anomalies": {
+    "observaciones": 86382,
+    "isolation_anomalias": 4315,
+    "tasa_isolation": 0.049952536408047976,
+    "por_fuente": [
+      {
+        "source": "metr_la",
+        "observaciones": 34269,
+        "baseline_anomalias": 7691,
+        "isolation_anomalias": 1709,
+        "coincidencias": 124,
+        "tasa_isolation_pct": 4.987014502903499,
+        "tasa_coincidencia_sobre_baseline_pct": 1.612274086594721,
+        "tasa_isolation": 0.04987014502903499
+      },
+      {
+        "source": "pems_bay",
+        "observaciones": 52113,
+        "baseline_anomalias": 3197,
+        "isolation_anomalias": 2606,
+        "coincidencias": 504,
+        "tasa_isolation_pct": 5.000671617446702,
+        "tasa_coincidencia_sobre_baseline_pct": 15.764779480763217,
+        "tasa_isolation": 0.050006716174467024
+      }
+    ]
+  },
+  "checks": [
+    {
+      "name": "filas_incompletas_features",
+      "value": 0.0025662081708068157,
+      "status": "ok",
+      "threshold": {
+        "warning": 0.01,
+        "alert": 0.05
+      },
+      "detail": "25 filas con al menos una feature faltante"
+    },
+    {
+      "name": "nulos_tsi_provisional_media",
+      "value": 0.0,
+      "status": "ok",
+      "threshold": {
+        "warning": 0.01,
+        "alert": 0.05
+      },
+      "detail": "0 valores faltantes"
+    },
+    {
+      "name": "nulos_tsi_lag_1",
+      "value": 0.0,
+      "status": "ok",
+      "threshold": {
+        "warning": 0.01,
+        "alert": 0.05
+      },
+      "detail": "0 valores faltantes"
+    },
+    {
+      "name": "nulos_tsi_lag_7",
+      "value": 0.0025662081708068157,
+      "status": "ok",
+      "threshold": {
+        "warning": 0.01,
+        "alert": 0.05
+      },
+      "detail": "25 valores faltantes"
+    },
+    {
+      "name": "nulos_delta_1",
+      "value": 0.0,
+      "status": "ok",
+      "threshold": {
+        "warning": 0.01,
+        "alert": 0.05
+      },
+      "detail": "0 valores faltantes"
+    },
+    {
+      "name": "nulos_media_movil_3",
+      "value": 0.0,
+      "status": "ok",
+      "threshold": {
+        "warning": 0.01,
+        "alert": 0.05
+      },
+      "detail": "0 valores faltantes"
+    },
+    {
+      "name": "nulos_media_movil_7",
+      "value": 0.0005132416341613632,
+      "status": "ok",
+      "threshold": {
+        "warning": 0.01,
+        "alert": 0.05
+      },
+      "detail": "5 valores faltantes"
+    },
+    {
+      "name": "nulos_desviacion_movil_7",
+      "value": 0.0005132416341613632,
+      "status": "ok",
+      "threshold": {
+        "warning": 0.01,
+        "alert": 0.05
+      },
+      "detail": "5 valores faltantes"
+    },
+    {
+      "name": "nulos_dia_semana",
+      "value": 0.0,
+      "status": "ok",
+      "threshold": {
+        "warning": 0.01,
+        "alert": 0.05
+      },
+      "detail": "0 valores faltantes"
+    },
+    {
+      "name": "nulos_mes",
+      "value": 0.0,
+      "status": "ok",
+      "threshold": {
+        "warning": 0.01,
+        "alert": 0.05
+      },
+      "detail": "0 valores faltantes"
+    },
+    {
+      "name": "nulos_es_fin_de_semana",
+      "value": 0.0,
+      "status": "ok",
+      "threshold": {
+        "warning": 0.01,
+        "alert": 0.05
+      },
+      "detail": "0 valores faltantes"
+    },
+    {
+      "name": "nulos_observaciones",
+      "value": 0.0,
+      "status": "ok",
+      "threshold": {
+        "warning": 0.01,
+        "alert": 0.05
+      },
+      "detail": "0 valores faltantes"
+    },
+    {
+      "name": "drift_media_tsi_provisional_media",
+      "value": 0.02401442760751398,
+      "status": "ok",
+      "threshold": {
+        "warning": 2.0,
+        "alert": 3.0
+      },
+      "detail": "distancia de la media actual respecto al perfil de entrenamiento en desviaciones estandar"
+    },
+    {
+      "name": "drift_media_tsi_lag_1",
+      "value": 0.02398311994729689,
+      "status": "ok",
+      "threshold": {
+        "warning": 2.0,
+        "alert": 3.0
+      },
+      "detail": "distancia de la media actual respecto al perfil de entrenamiento en desviaciones estandar"
+    },
+    {
+      "name": "drift_media_tsi_lag_7",
+      "value": 0.02403993974276088,
+      "status": "ok",
+      "threshold": {
+        "warning": 2.0,
+        "alert": 3.0
+      },
+      "detail": "distancia de la media actual respecto al perfil de entrenamiento en desviaciones estandar"
+    },
+    {
+      "name": "drift_media_delta_1",
+      "value": 8.901360255184475e-05,
+      "status": "ok",
+      "threshold": {
+        "warning": 2.0,
+        "alert": 3.0
+      },
+      "detail": "distancia de la media actual respecto al perfil de entrenamiento en desviaciones estandar"
+    },
+    {
+      "name": "drift_media_media_movil_3",
+      "value": 0.02507023318768697,
+      "status": "ok",
+      "threshold": {
+        "warning": 2.0,
+        "alert": 3.0
+      },
+      "detail": "distancia de la media actual respecto al perfil de entrenamiento en desviaciones estandar"
+    },
+    {
+      "name": "drift_media_media_movil_7",
+      "value": 0.025753040022030597,
+      "status": "ok",
+      "threshold": {
+        "warning": 2.0,
+        "alert": 3.0
+      },
+      "detail": "distancia de la media actual respecto al perfil de entrenamiento en desviaciones estandar"
+    },
+    {
+      "name": "drift_media_desviacion_movil_7",
+      "value": 0.004843446349554601,
+      "status": "ok",
+      "threshold": {
+        "warning": 2.0,
+        "alert": 3.0
+      },
+      "detail": "distancia de la media actual respecto al perfil de entrenamiento en desviaciones estandar"
+    },
+    {
+      "name": "drift_media_dia_semana",
+      "value": 0.006597579601897969,
+      "status": "ok",
+      "threshold": {
+        "warning": 2.0,
+        "alert": 3.0
+      },
+      "detail": "distancia de la media actual respecto al perfil de entrenamiento en desviaciones estandar"
+    },
+    {
+      "name": "drift_media_mes",
+      "value": 0.0056798157000910055,
+      "status": "ok",
+      "threshold": {
+        "warning": 2.0,
+        "alert": 3.0
+      },
+      "detail": "distancia de la media actual respecto al perfil de entrenamiento en desviaciones estandar"
+    },
+    {
+      "name": "drift_media_es_fin_de_semana",
+      "value": 0.009080198931049822,
+      "status": "ok",
+      "threshold": {
+        "warning": 2.0,
+        "alert": 3.0
+      },
+      "detail": "distancia de la media actual respecto al perfil de entrenamiento en desviaciones estandar"
+    },
+    {
+      "name": "drift_media_observaciones",
+      "value": 0.012952470282642873,
+      "status": "ok",
+      "threshold": {
+        "warning": 2.0,
+        "alert": 3.0
+      },
+      "detail": "distancia de la media actual respecto al perfil de entrenamiento en desviaciones estandar"
+    },
+    {
+      "name": "predicciones_fuera_de_rango_tsi",
+      "value": 0.0,
+      "status": "ok",
+      "threshold": {
+        "alert": 0.0
+      },
+      "detail": "el TSI provisional debe permanecer entre 0 y 100"
+    },
+    {
+      "name": "mae_inferencia",
+      "value": 1.7650647047423176,
+      "status": "ok",
+      "threshold": {
+        "warning": 3.5,
+        "alert": 5.0
+      },
+      "detail": "error observado en las filas con objetivo disponible"
+    },
+    {
+      "name": "tasa_anomalias_isolation_forest",
+      "value": 0.049952536408047976,
+      "status": "ok",
+      "threshold": {
+        "warning": 0.1,
+        "alert": 0.2
+      },
+      "detail": "tasa agregada reportada por el detector exploratorio"
+    }
+  ],
+  "limitations": [
+    "el drift es descriptivo y usa cambios de media por feature",
+    "las anomalias no tienen ground truth externo",
+    "el desempe\u00f1o depende del objetivo TSI provisional disponible"
+  ]
+}
