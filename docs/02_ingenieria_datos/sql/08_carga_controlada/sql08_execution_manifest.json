@@ -1,0 +1,30 @@
+{
+  "pipeline": "sql08_controlled_load",
+  "status": "executed",
+  "target_engine": "mysql_innodb",
+  "observations_current": 41770880,
+  "source_counts_current": {
+    "istanbul_traffic_index": 3332,
+    "madrid_traffic_points": 12512133,
+    "metr_la": 7094304,
+    "pems_bay": 16937700,
+    "sao_paulo_cet": 5223411
+  },
+  "load_log_history": {
+    "states": [
+      {
+        "state": "completada",
+        "rows_read": 120296760,
+        "rows_inserted": 120296760,
+        "rows_rejected": 0,
+        "batches": 488
+      }
+    ],
+    "interpretation": "The load log contains historical executions; its totals are not the current table row count."
+  },
+  "validation": {
+    "rows_rejected_current": 0,
+    "status": "passed"
+  },
+  "evidence": "MySQL Workbench query results supplied for the project validation"
+}
