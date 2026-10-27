@@ -1,73 +1,30 @@
 from __future__ import annotations
 
-import json
-from pathlib import Path
-
-import pandas as pd
-import pyarrow.parquet as parquet
 import streamlit as st
+
+from components import inject_styles, navigate_to
+from config import ADMIN_PASSWORD, ADMIN_USERNAME
+from views import analisis, ciencia, home, ingenieria, mineria, mlops
 
 
 st.set_page_config(
-    page_title="TSI | Avance del proyecto",
+    page_title="TSI | Recorrido del proyecto",
     page_icon="TSI",
     layout="wide",
 )
-
-
-def project_root() -> Path:
-    return Path(__file__).resolve().parents[1]
-
-
-ROOT = project_root()
-DATA = ROOT / "data"
-DOCS = ROOT / "docs" / "02_ingenieria_datos" / "sql"
-
-CONTRACT_PATH = DATA / "00_raw" / "external" / "international_sources_contract.json"
-QUALITY_PATH = DATA / "02_clean" / "external" / "international_clean_quality.json"
-CONSOLIDATION_PATH = DATA / "02_clean" / "consolidated" / "international_consolidation_manifest.json"
-OBSERVATIONS_PATH = DATA / "02_clean" / "consolidated" / "international_observations.parquet"
-SQL_PLAN_PATH = DOCS / "00_planificacion" / "12_plan_fase_sql.md"
-MODEL_MANIFEST_PATH = DATA / "05_mlops" / "model_registry" / "rf_tsi_internacional_v1.0.0" / "manifest.json"
-INFERENCE_METADATA_PATH = DATA / "05_mlops" / "inference" / "predicciones_tsi.json"
-PREDICTIONS_PATH = DATA / "05_mlops" / "inference" / "predicciones_tsi.csv"
-MONITORING_PATH = DATA / "05_mlops" / "monitoring" / "reporte_monitoreo.json"
-ANOMALY_SUMMARY_PATH = DATA / "04_model_output" / "anomalies" / "resumen_anomalias.csv"
-
-ADMIN_USERNAME = "admin"
-ADMIN_PASSWORD = "admin123"
-
-
-def read_json(path: Path) -> dict:
-    if not path.exists():
-        return {}
-    return json.loads(path.read_text(encoding="utf-8"))
-
-
-def parquet_row_count(path: Path) -> int | None:
-    if not path.exists():
-        return None
-    return parquet.ParquetFile(path).metadata.num_rows
-
-
-def parquet_preview(path: Path, rows: int = 12) -> pd.DataFrame:
-    if not path.exists():
-        return pd.DataFrame()
-    parquet_file = parquet.ParquetFile(path)
-    batch = next(parquet_file.iter_batches(batch_size=rows), None)
-    return batch.to_pandas() if batch is not None else pd.DataFrame()
-
-
-def exists_label(path: Path) -> str:
-    return "Disponible" if path.exists() else "Pendiente"
+inject_styles()
 
 
 if "authenticated" not in st.session_state:
     st.session_state.authenticated = False
+if "page" not in st.session_state:
+    st.session_state.page = "home"
+
 
 if not st.session_state.authenticated:
-    st.title("Acceso al dashboard TSI")
-    st.caption("Demostracion del avance de la nueva investigacion")
+    st.markdown('<div class="tsi-kicker">Demostracion del proyecto</div>', unsafe_allow_html=True)
+    st.title("Traffic Stability Index")
+    st.caption("Acceso a la investigacion internacional y su flujo MLOps local")
     with st.form("admin_login"):
         username = st.text_input("Usuario")
         password = st.text_input("Contrasena", type="password")
@@ -81,184 +38,33 @@ if not st.session_state.authenticated:
     st.stop()
 
 
-contract = read_json(CONTRACT_PATH)
-quality = read_json(QUALITY_PATH)
-clean_sources = quality.get("sources", [])
-quality_by_source = {item["source_id"]: item for item in clean_sources}
-source_rows = []
+st.sidebar.title("Recorrido TSI")
+st.sidebar.caption("Selecciona una fase para explorarla")
+navigation = [
+    ("home", "Mapa del proyecto"),
+    ("mineria", "01 | Mineria"),
+    ("ingenieria", "02 | Ingenieria"),
+    ("analisis", "03 | Analisis"),
+    ("ciencia", "04 | Ciencia de datos"),
+    ("mlops", "05 | MLOps"),
+]
+for page, label in navigation:
+    if st.sidebar.button(label, key=f"nav_{page}", use_container_width=True):
+        navigate_to(page)
 
-for source in contract.get("sources", []):
-    source_quality = quality_by_source.get(source["source_id"], {})
-    source_rows.append(
-        {
-            "Ciudad": source["city"],
-            "Fuente": source["source_id"],
-            "Rol": source["role"],
-            "Metrica": source["observed_variables"][1] if len(source["observed_variables"]) > 1 else source["observed_variables"][0],
-            "Registros CLEAN": source_quality.get("output_rows", "N/D"),
-            "Calidad": source_quality.get("status", "Pendiente"),
-        }
-    )
+st.sidebar.divider()
+if st.sidebar.button("Cerrar sesion", use_container_width=True):
+    st.session_state.authenticated = False
+    st.session_state.page = "home"
+    st.rerun()
 
 
-st.title("Traffic Stability Index")
-st.caption("Demostracion visual del avance de la nueva investigacion multiciudad")
-st.info(
-    "Esta aplicacion muestra el avance de la nueva investigacion: fuentes internacionales, "
-    "ingenieria RAW-PROCESSED-CLEAN-CONSOLIDATED, fase SQL y operacion MLOps local."
-)
-
-total_rows = parquet_row_count(OBSERVATIONS_PATH)
-metric_a, metric_b, metric_c, metric_d = st.columns(4)
-with metric_a:
-    st.metric("Fuentes aprobadas", len(source_rows))
-with metric_b:
-    st.metric("Fuentes CLEAN", len(clean_sources))
-with metric_c:
-    st.metric("Observaciones consolidadas", f"{total_rows:,}" if total_rows else "N/D")
-with metric_d:
-    st.metric("SQL", "Diseno listo" if SQL_PLAN_PATH.exists() else "Pendiente")
-
-pipeline_tab, sources_tab, sql_tab, mlops_tab = st.tabs(
-    ["Avance del pipeline", "Fuentes internacionales", "Fase SQL", "Operacion MLOps"]
-)
-
-with pipeline_tab:
-    st.subheader("Avance demostrable")
-    pipeline = pd.DataFrame(
-        [
-            {"Etapa": "RAW", "Estado": "Completada", "Evidencia": "Archivos originales y contrato de fuentes"},
-            {"Etapa": "PROCESSED", "Estado": "Completada", "Evidencia": "Parquet por fuente"},
-            {"Etapa": "CLEAN", "Estado": "Completada", "Evidencia": "Reporte de calidad internacional"},
-            {"Etapa": "CONSOLIDATED", "Estado": "Completada", "Evidencia": "international_observations.parquet"},
-            {"Etapa": "SQL", "Estado": "En organizacion", "Evidencia": "Modelo conceptual, logico y fisico documentado"},
-            {"Etapa": "ANALISIS", "Estado": "Siguiente", "Evidencia": "EDA multiciudad despues de la base SQL"},
-        ]
-    )
-    st.dataframe(pipeline, use_container_width=True, hide_index=True)
-
-    st.subheader("Artefactos actuales")
-    artifacts = pd.DataFrame(
-        [
-            {"Artefacto": "Contrato internacional", "Ruta": str(CONTRACT_PATH.relative_to(ROOT)), "Estado": exists_label(CONTRACT_PATH)},
-            {"Artefacto": "Calidad CLEAN", "Ruta": str(QUALITY_PATH.relative_to(ROOT)), "Estado": exists_label(QUALITY_PATH)},
-            {"Artefacto": "Consolidado internacional", "Ruta": str(OBSERVATIONS_PATH.relative_to(ROOT)), "Estado": exists_label(OBSERVATIONS_PATH)},
-            {"Artefacto": "Manifiesto de consolidacion", "Ruta": str(CONSOLIDATION_PATH.relative_to(ROOT)), "Estado": exists_label(CONSOLIDATION_PATH)},
-            {"Artefacto": "Plan de fase SQL", "Ruta": str(SQL_PLAN_PATH.relative_to(ROOT)), "Estado": exists_label(SQL_PLAN_PATH)},
-        ]
-    )
-    st.dataframe(artifacts, use_container_width=True, hide_index=True)
-
-with sources_tab:
-    st.subheader("Fuentes internacionales aprobadas")
-    st.dataframe(pd.DataFrame(source_rows), use_container_width=True, hide_index=True)
-    st.caption("Las metricas se mantienen separadas: velocidad, intensidad, indice y longitud de congestion no son equivalentes.")
-
-    if source_rows:
-        selected_city = st.selectbox("Selecciona una ciudad para ver su contrato", [row["Ciudad"] for row in source_rows])
-        selected = next(row for row in contract["sources"] if row["city"] == selected_city)
-        st.write(
-            {
-                "ciudad": selected["city"],
-                "pais": selected["country"],
-                "zona_horaria": selected["timezone"],
-                "rol": selected["role"],
-                "variables": selected["observed_variables"],
-                "estado": selected["status"],
-            }
-        )
-        dataset_path = DATA / "02_clean" / "external" / f"{selected['source_id']}_clean.parquet"
-        st.markdown("#### Muestra del dataset CLEAN")
-        st.caption(f"Archivo: {dataset_path.relative_to(ROOT)} | Registros disponibles: {parquet_row_count(dataset_path) or 'N/D'}")
-        preview = parquet_preview(dataset_path)
-        if preview.empty:
-            st.warning("No existe un dataset CLEAN local para esta fuente.")
-        else:
-            st.dataframe(preview, use_container_width=True, hide_index=True)
-
-with sql_tab:
-    st.subheader("Organizacion de la base SQL")
-    st.write("La base SQL todavia no carga el consolidado completo. Esta pantalla demuestra el diseno previo a la implementacion.")
-    sql_steps = pd.DataFrame(
-        [
-            {"Subfase": "SQL-01", "Estado": "Completada", "Salida": "Preguntas y limites"},
-            {"Subfase": "SQL-02", "Estado": "Completada", "Salida": "Modelo conceptual"},
-            {"Subfase": "SQL-03", "Estado": "Completada", "Salida": "Modelo logico"},
-            {"Subfase": "SQL-04", "Estado": "Completada", "Salida": "Politica de metricas"},
-            {"Subfase": "SQL-05", "Estado": "Completada", "Salida": "Modelo fisico MySQL"},
-            {"Subfase": "SQL-06", "Estado": "Completada", "Salida": "Guia de diagrama EER"},
-            {"Subfase": "SQL-07", "Estado": "Completada", "Salida": "Carga internacional de prueba validada"},
-            {"Subfase": "SQL-08", "Estado": "Siguiente", "Salida": "Carga controlada del consolidado"},
-            {"Subfase": "SQL-09", "Estado": "Preparada", "Salida": "Consultas de validacion MySQL"},
-        ]
-    )
-    st.dataframe(sql_steps, use_container_width=True, hide_index=True)
-    st.warning("La carga SQL y las consultas de validacion se realizaran despues de revisar el modelo visual en MySQL Workbench.")
-
-with mlops_tab:
-    st.subheader("Operacion MLOps local")
-    st.caption("La interfaz lee artefactos versionados; no entrena modelos ni modifica los datos de entrada.")
-
-    manifest = read_json(MODEL_MANIFEST_PATH)
-    inference_metadata = read_json(INFERENCE_METADATA_PATH)
-    monitoring = read_json(MONITORING_PATH)
-
-    if not manifest or not inference_metadata or not monitoring or not PREDICTIONS_PATH.exists():
-        st.warning("Faltan artefactos de la ejecucion MLOps. Ejecute inferencia y monitoreo antes de abrir esta vista.")
-    else:
-        performance = monitoring.get("performance", {})
-        metric_a, metric_b, metric_c, metric_d = st.columns(4)
-        with metric_a:
-            st.metric("Version del modelo", manifest.get("model_version", "N/D"))
-        with metric_b:
-            st.metric("Predicciones", f"{inference_metadata.get('rows_inferred', 0):,}")
-        with metric_c:
-            st.metric("MAE", f"{performance.get('mae', 0):.3f}")
-        with metric_d:
-            st.metric("Estado monitoreo", monitoring.get("status", "N/D").upper())
-
-        st.write(
-            {
-                "ejecucion_utc": inference_metadata.get("run_at_utc"),
-                "entrada": inference_metadata.get("input_path"),
-                "hash_entrada": inference_metadata.get("input_sha256"),
-                "filas_omitidas_por_incompletitud": inference_metadata.get("rows_skipped_incomplete"),
-            }
-        )
-
-        st.markdown("#### Metricas de desempeño")
-        st.dataframe(
-            pd.DataFrame(
-                [
-                    {"Metrica": "MAE", "Valor": performance.get("mae")},
-                    {"Metrica": "RMSE", "Valor": performance.get("rmse")},
-                    {"Metrica": "P95 error absoluto", "Valor": performance.get("p95_error_absoluto")},
-                    {"Metrica": "Drift maximo de media", "Valor": monitoring.get("drift_max_mean_shift")},
-                ]
-            ),
-            use_container_width=True,
-            hide_index=True,
-        )
-
-        checks = monitoring.get("checks", [])
-        if checks:
-            st.markdown("#### Controles de monitoreo")
-            checks_table = pd.DataFrame(checks)
-            st.dataframe(
-                checks_table[["name", "value", "status", "detail"]],
-                use_container_width=True,
-                hide_index=True,
-            )
-
-        predictions = pd.read_csv(PREDICTIONS_PATH)
-        st.markdown("#### Predicciones generadas")
-        st.dataframe(predictions.head(25), use_container_width=True, hide_index=True)
-
-        if ANOMALY_SUMMARY_PATH.exists():
-            st.markdown("#### Resumen de anomalias exploratorias")
-            st.dataframe(pd.read_csv(ANOMALY_SUMMARY_PATH), use_container_width=True, hide_index=True)
-
-        st.warning(
-            "El modelo es candidato internacional y el TSI es provisional. Las anomalias no tienen ground truth externo; "
-            "Guadalajara queda pendiente de calibracion y validacion local."
-        )
+views = {
+    "home": home.render,
+    "mineria": mineria.render,
+    "ingenieria": ingenieria.render,
+    "analisis": analisis.render,
+    "ciencia": ciencia.render,
+    "mlops": mlops.render,
+}
+views.get(st.session_state.page, home.render)()

@@ -1,6 +1,8 @@
-# Diccionario de datos del proyecto punta a punta
 
-Este diccionario pertenece a la implementación nueva del TSI. La investigación inicial conserva sus propios esquemas y resultados; este documento define el contrato común para las fuentes que entren al pipeline nuevo.
+
+
+
+# Diccionario de datos 
 
 ## Campos comunes
 

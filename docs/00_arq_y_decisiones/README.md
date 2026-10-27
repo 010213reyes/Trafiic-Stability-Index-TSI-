@@ -176,7 +176,7 @@ TSI/
 │   ├── 03_analisis_datos/
 │   ├── 04_ciencia_datos/
 │   ├── 05_mlops/
-│   └── 06_interfaz_minima/
+│   └── 06_interfaz_/
 ├── streamlit_app/                # Aplicacion Streamlit de demostracion
 └── .venv/                        # Entorno local, no es artefacto del sistema
 ```
