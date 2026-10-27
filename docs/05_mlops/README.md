@@ -15,6 +15,18 @@ Definir y demostrar un ciclo operativo local que permita:
 
 Esta fase no declara un despliegue productivo ni una operación en tiempo real. La primera entrega es una demostración local reproducible.
 
+## Ejecucion integrada
+
+El ciclo completo puede ejecutarse desde la raiz con una sola orden:
+
+```powershell
+.venv\Scripts\python.exe docs\05_mlops\run_pipeline.py
+```
+
+La orden crea automaticamente la siguiente version patch de Random Forest, registra tambien la version de Ridge y del baseline de persistencia, ejecuta inferencia con Random Forest y genera el reporte de monitoreo. Para reproducir una version especifica de Random Forest se puede usar `--model-version`.
+
+El orquestador admite `--model all`, `--model random_forest`, `--model ridge` o `--model baseline`. Ridge se serializa como modelo comparativo; el baseline se registra como regla determinista y no se entrena.
+
 ## Orden de trabajo
 
 1. `00_planificacion`: alcance operativo, contratos, criterios de aceptación y límites.

@@ -2,12 +2,18 @@ from __future__ import annotations
 
 import streamlit as st
 
-from components import render_phase_header, render_phase_navigation
+from components import render_phase_explanation, render_phase_header, render_phase_navigation
 from config import OBSERVATIONS_PATH, SQL_PLAN_PATH, parquet_row_count
 
 
 def render() -> None:
     render_phase_header("03", "Analisis", "Convierte los datos consolidados en evidencia sobre calidad, cobertura y estabilidad.")
+    render_phase_explanation(
+        "Medimos antes de modelar",
+        "El analisis revisa cobertura, calidad y comportamiento temporal. Las metricas no se mezclan en escala original; el TSI las normaliza con una regla documentada.",
+        "Consolidado internacional validado",
+        "Perfiles, comparaciones y TSI provisional",
+    )
     left, right = st.columns(2)
     with left:
         st.metric("Observaciones consolidadas", f"{parquet_row_count(OBSERVATIONS_PATH) or 0:,}")

@@ -22,7 +22,7 @@ if "page" not in st.session_state:
 
 
 if not st.session_state.authenticated:
-    st.markdown('<div class="tsi-kicker">Demostracion del proyecto</div>', unsafe_allow_html=True)
+    st.markdown('<div class="tsi-kicker">Workspace del proyecto</div>', unsafe_allow_html=True)
     st.title("Traffic Stability Index")
     st.caption("Acceso a la investigacion internacional y su flujo MLOps local")
     with st.form("admin_login"):
@@ -38,19 +38,32 @@ if not st.session_state.authenticated:
     st.stop()
 
 
-st.sidebar.title("Recorrido TSI")
-st.sidebar.caption("Selecciona una fase para explorarla")
-navigation = [
-    ("home", "Mapa del proyecto"),
-    ("mineria", "01 | Mineria"),
-    ("ingenieria", "02 | Ingenieria"),
-    ("analisis", "03 | Analisis"),
-    ("ciencia", "04 | Ciencia de datos"),
-    ("mlops", "05 | MLOps"),
-]
-for page, label in navigation:
-    if st.sidebar.button(label, key=f"nav_{page}", use_container_width=True):
-        navigate_to(page)
+st.sidebar.markdown("<div class='tsi-kicker'>TSI / DATA LAB</div>", unsafe_allow_html=True)
+st.sidebar.title("Control del workspace")
+st.sidebar.caption("Ejecucion y observabilidad del proyecto")
+st.sidebar.markdown("### Workspace")
+if st.sidebar.button("Vista general", key="control_home", use_container_width=True):
+    navigate_to("home")
+st.sidebar.markdown("### Vistas")
+phase_options = {
+    "Mapa del proyecto": "home",
+    "01 | Mineria de datos": "mineria",
+    "02 | Ingenieria de datos": "ingenieria",
+    "03 | Analisis": "analisis",
+    "04 | Ciencia de datos": "ciencia",
+    "05 | MLOps": "mlops",
+}
+current_label = next((label for label, page in phase_options.items() if page == st.session_state.page), "Mapa del proyecto")
+selected_phase = st.sidebar.selectbox("Abrir vista", list(phase_options), index=list(phase_options).index(current_label))
+if st.sidebar.button("Abrir vista seleccionada", key="control_phase", use_container_width=True):
+    navigate_to(phase_options[selected_phase])
+st.sidebar.markdown("### Operacion")
+if st.sidebar.button("Entrenar y registrar", key="control_run", use_container_width=True):
+    st.session_state.page = "home"
+    st.session_state.auto_run_pipeline = True
+    st.rerun()
+if st.sidebar.button("Abrir registro MLOps", key="control_mlops", use_container_width=True):
+    navigate_to("mlops")
 
 st.sidebar.divider()
 if st.sidebar.button("Cerrar sesion", use_container_width=True):

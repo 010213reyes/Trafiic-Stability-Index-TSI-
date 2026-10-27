@@ -2,7 +2,7 @@
   "model_version": "rf_tsi_internacional_v1.0.0",
   "model_name": "random_forest",
   "task": "pronostico_del_tsi_provisional_del_siguiente_dia",
-  "status": "candidato_internacional_no_final",
+  "status": "seleccionado_para_demostracion_internacional",
   "target": "objetivo_tsi_siguiente",
   "predictors": [
     "tsi_provisional_media",
@@ -158,7 +158,7 @@
     "path": "data/04_model_output/features/tsi_daily_features.parquet",
     "sha256": "be53d0e7fdf32d3d7b01d2d3d9155dc691f7d2361b85ba02f35b3ce4c395fa84"
   },
-  "created_at_utc": "2026-10-26T02:17:30.317975+00:00",
+  "created_at_utc": "2026-10-27T20:37:54.460345+00:00",
   "limitations": [
     "TSI provisional y especifico por fuente",
     "sin etiqueta externa de pre_colapso",

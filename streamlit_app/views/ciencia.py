@@ -3,15 +3,21 @@ from __future__ import annotations
 import pandas as pd
 import streamlit as st
 
-from components import render_phase_header, render_phase_navigation
+from components import render_phase_explanation, render_phase_header, render_phase_navigation
 from config import EXPERIMENT_PATH, VALIDATION_PATH, read_csv, read_json
 
 
 def render() -> None:
-    render_phase_header("04", "Ciencia de datos", "Construye features temporales, compara modelos y valida el candidato internacional.")
+    render_phase_header("04", "Ciencia de datos", "Construye features temporales, compara modelos y selecciona el modelo internacional.")
+    render_phase_explanation(
+        "El modelo aprende patrones temporales",
+        "Las features sin fuga alimentan modelos candidatos y un baseline temporal. La decision se toma por fuente, no solo por el promedio internacional.",
+        "Features diarias y particiones temporales",
+        "Predicciones, metricas y limites del experimento",
+    )
     experiment = read_json(EXPERIMENT_PATH)
     metrics = st.columns(4)
-    metrics[0].metric("Modelo candidato", experiment.get("modelo_candidato", "N/D"))
+    metrics[0].metric("Modelo seleccionado", experiment.get("modelo_candidato", "N/D"))
     metrics[1].metric("MAE modelo", f"{experiment.get('mae_prueba_modelo_candidato', 0):.3f}")
     metrics[2].metric("MAE baseline", f"{experiment.get('mae_prueba_baseline', 0):.3f}")
     metrics[3].metric("Fuentes con mejora", f"{experiment.get('fuentes_con_mejora', 0)}/{experiment.get('fuentes_evaluadas', 0)}")
@@ -23,5 +29,5 @@ def render() -> None:
     else:
         st.dataframe(validation, use_container_width=True, hide_index=True)
 
-    st.warning("Estado: candidato internacional no final. Madrid necesita una muestra de prueba mas amplia y Guadalajara queda para calibracion futura.")
+    st.info("Modelo seleccionado para el ciclo internacional: Random Forest mejora el baseline en 4 de 5 fuentes. Madrid requiere una muestra de prueba mas amplia y Guadalajara queda reservada para la calibracion futura.")
     render_phase_navigation("ciencia")

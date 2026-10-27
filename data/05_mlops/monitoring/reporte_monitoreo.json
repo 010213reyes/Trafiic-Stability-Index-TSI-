@@ -1,6 +1,6 @@
 {
-  "report_at_utc": "2026-10-26T05:42:44.149619+00:00",
-  "model_version": "rf_tsi_internacional_v1.0.0",
+  "report_at_utc": "2026-10-27T20:58:12.175123+00:00",
+  "model_version": "rf_tsi_internacional_v1.0.9",
   "status": "ok",
   "inputs": {
     "features": "data/04_model_output/features/tsi_daily_features.parquet",

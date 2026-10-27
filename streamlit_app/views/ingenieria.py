@@ -3,12 +3,18 @@ from __future__ import annotations
 import pandas as pd
 import streamlit as st
 
-from components import render_phase_header, render_phase_navigation
+from components import render_phase_explanation, render_phase_header, render_phase_navigation
 from config import CONSOLIDATION_PATH, OBSERVATIONS_PATH, QUALITY_PATH, read_json, parquet_row_count
 
 
 def render() -> None:
     render_phase_header("02", "Ingenieria de datos", "Transforma fuentes heterogeneas en datos trazables y listos para analisis.")
+    render_phase_explanation(
+        "Convertimos fuentes distintas en un contrato comun",
+        "Cada fuente conserva sus columnas y semantica original, pero pasa por etapas trazables de procesamiento, limpieza y consolidacion.",
+        "Archivos RAW de cinco fuentes",
+        "Parquet CLEAN y consolidado internacional",
+    )
     quality = read_json(QUALITY_PATH)
     consolidation = read_json(CONSOLIDATION_PATH)
     source_rows = quality.get("sources", [])

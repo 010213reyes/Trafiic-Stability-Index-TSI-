@@ -17,4 +17,4 @@ Desde la raíz del proyecto:
 .venv\Scripts\python.exe docs\05_mlops\03_monitoreo\monitorear_flujo.py
 ```
 
-El reporte se guarda en `data/05_mlops/monitoring/reporte_monitoreo.json`. Las alertas son controles operativos de esta demostración local, no sustituyen un sistema de observabilidad productivo.
+El reporte se guarda en `data/05_mlops/monitoring/reporte_monitoreo.json`. Sin `--model-version` el monitoreo usa automáticamente la versión registrada más reciente. Las alertas son controles operativos locales, no sustituyen un sistema de observabilidad productivo.

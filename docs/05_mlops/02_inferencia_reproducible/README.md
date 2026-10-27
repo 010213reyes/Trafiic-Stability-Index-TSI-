@@ -23,4 +23,4 @@ También puede recibir otro archivo compatible:
 .venv\Scripts\python.exe docs\05_mlops\02_inferencia_reproducible\inferir_tsi.py --input ruta\entrada.parquet --output ruta\salida.csv
 ```
 
-La inferencia conserva las filas con features completas, genera `prediccion_tsi_siguiente` y, cuando existe el objetivo observado, calcula `error_absoluto`. El archivo JSON contiguo registra la versión del modelo y el hash de entrada.
+La inferencia conserva las filas con features completas, genera `prediccion_tsi_siguiente` y, cuando existe el objetivo observado, calcula `error_absoluto`. Sin `--model-version` carga automáticamente la versión registrada más reciente; el archivo JSON contiguo registra la versión utilizada y el hash de entrada.

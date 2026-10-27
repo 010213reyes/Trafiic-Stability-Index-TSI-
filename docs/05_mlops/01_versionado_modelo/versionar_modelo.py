@@ -2,8 +2,10 @@
 
 from __future__ import annotations
 
+import argparse
 import hashlib
 import json
+import re
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -12,7 +14,7 @@ import pandas as pd
 from sklearn.ensemble import RandomForestRegressor
 
 
-MODEL_VERSION = "rf_tsi_internacional_v1.0.0"
+MODEL_FAMILY = "rf_tsi_internacional"
 PREDICTORS = [
     "tsi_provisional_media",
     "tsi_lag_1",
@@ -33,6 +35,29 @@ MODEL_PARAMETERS = {
     "random_state": 42,
     "n_jobs": -1,
 }
+
+
+def parse_args() -> argparse.Namespace:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument(
+        "--model-version",
+        help="Version manual opcional; si se omite, incrementa automaticamente el parche.",
+    )
+    return parser.parse_args()
+
+
+def next_model_version(root: Path) -> str:
+    registry_dir = root / "data" / "05_mlops" / "model_registry"
+    pattern = re.compile(rf"^{re.escape(MODEL_FAMILY)}_v(\d+)\.(\d+)\.(\d+)$")
+    versions = []
+    for candidate in registry_dir.iterdir() if registry_dir.exists() else []:
+        match = pattern.match(candidate.name)
+        if match and candidate.is_dir():
+            versions.append(tuple(int(part) for part in match.groups()))
+    if not versions:
+        return f"{MODEL_FAMILY}_v1.0.0"
+    major, minor, patch = max(versions)
+    return f"{MODEL_FAMILY}_v{major}.{minor}.{patch + 1}"
 
 
 def project_root() -> Path:
@@ -81,10 +106,12 @@ def build_training_data(features: pd.DataFrame) -> tuple[pd.DataFrame, list[str]
 
 
 def main() -> None:
+    args = parse_args()
     root = project_root()
+    model_version = args.model_version or next_model_version(root)
     input_path = root / "data" / "04_model_output" / "features" / "tsi_daily_features.parquet"
     metrics_path = root / "data" / "04_model_output" / "modeling" / "metricas_modelos.csv"
-    registry_dir = root / "data" / "05_mlops" / "model_registry" / MODEL_VERSION
+    registry_dir = root / "data" / "05_mlops" / "model_registry" / model_version
     registry_dir.mkdir(parents=True, exist_ok=True)
 
     features = pd.read_parquet(input_path)
@@ -113,10 +140,10 @@ def main() -> None:
         raise ValueError("No se encontro la metrica de random_forest")
 
     manifest = {
-        "model_version": MODEL_VERSION,
+        "model_version": model_version,
         "model_name": "random_forest",
         "task": "pronostico_del_tsi_provisional_del_siguiente_dia",
-        "status": "candidato_internacional_no_final",
+        "status": "seleccionado_para_demostracion_internacional",
         "target": TARGET,
         "predictors": PREDICTORS,
         "feature_columns": feature_columns,

@@ -3,12 +3,18 @@ from __future__ import annotations
 import pandas as pd
 import streamlit as st
 
-from components import render_phase_header, render_phase_navigation
+from components import render_phase_explanation, render_phase_header, render_phase_navigation
 from config import CONTRACT_PATH, QUALITY_PATH, read_json
 
 
 def render() -> None:
     render_phase_header("01", "Mineria de datos", "Define las fuentes, variables y limites antes de transformar los datos.")
+    render_phase_explanation(
+        "Primero entendemos el problema",
+        "Se identifican fuentes publicas, variables observables y riesgos de comparacion antes de construir el pipeline. Guadalajara se conserva como destino de calibracion futura.",
+        "Catalogo de fuentes y definiciones",
+        "Contrato internacional y decisiones de alcance",
+    )
     contract = read_json(CONTRACT_PATH)
     quality = read_json(QUALITY_PATH)
     quality_by_source = {item["source_id"]: item for item in quality.get("sources", [])}

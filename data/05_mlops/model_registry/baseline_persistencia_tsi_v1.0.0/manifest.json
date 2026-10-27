@@ -1,0 +1,52 @@
+{
+  "model_version": "baseline_persistencia_tsi_v1.0.0",
+  "model_name": "baseline_persistencia",
+  "task": "pronostico_del_tsi_provisional_del_siguiente_dia",
+  "status": "referencia_no_entrenable",
+  "artifact_type": "deterministic_rule",
+  "target": "objetivo_tsi_siguiente",
+  "predictors": [
+    "tsi_provisional_media",
+    "tsi_lag_1",
+    "tsi_lag_7",
+    "delta_1",
+    "media_movil_3",
+    "media_movil_7",
+    "desviacion_movil_7",
+    "dia_semana",
+    "mes",
+    "es_fin_de_semana",
+    "observaciones"
+  ],
+  "feature_columns": [
+    "tsi_lag_1"
+  ],
+  "model_parameters": {
+    "formula": "prediccion_tsi_siguiente = tsi_lag_1"
+  },
+  "training_policy": "train_plus_validation_temporal_por_fuente",
+  "rows": {
+    "features_input": 9742,
+    "eligible": 9717,
+    "train": 5827,
+    "validation": 1944,
+    "test_reserved": 1946,
+    "fit": 7771
+  },
+  "evaluation_metrics": {
+    "modelo": "baseline_persistencia",
+    "mae": 5.30213794644081,
+    "rmse": 9.950087378616706,
+    "r2": 0.8144881026666795
+  },
+  "data": {
+    "path": "data/04_model_output/features/tsi_daily_features.parquet",
+    "sha256": "be53d0e7fdf32d3d7b01d2d3d9155dc691f7d2361b85ba02f35b3ce4c395fa84"
+  },
+  "created_at_utc": "2026-10-27T20:53:15.967359+00:00",
+  "limitations": [
+    "TSI provisional y especifico por fuente",
+    "sin etiqueta externa de pre_colapso",
+    "sin calibracion local de Guadalajara"
+  ]
+}

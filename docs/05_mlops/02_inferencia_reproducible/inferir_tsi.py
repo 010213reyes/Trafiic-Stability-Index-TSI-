@@ -5,6 +5,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import re
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -12,6 +13,7 @@ import joblib
 import pandas as pd
 
 PREDICTION_DECIMALS = 10
+MODEL_FAMILY = "rf_tsi_internacional"
 
 
 def project_root() -> Path:
@@ -27,6 +29,19 @@ def sha256_file(path: Path) -> str:
         for chunk in iter(lambda: file.read(1024 * 1024), b""):
             digest.update(chunk)
     return digest.hexdigest()
+
+
+def latest_model_version(root: Path) -> str:
+    registry_dir = root / "data" / "05_mlops" / "model_registry"
+    pattern = re.compile(rf"^{re.escape(MODEL_FAMILY)}_v(\d+)\.(\d+)\.(\d+)$")
+    versions = []
+    for candidate in registry_dir.iterdir() if registry_dir.exists() else []:
+        match = pattern.match(candidate.name)
+        if match and (candidate / "manifest.json").exists():
+            versions.append((tuple(int(part) for part in match.groups()), candidate.name))
+    if not versions:
+        raise FileNotFoundError("No hay versiones registradas del modelo")
+    return max(versions)[1]
 
 
 def load_registry(root: Path, model_version: str) -> tuple[object, dict, Path]:
@@ -61,8 +76,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--input", type=Path, help="Archivo Parquet o CSV de entrada")
     parser.add_argument(
         "--model-version",
-        default="rf_tsi_internacional_v1.0.0",
-        help="Version registrada del modelo",
+        help="Version registrada; si se omite, se usa automaticamente la mas reciente",
     )
     parser.add_argument("--output", type=Path, help="Archivo CSV de predicciones")
     return parser.parse_args()
@@ -88,7 +102,8 @@ def main() -> None:
     output_path = output_path if output_path.is_absolute() else root / output_path
     input_path = input_path if input_path.is_absolute() else root / input_path
 
-    model, manifest, registry_dir = load_registry(root, args.model_version)
+    model_version = args.model_version or latest_model_version(root)
+    model, manifest, registry_dir = load_registry(root, model_version)
     data = read_input(input_path)
     eligible, encoded = prepare_features(data, manifest)
     predictions = model.predict(encoded)

@@ -2,7 +2,9 @@
 
 from __future__ import annotations
 
+import argparse
 import json
+import re
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -17,6 +19,7 @@ MAE_WARNING = 3.5
 MAE_ALERT = 5.0
 ANOMALY_WARNING = 0.10
 ANOMALY_ALERT = 0.20
+MODEL_FAMILY = "rf_tsi_internacional"
 
 
 def project_root() -> Path:
@@ -24,6 +27,28 @@ def project_root() -> Path:
     if not (root / "data").exists():
         raise FileNotFoundError("No se encontro la carpeta data del proyecto")
     return root
+
+
+def latest_model_version(root: Path) -> str:
+    registry_dir = root / "data" / "05_mlops" / "model_registry"
+    pattern = re.compile(rf"^{re.escape(MODEL_FAMILY)}_v(\d+)\.(\d+)\.(\d+)$")
+    versions = []
+    for candidate in registry_dir.iterdir() if registry_dir.exists() else []:
+        match = pattern.match(candidate.name)
+        if match and (candidate / "manifest.json").exists():
+            versions.append((tuple(int(part) for part in match.groups()), candidate.name))
+    if not versions:
+        raise FileNotFoundError("No hay versiones registradas del modelo")
+    return max(versions)[1]
+
+
+def parse_args() -> argparse.Namespace:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument(
+        "--model-version",
+        help="Version registrada; si se omite, se usa automaticamente la mas reciente",
+    )
+    return parser.parse_args()
 
 
 def level(value: float, warning: float, alert: float) -> str:
@@ -47,8 +72,10 @@ def add_check(checks: list[dict], name: str, value: float, status: str, threshol
 
 
 def main() -> None:
+    args = parse_args()
     root = project_root()
-    registry_dir = root / "data" / "05_mlops" / "model_registry" / "rf_tsi_internacional_v1.0.0"
+    model_version = args.model_version or latest_model_version(root)
+    registry_dir = root / "data" / "05_mlops" / "model_registry" / model_version
     manifest = json.loads((registry_dir / "manifest.json").read_text(encoding="utf-8"))
     features_path = root / "data" / "04_model_output" / "features" / "tsi_daily_features.parquet"
     predictions_path = root / "data" / "05_mlops" / "inference" / "predicciones_tsi.csv"

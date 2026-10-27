@@ -1,0 +1,167 @@
+{
+  "model_version": "rf_tsi_internacional_v1.0.9",
+  "model_name": "random_forest",
+  "task": "pronostico_del_tsi_provisional_del_siguiente_dia",
+  "status": "seleccionado_para_demostracion_internacional",
+  "target": "objetivo_tsi_siguiente",
+  "predictors": [
+    "tsi_provisional_media",
+    "tsi_lag_1",
+    "tsi_lag_7",
+    "delta_1",
+    "media_movil_3",
+    "media_movil_7",
+    "desviacion_movil_7",
+    "dia_semana",
+    "mes",
+    "es_fin_de_semana",
+    "observaciones"
+  ],
+  "feature_columns": [
+    "tsi_provisional_media",
+    "tsi_lag_1",
+    "tsi_lag_7",
+    "delta_1",
+    "media_movil_3",
+    "media_movil_7",
+    "desviacion_movil_7",
+    "dia_semana",
+    "mes",
+    "es_fin_de_semana",
+    "observaciones",
+    "fuente_istanbul_traffic_index",
+    "fuente_madrid_traffic_points",
+    "fuente_metr_la",
+    "fuente_pems_bay",
+    "fuente_sao_paulo_cet"
+  ],
+  "model_parameters": {
+    "n_estimators": 150,
+    "min_samples_leaf": 5,
+    "random_state": 42,
+    "n_jobs": -1
+  },
+  "reference_profile": {
+    "tsi_provisional_media": {
+      "mean": 80.45246185232689,
+      "std": 20.027278972349222,
+      "min": 4.896922132133049e-11,
+      "max": 99.99999999997245
+    },
+    "tsi_lag_1": {
+      "mean": 80.45566162355134,
+      "std": 20.022997312150327,
+      "min": 4.896922132133049e-11,
+      "max": 99.99999999997245
+    },
+    "tsi_lag_7": {
+      "mean": 80.45834152432832,
+      "std": 20.02988555478123,
+      "min": 4.896922132133049e-11,
+      "max": 99.99999999997245
+    },
+    "delta_1": {
+      "mean": -0.00319977122445932,
+      "std": 8.197565252250014,
+      "min": -67.5013819643755,
+      "max": 62.842932966330295
+    },
+    "media_movil_3": {
+      "mean": 80.4580362119218,
+      "std": 19.333845277354058,
+      "min": 21.42390932201411,
+      "max": 98.95349889996074
+    },
+    "media_movil_7": {
+      "mean": 80.46073458821348,
+      "std": 18.928179392295043,
+      "min": 30.803151439693693,
+      "max": 98.87204412682377
+    },
+    "desviacion_movil_7": {
+      "mean": 4.477828040919108,
+      "std": 5.432259653553786,
+      "min": 0.13677065627796287,
+      "max": 28.952054003308696
+    },
+    "dia_semana": {
+      "mean": 2.914811478574186,
+      "std": 1.9744737386690854,
+      "min": 0.0,
+      "max": 6.0
+    },
+    "mes": {
+      "mean": 6.479732338180415,
+      "std": 3.4618266430465114,
+      "min": 1.0,
+      "max": 12.0
+    },
+    "es_fin_de_semana": {
+      "mean": 0.2613563247973234,
+      "std": 0.43937364086362685,
+      "min": 0.0,
+      "max": 1.0
+    },
+    "observaciones": {
+      "mean": 3810.0465834512934,
+      "std": 23640.23679702626,
+      "min": 1.0,
+      "max": 408098.0
+    },
+    "fuente_istanbul_traffic_index": {
+      "mean": 0.342169604941449,
+      "std": 0.47443605090218605,
+      "min": 0.0,
+      "max": 1.0
+    },
+    "fuente_madrid_traffic_points": {
+      "mean": 0.0023163042079526446,
+      "std": 0.04807222631383806,
+      "min": 0.0,
+      "max": 1.0
+    },
+    "fuente_metr_la": {
+      "mean": 0.011324153905546261,
+      "std": 0.10581076241984916,
+      "min": 0.0,
+      "max": 1.0
+    },
+    "fuente_pems_bay": {
+      "mean": 0.017758332260970275,
+      "std": 0.13207185126392093,
+      "min": 0.0,
+      "max": 1.0
+    },
+    "fuente_sao_paulo_cet": {
+      "mean": 0.6264316046840819,
+      "std": 0.4837510199854963,
+      "min": 0.0,
+      "max": 1.0
+    }
+  },
+  "training_policy": "train_plus_validation_temporal_por_fuente",
+  "rows": {
+    "features_input": 9742,
+    "eligible": 9717,
+    "train": 5827,
+    "validation": 1944,
+    "test_reserved": 1946,
+    "fit": 7771
+  },
+  "evaluation_metrics": {
+    "modelo": "random_forest",
+    "mae": 2.5110870774445324,
+    "rmse": 5.274512502805163,
+    "r2": 0.9478706115283908
+  },
+  "data": {
+    "path": "data/04_model_output/features/tsi_daily_features.parquet",
+    "sha256": "be53d0e7fdf32d3d7b01d2d3d9155dc691f7d2361b85ba02f35b3ce4c395fa84"
+  },
+  "created_at_utc": "2026-10-27T20:58:08.705819+00:00",
+  "limitations": [
+    "TSI provisional y especifico por fuente",
+    "sin etiqueta externa de pre_colapso",
+    "sin calibracion local de Guadalajara"
+  ]
+}
