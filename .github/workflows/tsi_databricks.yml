@@ -1,0 +1,42 @@
+
+name: TSI - Databricks
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validar-tsi:
+    name: Ejecutar validacion en Databricks
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Ejecutar Job de Databricks
+        env:
+          DATABRICKS_HOST: ${{ secrets.DATABRICKS_HOST }}
+          DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_TOKEN }}
+        run: |
+          set -euo pipefail
+
+          response=$(curl --fail-with-body --silent --show-error \
+            --retry 2 \
+            --request POST \
+            "${DATABRICKS_HOST%/}/api/2.1/jobs/run-now" \
+            --header "Authorization: Bearer ${DATABRICKS_TOKEN}" \
+            --header "Content-Type: application/json" \
+            --data '{"job_id":148469682711531}')
+
+          echo "$response" > response.json
+
+          python - <<'PY'
+          import json
+
+          with open("response.json", encoding="utf-8") as f:
+              response = json.load(f)
+
+          run_id = response["run_id"]
+          print(f"Databricks acepto la ejecucion. Run ID: {run_id}")
+          PY
